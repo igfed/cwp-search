@@ -1,0 +1,198 @@
+/* Panels */
+//was going to use extend but there are too many caveats 
+
+//this is for content asides etc
+
+.white-panel {
+	@include clearfix();
+	@include panel($bg: $white);
+	border-color: $white;
+	@include radius();
+
+	img {
+		margin-bottom: 0.625rem;
+	}
+	label {
+		font-size: 20px;
+	}
+
+	.white-panel {
+		padding: 0;
+	}
+
+	.row {
+		margin-left: -0.9375rem;
+		margin-right: -0.9375rem;
+	}
+}
+
+/* for home page*/
+.white-panel-home {
+	@include clearfix();
+	@include panel($bg: $white);
+	$padding: 0;
+	border-radius: 0 0 5px 5px;
+	border-color: $white;
+	margin-top: 0px;
+	margin-bottom: 1.25rem !important;
+
+	.mini-nav {
+		margin-left: 64.5% !important;
+		@include inline-list();
+		$inline-list-default-float-margin: rem-calc(-22);
+		padding-top: 10px;
+		a, ul, li {
+			color: $grey;
+			font-size: 14px;
+		}
+
+	}
+}
+
+//panel for go back to advisor
+.advisor-panel {
+	@include clearfix();
+	@include panel(
+	$bg: $cream
+	);
+	padding: 6px 16px;
+	position: relative;
+	margin-bottom: -16px;
+	border-radius: 0 0 5px 5px;
+
+	.advisor-text {
+		text-decoration: underline;
+	}
+}
+
+// advisor search
+.faa-panel {
+	@include clearfix();
+	@include panel(
+	$bg: $white
+	);
+
+	margin-top: 20px;
+	.findAdvisorText {
+		font-size: 25px;
+		text-transform: uppercase;
+
+	}
+}
+
+main.content .faa-panel {
+	@include clearfix();
+	@include panel(
+	$bg: $cream
+	);
+
+	margin-top: 20px;
+	.findAdvisorText {
+		font-size: 25px;
+		text-transform: uppercase;
+	}
+}
+
+.find-advisor-panel {
+	@include clearfix();
+	@include panel(
+	$bg: $cream
+	);
+	border-color: $cream;
+
+	border-radius: 0 0 5px 5px;
+
+	img {
+		margin-bottom: 0.625rem;
+	}
+}
+
+//panel for go back to advisor
+.video-panel-home {
+	@include clearfix();
+	@include panel($bg: $white);
+
+	border-radius: 5px 5px 0 0;
+	padding: 16px;
+	position: relative;
+	margin-bottom: 0;
+	h6, p {
+		color: $white;
+	}
+}
+
+//panel for go back to advisor
+.olive-panel {
+	@include clearfix();
+	@include panel(
+	$bg: $white
+	);
+
+	@include radius();
+	padding: 16px;
+	position: relative;
+	margin-bottom: 20px;
+
+}
+
+/* for video panels*/
+.olive-panel-content {
+	@include clearfix();
+	@include clearfix();
+	@include panel(
+	$bg: $white
+	);
+
+	@include radius();
+	padding: 16px;
+	margin-bottom: 20px;
+
+}
+
+//beige-panel
+
+.cream-panel {
+	@include clearfix();
+	@include panel(
+	$bg: $cream
+	);
+
+	@include radius();
+	padding: 16px;
+	position: relative;
+	margin-bottom: 0;
+
+}
+
+.serp-panel {
+	@include clearfix();
+	@include panel(
+	$bg: $white
+	);
+
+	@include radius();
+	padding: 30px 0 0 0;
+	position: relative;
+	margin-left: 0;
+	margin-right: 0;
+
+}
+
+//Grey used for social media footer
+.grey-panel {
+	@include clearfix();
+	@include panel(
+	$bg: $grey
+	);
+	border-color: $grey;
+	@include radius();
+
+}
+
+//it's like a panel so I put it here
+main.content.hcwh-front section.c12 .white-panel aside.c4 {
+	img {
+		border-radius: $global-radius;
+	}
+
+}

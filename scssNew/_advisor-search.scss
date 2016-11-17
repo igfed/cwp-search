@@ -1,0 +1,145 @@
+
+// advisor search
+.advisor-search-home{
+	 @include panel(
+	 	 $bg:$white
+	 );
+	 
+	 margin-top: 20px;
+	.findAdvisorText {
+		font-size: 25px;
+		text-transform: uppercase;
+		
+	}
+}
+
+
+img.advisor{
+		height:24px;
+		width: 24px;
+    	margin:0 0 .25rem 0;
+		overflow: hidden;
+}
+
+.icon-wrap .search-form {padding-bottom:25em;}
+span.prefix {
+	background-color: $white;
+	width: 100%;
+}
+.contact .search-ui{
+	white-space:nowrap;
+	/*margin:7rem 0 0;*/
+	padding:0 8.2%;
+}
+.contact .search-ui>*{vertical-align:top;}
+.contact .search-ui.name .search-ui--location {
+	opacity:0;
+	visibility:hidden;
+	-webkit-transition:opacity .2s ease 0s, visibility 0s linear .2s;
+	transition:opacity .2s ease 0s, visibility 0s linear .2s;
+}
+.contact .search-ui .search-ui--location { 
+	opacity:1;
+	visibility:visible;
+	-webkit-transition:opacity .2s ease .2s, visibility 0s linear 0s;
+	transition:opacity .2s ease .2s, visibility 0s linear 0s;
+}
+.contact .search-ui .search-ui--location input{
+	font-size:1rem;
+	font-style:normal;
+	font-family:"whitney_bookregular";
+	font-weight:500;
+	text-transform:none;
+	/*border:0;*/
+	/*border-bottom:2px solid #0ed59a;*/
+	/*padding:0 1.2em;*/
+	height:58px;
+	background-color:#FFF;;
+	box-shadow:none;
+	margin-bottom:0;
+	border:none;
+}
+.contact .search-ui .search-ui--location input.tt-hint {
+	border-color:inherit;
+	color:#0c273c;
+}
+.contact .search-ui .search-ui--location input::-webkit-input-placeholder {
+	font-size:1rem;
+	font-style:normal;
+	font-family:"whitney_bookregular";
+	font-weight:500;
+	text-transform:none;
+	color:#0c273c;
+}
+.contact .search-ui .search-ui--location input::-moz-placeholder {
+	font-size:1rem;
+	font-style:normal;
+	font-family:"whitney_bookregular";
+	font-weight:500;
+	text-transform:none;
+	color:#0c273c;
+}
+.contact .search-ui .search-ui--location input:-ms-input-placeholder {
+	font-size:1rem;
+	font-style:normal;
+	font-family:"whitney_bookregular";
+	font-weight:500;
+	text-transform:none;
+	color:#0c273c;
+}
+.contact .search-ui .search-ui--location input::placeholder {
+	font-size:1rem;
+	font-style:normal;
+	font-family:"whitney_bookregular";
+	font-weight:500;
+	text-transform:none;
+	color:#0c273c;
+}
+.contact .search-ui .search-ui--location>input,.contact .search-ui .search-ui--location .twitter-typeahead {
+	font-size:1rem;
+	font-style:normal;
+	font-family:"whitney_bookregular";
+	font-weight:500;
+	text-transform:none;
+	color:#0c273c;
+	/*width:calc(100% - 20px);*/
+	vertical-align:top;
+	/*margin-right:20px;*/
+	display:inline-block;
+}
+.contact .search-ui .search-ui--location>input .tt-menu,.contact .search-ui .search-ui--location .twitter-typeahead .tt-menu {
+	margin-left:-74px;
+	width:120%;
+	z-index:20 !important;
+	margin-top:-3px;
+	border-top:1px solid #CCC;
+}
+.contact .search-ui .search-ui--location>input .tt-menu .no-results,.contact .search-ui .search-ui--location>input .tt-menu .tt-suggestion,.contact .search-ui .search-ui--location .twitter-typeahead .tt-menu .no-results,.contact .search-ui .search-ui--location .twitter-typeahead .tt-menu .tt-suggestion {
+	width:100%;
+	padding:.8em 1.2em;
+	text-transform:lowercase;
+	background-color:#fff;
+	cursor:pointer;
+}
+.contact .search-ui .search-ui--location>input .tt-menu .no-results,.contact .search-ui .search-ui--location>input .tt-menu .tt-suggestion:last-child,.contact .search-ui .search-ui--location .twitter-typeahead .tt-menu .no-results,.contact .search-ui .search-ui--location .twitter-typeahead .tt-menu .tt-suggestion:last-child {
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.contact .search-ui .search-ui--location>input .tt-menu .no-results:hover,.contact .search-ui .search-ui--location>input .tt-menu .tt-suggestion:hover,.contact .search-ui .search-ui--location .twitter-typeahead .tt-menu .no-results:hover,.contact .search-ui .search-ui--location .twitter-typeahead .tt-menu .tt-suggestion:hover {
+	background-color:#e5e8e8;;
+	color:#0c273c;
+}
+.contact .search-ui .search-ui--location>input .tt-menu .no-results.tt-cursor,.contact .search-ui .search-ui--location>input .tt-menu .tt-suggestion.tt-cursor,.contact .search-ui .search-ui--location .twitter-typeahead .tt-menu .no-results.tt-cursor,.contact .search-ui .search-ui--location .twitter-typeahead .tt-menu .tt-suggestion.tt-cursor{
+	background-color:#F1FBF8;
+	color:#0ed59a;
+}
+.contact .search-ui .search-ui--location>input .tt-menu .no-results .tt-highlight,.contact .search-ui .search-ui--location>input .tt-menu .tt-suggestion .tt-highlight,.contact .search-ui .search-ui--location .twitter-typeahead .tt-menu .no-results .tt-highlight,.contact .search-ui .search-ui--location .twitter-typeahead .tt-menu .tt-suggestion .tt-highlight {
+	background-color:#F1FBF8;
+	font-weight:900;
+}
+.contact .search-ui .search-ui--location>input .tt-menu .no-results:hover .tt-highlight,.contact .search-ui .search-ui--location>input .tt-menu .tt-suggestion:hover .tt-highlight,.contact .search-ui .search-ui--location .twitter-typeahead .tt-menu .no-results:hover .tt-highlight,.contact .search-ui .search-ui--location .twitter-typeahead .tt-menu .tt-suggestion:hover .tt-highlight{
+	color:#e5e8e8;
+}
+.contact .search-ui .search-ui--location>input .tt-menu .no-results,.contact .search-ui .search-ui--location .twitter-typeahead .tt-menu .no-results{
+	white-space:normal;
+}

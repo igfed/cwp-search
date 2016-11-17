@@ -1,0 +1,64 @@
+%svg-common {
+	background: url(/en/images/corp/svg/social-sprite.svg) no-repeat;
+}
+
+.svg--soc-facebook {
+	@extend %svg-common;
+	background-position: 99.95283018867924% 0;
+}
+
+.svg--soc-facebook-dims {
+	width: 100px;
+	height: 100px;
+}
+
+.svg--soc-instagram {
+	@extend %svg-common;
+	background-position: 99.95283018867924% 100%;
+}
+
+.svg--soc-instagram-dims {
+	width: 100px;
+	height: 100px;
+}
+
+.svg--soc-linkedin {
+	@extend %svg-common;
+	background-position: 46.684498065103575% 100%;
+}
+
+.svg--soc-linkedin-dims {
+	width: 101.42px;
+	height: 100px;
+}
+
+.svg--soc-stumbleupon {
+	@extend %svg-common;
+	background-position: 57.10540182759905% 0;
+}
+
+.svg--soc-stumbleupon-dims {
+	width: 131.579px;
+	height: 100px;
+}
+
+.svg--soc-twitter {
+	@extend %svg-common;
+	background-position: 0 100%;
+}
+
+.svg--soc-twitter-dims {
+	width: 123.051px;
+	height: 100px;
+}
+
+.svg--soc-youtube {
+	@extend %svg-common;
+	background-position: 0 0;
+}
+
+.svg--soc-youtube-dims {
+	width: 133.296px;
+	height: 100px;
+}
+

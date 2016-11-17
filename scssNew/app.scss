@@ -1,0 +1,57 @@
+//foundation**************************
+
+@import "settings"; //colors, fonts, basics defined here
+
+@import "foundation";
+
+//@import "foundation/functions";
+
+//core partials**************************
+//mixins
+@import "mixins"; // functions add here to do lifting
+
+@import "fonts"; // webfont definitions etc.
+
+//base
+@import "panels"; // color blocks
+@import "helper"; // 
+@import "buttons"; // buttons
+@import "typography"; // type, colors and set or overrides etc
+
+//layout
+@import "layout"; // media query breakpoints
+@import "media-queries";  // specfic pixel pushing
+
+//certain elements need to to things at certain breakpoints 
+//please do them here @layout or @media-queries
+
+//Modules**************************
+//page specific
+@import "home"; // home page stuff
+@import "serp";
+@import "timeline";
+@import "alert-box"; //primary used for return to advisor at top.
+
+@import "slick-custom";
+
+//sections **
+//header
+@import "header";
+
+//nav
+//@import "global-navigation";
+@import "localnavigation"; // in page navigation
+
+//search
+//@import "serpoffcanvas"; // search results styles
+@import "advisor-search"; // search advisor input styles
+
+
+//footer
+@import "footer"; // footer
+@import "social-media"; // social media list
+@import "share-this"; // share this
+
+
+@import "client-res"; //client resources
+@import "typography-updated"; // type, colors and set or overrides etc

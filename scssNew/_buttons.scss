@@ -1,0 +1,107 @@
+
+.radius-right-side {
+  @include button(
+    // $padding - Used to build padding for buttons Default: $button-med or rem-calc(12)
+    //$padding,
+    // Primary color set in settings file. Default: $primary-color.
+    //$bg,
+    // If true, set to button radius which is $global-radius or explicitly set radius amount in px (ex. $radius:10px). Default:false.
+          $radius: 0 5px 5px 0 // We can set $full-width:true to remove side padding extend width. Default:false
+    //$full-width,
+    // We can set $disabled:true to create a disabled transparent button. Default:false
+    //$disabled,
+    // $is-input - <input>s and <button>s take on strange padding. We added this to help fix that. Default:false
+    //$is-input
+  );
+}
+
+//used on the videos module will need to customize to make it global
+
+//future use?
+.igblue-button {
+  @include button(
+    // $padding - Used to build padding for buttons Default: $button-med or rem-calc(12)
+          $padding: rem-calc(12),
+            // Primary color set in settings file. Default: $primary-color.
+          $bg: $blue,
+            // If true, set to button radius which is $global-radius or explicitly set radius amount in px (ex. $radius:10px). Default:false.
+            //$radius
+            // We can set $full-width:true to remove side padding extend width. Default:false
+          $full-width: true,
+            // We can set $disabled:true to create a disabled transparent button. Default:false
+          $disabled: false
+            // $is-input - <input>s and <button>s take on strange padding. We added this to help fix that. Default:false
+          //,$is-input: false
+  );
+  line-height: 1em;
+}
+
+.postfix.button.advisor {
+  line-height: 2.5;
+}
+
+.refine-search-button-group-class {
+  @include button-group-container();
+  .refine-search-button {
+    @include button();
+  }
+  & > li {
+    @include button-group-style();
+  }
+
+}
+
+a.already-client-split-button {
+  color: $grey;
+
+  &:hover {
+    color: $orange;
+  }
+}
+
+.already-client-split-button {
+  @include split-button(
+    // Type of padding to apply. Default: medium.
+    // Options: tiny, small, medium, large.
+          $padding: large,
+            // Color of the triangle. Default: $split-button-pip-color.
+          $pip-color: $grey,
+            // Border color of button divider. Default: $primary-color.
+          $span-border: $grey,
+            // Apply base style to split button. Default: true.
+          $base-style: true
+  );
+  position: relative;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  padding-left: .75rem;
+  padding-right: 4.5rem !important; //override split button stuff
+  border: 1px solid $light-grey;
+  top: 20px;
+  text-transform: uppercase;
+  font-size: .8rem;
+  background-color: $white;
+  color: $light-grey;
+
+  .split {
+    color: $grey;
+    &:hover {
+      color: $orange !important;
+    }
+  }
+  span {
+    border-left-color: $light-grey;
+  }
+}
+
+.rotatingtext p a.button {
+  border-radius: $global-radius;
+}
+
+.white-panel p a.button {
+  color: $white;
+}
+
+p.button a {
+  color: $white;
+}

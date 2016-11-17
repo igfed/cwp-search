@@ -1,0 +1,16 @@
+@import "../slick/slick.scss";
+
+.slick-video-toggles {
+	@include grid-row();
+
+	.slick-toggle {
+		@include grid-column(12);
+		@media #{$medium-up} {
+			@include grid-column(4);
+		}
+
+		p, h6 {
+			color: black;
+		}
+	}
+}

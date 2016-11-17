@@ -1,0 +1,50 @@
+//center ul content in div
+.footer-bottom .white-panel.clearfix {
+	text-align: center;
+}
+
+.social-media {
+	display: inline-block;
+
+}
+.social-media ul {
+	margin: 0 auto;
+    display: block;
+    width: auto;
+    display: inline-block;
+}
+.social-media ul li {
+	background-image: none;
+    float: left;
+    list-style-type: none;
+	margin-left: 5px;
+   // padding: 5px 0 0 5px;
+    line-height: 1em;
+}
+.social-media ul li.social-media {
+    margin-left: 0;
+    padding-left: 0;
+    line-height: 2em;
+}
+.social-media ul li a {
+	border-bottom: medium none;
+    color: #999999;
+    height: 16px;
+    line-height: 0;
+    padding: 0 10px 0 10px;
+    text-decoration: none;
+}
+.twitter, .facebook, .linkedin, .stumbleupon, .email {
+    background-position: 0 0;
+    display: block;
+}
+  
+.social-media {
+    img{
+        width:30px;  
+        height: 30px;
+    }
+}
+
+
+

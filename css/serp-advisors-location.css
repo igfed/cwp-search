@@ -1,0 +1,305 @@
+.advisor-card {
+  display: block;
+  padding: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 1em 0 0 0;
+  transition: opacity 250ms ease; }
+  .advisor-card.hide {
+    opacity: 0; }
+  .advisor-card.placeholder {
+    opacity: 0.25; }
+    .advisor-card.placeholder .name-address .name,
+    .advisor-card.placeholder .name-address .title,
+    .advisor-card.placeholder .name-address .address *,
+    .advisor-card.placeholder .contact .phone {
+      cursor: default; }
+      .advisor-card.placeholder .name-address .name:after,
+      .advisor-card.placeholder .name-address .title:after,
+      .advisor-card.placeholder .name-address .address *:after,
+      .advisor-card.placeholder .contact .phone:after {
+        display: inline-block;
+        content: '';
+        width: 85%;
+        background-color: #ddd;
+        height: 0.2em;
+        margin-top: 0.4em; }
+    .advisor-card.placeholder a {
+      cursor: default; }
+  .advisor-card:first-child {
+    margin-top: 0; }
+  .advisor-card .advisor, .advisor-card .team {
+    padding: 1em; }
+  .advisor-card .advisor {
+    position: relative; }
+    .advisor-card .advisor-photo {
+      margin-right: 2em;
+      /*max-width: 6em;*/
+      display: block;
+      float: left;
+      height: 144px;
+      width: 144px;
+      border-radius: 50%;
+      overflow: hidden; }
+      .advisor-card .advisor-photo img {
+        max-width: 100%;
+        width: 144px;
+        /*height: 144px;*/
+        /*display: block;*/
+        /*background-repeat: no-repeat;*/
+        /* background-position: center center;*/
+        /* background-color: transparent;*/
+        /* background-size: contain;*/ }
+        .advisor-card .advisor-photo img.m {
+          background-image: url(../img/silhouette-m.png); }
+        .advisor-card .advisor-photo img.f {
+          background-image: url(../img/silhouette-f.png); }
+      @media only screen and (max-width: 480px) {
+        .advisor-card .advisor-photo {
+          float: none;
+          margin: 0 auto 1em auto; } }
+    .advisor-card .advisor .name {
+      margin-bottom: 0;
+      font-family: "whitney_lightregular";
+      font-size: 1.75rem;
+      color: #0c273c; }
+    .advisor-card .advisor h3 a {
+      color: #0c273c; }
+    .advisor-card .advisor .title {
+      font-family: "whitney_scmedium";
+      font-size: 1.375rem;
+      color: #0c273c;
+      margin-top: 1.5em; }
+    .advisor-card .advisor .address {
+      color: #0c273c;
+      font-style: normal;
+      font-family: "whitney_bookregular";
+      font-size: 1.125rem;
+      margin-top: 0; }
+      .advisor-card .advisor .address .street, .advisor-card .advisor .address .location {
+        display: block; }
+      .advisor-card .advisor .address .street {
+        margin-right: 1em; }
+      .advisor-card .advisor .address .location {
+        white-space: nowrap; }
+    .advisor-card .advisor-details {
+      margin-left: 8em;
+      display: block;
+      clear: right; }
+      @media only screen and (max-width: 480px) {
+        .advisor-card .advisor-details {
+          margin-left: 0; } }
+      .advisor-card .advisor-details .name-address {
+        width: 58%;
+        padding-right: 1em;
+        font-size: 0.9em; }
+        .advisor-card .advisor-details .name-address .name {
+          margin-bottom: 0;
+          font-family: "whitney_lightregular";
+          font-size: 1.75rem;
+          color: #0c273c; }
+        .advisor-card .advisor-details .name-address h3 a {
+          color: #0c273c; }
+        .advisor-card .advisor-details .name-address .title {
+          font-family: "whitney_scmedium";
+          font-size: 1.375rem;
+          color: #0c273c;
+          margin-top: 1.5em; }
+        .advisor-card .advisor-details .name-address .address {
+          color: #0c273c;
+          font-style: normal;
+          font-family: "whitney_bookregular";
+          font-size: 1.125rem;
+          margin-top: 0; }
+          .advisor-card .advisor-details .name-address .address .street, .advisor-card .advisor-details .name-address .address .location {
+            display: block; }
+          .advisor-card .advisor-details .name-address .address .street {
+            margin-right: 1em; }
+          .advisor-card .advisor-details .name-address .address .location {
+            white-space: nowrap; }
+      .advisor-card .advisor-details .contact {
+        width: 34%; }
+        .advisor-card .advisor-details .contact a {
+          display: block;
+          line-height: 2.5;
+          white-space: nowrap;
+          color: #E9851F;
+          /*&:before {
+            margin-right: 0.5em;
+            font-size: 2em;
+            line-height: 1;
+            vertical-align: middle;
+            display: inline-block;
+
+            background-repeat: no-repeat;
+            background-color: transparent;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAwCAYAAAALiLqjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAaBJREFUeNrslu1tgzAQhp2KATxCR4AN3A3oBowAE0AngA2ACVAnYATYAJjAbODi1Einiwlg7B+tctKJQOB9fOY+IOS/m7946Eo8WlwoD12svAMAvji1JR4CUQ4grS3AAEThb+mxDYBAzhHwlHkH75uVf9qIoNVEYPyC3zTXvtF5pVZvzSiKoHFRZCWCUNsAirIncxFFhqJgmkU0aiG+KQS3C9iTGvBfZwp4R1u1ijWaKs9NIUxT3VuthNlo3bgIOTq/NB/4DuRyzeA5AYsxsj3tWhfCL/uDdlOplzvSTzzVFZkjAH0Y+nmeE983675935MkSfTNjFIq1mPXdeKsyWegBmx+d0CWZSKKIiMIFC/LUjDG9ABpZyFYXNpTAIQs70Jwzk+JHwIcgWyJHwY8g0Bx3XMQ4B1NvyAISJqmZJomUhQFmeffj71xHI/N3K0tkisNw/BhXMZxbL5FukySR3nPUohiGAbzl3w2TaXwGtVumpoWGoZoAVdbBYTAVnFTgNZGs6vrmlRVBS997H25XfV7HchE/nI0D8bXTN+1HwEGAPNuRLHrzARAAAAAAElFTkSuQmCC);
+            content: '';
+            width: 24px;
+            height: 24px;
+          }*/ }
+          .advisor-card .advisor-details .contact a:hover {
+            text-decoration: underline; }
+          .advisor-card .advisor-details .contact a.phone:before {
+            background-position: center 0; }
+          .advisor-card .advisor-details .contact a.email:before {
+            background-position: center -24px; }
+          @media only screen and (max-width: 480px) {
+            .advisor-card .advisor-details .contact a {
+              line-height: 1.75; }
+              .advisor-card .advisor-details .contact a:before {
+                display: none; } }
+      .advisor-card .advisor-details .name-address, .advisor-card .advisor-details .contact {
+        display: inline-block;
+        line-height: 1.1;
+        vertical-align: top; }
+        @media only screen and (max-width: 767px) {
+          .advisor-card .advisor-details .name-address, .advisor-card .advisor-details .contact {
+            display: block;
+            width: 100%;
+            margin-bottom: 1em;
+            padding-right: 0; } }
+      .advisor-card .advisor-details .websiteLink {
+        margin-top: 1em;
+        display: block;
+        float: right; }
+        .advisor-card .advisor-details .websiteLink a {
+          display: inline-block;
+          border-radius: 5px;
+          border: none;
+          color: #0d263c;
+          background-color: #0ed59a;
+          padding: 0.875em 1.375em;
+          font-family: "whitney_scmedium";
+          font-size: 1rem; }
+          .advisor-card .advisor-details .websiteLink a:hover {
+            background-color: #E9851F;
+            color: white; }
+          @media only screen and (max-width: 480px) {
+            .advisor-card .advisor-details .websiteLink a {
+              display: block;
+              text-align: center;
+              padding-left: 0;
+              padding-right: 0; } }
+    .advisor-card .advisor .columns-no-left-gutter {
+      padding-left: 0; }
+  .advisor-card .team {
+    border-top: 1px solid #ccc;
+    background-color: #eee;
+    padding-top: 0.5em; }
+    .advisor-card .team .title {
+      line-height: 1.2;
+      font-size: 0.9em;
+      color: #444; }
+      .advisor-card .team .title:hover {
+        text-decoration: underline; }
+    .advisor-card .team ul.team-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0.75em 0 0 0; }
+      .advisor-card .team ul.team-list > li {
+        margin: 0 0 1em 0.5em; }
+        .advisor-card .team ul.team-list > li:last-child {
+          margin-bottom: 0; }
+        .advisor-card .team ul.team-list > li .name {
+          text-transform: uppercase;
+          margin-bottom: 0; }
+          .advisor-card .team ul.team-list > li .name a {
+            color: #444; }
+            .advisor-card .team ul.team-list > li .name a:hover {
+              color: #333; }
+        .advisor-card .team ul.team-list > li .contact {
+          font-size: 0.9em;
+          display: block; }
+          .advisor-card .team ul.team-list > li .contact > * {
+            display: inline-block;
+            white-space: nowrap;
+            margin-right: 1em; }
+            .advisor-card .team ul.team-list > li .contact > *:last-child {
+              margin-right: 0; }
+          .advisor-card .team ul.team-list > li .contact a {
+            color: #666; }
+            .advisor-card .team ul.team-list > li .contact a:hover {
+              text-decoration: underline; }
+            .advisor-card .team ul.team-list > li .contact a.email {
+              text-overflow: ellipsis;
+              width: 100%;
+              overflow: hidden; }
+
+/* hello */
+.search-container input[data-toggle] {
+  display: none; }
+
+.search-container .button {
+  background-color: #ddd;
+  color: black;
+  margin: 0; }
+
+.search-container input[data-toggle]:checked + label,
+.search-container input[data-toggle]:checked + label:active {
+  background-color: #00416F;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) inset, 0 1px 2px rgba(0, 0, 0, 0.05); }
+
+.search-container .button-group.toggle {
+  font-size: 0; }
+  .search-container .button-group.toggle li {
+    font-size: 1rem;
+    margin: 0; }
+
+.search-container .button-group.toggle,
+.search-container input.search-box {
+  display: inline-block; }
+
+.search-container input.search-box {
+  width: auto;
+  font-size: 0.9em;
+  padding: 6px 8px; }
+
+#location-find-advisor-container #results-container {
+  position: relative; }
+  #location-find-advisor-container #results-container .loading {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; }
+    #location-find-advisor-container #results-container .loading .loading-modal {
+      display: block;
+      position: absolute;
+      top: 0;
+      z-index: 2;
+      background-color: white;
+      width: 300px;
+      left: 50%;
+      box-shadow: 0 1px 1px #999;
+      border: 1px solid #999;
+      padding: 2em 0;
+      margin: 3em 0 1em -150px;
+      text-align: center; }
+      #location-find-advisor-container #results-container .loading .loading-modal .loading-spinner {
+        display: block;
+        height: 64px;
+        width: 64px;
+        margin: 1em auto 0 auto;
+        background: transparent url(../img/loading-spinner.gif) no-repeat center center; }
+
+#location-find-advisor-container.loading #results-container .loading {
+  display: block; }
+
+#location-find-advisor-container .more-container {
+  display: block; }
+  #location-find-advisor-container .more-container .more-button {
+    background-color: #ddd;
+    color: black;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    border-radius: 3px;
+    line-height: 3;
+    padding: 0;
+    margin: 1em auto; }
