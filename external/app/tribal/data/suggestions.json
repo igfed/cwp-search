@@ -1,0 +1,8 @@
+[
+	{"id":"0001", "name": "SANJAY JAGOTA", "location": "Ajax", "postal": "L1T 3J2"},
+	{"id":"0002", "name": "NEIL GAYLOR", "location": "Etobicoke", "postal": "M9C 4Z4"},
+	{"id":"0003", "name": "RICK SPENCE", "location": "Brampton", "postal": "L6V 1A3"},
+	{"id":"0004", "name": "LYNN DAVEY", "location": "Orangeville", "postal": "L9W 5G4"},
+	{"id":"0005", "name": "WAYNE SARETSKY", "location": "Saskatoon", "postal": "S7S 0A5"},
+	{"id":"0006", "name": "MICHEL GIGUERE", "location": "Sherbrooke", "postal": "J1L 1P8"}
+]
