@@ -26,39 +26,26 @@ function getCoordinates() {
 
 // Process the data
 var consultants = new Bloodhound({
-  datumTokenizer: Bloodhound.tokenizers.obj.whitespace("name"),
+  // datumTokenizer: Bloodhound.tokenizers.obj.whitespace("name"),
+  datumTokenizer: Bloodhound.tokenizers.whitespace,
   queryTokenizer: Bloodhound.tokenizers.whitespace,
   prefetch: '../external/app/tribal/data/names.json'
 });
 var locations = new Bloodhound({
-  datumTokenizer: Bloodhound.tokenizers.obj.whitespace("location"),
+  datumTokenizer: Bloodhound.tokenizers.whitespace,
   queryTokenizer: Bloodhound.tokenizers.whitespace,
   prefetch: '../external/app/tribal/data/cities.json'
 });
 var postalCode = new Bloodhound({
-  datumTokenizer: Bloodhound.tokenizers.obj.whitespace('postal'),
+  datumTokenizer: Bloodhound.tokenizers.whitespace,
   queryTokenizer: Bloodhound.tokenizers.whitespace,
   prefetch: '../external/app/tribal/data/postal-code.json'
 });
 
 $(function() {
-	// Find current location
-	var pos = getCoordinates();
-	
-	$('.typeahead').typeahead({
-		highlight: true
-	},
-	{
-		name: 'consultants',
-		source: consultants
-	},
-	{
-		name: 'locations',
-		source: locations
-	},
-	{
-		name: 'postalCode',
-		source: postalCode
-	});
-
+	$('.typeahead').typeahead({ highlight: true },
+		{ name: 'consultants', source: consultants },
+		{ name: 'locations', source: locations },
+		{ name: 'postalCode', source: postalCode}
+	);
 });
