@@ -24,9 +24,12 @@
             				<span class="prefix"><img src="/en/images/corp/svg/search-icon-in-search-box.png" width="20" height="23" /></span>
             			</div>
             			<div class="small-10 columns search-ui" data-searchtype="location">
-                            <div class="search-ui--location">
-                                <label class="show-for-sr" for="FindAnAdvisor">Find an advisor</label>
-                                <input class="typeahead itf_location itf_name" type="text" placeholder="Find an advisor" name="Search" autocomplete="off" spellcheck="false" id="FindAnAdvisor">
+                            <div class="search-ui--location" 
+                                data-cities="/external/app/tribal/data/cities-en.json"
+                                data-advisor-search-url-location="/en/search?q="
+                                data-advisor-search-url-name="en/search?f=advisors&q="
+                            >
+                                <input class="typeahead itf_location itf_name" type="text" placeholder="Enter name or city" name="Search" autocomplete="off" spellcheck="false" dir="auto" data-copyNoResults="Sorry, there are no advisors in the city specified.<br>Please enter your next nearest town/city.">
                             </div>
                         </div>
                         <div class="small-1 columns adv-search-right">
@@ -65,30 +68,12 @@
         	<div class="small-12 columns">
             	<div id="location-find-advisor-container" class="location-find-advisor-container" data-query="toronto" data-search-action="/en/scripts/corp/googlereturnjson.aspx">
                 	<div id="results-container">
-                    	<article class="advisor-card">
-                        	<div id="template-results-container" class="advisor clearfix">
-                            	<div class="advisor-photo">
-									<img class="m" width="220" height="248" data-src="" src="http://www.investorsgroup.com//en/images/ig-cwpb/profilePhotos/22329.PNG">
-								</div>
-                                <div class="advisor-details">
-                            		<div class="name-address">
-                                        <h3 class="name">
-                                        	<a href="http://www.investorsgroup.com/en/rob.zeltzer/home">Rob Zeltzer</a>
-                                        </h3>
-                                        <h5 class="title">Division Director</h5>
-                                        <address class="address">
-                                        	<!--<span class="street">601-2345 Yonge Street</span>-->
-                                        	<span class="location">Toronto, ON</span>
-                                        </address>
-                                    </div>
-                                    <div class="contact">
-                                        <div class="websiteLink">
-                                        	<a href="http://www.investorsgroup.com/en/rob.zeltzer/home">View profile</a>
-                                    	</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
+                        <div class="loading">
+                        	<div class="loading-modal">
+                        		<div class="loading-text">Loading results&hellip;</div>
+                        		<div class="loading-spinner"></div>
+                        	</div>
+                        </div>
                         <article class="advisor-card">
                         	<div id="template-results-container" class="row advisor">
                             	<div class="small-12 medium-2 columns columns-no-left-gutter">
@@ -114,14 +99,47 @@
                                             <li><a href="#">123-456-7890</a></li>
                                         </ul>
                                 </div>
-                                <div class="small-12 medium-2 columns">
+                                <div class="small-12 medium-2 columns advisor-details">
                                 	<div class="websiteLink">
                                         <a href="http://www.investorsgroup.com/en/rob.zeltzer/home" class="button">View profile</a>
                                     </div>
                                 </div>
                             </div>
                         </article>
+                        <article class="advisor-card">
+                            <div id="template-results-container" class="row advisor">
+                                <div class="small-12 medium-2 columns columns-no-left-gutter">
+                                    <div class="advisor-photo">
+                                        <img
+                                            width="220"
+                                            height="248"
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII="
+                                            data-src="" />
+                                    </div>
+                                </div>
+                                <div class="small-12 medium-5 columns">
+                                    <h3 class="name">
+                                        <a href="#"></a>
+                                    </h3>
+                                    <h5 class="title"></h5>
+                                    <address class="address">
+                                        <span class="location"></span>
+                                    </address>
+                                </div>
+                                <div class="small-12 medium-3 columns">
+                                        <button href="#" class="button dropdown"></button>
+                                </div>
+                                <div class="small-12 medium-2 columns advisor-details">
+                                    <div class="websiteLink">
+                                        <a href="#"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
                     </div>
+                    <div class="more-container" style="display: none;">
+                		<button class="more-button">See more</button>
+            		</div>
                 </div>
             </div>
         </div>
@@ -138,9 +156,45 @@
     <script>
     $(document).foundation();
 	</script>
-    <script src="js/vendor/typeahead.bundle.min.js"></script>
-    <script src="js/main.js"></script>
-
+	<script type="text/html" id="advisor-template">
+		<article class="advisor-card">
+			<div id="template-results-container" class="row advisor">
+				<div class="small-12 medium-2 columns columns-no-left-gutter">
+					<div class="advisor-photo">
+						<img
+                            width="220"
+                            height="248"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII="
+                            data-src="" />
+					</div>
+				</div>
+				<div class="small-12 medium-5 columns name-address">
+					<h3 class="name">
+						<a href="#"></a>
+					</h3>
+					<h5 class="title"></h5>
+					<address class="address">
+						<span class="location"></span>
+					</address>
+				</div>
+				<div class="small-12 medium-3 columns">
+						<button href="#" data-dropdown="drop1" aria-controls="drop1" aria-expanded="false" class="button dropdown">Contact info</button><br>
+						<ul id="drop1" data-dropdown-content class="f-dropdown contact" aria-hidden="true">
+							<li class="street"><a href="#"></a></li>
+							<li class="email"><a href="#"></a></li>
+							<li class="phone"><a href="#"></a></li>
+						</ul>
+				</div>
+				<div class="small-12 medium-2 columns advisor-details">
+					<div class="websiteLink">
+						<a href="#">View profile</a>
+					</div>
+				</div>
+			</div>
+		</article>
+    </script>
+    <script src="/en/js/corp/jquery.unveil.js"></script>
+    <script src="/external/app/serp/js/serp-advisors-location.js"></script>
 </body>
 
 </html>
