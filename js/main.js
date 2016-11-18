@@ -34,7 +34,6 @@ $(function() {
 	var pos = getCoordinates();
 	
 	$('.typeahead').typeahead({
-		hint: true,
 		minLength: 3
 	},
 	{

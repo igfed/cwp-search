@@ -24,12 +24,9 @@
             				<span class="prefix"><img src="/en/images/corp/svg/search-icon-in-search-box.png" width="20" height="23" /></span>
             			</div>
             			<div class="small-10 columns search-ui" data-searchtype="location">
-                            <div class="search-ui--location" 
-                                data-cities="/external/app/tribal/data/cities-en.json"
-                                data-advisor-search-url-location="/en/search?q="
-                                data-advisor-search-url-name="en/search?f=advisors&q="
-                            >
-                                <input class="typeahead itf_location itf_name" type="text" placeholder="Enter name or city" name="Search" autocomplete="off" spellcheck="false" dir="auto" data-copyNoResults="Sorry, there are no advisors in the city specified.<br>Please enter your next nearest town/city.">
+                            <div class="search-ui--location">
+                                <label class="show-for-sr" for="FindAnAdvisor">Find an advisor</label>
+                                <input class="typeahead itf_location itf_name" type="text" placeholder="Find an advisor" name="Search" autocomplete="off" spellcheck="false" id="FindAnAdvisor">
                             </div>
                         </div>
                         <div class="small-1 columns adv-search-right">
