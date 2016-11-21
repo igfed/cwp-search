@@ -25,16 +25,16 @@ function getCoordinates() {
 
 
 // Process the data
+var locations = new Bloodhound({
+  datumTokenizer: Bloodhound.tokenizers.whitespace,
+  queryTokenizer: Bloodhound.tokenizers.whitespace,
+  prefetch: '../external/app/tribal/data/cities.json'
+});
 var consultants = new Bloodhound({
   // datumTokenizer: Bloodhound.tokenizers.obj.whitespace("name"),
   datumTokenizer: Bloodhound.tokenizers.whitespace,
   queryTokenizer: Bloodhound.tokenizers.whitespace,
   prefetch: '../external/app/tribal/data/names.json'
-});
-var locations = new Bloodhound({
-  datumTokenizer: Bloodhound.tokenizers.whitespace,
-  queryTokenizer: Bloodhound.tokenizers.whitespace,
-  prefetch: '../external/app/tribal/data/cities.json'
 });
 var postalCode = new Bloodhound({
   datumTokenizer: Bloodhound.tokenizers.whitespace,
