@@ -45,19 +45,17 @@ function getCoordinates() {
 }
 
 // Get the results
-function getSearchResults() {
-	var request = $.ajax({
-		url: modelUrl,
-		// data: ,
-		dataType: "string"
-	});
-
-	request.done(function( msg ) {
-		var result = JSON.parse(tempModel)
+function getSearchResults(e) {
+	e.preventDefault();
+	var query = $('#FindAnAdvisor').val();
+	console.log(query);
+	$.getJSON(modelUrl, query)
+	.always()
+	.done(function( data ) {
+		var result = JSON.parse(data);
 		displaySearchResults(result);
-	});
-
-	request.fail(function( result ) {
+	})
+	.fail(function( result ) {
 		console.log('Data could not be retrieved, please try again', result.status + ' ' + result.statusText);
 		var result = JSON.parse(tempModel)
 		displaySearchResults(result);
@@ -65,20 +63,11 @@ function getSearchResults() {
 }
 
 function displaySearchResults( json ) {
-	//Grab the inline template
 	var template = document.getElementById('template').innerHTML;
-	//Parse it (optional, only necessary if template is to be used again)
 	Mustache.parse(template);
-
-	//Render the data into the template
-	console.log(json);
-	var rendered;
-	for (i=0; i< json.length-1; i++) {
-		rendered += Mustache.render(template, json[i]);
-	}
-
-	//Overwrite the contents of #target with the rendered HTML
-	$('#results-container').html(rendered);
+	var rendered = Mustache.render(template, json);
+	$('.office-search, .filter').removeClass('hide');
+	$('#results-container').removeClass('hide').html(rendered);
 }
 
 
@@ -91,5 +80,7 @@ $(function() {
 		{ name: 'locations', source: suggestions.locations },
 		{ name: 'postalCode', source: suggestions.postalCode }
 	);
-	getSearchResults();
+	$('#siteSearch').submit(function(e){
+		getSearchResults(e);
+	});
 });

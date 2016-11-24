@@ -17,35 +17,35 @@
 
             <!--Search-->
             <div class="icon-wrap">
-        <form id="siteSearch" class="search-form" onSubmit="return emptysearch_validateForm();" action="/en/search">
-            <div class="row contact section">
-                <div class="small-11 small-centered columns">
-                    <div class="row">
-                        <img src="images/find-an-advisor-icon.png" class="img__icon">
-                        <h1 class="text-center">Find an Advisor</h1>
-                        <p class="text-center">Our advisors can help no matter what financial situation you're in. Use this tool to set up your meeting today.</p>
-                    </div>
-                    <div class="row collapse">
-                        <div class="small-1 columns adv-search-left">
-                            <span class="prefix"><img src="images/search-icon-in-search-box.png" /></span>
-                        </div>
-                        <div class="small-10 columns search-ui" data-searchtype="location">
-                            <div class="search-ui--location">
-                                <label class="show-for-sr hide" for="FindAnAdvisor">Find an advisor</label>
-                                <input class="typeahead itf_location itf_name" type="text" placeholder="Find an advisor" name="Search" autocomplete="off" spellcheck="false" id="FindAnAdvisor">
+                <form id="siteSearch" class="search-form">
+                    <div class="row contact section">
+                        <div class="small-11 small-centered columns">
+                            <div class="row">
+                                <img src="images/find-an-advisor-icon.png" class="img__icon">
+                                <h1 class="text-center">Find an Advisor</h1>
+                                <p class="text-center">Our advisors can help no matter what financial situation you're in. Use this tool to set up your meeting today.</p>
+                            </div>
+                            <div class="row collapse">
+                                <div class="small-1 columns adv-search-left">
+                                    <span class="prefix"><button type="submit" value="Submit"><img src="images/search-icon-in-search-box.png" /></button></span>
+                                </div>
+                                <div class="small-10 columns search-ui" data-searchtype="location">
+                                    <div class="search-ui--location">
+                                        <label class="show-for-sr hide" for="FindAnAdvisor">Find an advisor</label>
+                                        <input class="typeahead itf_location itf_name" type="search" placeholder="Find an advisor" name="Search" autocomplete="off" spellcheck="false" id="FindAnAdvisor">
+                                    </div>
+                                </div>
+                                <div class="small-1 columns adv-search-right">
+                                    <span class="postfix"><button type="reset" value="Reset"><img src="images/find_an_advisor_close.png" alt="X" /></button></span>
+                                </div>
                             </div>
                         </div>
-                        <div class="small-1 columns adv-search-right">
-                            <span class="postfix"><button type="reset" value="Reset"><img src="images/find_an_advisor_close.png" alt="X" /></button></span>
-                        </div>
                     </div>
-                </div>
+                </form>
             </div>
-        </form>
-    </div>
 
             <!--Filter-->
-            <div class="section filter">
+            <div class="section filter hide">
               <div class="row">
                 <div class="medium-8 columns">
                   <p class="tp_21">Filter By</p>
@@ -70,7 +70,7 @@
             </div>
 
             <!--Office-->
-            <div class="section office-search info-toggle active" info-toggle-aria="true">
+            <div class="section office-search info-toggle hide" info-toggle-aria="true">
               <div class="row info-toggle-trigger">
                 <div class="small-3 medium-2 columns">
                   <img class="illustration" data-illustrationid="consultant-about" src="img/illustrations/consultant_webpage_open_icon_3C_191016.svg" alt="icon book and glasses">
@@ -276,12 +276,13 @@
 
             <!--Search Results-->
             <div class="section search-results">
-              <div class="row">
-                <div class="medium-4 columns">
-                  <p class="tp_08">24 results in Whitby, ON</p>
-                </div>
-              </div>
                 <script id="template" type="x-tmpl-mustache">
+                  <div class="row">
+                    <div class="medium-4 columns">
+                      <p class="tp_08">{{this.length}} results</p>
+                    </div>
+                  </div>
+                    {{#.}}
                     <div class="row">
                         <div class="small-5 medium-3 large-2 columns">
                             <div class="portrait">
@@ -338,6 +339,7 @@
                             <a class="outline-btn constrained" type="button" href="{{myInfo.ConsultantUrl}}">View Profile</a>
                         </div>
                     </div>
+                    {{#myConsultantTeam.length}}
                     <div class="row my-team">
                         <div class="medium-12 columns">
                           <p class="show-for-small-only">View All Team Members</p>
@@ -368,16 +370,17 @@
                             </div>
                         {{/myConsultantTeam}}
                     </div>
-                
+                    {{/myConsultantTeam.length}}
+                {{/.}}
+                <div class="row">
+                    <div class="medium-4 medium-centered">
+                        <a class="outline-btn secondary" type="button" href="#appointment-michael-scott">View More Results</a>
+                    </div>
+                </div>
                 </script>
-                <div id="results-container">
+                <div id="results-container" class="hide">
 
                 </div>
-              <div class="row">
-                <div class="medium-4 medium-centered">
-                  <a class="outline-btn secondary" type="button" href="#appointment-michael-scott">View More Results</a>
-                </div>
-              </div>
             </div>
 
             <!--18.Footer-->
