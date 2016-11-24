@@ -11036,8 +11036,8 @@ img.advisor {
   margin: 0 0 .25rem 0;
   overflow: hidden; }
 
-.icon-wrap .search-form {
-  padding-bottom: 25em; }
+.icon-wrap, .search-form, .body-content {
+  height: 100%; }
 
 span.prefix {
   background-color: #FFFFFF;
