@@ -1,34 +1,35 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="IGv2" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Consultant Pages</title>
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="css/serp-advisors-location.css"/>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
+        <script src="js/vendor/modernizr.js"></script>
+    </head>
+    <body>
+        <div class="body-content">
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Results - Find an advisor</title>
-    <link rel="stylesheet" href="css/app.css" />
-    <link rel="stylesheet" href="css/serp-advisors-location.css"/>
-    <script src="js/vendor/modernizr.js"></script>
-</head>
-
-<body>
-    <!-- Start Header -->
-
-    <!--#include file="includes/header.html" -->
-    <div class="icon-wrap">
+            <!--Search-->
+            <div class="icon-wrap">
         <form id="siteSearch" class="search-form" onSubmit="return emptysearch_validateForm();" action="/en/search">
             <div class="row contact section">
-            	<div class="small-11 small-centered columns">
+                <div class="small-11 small-centered columns">
                     <div class="row">
                         <img src="images/find-an-advisor-icon.png" class="img__icon">
                         <h1 class="text-center">Find an Advisor</h1>
                         <p class="text-center">Our advisors can help no matter what financial situation you're in. Use this tool to set up your meeting today.</p>
                     </div>
-            		<div class="row collapse">
-            			<div class="small-1 columns adv-search-left">
-            				<span class="prefix"><img src="images/search-icon-in-search-box.png" /></span>
-            			</div>
-            			<div class="small-10 columns search-ui" data-searchtype="location">
+                    <div class="row collapse">
+                        <div class="small-1 columns adv-search-left">
+                            <span class="prefix"><img src="images/search-icon-in-search-box.png" /></span>
+                        </div>
+                        <div class="small-10 columns search-ui" data-searchtype="location">
                             <div class="search-ui--location">
                                 <label class="show-for-sr hide" for="FindAnAdvisor">Find an advisor</label>
                                 <input class="typeahead itf_location itf_name" type="text" placeholder="Find an advisor" name="Search" autocomplete="off" spellcheck="false" id="FindAnAdvisor">
@@ -38,20 +39,357 @@
                             <span class="postfix"><button type="reset" value="Reset"><img src="images/find_an_advisor_close.png" alt="X" /></button></span>
                         </div>
                     </div>
-            	</div>
+                </div>
             </div>
         </form>
     </div>
-    
-    <!-- Footer -->
-    <!--#include file="includes/footer.html" -->
-    <!-- end of Footer -->
+
+            <!--Filter-->
+            <div class="section filter">
+              <div class="row">
+                <div class="medium-8 columns">
+                  <p class="tp_21">Filter By</p>
+                </div>
+                <div class="medium-3 columns">
+                  
+                <form>
+                <label>
+                  <span>Province</span>
+                  <select id="phoneType" name="phoneType" required="" aria-required="true">
+                          <option value=""></option>
+                          <option value="home">Ontario</option>
+                          <option value="mobile">British Columbia</option>
+                          <option value="office">Office</option>
+                  </select>
+                  <i aria-hidden="true" class="fa fa-exclamation-circle info-toggle-trigger"></i>
+              </label>
+              </form>
+
+                </div>
+              </div>
+            </div>
+
+            <!--Office-->
+            <div class="section office-search info-toggle active" info-toggle-aria="true">
+              <div class="row info-toggle-trigger">
+                <div class="small-3 medium-2 columns">
+                  <img class="illustration" data-illustrationid="consultant-about" src="img/illustrations/consultant_webpage_open_icon_3C_191016.svg" alt="icon book and glasses">
+                </div>
+                <div class="small-6 medium-3 columns">
+                  <p class="tp_08">3 Offices found</p>
+                </div>
+                <div class="small-2 medium-3 columns">
+                  <i class="fa fa-chevron-down"></i>
+                </div>
+              </div>
+              <div class="row info-toggle-content">
+                <div class="small-12 columns">
+                  <div class="row">
+                    <div class="small-4 medium-3 columns">
+                      <div class="maps">
+                        <a class="map-anchor">
+                            <div class="map-container">
+                                <div class="map-icon"></div>
+                                <div class="tp_22">View Map</div>
+                            </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="small-8 medium-3 columns">
+                      <p class="tp_07">200 Yorkland Blvd</p>
+                      <p class="tp_09">Toronto, ON, M2J 5C1</p>
+                      <p class="map-address" style="display:none">200 Yorkland Blvd, Toronto, ON, M2J 5C1</p>
+                    </div>
+
+                      <div class="row contact-buttons">
+                        <div class="small-6 medium-3 columns phone">
+                          <ul class="dropdown menu" data-dropdown-menu>
+                              <li>
+                                  <a class="outline-btn secondary small-icon phone dropdown-button" type="button">
+                                      <span class="hide-for-small-only">Contact Info</span>
+                                      <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Phone</span>
+                                  </a>
+                                  <ul class="menu">
+                                      <li class="hide-for-small-only emphasize">
+                                          <a href="mailto:a@b.com">Email me</a>
+                                      </li>
+                                      <li>
+                                          <a href="tel:+15555555555">
+                                              <strong>Main</strong>
+                                              <span>555-555-5555</span>
+                                          </a>
+                                      </li>
+                                      <li>
+                                          <a href="tel:+15555555555">
+                                              <strong>Direct</strong>
+                                              <span>555-555-5555</span>
+                                          </a>
+                                      </li>
+                                      <li>
+                                          <a href="tel:+15555555555">
+                                              <strong>Toll-Free</strong>
+                                              <span>555-555-5555</span>
+                                          </a>
+                                      </li>
+                                      <li>
+                                          <a href="tel:+15555555555">
+                                              <strong>Fax</strong>
+                                              <span>555-555-5555</span>
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </li>
+                          </ul>
+                        </div>
+                        <div class="small-6 show-for-small-only columns email-button">
+                        <a href="mailto:a@b.com" class="outline-btn secondary small-icon email" type="button"><span class="show-for-small-only"><i aria-hidden="true" class="fa fa-envelope"></i> Email</span></a>
+                        </div>
+                      </div>
+
+                        <div class="small-12 medium-3 columns">
+                          <a class="outline-btn constrained" type="button" href="#appointment-michael-scott">View Details</a>
+                        </div>
+                  </div>
+
+                <div class="row">
+                  <div class="medium-3 columns">
+                    <div class="maps">
+                      <a class="map-anchor">
+                          <div class="map-container">
+                              <div class="map-icon"></div>
+                              <div class="tp_22">View Map</div>
+                          </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="medium-3 columns">
+                    <p class="tp_07">200 Yorkland Blvd</p>
+                      <p class="tp_09">Toronto, ON, M2J 5C1</p>
+                      <p class="map-address" style="display:none">200 Yorkland Blvd, Toronto, ON, M2J 5C1</p>
+                  </div>
+                  <div class="medium-3 columns">
+                    <ul class="dropdown menu" data-dropdown-menu>
+                        <li>
+                            <a class="outline-btn secondary small-icon phone dropdown-button" type="button">
+                                <span class="hide-for-small-only">Contact Info</span>
+                                <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Phone</span>
+                            </a>
+                            <ul class="menu">
+                                <li class="hide-for-small-only emphasize">
+                                    <a href="mailto:a@b.com">Email me</a>
+                                </li>
+                                <li>
+                                    <a href="tel:+15555555555">
+                                        <strong>Main</strong>
+                                        <span>555-555-5555</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tel:+15555555555">
+                                        <strong>Direct</strong>
+                                        <span>555-555-5555</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tel:+15555555555">
+                                        <strong>Toll-Free</strong>
+                                        <span>555-555-5555</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tel:+15555555555">
+                                        <strong>Fax</strong>
+                                        <span>555-555-5555</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                  </div>
+                  <div class="medium-3 columns">
+                    <a class="outline-btn constrained" type="button" href="#appointment-michael-scott">View Details</a>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="medium-3 columns">
+                    <div class="maps">
+                      <a class="map-anchor">
+                          <div class="map-container">
+                              <div class="map-icon"></div>
+                              <div class="tp_22">View Map</div>
+                          </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="medium-3 columns">
+                    <p class="tp_07">200 Yorkland Blvd</p>
+                      <p class="tp_09">Toronto, ON, M2J 5C1</p>
+                      <p class="map-address" style="display:none">200 Yorkland Blvd, Toronto, ON, M2J 5C1</p>
+                  </div>
+                  <div class="medium-3 columns">
+                    <ul class="dropdown menu" data-dropdown-menu>
+                                              <li>
+                                                  <a class="outline-btn secondary small-icon phone dropdown-button" type="button">
+                                                      <span class="hide-for-small-only">Contact Info</span>
+                                                      <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Phone</span>
+                                                  </a>
+                                                  <ul class="menu">
+                                                      <li class="hide-for-small-only emphasize">
+                                                          <a href="mailto:a@b.com">Email me</a>
+                                                      </li>
+                                                      <li>
+                                                          <a href="tel:+15555555555">
+                                                              <strong>Main</strong>
+                                                              <span>555-555-5555</span>
+                                                          </a>
+                                                      </li>
+                                                      <li>
+                                                          <a href="tel:+15555555555">
+                                                              <strong>Direct</strong>
+                                                              <span>555-555-5555</span>
+                                                          </a>
+                                                      </li>
+                                                      <li>
+                                                          <a href="tel:+15555555555">
+                                                              <strong>Toll-Free</strong>
+                                                              <span>555-555-5555</span>
+                                                          </a>
+                                                      </li>
+                                                      <li>
+                                                          <a href="tel:+15555555555">
+                                                              <strong>Fax</strong>
+                                                              <span>555-555-5555</span>
+                                                          </a>
+                                                      </li>
+                                                  </ul>
+                                              </li>
+                                          </ul>
+                  </div>
+                  <div class="medium-3 columns">
+                    <a class="outline-btn constrained" type="button" href="#appointment-michael-scott">View Details</a>
+                  </div>
+              </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!--Search Results-->
+            <div class="section search-results">
+              <div class="row">
+                <div class="medium-4 columns">
+                  <p class="tp_08">24 results in Whitby, ON</p>
+                </div>
+              </div>
+                <script id="template" type="x-tmpl-mustache">
+                    <div class="row">
+                        <div class="small-5 medium-3 large-2 columns">
+                            <div class="portrait">
+                                <img src="{{myInfo.photoUrl}}" alt="{{myInfo.FName}} {{myInfo.LName}}" />
+                            </div>
+                        </div>
+                        <div class="small-6 medium-3 large-4 columns">
+                            <p class="tp_07">{{myInfo.Address}}</p>
+                            <p class="tp_09">{{myInfo.Ct_City}} {{myInfo.PostalCode}}</p>
+                        </div>
+                        <div class="small-6 medium-3 columns phone">
+                            <ul class="dropdown menu" data-dropdown-menu>
+                                <li>
+                                    <a class="outline-btn secondary small-icon phone dropdown-button" type="button">
+                                        <span class="hide-for-small-only">Contact Info</span>
+                                        <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Phone</span>
+                                    </a>
+                                    <ul class="menu">
+                                        <li class="hide-for-small-only emphasize">
+                                            <a href="{{myInfo.Email}}">Email me</a>
+                                        </li>
+                                        <li>
+                                            <a href="tel:{{myInfo.Phone}}">
+                                                <strong>Main</strong>
+                                                <span>{{myInfo.Phone}}</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="tel:+15555555555">
+                                                <strong>Direct</strong>
+                                                <span>555-555-5555</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="tel:+15555555555">
+                                                <strong>Toll-Free</strong>
+                                                <span>555-555-5555</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="tel:+15555555555">
+                                                <strong>Fax</strong>
+                                                <span>555-555-5555</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="small-6 show-for-small-only columns email-button">
+                            <a href="{{myInfo.Email}}" class="outline-btn secondary small-icon email" type="button"><span class="show-for-small-only"><i aria-hidden="true" class="fa fa-envelope"></i> Email</span></a>
+                        </div>
+                        <div class="medium-3 columns">
+                            <a class="outline-btn constrained" type="button" href="{{myInfo.ConsultantUrl}}">View Profile</a>
+                        </div>
+                    </div>
+                    <div class="row my-team">
+                        <div class="medium-12 columns">
+                          <p class="show-for-small-only">View All Team Members</p>
+                          <p class="tp_21">My Team</p>
+                        </div>
+                        {{#myConsultantTeam}}
+                            <div class="medium-4 columns">
+                              <p class="tp_09">{{FName}} {{LName}}</p>
+                              <ul class="dropdown menu" data-dropdown-menu>
+                                  <li>
+                                      <a class="outline-btn secondary small-icon phone dropdown-button" type="button">
+                                          <span class="hide-for-small-only">Contact Info</span>
+                                          <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Phone</span>
+                                      </a>
+                                      <ul class="menu">
+                                          <li class="hide-for-small-only emphasize">
+                                              <a href="mailto:a@b.com">Email me</a>
+                                          </li>
+                                          <li>
+                                              <a href="tel:+15555555555">
+                                                  <strong>Main</strong>
+                                                  <span>555-555-5555</span>
+                                              </a>
+                                          </li>
+                                      </ul>
+                                  </li>
+                              </ul>
+                            </div>
+                        {{/myConsultantTeam}}
+                    </div>
+                
+                </script>
+                <div id="results-container">
+
+                </div>
+              <div class="row">
+                <div class="medium-4 medium-centered">
+                  <a class="outline-btn secondary" type="button" href="#appointment-michael-scott">View More Results</a>
+                </div>
+              </div>
+            </div>
+
+            <!--18.Footer-->
+
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation/foundation.js"></script>
     <script>
     $(document).foundation();
 	</script>
+    <script src="js/search-app.js"></script>
     <script src="js/vendor/typeahead.bundle.min.js"></script>
+    <script src="js/vendor/mustache.min.js"></script>
     <script src="js/main.js"></script>
 
 </body>
