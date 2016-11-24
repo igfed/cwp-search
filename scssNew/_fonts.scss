@@ -7,7 +7,7 @@
 
 //Typography
 
-$font-path: '/en/fonts/corp' !default;
+$font-path: '../en/fonts/corp' !default;
 $roboto-font-path: $font-path !default;
 
 // PROD $roboto-font-path: '../en/fonts/corp' !default;
@@ -40,10 +40,10 @@ $roboto-font-path: $font-path !default;
 
 
 //Roboto Slab
-$roboto-slab-font-path: '/en/fonts/corp' !default;
+// $roboto-slab-font-path: '/en/fonts/corp' !default;
 
 //PROD
-//$roboto-slab-font-path: '../en/fonts/corp' !default;
+$roboto-slab-font-path: '../en/fonts/corp' !default;
 
 
 @mixin roboto-slab-font($type, $weight, $style: normal) {
@@ -77,8 +77,8 @@ $roboto-slab-font-path: '/en/fonts/corp' !default;
 
 
 // Whitney - default path
-//$whitney-path: '../en/fonts/corp' !default;
-$whitney-path: '/en/fonts/corp' !default;
+$whitney-path: '../en/fonts/corp' !default;
+// $whitney-path: '/en/fonts/corp' !default;
 
 // Whitney-book - REGULAR
 @font-face {
