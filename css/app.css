@@ -18484,10 +18484,6 @@ html.IGv2 .section.search-results .my-team .columns:first-child p {
     width: 50%;
     float: left; } }
 
-.my-consultant-team .columns:nth-last-child(n+2) ~ .my-consultant-team .columns:last-child {
-  float: none;
-  margin: 0 auto; }
-
 @media screen and (max-width: 39.9375em) {
   html.IGv2 .office-search .contact-buttons, html.IGv2 .search-results .contact-buttons {
     clear: both;
@@ -18548,6 +18544,13 @@ html.IGv2 .section.search-results .my-team .columns:first-child p {
 .section.search-results .my-team .title .line {
   border-top: 0.2rem solid #c1cbd0;
   content: ""; }
+
+.section.search-results .my-consultant-team .columns {
+  float: none;
+  display: inline-block;
+  text-align: center;
+  width: 30%;
+  padding-bottom: 5rem; }
 
 .clear {
   clear: both; }
