@@ -1,9 +1,12 @@
 var modelUrl = 'http://54.160.16.202:9000/api/cwpsearch?';
+var $field = $('#FindAnAdvisor');
 var query = {
 		lang: 'en',
 		searchtype: 'con',
 		city: '',
-		name: ''
+		name: '',
+		Pcode: '',
+		geo: ''
 	}
 // Process the local prefetched data
 var suggestions = {};
@@ -30,30 +33,21 @@ function getCoordinates() {
 		// output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
 		return;
 	}
-	var result = {
-		hasResults: false,
-		lat: 0,
-		long: 0
-	};
 	function success(position) {
-		result = {
-			hasResults: true,
-			lat: position.coords.latitude,
-			long: position.coords.longitude
-		}
+		var params = query;
+		params.geo = position.coords.latitude +','+ position.coords.longitude;
+
+		getSearchResults(params);
 	}
 	function error() {
-		console.alert('Error with geolocation')
+		console.log('Error with geolocation');
 	}
 	navigator.geolocation.getCurrentPosition(success, error);
-	return result;
 }
 
 // Get the results
-function getSearchResults(e) {
-	e.preventDefault();
-	query.name = $('#FindAnAdvisor').val();
-	$.getJSON(modelUrl, query)
+function getSearchResults(params) {
+	$.getJSON(modelUrl, params)
 	.always()
 	.done(function( data ) {
 		var result = JSON.parse(data);
@@ -64,11 +58,42 @@ function getSearchResults(e) {
 	});
 }
 
+function parseSearchString() {
+	var result = query;
+	var search = $field.val();
+	result.geo = '';
+	var postalCodeFormat = new RegExp(/^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$/);
+
+	// Check if there is a postal code
+	if (postalCodeFormat.test(search)) {
+		result.Pcode = search.match(postalCodeFormat)[0];
+		search = search.replace(postalCodeFormat, ' ');
+	}
+
+	// Check the search string for a previously defined location
+	var words = search.split(' ');
+	for (i = 0; i < words.length; i++) {
+		// Check each word for a city from the predefined list
+		var city = suggestions.locations.get(words[i]);
+		if (city.length > 0) {
+			result.city = city[0];
+			words.splice(i, 1);
+		}
+	}
+
+	// All remaining words should be a name
+	if  (words.length > 0) {
+		result.name = words.join(' ');
+	}
+
+	return result;
+}
+
 function displaySearchResults( json ) {
 	var template = document.getElementById('template').innerHTML;
 	Mustache.parse(template);
 	var rendered = Mustache.render(template, json);
-	$('.office-search, .filter').removeClass('hide');
+	$('.filter').removeClass('hide'); // .office-search, to be added after office module worked on.
 	$('#results-container').removeClass('hide').html(rendered);
 }
 
@@ -77,6 +102,10 @@ function displaySearchResults( json ) {
 
 //Init everything
 $(function() {
+	// Try to predetermine what results should show
+	getCoordinates();
+
+	// Setup the typeahead
 	$('.typeahead').typeahead({
 		highlight: true
 	},
@@ -84,18 +113,12 @@ $(function() {
 		{ name: 'consultants', source: suggestions.consultants, limit: 3 },
 		{ name: 'postalCode', source: suggestions.postalCode, limit: 3 }
 	)
-	.bind('typeahead:select', function(ev, suggestion) {
-		console.log('Selection: ' + suggestion, ev);
-	})
-	.bind('typeahead:change', function(ev, suggestion) {
-		console.log('Selection: ' + suggestion, ev);
-		query = {
-			lang: 'en',
-			searchtype: 'con',
-			city: 'Winnipeg'
-		}
-	});
+
+	// Setup the form submission
 	$('#siteSearch').submit(function(e){
-		getSearchResults(e);
+		e.preventDefault();
+		var params = parseSearchString();
+
+		getSearchResults(params);
 	});
 });

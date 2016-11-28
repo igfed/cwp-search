@@ -11121,7 +11121,7 @@ span.prefix {
   font-weight: 500;
   text-transform: none;
   color: #0c273c;
-  /*width:calc(100% - 20px);*/
+  width: 100%;
   vertical-align: top;
   /*margin-right:20px;*/
   display: inline-block; }
