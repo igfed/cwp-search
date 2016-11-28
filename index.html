@@ -102,7 +102,7 @@
                     </div>
 
                       <div class="row contact-buttons">
-                        <div class="small-6 medium-3 columns phone">
+                        <div class="small-5 medium-3 columns phone">
                           <!-- <ul class="dropdown menu" data-dropdown-menu>
                               <li>
                                   <a class="outline-btn secondary small-icon phone dropdown-button" type="button">
@@ -181,7 +181,7 @@
                               </li>
                           </ul>
                         </div>
-                        <div class="small-6 show-for-small-only columns email-button">
+                        <div class="small-5 show-for-small-only columns email-button">
                         <a href="mailto:a@b.com" class="outline-btn secondary small-icon email" type="button"><span class="show-for-small-only"><i aria-hidden="true" class="fa fa-envelope"></i> Email</span></a>
                         </div>
                          <div class="small-12 medium-3 columns">
@@ -208,7 +208,7 @@
                     </div>
 
                       <div class="row contact-buttons">
-                        <div class="small-6 medium-3 columns phone">
+                        <div class="small-5 medium-3 columns phone">
                           <!-- <ul class="dropdown menu" data-dropdown-menu>
                               <li>
                                   <a class="outline-btn secondary small-icon phone dropdown-button" type="button">
@@ -287,7 +287,7 @@
                               </li>
                           </ul>
                         </div>
-                        <div class="small-6 show-for-small-only columns email-button">
+                        <div class="small-5 show-for-small-only columns email-button">
                         <a href="mailto:a@b.com" class="outline-btn secondary small-icon email" type="button"><span class="show-for-small-only"><i aria-hidden="true" class="fa fa-envelope"></i> Email</span></a>
                         </div>
                          <div class="small-12 medium-3 columns">
@@ -314,7 +314,7 @@
                     </div>
 
                       <div class="row contact-buttons">
-                        <div class="small-6 medium-3 columns phone">
+                        <div class="small-5 medium-3 columns phone">
                           <!-- <ul class="dropdown menu" data-dropdown-menu>
                               <li>
                                   <a class="outline-btn secondary small-icon phone dropdown-button" type="button">
@@ -393,7 +393,7 @@
                               </li>
                           </ul>
                         </div>
-                        <div class="small-6 show-for-small-only columns email-button">
+                        <div class="small-5 show-for-small-only columns email-button">
                         <a href="mailto:a@b.com" class="outline-btn secondary small-icon email" type="button"><span class="show-for-small-only"><i aria-hidden="true" class="fa fa-envelope"></i> Email</span></a>
                         </div>
                          <div class="small-12 medium-3 columns">
@@ -429,7 +429,7 @@
                             <p class="tp_07 consultant_name">{{myInfo.FName}} {{myInfo.LName}}</p>
                             <p class="tp_09">{{myInfo.Ct_City}} {{myInfo.PostalCode}}</p>
                         </div>
-                        <div class="small-6 medium-3 columns phone">
+                        <div class="small-5 medium-3 columns phone">
                           
                             <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
                               <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
@@ -472,7 +472,7 @@
                               </li>
                           </ul>
                         </div>
-                        <div class="small-6 show-for-small-only columns email-button">
+                        <div class="small-5 show-for-small-only columns email-button">
                             <a href="{{myInfo.Email}}" class="outline-btn secondary small-icon email" type="button"><span class="show-for-small-only"><i aria-hidden="true" class="fa fa-envelope"></i> Email</span></a>
                         </div>
                         <div class="small-12 medium-3 columns">
@@ -484,14 +484,13 @@
                     <div class="row my-team">
                         <div class="medium-12 columns title">
                           <div class="row">
-                            <div class="medium-4 columns line">
+                            <div class="small-4 medium-4 columns line">
                               <div class="clear"></div>
                             </div>
-                            <div class="medium-4 columns">
-                              <p class="show-for-small-only">View All Team Members</p>
+                            <div class="small-4 medium-4 columns">
                               <p class="tp_21">My Team</p>
                             </div>
-                            <div class="medium-4 columns line">
+                            <div class="small-4 medium-4 columns line">
                               <div class="clear"></div>
                             </div>
                             </div>
@@ -509,7 +508,7 @@
                                   ">
                                   <a class="outline-btn secondary small-icon phone dropdown-button" type="button" tabindex="0">
                                       <span class="hide-for-small-only">Contact Info</span>
-                                      <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Phone</span>
+                                      <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i></span>
                                   </a>
                                   <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
                                       <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
@@ -542,9 +541,13 @@
                                   </ul>
                               </li>
                           </ul>
-
+                        <a href="mailto:a@b.com" class="outline-btn secondary small-icon email show-for-small-only" type="button"><span><i aria-hidden="true" class="fa fa-envelope"></i></span></a>
+                          <div class="clear"></div>
                             </div>
                         {{/myConsultantTeam}}
+                         <div class="row show-for-small-only">
+                               <p>View All Team Members</p>
+                            </div>
                         </div>
                     </div>
                     {{/myConsultantTeam.length}}
