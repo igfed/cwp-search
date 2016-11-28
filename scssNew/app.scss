@@ -6049,36 +6049,6 @@ html.IGv2 {
       width: 50%;
       float: left; } }
 
-// .my-consultant-team .columns:last-child,
-// .my-consultant-team .columns:nth-last-of-type(-n+2):not(:nth-child(even)) {
-   // width: 50%;
-   // margin: 0 auto;
-   // float: left;
-
-
-//    .dropdown{
-//       text-align: center;
-//       width: 47%;
-//       margin: 0 auto;
-//    }
-// }
-
-// .my-consultant-team{
-//   .columns{
-//     &:only-child{
-//       float:none;
-//       margin: 0 auto;
-//     }
-// }
-// }
-
-
-.my-consultant-team .columns:nth-last-child(n+2) ~ .my-consultant-team .columns:last-child{
-    float: none;
-    margin: 0 auto;
-}
-
-
   @media screen and (max-width: 39.9375em) {
     html.IGv2 .office-search .contact-buttons, html.IGv2 .search-results .contact-buttons {
       clear: both;
@@ -6162,6 +6132,16 @@ html.IGv2 {
         border-top: 0.2rem solid #c1cbd0;
         content: "";
       }
+    }
+  }
+
+  .my-consultant-team{
+    .columns{
+      float: none;
+      display: inline-block;
+      text-align: center;
+      width: 30%;
+      padding-bottom: 5rem;
     }
   }
 }
