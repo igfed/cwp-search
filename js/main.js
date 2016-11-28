@@ -61,13 +61,13 @@ function getSearchResults(params) {
 function parseSearchString() {
 	var result = query;
 	var search = $field.val();
-	result.geo = '';
 	var postalCodeFormat = new RegExp(/^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$/);
 
 	// Check if there is a postal code
 	if (postalCodeFormat.test(search)) {
 		result.Pcode = search.match(postalCodeFormat)[0];
 		search = search.replace(postalCodeFormat, ' ');
+		result.geo = ''; // Remove geolocation
 	}
 
 	// Check the search string for a previously defined location
@@ -78,6 +78,7 @@ function parseSearchString() {
 		if (city.length > 0) {
 			result.city = city[0];
 			words.splice(i, 1);
+			result.geo = ''; // Remove geolocation
 		}
 	}
 
