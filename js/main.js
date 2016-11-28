@@ -51,11 +51,29 @@ function getSearchResults(params) {
 	.always()
 	.done(function( data ) {
 		var result = JSON.parse(data);
-		displaySearchResults(result);
+		displaySearchResults('consultant-template', result, 'results-container');
 	})
 	.fail(function( result ) {
 		console.log('Data could not be retrieved, please try again', result.status + ' ' + result.statusText);
 	});
+
+	if (params.city.length > 0) {
+		params.searchtype = 'office';
+		params.name = '';
+
+		$.getJSON(modelUrl, params)
+		.always()
+		.done(function( data ) {
+			var result = JSON.parse(data);
+			console.log(result);
+			if (result.length > 0) {
+				displaySearchResults('office-template', result, 'office-search');
+			}
+		})
+		.fail(function( result ) {
+			console.log('Data could not be retrieved, please try again', result.status + ' ' + result.statusText);
+		});
+	}
 }
 
 function parseSearchString() {
@@ -90,12 +108,12 @@ function parseSearchString() {
 	return result;
 }
 
-function displaySearchResults( json ) {
-	var template = document.getElementById('template').innerHTML;
+function displaySearchResults( templateID, json, destination ) {
+	var template = document.getElementById(templateID).innerHTML;
 	Mustache.parse(template);
 	var rendered = Mustache.render(template, json);
-	$('.filter').removeClass('hide'); // .office-search, to be added after office module worked on.
-	$('#results-container').removeClass('hide').html(rendered);
+	$('#'+destination).removeClass('hide').html(rendered);
+	$('.filter').removeClass('hide');
 }
 
 
@@ -119,7 +137,6 @@ $(function() {
 	$('#siteSearch').submit(function(e){
 		e.preventDefault();
 		var params = parseSearchString();
-
 		getSearchResults(params);
 	});
 });

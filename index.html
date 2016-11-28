@@ -70,348 +70,100 @@
             </div>
 
             <!--Office-->
-            <div class="section office-search info-toggle hide" info-toggle-aria="true">
+            <script id="office-template" type="x-tmpl-mustache">
               <div class="row info-toggle-trigger">
                 <div class="small-3 medium-2 columns">
                   <img class="illustration" data-illustrationid="consultant-about" src="img/illustrations/consultant_webpage_open_icon_3C_191016.svg" alt="icon book and glasses">
                 </div>
                 <div class="small-6 medium-3 columns">
-                  <p class="tp_08">3 Offices found</p>
+                  <p class="tp_08">{{this.length}} Offices found</p>
                 </div>
                 <div class="small-2 medium-3 columns">
                   <i class="fa fa-chevron-down"></i>
                 </div>
               </div>
-              <div class="row info-toggle-content">
-                <div class="small-12 columns">
-                  <div class="row underline">
-                    <div class="small-4 medium-3 columns">
-                      <div class="maps">
-                        <a class="map-anchor">
-                            <div class="map-container">
-                                <div class="map-icon"></div>
-                                <div class="tp_22">View Map</div>
-                            </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="small-8 medium-3 columns">
-                      <p class="tp_07">200 Yorkland Blvd</p>
-                      <p class="tp_09">Toronto, ON, M2J 5C1</p>
-                      <p class="map-address" style="display:none">200 Yorkland Blvd, Toronto, ON, M2J 5C1</p>
-                    </div>
+              {{#.}}
 
-                      <div class="row contact-buttons">
-                        <div class="small-5 medium-3 columns phone">
-                          <!-- <ul class="dropdown menu" data-dropdown-menu>
-                              <li>
-                                  <a class="outline-btn secondary small-icon phone dropdown-button" type="button">
-                                      <span class="hide-for-small-only">Contact Info</span>
-                                      <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Phone</span>
-                                  </a>
-                                  <ul class="menu">
-                                      <li class="hide-for-small-only emphasize">
-                                          <a href="mailto:a@b.com">Email me</a>
-                                      </li>
-                                      <li>
-                                          <a href="tel:+15555555555">
-                                              <strong>Main</strong>
-                                              <span>555-555-5555</span>
-                                          </a>
-                                      </li>
-                                      <li>
-                                          <a href="tel:+15555555555">
-                                              <strong>Direct</strong>
-                                              <span>555-555-5555</span>
-                                          </a>
-                                      </li>
-                                      <li>
-                                          <a href="tel:+15555555555">
-                                              <strong>Toll-Free</strong>
-                                              <span>555-555-5555</span>
-                                          </a>
-                                      </li>
-                                      <li>
-                                          <a href="tel:+15555555555">
-                                              <strong>Fax</strong>
-                                              <span>555-555-5555</span>
-                                          </a>
-                                      </li>
-                                  </ul>
-                              </li>
-                          </ul> -->
-                          <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
-                              <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
-                                      Contact Info
-                                       Phone
-                                  ">
-                                  <a class="outline-btn secondary small-icon phone dropdown-button" type="button" tabindex="0" href="https://www.google.ca/maps/dir//200 Yorkland Blvd, Toronto, ON, M2J 5C1">
-                                      <span class="hide-for-small-only">Contact Info</span>
-                                      <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Phone</span>
-                                  </a>
-                                  <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
-                                      <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
-                                          <a href="https://www.google.ca/maps?q=200 Yorkland Blvd, Toronto, ON, M2J 5C1">Email me</a>
-                                      </li>
-                                      <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                          <a href="https://www.google.ca/maps?q=200 Yorkland Blvd, Toronto, ON, M2J 5C1">
-                                              <strong>Main</strong>
-                                              <span>555-555-5555</span>
-                                          </a>
-                                      </li>
-                                      <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                          <a href="https://www.google.ca/maps?q=200 Yorkland Blvd, Toronto, ON, M2J 5C1">
-                                              <strong>Direct</strong>
-                                              <span>555-555-5555</span>
-                                          </a>
-                                      </li>
-                                      <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                          <a href="https://www.google.ca/maps?q=200 Yorkland Blvd, Toronto, ON, M2J 5C1">
-                                              <strong>Toll-Free</strong>
-                                              <span>555-555-5555</span>
-                                          </a>
-                                      </li>
-                                      <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                          <a href="https://www.google.ca/maps?q=200 Yorkland Blvd, Toronto, ON, M2J 5C1">
-                                              <strong>Fax</strong>
-                                              <span>555-555-5555</span>
-                                          </a>
-                                      </li>
-                                  </ul>
-                              </li>
-                          </ul>
-                        </div>
-                        <div class="small-5 show-for-small-only columns email-button">
-                        <a href="mailto:a@b.com" class="outline-btn secondary small-icon email" type="button"><span class="show-for-small-only"><i aria-hidden="true" class="fa fa-envelope"></i> Email</span></a>
-                        </div>
-                         <div class="small-12 medium-3 columns">
-                          <a class="outline-btn constrained" type="button" href="#appointment-michael-scott">View Details</a>
+                <div class="row info-toggle-content">
+                  <div class="small-12 columns">
+                    <div class="row underline">
+                      <div class="small-4 medium-3 columns">
+                        <div class="maps">
+                          <a class="map-anchor">
+                              <div class="map-container">
+                                  <div class="map-icon"></div>
+                                  <div class="tp_22">View Map</div>
+                              </div>
+                          </a>
                         </div>
                       </div>
-                      <div class="clear"></div>
+                      <div class="small-8 medium-3 columns">
+                        <p class="tp_07">{{Address_Line_1__c}} {{Address_Line_2__c}}</p>
+                        <p class="tp_09">{{City__c}}, {{Province_Territory_State__c}}, {{Postal_Code__c}}</p>
+                        <p class="map-address" style="display:none">{{Address_Line_1__c}} {{Address_Line_2__c}}, {{City__c}}, {{Province_Territory_State__c}}, {{Postal_Code__c}}</p>
+                      </div>
+
+                        <div class="row contact-buttons">
+                          <div class="small-5 medium-3 columns phone">
+                            <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
+                                <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
+                                        Contact Info
+                                         Phone
+                                    ">
+                                    <a class="outline-btn secondary small-icon phone dropdown-button" type="button" tabindex="0" href="https://www.google.ca/maps/dir//200 Yorkland Blvd, Toronto, ON, M2J 5C1">
+                                        <span class="hide-for-small-only">Contact Info</span>
+                                        <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Phone</span>
+                                    </a>
+                                    <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
+                                        <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
+                                            <a href="https://www.google.ca/maps?q=200 Yorkland Blvd, Toronto, ON, M2J 5C1">Email me</a>
+                                        </li>
+                                        <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                                            <a href="https://www.google.ca/maps?q=200 Yorkland Blvd, Toronto, ON, M2J 5C1">
+                                                <strong>Main</strong>
+                                                <span>555-555-5555</span>
+                                            </a>
+                                        </li>
+                                        <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                                            <a href="https://www.google.ca/maps?q=200 Yorkland Blvd, Toronto, ON, M2J 5C1">
+                                                <strong>Direct</strong>
+                                                <span>555-555-5555</span>
+                                            </a>
+                                        </li>
+                                        <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                                            <a href="https://www.google.ca/maps?q=200 Yorkland Blvd, Toronto, ON, M2J 5C1">
+                                                <strong>Toll-Free</strong>
+                                                <span>555-555-5555</span>
+                                            </a>
+                                        </li>
+                                        <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                                            <a href="https://www.google.ca/maps?q=200 Yorkland Blvd, Toronto, ON, M2J 5C1">
+                                                <strong>Fax</strong>
+                                                <span>555-555-5555</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                          </div>
+                          <div class="small-5 show-for-small-only columns email-button">
+                          <a href="mailto:a@b.com" class="outline-btn secondary small-icon email" type="button"><span class="show-for-small-only"><i aria-hidden="true" class="fa fa-envelope"></i> Email</span></a>
+                          </div>
+                           <div class="small-12 medium-3 columns">
+                            <a class="outline-btn constrained" type="button" href="#appointment-michael-scott">View Details</a>
+                          </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
                   </div>
-                  <div class="row underline">
-                    <div class="small-4 medium-3 columns">
-                      <div class="maps">
-                        <a class="map-anchor">
-                            <div class="map-container">
-                                <div class="map-icon"></div>
-                                <div class="tp_22">View Map</div>
-                            </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="small-8 medium-3 columns">
-                      <p class="tp_07">200 Yorkland Blvd</p>
-                      <p class="tp_09">Toronto, ON, M2J 5C1</p>
-                      <p class="map-address" style="display:none">200 Yorkland Blvd, Toronto, ON, M2J 5C1</p>
-                    </div>
-
-                      <div class="row contact-buttons">
-                        <div class="small-5 medium-3 columns phone">
-                          <!-- <ul class="dropdown menu" data-dropdown-menu>
-                              <li>
-                                  <a class="outline-btn secondary small-icon phone dropdown-button" type="button">
-                                      <span class="hide-for-small-only">Contact Info</span>
-                                      <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Phone</span>
-                                  </a>
-                                  <ul class="menu">
-                                      <li class="hide-for-small-only emphasize">
-                                          <a href="mailto:a@b.com">Email me</a>
-                                      </li>
-                                      <li>
-                                          <a href="tel:+15555555555">
-                                              <strong>Main</strong>
-                                              <span>555-555-5555</span>
-                                          </a>
-                                      </li>
-                                      <li>
-                                          <a href="tel:+15555555555">
-                                              <strong>Direct</strong>
-                                              <span>555-555-5555</span>
-                                          </a>
-                                      </li>
-                                      <li>
-                                          <a href="tel:+15555555555">
-                                              <strong>Toll-Free</strong>
-                                              <span>555-555-5555</span>
-                                          </a>
-                                      </li>
-                                      <li>
-                                          <a href="tel:+15555555555">
-                                              <strong>Fax</strong>
-                                              <span>555-555-5555</span>
-                                          </a>
-                                      </li>
-                                  </ul>
-                              </li>
-                          </ul> -->
-                          <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
-                              <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
-                                      Contact Info
-                                       Phone
-                                  ">
-                                  <a class="outline-btn secondary small-icon phone dropdown-button" type="button" tabindex="0" href="https://www.google.ca/maps/dir//200 Yorkland Blvd, Toronto, ON, M2J 5C1">
-                                      <span class="hide-for-small-only">Contact Info</span>
-                                      <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Phone</span>
-                                  </a>
-                                  <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
-                                      <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
-                                          <a href="https://www.google.ca/maps?q=200 Yorkland Blvd, Toronto, ON, M2J 5C1">Email me</a>
-                                      </li>
-                                      <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                          <a href="https://www.google.ca/maps?q=200 Yorkland Blvd, Toronto, ON, M2J 5C1">
-                                              <strong>Main</strong>
-                                              <span>555-555-5555</span>
-                                          </a>
-                                      </li>
-                                      <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                          <a href="https://www.google.ca/maps?q=200 Yorkland Blvd, Toronto, ON, M2J 5C1">
-                                              <strong>Direct</strong>
-                                              <span>555-555-5555</span>
-                                          </a>
-                                      </li>
-                                      <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                          <a href="https://www.google.ca/maps?q=200 Yorkland Blvd, Toronto, ON, M2J 5C1">
-                                              <strong>Toll-Free</strong>
-                                              <span>555-555-5555</span>
-                                          </a>
-                                      </li>
-                                      <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                          <a href="https://www.google.ca/maps?q=200 Yorkland Blvd, Toronto, ON, M2J 5C1">
-                                              <strong>Fax</strong>
-                                              <span>555-555-5555</span>
-                                          </a>
-                                      </li>
-                                  </ul>
-                              </li>
-                          </ul>
-                        </div>
-                        <div class="small-5 show-for-small-only columns email-button">
-                        <a href="mailto:a@b.com" class="outline-btn secondary small-icon email" type="button"><span class="show-for-small-only"><i aria-hidden="true" class="fa fa-envelope"></i> Email</span></a>
-                        </div>
-                         <div class="small-12 medium-3 columns">
-                          <a class="outline-btn constrained" type="button" href="#appointment-michael-scott">View Details</a>
-                        </div>
-                      </div>
-                      <div class="clear"></div>
-                  </div>
-                  <div class="row underline">
-                    <div class="small-4 medium-3 columns">
-                      <div class="maps">
-                        <a class="map-anchor">
-                            <div class="map-container">
-                                <div class="map-icon"></div>
-                                <div class="tp_22">View Map</div>
-                            </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="small-8 medium-3 columns">
-                      <p class="tp_07">200 Yorkland Blvd</p>
-                      <p class="tp_09">Toronto, ON, M2J 5C1</p>
-                      <p class="map-address" style="display:none">200 Yorkland Blvd, Toronto, ON, M2J 5C1</p>
-                    </div>
-
-                      <div class="row contact-buttons">
-                        <div class="small-5 medium-3 columns phone">
-                          <!-- <ul class="dropdown menu" data-dropdown-menu>
-                              <li>
-                                  <a class="outline-btn secondary small-icon phone dropdown-button" type="button">
-                                      <span class="hide-for-small-only">Contact Info</span>
-                                      <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Phone</span>
-                                  </a>
-                                  <ul class="menu">
-                                      <li class="hide-for-small-only emphasize">
-                                          <a href="mailto:a@b.com">Email me</a>
-                                      </li>
-                                      <li>
-                                          <a href="tel:+15555555555">
-                                              <strong>Main</strong>
-                                              <span>555-555-5555</span>
-                                          </a>
-                                      </li>
-                                      <li>
-                                          <a href="tel:+15555555555">
-                                              <strong>Direct</strong>
-                                              <span>555-555-5555</span>
-                                          </a>
-                                      </li>
-                                      <li>
-                                          <a href="tel:+15555555555">
-                                              <strong>Toll-Free</strong>
-                                              <span>555-555-5555</span>
-                                          </a>
-                                      </li>
-                                      <li>
-                                          <a href="tel:+15555555555">
-                                              <strong>Fax</strong>
-                                              <span>555-555-5555</span>
-                                          </a>
-                                      </li>
-                                  </ul>
-                              </li>
-                          </ul> -->
-                          <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
-                              <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
-                                      Contact Info
-                                       Phone
-                                  ">
-                                  <a class="outline-btn secondary small-icon phone dropdown-button" type="button" tabindex="0" href="https://www.google.ca/maps/dir//200 Yorkland Blvd, Toronto, ON, M2J 5C1">
-                                      <span class="hide-for-small-only">Contact Info</span>
-                                      <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Phone</span>
-                                  </a>
-                                  <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
-                                      <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
-                                          <a href="https://www.google.ca/maps?q=200 Yorkland Blvd, Toronto, ON, M2J 5C1">Email me</a>
-                                      </li>
-                                      <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                          <a href="https://www.google.ca/maps?q=200 Yorkland Blvd, Toronto, ON, M2J 5C1">
-                                              <strong>Main</strong>
-                                              <span>555-555-5555</span>
-                                          </a>
-                                      </li>
-                                      <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                          <a href="https://www.google.ca/maps?q=200 Yorkland Blvd, Toronto, ON, M2J 5C1">
-                                              <strong>Direct</strong>
-                                              <span>555-555-5555</span>
-                                          </a>
-                                      </li>
-                                      <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                          <a href="https://www.google.ca/maps?q=200 Yorkland Blvd, Toronto, ON, M2J 5C1">
-                                              <strong>Toll-Free</strong>
-                                              <span>555-555-5555</span>
-                                          </a>
-                                      </li>
-                                      <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                          <a href="https://www.google.ca/maps?q=200 Yorkland Blvd, Toronto, ON, M2J 5C1">
-                                              <strong>Fax</strong>
-                                              <span>555-555-5555</span>
-                                          </a>
-                                      </li>
-                                  </ul>
-                              </li>
-                          </ul>
-                        </div>
-                        <div class="small-5 show-for-small-only columns email-button">
-                        <a href="mailto:a@b.com" class="outline-btn secondary small-icon email" type="button"><span class="show-for-small-only"><i aria-hidden="true" class="fa fa-envelope"></i> Email</span></a>
-                        </div>
-                         <div class="small-12 medium-3 columns">
-                          <a class="outline-btn constrained" type="button" href="#appointment-michael-scott">View Details</a>
-                        </div>
-                      </div>
-                      <div class="clear"></div>
-                  </div>
-                
-
                 </div>
-              </div>
-
-            </div>
+              {{/.}}
+            </script>
+            <div id="office-search" class="section office-search info-toggle active hide" info-toggle-aria="true"></div>
 
             <!--Search Results-->
             <div class="section search-results">
-                <script id="template" type="x-tmpl-mustache">
+                <script id="consultant-template" type="x-tmpl-mustache">
                   <div class="row">
                     <div class="medium-4 columns">
                       <p class="tp_08">{{this.length}} results </p>
