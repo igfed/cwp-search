@@ -1,13 +1,9 @@
+// Plugin
+!function(t){"use strict";t.fn.infoToggle=function(){return this.each(function(){function i(){f.on("click",n),t(window).on("resize",o),s()}function n(){s(),a.toggleClass("active"),window.setTimeout(s),a.hasClass("active")&&e()}function o(){r&&c.css({height:"auto"})}function e(){t("html, body").animate({scrollTop:a.offset().top},500)}function s(){var t;a.hasClass("active")?(t=c[0].scrollHeight,r=!0):(t=0,r=!1),c.css({height:t}),g&&c.attr("aria-hidden",!r)}var a=t(this),c=a.find(".info-toggle-content"),f=a.find(".info-toggle-trigger"),r=!1,g="true"===a.attr("info-toggle-aria");i()}),this}}(jQuery);
+// GLOBALS
 var modelUrl = 'http://54.160.16.202:9000/api/cwpsearch?';
 var $field = $('#FindAnAdvisor');
-var query = {
-		lang: 'en',
-		searchtype: 'con',
-		city: '',
-		name: '',
-		Pcode: '',
-		geo: ''
-	}
+
 // Process the local prefetched data
 var suggestions = {};
 	suggestions.locations = new Bloodhound({
@@ -30,11 +26,12 @@ var suggestions = {};
 // Get current location
 function getCoordinates() {
 	if (!navigator.geolocation){
-		// output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
 		return;
 	}
 	function success(position) {
-		var params = query;
+		var params = {};
+		params.lang = 'en';
+		params.searchtype = 'con';
 		params.geo = position.coords.latitude +','+ position.coords.longitude;
 
 		getSearchResults(params);
@@ -57,7 +54,7 @@ function getSearchResults(params) {
 		console.log('Data could not be retrieved, please try again', result.status + ' ' + result.statusText);
 	});
 
-	if (params.city.length > 0) {
+	if (params.city || params.Pcode) {
 		params.searchtype = 'office';
 		params.name = '';
 
@@ -65,7 +62,6 @@ function getSearchResults(params) {
 		.always()
 		.done(function( data ) {
 			var result = JSON.parse(data);
-			console.log(result);
 			if (result.length > 0) {
 				displaySearchResults('office-template', result, 'office-search');
 			}
@@ -77,10 +73,14 @@ function getSearchResults(params) {
 }
 
 function parseSearchString() {
-	var result = query;
+	var result = {};
 	var search = $field.val();
 	var postalCodeFormat = new RegExp(/^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$/);
 
+	// Search in english
+	result.lang = 'en';
+	// We only search consultants from this method
+	result.searchtype = 'con';
 	// Check if there is a postal code
 	if (postalCodeFormat.test(search)) {
 		result.Pcode = search.match(postalCodeFormat)[0];
@@ -113,11 +113,13 @@ function displaySearchResults( templateID, json, destination ) {
 	Mustache.parse(template);
 	var rendered = Mustache.render(template, json);
 	$('#'+destination).removeClass('hide').html(rendered);
-	$('.filter').removeClass('hide');
+
+	$('.info-toggle-small, .info-toggle').infoToggle();
+	// setTimeout(function(){
+	// 	$('.info-toggle-small, .info-toggle').infoToggle();
+	// 	$(document).foundation();
+	// }, 300);
 }
-
-
-
 
 //Init everything
 $(function() {
@@ -128,9 +130,9 @@ $(function() {
 	$('.typeahead').typeahead({
 		highlight: true
 	},
-		{ name: 'locations', source: suggestions.locations, limit: 3, templates: {header: "Suggested Search"} },
+		{ name: 'locations', source: suggestions.locations, limit: 2 },
 		{ name: 'consultants', source: suggestions.consultants, limit: 3 },
-		{ name: 'postalCode', source: suggestions.postalCode, limit: 3 }
+		{ name: 'postalCode', source: suggestions.postalCode, limit: 2 }
 	)
 
 	// Setup the form submission
