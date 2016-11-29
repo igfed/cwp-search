@@ -122,7 +122,7 @@ function displaySearchResults( templateID, json, destination ) {
 $(function() {
 	
 	// Try to predetermine what results should show
-	//getCoordinates();
+	getCoordinates();
 
 	// Setup the typeahead
 	$('.typeahead').typeahead({
