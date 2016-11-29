@@ -123,7 +123,6 @@
             <div id="office-search" class="section office-search info-toggle hide" info-toggle-aria="true"></div>
 
             <!--Search Results-->
-            <div class="section search-results">
                 <script id="consultant-template" type="x-tmpl-mustache">
                     {{^.}}
                       <div class="row">
@@ -272,62 +271,15 @@
                     </div>
                 </div> -->
                 </script>
-                <div id="results-container" class="hide">
-
-                </div>
-            </div>
-            <div style="visibility: hidden">
-                <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
-                              <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
-                                      Contact Info
-                                       Phone
-                                  ">
-                                  <a class="outline-btn secondary small-icon phone dropdown-button" type="button" tabindex="0">
-                                      <span class="hide-for-small-only">Contact Info</span>
-                                      <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Phone</span>
-                                  </a>
-                                  <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
-                                      <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
-                                          <a href="{{myInfo.Email}}">Email me</a>
-                                      </li>
-                                      <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                          <a href="{{myInfo.Phone}}">
-                                              <strong>Main</strong>
-                                              <span>{{myInfo.Phone}}</span>
-                                          </a>
-                                      </li>
-                                      <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                          <a href="https://www.google.ca/maps?q=200 Yorkland Blvd, Toronto, ON, M2J 5C1">
-                                              <strong>Direct</strong>
-                                              <span>555-555-5555</span>
-                                          </a>
-                                      </li>
-                                      <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                          <a href="https://www.google.ca/maps?q=200 Yorkland Blvd, Toronto, ON, M2J 5C1">
-                                              <strong>Toll-Free</strong>
-                                              <span>555-555-5555</span>
-                                          </a>
-                                      </li>
-                                      <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                          <a href="https://www.google.ca/maps?q=200 Yorkland Blvd, Toronto, ON, M2J 5C1">
-                                              <strong>Fax</strong>
-                                              <span>555-555-5555</span>
-                                          </a>
-                                      </li>
-                                  </ul>
-                              </li>
-                          </ul>
-            </div>
+            <div class="section search-results hide" id="results-container"></div>
 
             <!--18.Footer-->
 
     <script src="js/vendor/jquery.js"></script>
-    <script src="js/foundation/foundation.js"></script>
-    <script>
-    $(document).foundation();
-	</script>
+    <script src="js/foundation.min.js"></script>>
     <script src="js/vendor/typeahead.bundle.min.js"></script>
     <script src="js/vendor/mustache.min.js"></script>
+    <script src="js/search-app.js"></script>
     <script src="js/main.js"></script>
 
 </body>

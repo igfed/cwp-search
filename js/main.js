@@ -114,17 +114,15 @@ function displaySearchResults( templateID, json, destination ) {
 	var rendered = Mustache.render(template, json);
 	$('#'+destination).removeClass('hide').html(rendered);
 
+	$(document).foundation();
 	$('.info-toggle-small, .info-toggle').infoToggle();
-	// setTimeout(function(){
-	// 	$('.info-toggle-small, .info-toggle').infoToggle();
-	// 	$(document).foundation();
-	// }, 300);
 }
 
 //Init everything
 $(function() {
+	
 	// Try to predetermine what results should show
-	getCoordinates();
+	//getCoordinates();
 
 	// Setup the typeahead
 	$('.typeahead').typeahead({
@@ -141,4 +139,5 @@ $(function() {
 		var params = parseSearchString();
 		getSearchResults(params);
 	});
+
 });
