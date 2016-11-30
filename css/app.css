@@ -11036,12 +11036,12 @@ img.advisor {
   margin: 0 0 .25rem 0;
   overflow: hidden; }
 
-.icon-wrap, .search-form, .body-content {
-  height: 100%; }
-
 span.prefix {
   background-color: #FFFFFF;
   width: 100%; }
+
+.row.contact.section {
+  padding-bottom: 120px; }
 
 .contact .search-ui {
   white-space: nowrap;

@@ -21,10 +21,12 @@ img.advisor{
 		overflow: hidden;
 }
 
-.icon-wrap, .search-form, .body-content {height: 100%}
 span.prefix {
 	background-color: $white;
 	width: 100%;
+}
+.row.contact.section {
+	padding-bottom:120px;
 }
 .contact .search-ui{
 	white-space:nowrap;

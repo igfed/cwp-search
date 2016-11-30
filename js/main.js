@@ -9,18 +9,18 @@ var suggestions = {};
 	suggestions.locations = new Bloodhound({
 		datumTokenizer: Bloodhound.tokenizers.whitespace,
 		queryTokenizer: Bloodhound.tokenizers.whitespace,
-		prefetch: '../external/app/tribal/data/cities.json'
+		prefetch: 'data/cities.json'
 	});
 	suggestions.consultants = new Bloodhound({
 		// datumTokenizer: Bloodhound.tokenizers.obj.whitespace("name"),
 		datumTokenizer: Bloodhound.tokenizers.whitespace,
 		queryTokenizer: Bloodhound.tokenizers.whitespace,
-		prefetch: '../external/app/tribal/data/names.json'
+		prefetch: 'data/names.json'
 	});
 	suggestions.postalCode = new Bloodhound({
 		datumTokenizer: Bloodhound.tokenizers.whitespace,
 		queryTokenizer: Bloodhound.tokenizers.whitespace,
-		prefetch: '../external/app/tribal/data/postal-code.json'
+		prefetch: 'data/postal-code.json'
 	});
 
 // Get current location
@@ -114,8 +114,8 @@ function displaySearchResults( templateID, json, destination ) {
 	var rendered = Mustache.render(template, json);
 	$('#'+destination).removeClass('hide').html(rendered);
 
-	$(document).foundation();
 	$('.info-toggle-small, .info-toggle').infoToggle();
+	$(document).foundation();
 }
 
 //Init everything
@@ -139,5 +139,4 @@ $(function() {
 		var params = parseSearchString();
 		getSearchResults(params);
 	});
-
 });
