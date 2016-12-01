@@ -5826,10 +5826,6 @@ html.IGv2 {
       float: none;
       text-align: center; } }
   @media screen and (max-width: 39.9375em) {
-    html.IGv2 .info-toggle-small .info-toggle-content {
-      height: 0;
-      overflow: hidden;
-      transition: height .5s ease 0s; }
     html.IGv2 .info-toggle-small .info-toggle-trigger {
       position: relative;
       cursor: pointer; }
@@ -5855,10 +5851,6 @@ html.IGv2 {
   @media screen and (min-width: 40em) {
     html.IGv2 .info-toggle-small .info-toggle-trigger .fa-chevron-down {
       display: none; } }
-  html.IGv2 .info-toggle .info-toggle-content {
-    height: 0;
-    overflow: hidden;
-    transition: height .5s ease 0s; }
   html.IGv2 .info-toggle .info-toggle-trigger {
     position: relative;
     cursor: pointer; }
@@ -6081,8 +6073,20 @@ html.IGv2 {
 /*Office Search*/
 
 .office-search{
+  #info-toggle-wrapper {
+    display: none;
+
+    &.isActive {
+      display: block;
+    }
+  }
   .info-toggle-content{
-    height: auto;
+    min-height: 130px;
+    margin-bottom: 20px;
+    // transform: translate3d(-100%,0,0);
+
+    transition: transform .5s ease 500ms;
+    
     .row{
         &.underline:not(:last-child){
           &:after{

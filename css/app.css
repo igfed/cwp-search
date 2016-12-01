@@ -18223,10 +18223,6 @@ html.IGv2 .form-modals {
     text-align: center; } }
 
 @media screen and (max-width: 39.9375em) {
-  html.IGv2 .info-toggle-small .info-toggle-content {
-    height: 0;
-    overflow: hidden;
-    transition: height .5s ease 0s; }
   html.IGv2 .info-toggle-small .info-toggle-trigger {
     position: relative;
     cursor: pointer; }
@@ -18253,11 +18249,6 @@ html.IGv2 .form-modals {
 @media screen and (min-width: 40em) {
   html.IGv2 .info-toggle-small .info-toggle-trigger .fa-chevron-down {
     display: none; } }
-
-html.IGv2 .info-toggle .info-toggle-content {
-  height: 0;
-  overflow: hidden;
-  transition: height .5s ease 0s; }
 
 html.IGv2 .info-toggle .info-toggle-trigger {
   position: relative;
@@ -18530,8 +18521,15 @@ html.IGv2 .section.search-results .tp_21 {
     margin-top: 0; } }
 
 /*Office Search*/
+.office-search #info-toggle-wrapper {
+  display: none; }
+  .office-search #info-toggle-wrapper.isActive {
+    display: block; }
+
 .office-search .info-toggle-content {
-  height: auto; }
+  min-height: 130px;
+  margin-bottom: 20px;
+  transition: transform .5s ease 500ms; }
   .office-search .info-toggle-content .row.underline:not(:last-child):after {
     border-top: 0.2rem solid #c1cbd0;
     content: "";

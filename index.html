@@ -43,17 +43,18 @@
 
             <!--Office-->
             <script id="office-template" type="x-tmpl-mustache">
-              <div class="row info-toggle-trigger">
+              <div class="row info-toggle-trigger" data-toggler=".isActive" data-toggle="info-toggle-wrapper">
                 <div class="small-3 medium-2 columns">
                   <img class="illustration" data-illustrationid="consultant-about" src="img/illustrations/consultant_webpage_open_icon_3C_191016.svg" alt="icon book and glasses">
                 </div>
                 <div class="small-6 medium-3 columns">
-                  <p class="tp_08">{{this.length}} Offices found</p>
+                  <p class="tp_08">{{length}} Offices found</p>
                 </div>
                 <div class="small-2 medium-3 columns">
                   <i class="fa fa-chevron-down"></i>
                 </div>
               </div>
+              <div id="info-toggle-wrapper" data-toggler=".isActive">
               {{#.}}
 
                 <div class="row info-toggle-content">
@@ -61,7 +62,7 @@
                     <div class="row underline">
                       <div class="small-4 medium-3 columns">
                         <div class="maps">
-                          <a class="map-anchor">
+                          <a class="map-anchor" href="https://www.google.ca/maps/dir//{{Address_Line_1__c}} {{Address_Line_2__c}}, {{City__c}}, {{Province_Territory_State__c}}, {{Postal_Code__c}}">
                               <div class="map-container">
                                 <img src="https://maps.googleapis.com/maps/api/staticmap?center={{Address_Line_1__c}} {{Address_Line_2__c}}, {{City__c}}, {{Province_Territory_State__c}}, {{Postal_Code__c}}&zoom=17&size=130x130&key=AIzaSyB0n_92iCiJzEB2KBQ19jx88Uu6SWN7aUU" />    
                                 <div class="map-icon"></div>
@@ -73,7 +74,6 @@
                       <div class="small-8 medium-3 columns">
                         <p class="tp_07">{{Address_Line_1__c}} {{Address_Line_2__c}}</p>
                         <p class="tp_09">{{City__c}}, {{Province_Territory_State__c}}, {{Postal_Code__c}}</p>
-                        <p class="map-address" style="display:none"></p>
                       </div>
 
                         <div class="row contact-buttons">
@@ -83,22 +83,22 @@
                                         Contact Info
                                          Phone
                                     ">
-                                    <a class="outline-btn secondary small-icon phone dropdown-button" type="button" tabindex="0" href="https://www.google.ca/maps/dir//200 Yorkland Blvd, Toronto, ON, M2J 5C1">
+                                    <a class="outline-btn secondary small-icon phone dropdown-button" type="button" tabindex="0">
                                         <span class="hide-for-small-only">Contact Info</span>
                                         <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Phone</span>
                                     </a>
                                     <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
                                         <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
-                                            <a href="https://www.google.ca/maps?q=200 Yorkland Blvd, Toronto, ON, M2J 5C1">Email me</a>
+                                            <a href="mailto:a@b.com">Email me</a>
                                         </li>
                                         <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                            <a href="https://www.google.ca/maps?q=200 Yorkland Blvd, Toronto, ON, M2J 5C1">
+                                            <a tel="{{Phone__c}}">
                                                 <strong>Main</strong>
                                                 <span>{{Phone__c}}</span>
                                             </a>
                                         </li>
                                         <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                            <a href="https://www.google.ca/maps?q=200 Yorkland Blvd, Toronto, ON, M2J 5C1">
+                                            <a href="{{Fax__c}}">
                                                 <strong>Fax</strong>
                                                 <span>{{Fax__c}}</span>
                                             </a>
@@ -111,7 +111,7 @@
                           <a href="mailto:a@b.com" class="outline-btn secondary small-icon email" type="button"><span class="show-for-small-only"><i aria-hidden="true" class="fa fa-envelope"></i> Email</span></a>
                           </div>
                            <div class="small-12 medium-3 columns">
-                            <a class="outline-btn constrained" type="button" href="#appointment-michael-scott">View Details</a>
+                            <a class="outline-btn constrained" type="button" href="{{prettyURL__c}}">View Details</a>
                           </div>
                         </div>
                         <div class="clear"></div>
@@ -119,18 +119,19 @@
                   </div>
                 </div>
               {{/.}}
+              </div>
             </script>
-            <div id="office-search" class="section office-search info-toggle hide" info-toggle-aria="true"></div>
+            <div id="office-search" class="section office-search info-toggle hide" info-toggle-aria="true" data-toggler=".active">
+                
+            </div>
 
             <!--Search Results-->
                 <script id="consultant-template" type="x-tmpl-mustache">
-                    {{^.}}
-                      <div class="row">
+                    <div class="row">
                         <div class="medium-4 columns">
-                          <p class="tp_08">{{this.length}} No results </p>
+                          <p class="tp_08">{{length}} results</p>
                         </div>
-                      </div>
-                    {{/.}}
+                    </div>
                     {{#.}}
                     <div class="row underline">
                         <div class="small-5 medium-3 large-2 columns">

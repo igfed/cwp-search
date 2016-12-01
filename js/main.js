@@ -1,5 +1,3 @@
-// Plugin
-!function(t){"use strict";t.fn.infoToggle=function(){return this.each(function(){function i(){f.on("click",n),t(window).on("resize",o),s()}function n(){s(),a.toggleClass("active"),window.setTimeout(s),a.hasClass("active")&&e()}function o(){r&&c.css({height:"auto"})}function e(){t("html, body").animate({scrollTop:a.offset().top},500)}function s(){var t;a.hasClass("active")?(t=c[0].scrollHeight,r=!0):(t=0,r=!1),c.css({height:t}),g&&c.attr("aria-hidden",!r)}var a=t(this),c=a.find(".info-toggle-content"),f=a.find(".info-toggle-trigger"),r=!1,g="true"===a.attr("info-toggle-aria");i()}),this}}(jQuery);
 // GLOBALS
 var modelUrl = 'http://54.160.16.202:9000/api/cwpsearch?';
 var $field = $('#FindAnAdvisor');
@@ -44,6 +42,7 @@ function getCoordinates() {
 
 // Get the results
 function getSearchResults(params) {
+	$('#results-container, #office-search').addClass('hide').html('');
 	$.getJSON(modelUrl, params)
 	.always()
 	.done(function( data ) {
@@ -77,6 +76,11 @@ function parseSearchString() {
 	var search = $field.val();
 	var postalCodeFormat = new RegExp(/^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$/);
 
+	result.city = '';
+	result.name = '';
+	result.Pcode = '';
+	result.geo = '';
+
 	// Search in english
 	result.lang = 'en';
 	// We only search consultants from this method
@@ -85,7 +89,6 @@ function parseSearchString() {
 	if (postalCodeFormat.test(search)) {
 		result.Pcode = search.match(postalCodeFormat)[0];
 		search = search.replace(postalCodeFormat, ' ');
-		result.geo = ''; // Remove geolocation
 	}
 
 	// Check the search string for a previously defined location
@@ -96,7 +99,6 @@ function parseSearchString() {
 		if (city.length > 0) {
 			result.city = city[0];
 			words.splice(i, 1);
-			result.geo = ''; // Remove geolocation
 		}
 	}
 
@@ -113,8 +115,10 @@ function displaySearchResults( templateID, json, destination ) {
 	Mustache.parse(template);
 	var rendered = Mustache.render(template, json);
 	$('#'+destination).removeClass('hide').html(rendered);
+	attachComponents();
+}
 
-	$('.info-toggle-small, .info-toggle').infoToggle();
+function attachComponents(){
 	$(document).foundation();
 }
 
