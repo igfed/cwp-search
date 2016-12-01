@@ -1,6 +1,10 @@
 // GLOBALS
 var modelUrl = 'http://54.160.16.202:9000/api/cwpsearch?';
 var $field = $('#FindAnAdvisor');
+var lang = 'en';
+if(window.location.href.indexOf('/fr/') > -1) {
+    lang = 'fr';
+}
 
 // Process the local prefetched data
 var suggestions = {};
@@ -28,7 +32,7 @@ function getCoordinates() {
 	}
 	function success(position) {
 		var params = {};
-		params.lang = 'en';
+		params.lang = lang;
 		params.searchtype = 'con';
 		params.geo = position.coords.latitude +','+ position.coords.longitude;
 
@@ -47,6 +51,7 @@ function getSearchResults(params) {
 	.always()
 	.done(function( data ) {
 		var result = JSON.parse(data);
+		result = shuffle(result);
 		displaySearchResults('consultant-template', result, 'results-container');
 	})
 	.fail(function( result ) {
@@ -71,6 +76,25 @@ function getSearchResults(params) {
 	}
 }
 
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
 function parseSearchString() {
 	var result = {};
 	var search = $field.val();
@@ -81,8 +105,8 @@ function parseSearchString() {
 	result.Pcode = '';
 	result.geo = '';
 
-	// Search in english
-	result.lang = 'en';
+	// Search in the language of the page
+	result.lang = lang;
 	// We only search consultants from this method
 	result.searchtype = 'con';
 	// Check if there is a postal code

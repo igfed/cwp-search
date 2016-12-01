@@ -127,12 +127,14 @@
 
             <!--Search Results-->
                 <script id="consultant-template" type="x-tmpl-mustache">
-                    <div class="row">
-                        <div class="medium-4 columns">
-                          <p class="tp_08">{{length}} results</p>
-                        </div>
-                    </div>
                     {{#.}}
+                      {{#myInfo.0}}
+                        <div class="row">
+                            <div class="medium-4 columns">
+                              <p class="tp_08">{{length}} results</p>
+                            </div>
+                        </div>
+                      {{/myInfo.0}}
                     <div class="row underline">
                         <div class="small-5 medium-3 large-2 columns">
                             <div class="portrait">
