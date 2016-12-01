@@ -6284,6 +6284,7 @@ html.IGv2 {
     }
 
     .search-ui--location{
+      padding-left: 2.5rem;
       label{
         font-family: "whitney_lightregular";
       }
@@ -6314,5 +6315,9 @@ html.IGv2 {
      color: #666666 ;
      opacity: 1;
       font-size: 1.6rem!important;
+    }
+
+    .adv-search-right{
+      padding-right: 2.5rem;
     }
 }

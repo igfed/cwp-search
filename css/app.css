@@ -18649,8 +18649,10 @@ html.IGv2 .section.search-results .tp_21 {
   border-radius: 0.5rem; }
   .contact.section .collapse .columns {
     margin-bottom: 0 !important; }
-  .contact.section .collapse .search-ui--location label {
-    font-family: "whitney_lightregular"; }
+  .contact.section .collapse .search-ui--location {
+    padding-left: 2.5rem; }
+    .contact.section .collapse .search-ui--location label {
+      font-family: "whitney_lightregular"; }
 
 .contact.section .tt-menu, .contact.section .typeahead {
   font-size: 1.6rem !important; }
@@ -18678,3 +18680,6 @@ html.IGv2 .section.search-results .tp_21 {
   color: #666666;
   opacity: 1;
   font-size: 1.6rem !important; }
+
+.contact.section .adv-search-right {
+  padding-right: 2.5rem; }
