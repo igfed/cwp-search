@@ -4,13 +4,13 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Find an Advisor</title>
-        <link rel="stylesheet" href="css/app.css">
-        <link rel="stylesheet" href="css/serp-advisors-location.css"/>
+        <title>Trouver un conseiller</title>
+        <link rel="stylesheet" href="../css/app.css">
+        <link rel="stylesheet" href="../css/serp-advisors-location.css"/>
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
         <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
         <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
-        <script src="js/vendor/modernizr.js"></script>
+        <script src="../js/vendor/modernizr.js"></script>
     </head>
     <body>
         <div class="body-content">
@@ -21,19 +21,19 @@
                     <div class="row contact section">
                         <div class="small-10 small-centered columns">
                             <div class="row">
-                                <img src="images/find-an-advisor-icon.png" class="img__icon">
-                                <h1 class="text-center">Find an Advisor</h1>
-                                <p class="text-center">Our advisors can help no matter what financial situation you're in. Use this tool to set up your meeting today.</p>
+                                <img src="../images/find-an-advisor-icon.png" class="img__icon" alt="">
+                                <h1 class="text-center">Trouver un conseiller</h1>
+                                <p class="text-center">Nos conseillers examineront vos objectifs financiers et vous aideront à trouver comment les réaliser.</p>
                             </div>
                             <div class="row collapse">
                                 <div class="small-10 columns search-ui" data-searchtype="location">
                                     <div class="search-ui--location">
-                                        <label class="show-for-sr hide" for="FindAnAdvisor">Find an advisor</label>
-                                        <input class="typeahead itf_location itf_name" type="search" placeholder="Find an advisor" name="Search" autocomplete="off" spellcheck="false" id="FindAnAdvisor">
+                                        <label class="show-for-sr hide" for="FindAnAdvisor">Entrez le nom ou la ville</label>
+                                        <input class="typeahead itf_location itf_name" type="search" placeholder="Trouver un conseiller" name="Search" autocomplete="off" spellcheck="false" id="FindAnAdvisor">
                                     </div>
                                 </div>
                                 <div class="small-2 columns adv-search-right">
-                                    <button type="submit" value="Submit" id="SearchSubmitButton"><img src="images/search-icon-in-search-box.png" /></button>
+                                    <button type="submit" value="Submit" id="SearchSubmitButton"><img src="../images/search-icon-in-search-box.png" /></button>
                                 </div>
                             </div>
                         </div>
@@ -45,10 +45,10 @@
             <script id="office-template" type="x-tmpl-mustache">
               <div class="row info-toggle-trigger" data-toggler=".isActive" data-toggle="info-toggle-wrapper">
                 <div class="small-3 medium-2 columns">
-                  <img class="illustration" data-illustrationid="consultant-about" src="img/illustrations/consultant_webpage_open_icon_3C_191016.svg" alt="icon book and glasses">
+                  <img class="illustration" data-illustrationid="consultant-about" src="../img/illustrations/consultant_webpage_open_icon_3C_191016.svg" alt="icon book and glasses">
                 </div>
                 <div class="small-6 medium-3 columns">
-                  <p class="tp_08">{{length}} Offices found</p>
+                  <p class="tp_08">{{length}} bureaux trouvés</p>
                 </div>
                 <div class="small-2 medium-3 columns">
                   <i class="fa fa-chevron-down"></i>
@@ -66,7 +66,7 @@
                               <div class="map-container">
                                 <img src="https://maps.googleapis.com/maps/api/staticmap?center={{Address_Line_1__c}} {{Address_Line_2__c}}, {{City__c}}, {{Province_Territory_State__c}}, {{Postal_Code__c}}&zoom=17&size=130x130&key=AIzaSyB0n_92iCiJzEB2KBQ19jx88Uu6SWN7aUU" />    
                                 <div class="map-icon"></div>
-                                <div class="tp_22">View Map</div>
+                                <div class="tp_22">Voir la carte</div>
                               </div>
                           </a>
                         </div>
@@ -80,26 +80,26 @@
                           <div class="small-5 medium-3 columns phone">
                             <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
                                 <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
-                                        Contact Info
-                                         Phone
+                                        Informations de contact
+                                         Téléphone 
                                     ">
                                     <a class="outline-btn secondary small-icon phone dropdown-button" type="button" tabindex="0">
-                                        <span class="hide-for-small-only">Contact Info</span>
-                                        <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Phone</span>
+                                        <span class="hide-for-small-only">Informations de contact</span>
+                                        <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Téléphone </span>
                                     </a>
                                     <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
                                         <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
-                                            <a href="mailto:{{Email__c}}">Email me</a>
+                                            <a href="mailto:a@b.com">Envoyez moi un courriel</a>
                                         </li>
                                         <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
                                             <a href="tel:{{Phone__c}}">
-                                                <strong>Main</strong>
+                                                <strong>Principal</strong>
                                                 <span>{{Phone__c}}</span>
                                             </a>
                                         </li>
                                         <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
                                             <a href="tel:{{Fax__c}}">
-                                                <strong>Fax</strong>
+                                                <strong>Télécopieur</strong>
                                                 <span>{{Fax__c}}</span>
                                             </a>
                                         </li>
@@ -108,10 +108,10 @@
                             </ul>
                           </div>
                           <div class="small-5 show-for-small-only columns email-button">
-                          <a href="mailto:{{Email__c}}" class="outline-btn secondary small-icon email" type="button"><span class="show-for-small-only"><i aria-hidden="true" class="fa fa-envelope"></i> Email</span></a>
+                          <a href="mailto:{{Email__c}}" class="outline-btn secondary small-icon email" type="button"><span class="show-for-small-only"><i aria-hidden="true" class="fa fa-envelope"></i> Courriel</span></a>
                           </div>
                            <div class="small-12 medium-3 columns">
-                            <a class="outline-btn constrained" type="button" href="{{prettyURL__c}}">View Details</a>
+                            <a class="outline-btn constrained" type="button" href="{{prettyURL__c}}">Voir les détails</a>
                           </div>
                         </div>
                         <div class="clear"></div>
@@ -127,7 +127,7 @@
             <script id="result-amount-template" type="x-tmpl-mustache">
               <div class="row">
                   <div class="medium-4 columns">
-                    <p class="tp_08">{{length}} results</p>
+                    <p class="tp_08">{{length}} résultats</p>
                   </div>
               </div>
             </script>
@@ -148,20 +148,20 @@
                       
                         <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
                           <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
-                                  Contact Info
-                                   Phone
+                                  Informations de contact
+                                   Téléphone
                               ">
                               <a class="outline-btn secondary small-icon phone dropdown-button" type="button" tabindex="0">
-                                  <span class="hide-for-small-only">Contact Info</span>
-                                  <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Phone</span>
+                                  <span class="hide-for-small-only">Informations de contact</span>
+                                  <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Téléphone </span>
                               </a>
                               <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
                                   <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
-                                      <a href="mailto:{{myInfo.Email}}">Email me</a>
+                                      <a href="mailto:{{myInfo.Email}}">Envoyez moi un courriel</a>
                                   </li>
                                   <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
                                       <a href="tel:{{myInfo.Phone}}">
-                                          <strong>Main</strong>
+                                          <strong>Principal</strong>
                                           <span>{{myInfo.Phone}}</span>
                                       </a>
                                   </li>
@@ -170,10 +170,10 @@
                       </ul>
                     </div>
                     <div class="small-5 show-for-small-only columns email-button">
-                        <a href="mailto:{{myInfo.Email}}" class="outline-btn secondary small-icon email" type="button"><span class="show-for-small-only"><i aria-hidden="true" class="fa fa-envelope"></i> Email</span></a>
+                        <a href="mailto:{{myInfo.Email}}" class="outline-btn secondary small-icon email" type="button"><span class="show-for-small-only"><i aria-hidden="true" class="fa fa-envelope"></i> Courriel</span></a>
                     </div>
                     <div class="small-12 medium-3 columns">
-                        <a class="outline-btn constrained" type="button" href="{{myInfo.ConsultantUrl}}">View Profile</a>
+                        <a class="outline-btn constrained" type="button" href="{{myInfo.ConsultantUrl}}">Voir le profil</a>
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -185,7 +185,7 @@
                           <div class="clear"></div>
                         </div>
                         <div class="small-4 medium-4 columns">
-                          <p class="tp_21">My Team</p>
+                          <p class="tp_21">Mon équipe</p>
                         </div>
                         <div class="small-4 medium-4 columns line">
                           <div class="clear"></div>
@@ -200,20 +200,20 @@
 
                           <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
                           <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
-                                  Contact Info
-                                   Phone
+                                  Informations de contact
+                                   Téléphone 
                               ">
                               <a class="outline-btn secondary small-icon phone dropdown-button" type="button" tabindex="0">
-                                  <span class="hide-for-small-only">Contact Info</span>
+                                  <span class="hide-for-small-only">Informations de contact</span>
                                   <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i></span>
                               </a>
                               <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
                                   <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
-                                      <a href="mailto:{{Email}}">Email me</a>
+                                      <a href="mailto:{{Email}}">Envoyez moi un courriel</a>
                                   </li>
                                   <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
                                       <a href="tel:{{Phone}}">
-                                          <strong>Main</strong>
+                                          <strong>Principal</strong>
                                           <span>{{Phone}}</span>
                                       </a>
                                   </li>
@@ -224,10 +224,10 @@
                       <div class="clear"></div>
                         </div>
                     {{/myConsultantTeam}}
-                     <div class="row show-for-small-only">
+                     <!--<div class="row show-for-small-only">
                            <p>View All Team Members</p>
                         </div>
-                    </div>
+                    </div>--> 
                 </div>
                 {{/myConsultantTeam.length}}
             {{/.}}
@@ -235,7 +235,7 @@
             <script id="view-more-template" type="x-tmpl-mustache">
               <div class="row">
                   <div class="medium-4 medium-centered">
-                      <a class="outline-btn secondary" type="button" href="#" data-fetch-results>View More Results</a>
+                      <a class="outline-btn secondary" type="button" href="#" data-fetch-results>Afficher plus de résultats</a>
                   </div>
               </div>
             </script>
@@ -243,11 +243,11 @@
 
             <!--18.Footer-->
 
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script src="js/vendor/typeahead.bundle.min.js"></script>
-    <script src="js/vendor/mustache.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="../js/vendor/jquery.js"></script>
+    <script src="../js/foundation.min.js"></script>
+    <script src="../js/vendor/typeahead.bundle.min.js"></script>
+    <script src="../js/vendor/mustache.min.js"></script>
+    <script src="../js/main.js"></script>
 
 </body>
 
