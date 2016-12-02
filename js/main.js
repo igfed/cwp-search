@@ -1,6 +1,7 @@
 // GLOBALS
 var modelUrl = 'http://54.160.16.202:9000/api/cwpsearch?';
 var $field = $('#FindAnAdvisor');
+var allConsultants = {};
 var lang = 'en';
 if(window.location.href.indexOf('/fr/') > -1) {
     lang = 'fr';
@@ -51,8 +52,10 @@ function getSearchResults(params) {
 	.always()
 	.done(function( data ) {
 		var result = JSON.parse(data);
-		result = shuffle(result);
-		displaySearchResults('consultant-template', result, 'results-container');
+		allConsultants = shuffle(result);
+		displaySearchResults('result-amount-template', allConsultants, 'results-container');
+		paginateResults();
+		$('html, body').animate({scrollTop: $('#office-search').offset().top}, 750);
 	})
 	.fail(function( result ) {
 		console.log('Data could not be retrieved, please try again', result.status + ' ' + result.statusText);
@@ -95,6 +98,14 @@ function shuffle(array) {
   return array;
 }
 
+function paginateResults() {
+	var result = allConsultants.slice(0, 5);
+	allConsultants.splice(0,5);
+	displaySearchResults('consultant-template', result, 'results-container');
+	if (allConsultants.length > 0) {
+		displaySearchResults('view-more-template', [], 'results-container');
+	}
+}
 function parseSearchString() {
 	var result = {};
 	var search = $field.val();
@@ -138,12 +149,17 @@ function displaySearchResults( templateID, json, destination ) {
 	var template = document.getElementById(templateID).innerHTML;
 	Mustache.parse(template);
 	var rendered = Mustache.render(template, json);
-	$('#'+destination).removeClass('hide').html(rendered);
+	$('#'+destination).removeClass('hide').append(rendered);
 	attachComponents();
 }
 
 function attachComponents(){
 	$(document).foundation();
+	$('[data-fetch-results]').on('click',function(e){
+		e.preventDefault();
+		$(this).remove();
+		paginateResults();
+	});
 }
 
 //Init everything
