@@ -121,121 +121,128 @@
               {{/.}}
               </div>
             </script>
-            <div id="office-search" class="section office-search info-toggle hide" info-toggle-aria="true" data-toggler=".active">
-                
-            </div>
+            <div id="office-search" class="section office-search info-toggle hide" info-toggle-aria="true" data-toggler=".active"></div>
 
             <!--Search Results-->
-                <script id="consultant-template" type="x-tmpl-mustache">
-                    <div class="row">
-                        <div class="medium-4 columns">
-                          <p class="tp_08">{{length}} results</p>
+            <script id="result-amount-template" type="x-tmpl-mustache">
+              <div class="row">
+                  <div class="medium-4 columns">
+                    <p class="tp_08">{{length}} results</p>
+                  </div>
+              </div>
+            </script>
+            <script id="consultant-template" type="x-tmpl-mustache">
+                {{#.}}
+                <div class="row underline">
+                    <div class="small-5 medium-3 large-2 columns">
+                        <div class="portrait">
+                            <img src="{{myInfo.photoUrl}}" alt="{{myInfo.FName}} {{myInfo.LName}}" />
                         </div>
                     </div>
-                    {{#.}}
-                    <div class="row underline">
-                        <div class="small-5 medium-3 large-2 columns">
-                            <div class="portrait">
-                                <img src="{{myInfo.photoUrl}}" alt="{{myInfo.FName}} {{myInfo.LName}}" />
-                            </div>
-                        </div>
-                        <div class="small-6 medium-3 large-4 columns">
-                            <p class="tp_07 consultant_name">{{myInfo.FName}} {{myInfo.LName}}</p>
-                            <p class="tp_09">{{myInfo.Ct_City}} {{myInfo.PostalCode}}</p>
-                        </div>
-                        <div class="small-5 medium-3 columns phone">
-                          
-                            <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
-                              <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
-                                      Contact Info
-                                       Phone
-                                  ">
-                                  <a class="outline-btn secondary small-icon phone dropdown-button" type="button" tabindex="0">
-                                      <span class="hide-for-small-only">Contact Info</span>
-                                      <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Phone</span>
-                                  </a>
-                                  <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
-                                      <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
-                                          <a href="mailto:{{myInfo.Email}}">Email me</a>
-                                      </li>
-                                      <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                          <a href="tel:{{myInfo.Phone}}">
-                                              <strong>Main</strong>
-                                              <span>{{myInfo.Phone}}</span>
-                                          </a>
-                                      </li>
-                                  </ul>
-                              </li>
-                          </ul>
-                        </div>
-                        <div class="small-5 show-for-small-only columns email-button">
-                            <a href="mailto:{{myInfo.Email}}" class="outline-btn secondary small-icon email" type="button"><span class="show-for-small-only"><i aria-hidden="true" class="fa fa-envelope"></i> Email</span></a>
-                        </div>
-                        <div class="small-12 medium-3 columns">
-                            <a class="outline-btn constrained" type="button" href="{{myInfo.ConsultantUrl}}">View Profile</a>
-                        </div>
-                        <div class="clear"></div>
+                    <div class="small-6 medium-3 large-4 columns">
+                        <p class="tp_07 consultant_name">{{myInfo.FName}} {{myInfo.LName}}</p>
+                        <p class="tp_09">{{myInfo.Ct_City}} {{myInfo.PostalCode}}</p>
                     </div>
-                    {{#myConsultantTeam.length}}
-                    <div class="row my-team">
-                        <div class="medium-12 columns title">
-                          <div class="row">
-                            <div class="small-4 medium-4 columns line">
-                              <div class="clear"></div>
-                            </div>
-                            <div class="small-4 medium-4 columns">
-                              <p class="tp_21">My Team</p>
-                            </div>
-                            <div class="small-4 medium-4 columns line">
-                              <div class="clear"></div>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="my-consultant-team">
-                        {{#myConsultantTeam}}
-                            <div class="medium-4 columns">
-                              <p class="tp_09 consultant_name">{{FName}} {{LName}}</p>
-                        
-
-                              <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
-                              <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
-                                      Contact Info
-                                       Phone
-                                  ">
-                                  <a class="outline-btn secondary small-icon phone dropdown-button" type="button" tabindex="0">
-                                      <span class="hide-for-small-only">Contact Info</span>
-                                      <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i></span>
-                                  </a>
-                                  <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
-                                      <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
-                                          <a href="mailto:{{Email}}">Email me</a>
-                                      </li>
-                                      <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                          <a href="tel:{{Phone}}">
-                                              <strong>Main</strong>
-                                              <span>{{Phone}}</span>
-                                          </a>
-                                      </li>
-                                  </ul>
-                              </li>
-                          </ul>
-                        <a href="mailto:{{Email}}" class="outline-btn secondary small-icon email show-for-small-only" type="button"><span><i aria-hidden="true" class="fa fa-envelope"></i></span></a>
+                    <div class="small-5 medium-3 columns phone">
+                      
+                        <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
+                          <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
+                                  Contact Info
+                                   Phone
+                              ">
+                              <a class="outline-btn secondary small-icon phone dropdown-button" type="button" tabindex="0">
+                                  <span class="hide-for-small-only">Contact Info</span>
+                                  <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Phone</span>
+                              </a>
+                              <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
+                                  <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
+                                      <a href="mailto:{{myInfo.Email}}">Email me</a>
+                                  </li>
+                                  <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                                      <a href="tel:{{myInfo.Phone}}">
+                                          <strong>Main</strong>
+                                          <span>{{myInfo.Phone}}</span>
+                                      </a>
+                                  </li>
+                              </ul>
+                          </li>
+                      </ul>
+                    </div>
+                    <div class="small-5 show-for-small-only columns email-button">
+                        <a href="mailto:{{myInfo.Email}}" class="outline-btn secondary small-icon email" type="button"><span class="show-for-small-only"><i aria-hidden="true" class="fa fa-envelope"></i> Email</span></a>
+                    </div>
+                    <div class="small-12 medium-3 columns">
+                        <a class="outline-btn constrained" type="button" href="{{myInfo.ConsultantUrl}}">View Profile</a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                {{#myConsultantTeam.length}}
+                <div class="row my-team">
+                    <div class="medium-12 columns title">
+                      <div class="row">
+                        <div class="small-4 medium-4 columns line">
                           <div class="clear"></div>
-                            </div>
-                        {{/myConsultantTeam}}
-                         <div class="row show-for-small-only">
-                               <p>View All Team Members</p>
-                            </div>
+                        </div>
+                        <div class="small-4 medium-4 columns">
+                          <p class="tp_21">My Team</p>
+                        </div>
+                        <div class="small-4 medium-4 columns line">
+                          <div class="clear"></div>
+                        </div>
                         </div>
                     </div>
-                    {{/myConsultantTeam.length}}
-                {{/.}}
-                <!-- <div class="row">
-                    <div class="medium-4 medium-centered">
-                        <a class="outline-btn secondary" type="button" href="#">View More Results</a>
+                    <div class="my-consultant-team">
+                    {{#myConsultantTeam}}
+                        <div class="medium-4 columns">
+                          <p class="tp_09 consultant_name">{{FName}} {{LName}}</p>
+                    
+
+                          <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
+                          <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
+                                  Contact Info
+                                   Phone
+                              ">
+                              <a class="outline-btn secondary small-icon phone dropdown-button" type="button" tabindex="0">
+                                  <span class="hide-for-small-only">Contact Info</span>
+                                  <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i></span>
+                              </a>
+                              <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
+                                  <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
+                                      <a href="mailto:{{Email}}">Email me</a>
+                                  </li>
+                                  <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                                      <a href="tel:{{Phone}}">
+                                          <strong>Main</strong>
+                                          <span>{{Phone}}</span>
+                                      </a>
+                                  </li>
+                              </ul>
+                          </li>
+                      </ul>
+                    <a href="mailto:{{Email}}" class="outline-btn secondary small-icon email show-for-small-only" type="button"><span><i aria-hidden="true" class="fa fa-envelope"></i></span></a>
+                      <div class="clear"></div>
+                        </div>
+                    {{/myConsultantTeam}}
+                     <div class="row show-for-small-only">
+                           <p>View All Team Members</p>
+                        </div>
                     </div>
-                </div> -->
-                </script>
+                </div>
+                {{/myConsultantTeam.length}}
+            {{/.}}
+            {{#hasMore}}
+            {{/hasMore}}
+            {{^hasMore}}
+            {{/hasMore}}
+            
+            </script>
+            <script id="view-more-template" type="x-tmpl-mustache">
+              <div class="row">
+                  <div class="medium-4 medium-centered">
+                      <a class="outline-btn secondary" type="button" href="#" data-fetch-results>View More Results</a>
+                  </div>
+              </div>
+            </script>
             <div class="section search-results hide" id="results-container"></div>
 
             <!--18.Footer-->
