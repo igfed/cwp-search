@@ -71,6 +71,7 @@ function getSearchResults(params) {
 			var result = JSON.parse(data);
 			if (result.length > 0) {
 				displaySearchResults('office-template', result, 'office-search');
+				console.log(result);
 			}
 		})
 		.fail(function( result ) {
