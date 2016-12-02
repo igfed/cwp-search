@@ -26,15 +26,17 @@
                                 <p class="text-center">Our advisors can help no matter what financial situation you're in. Use this tool to set up your meeting today.</p>
                             </div>
                             <div class="row collapse">
-                                <div class="small-10 columns search-ui" data-searchtype="location">
-                                    <div class="search-ui--location">
+                                <!-- <div class="small-10 columns search-ui" data-searchtype="location"> -->
+                                    <div class="search-ui--location search-ui" data-searchtype="location">
+                                      <button type="submit" value="Submit" id="SearchSubmitButton"><img src="images/search-icon-in-search-box.png" /></button>
                                         <label class="show-for-sr hide" for="FindAnAdvisor">Find an advisor</label>
                                         <input class="typeahead itf_location itf_name" type="search" placeholder="Find an advisor" name="Search" autocomplete="off" spellcheck="false" id="FindAnAdvisor">
+                                        <!-- <div class=" adv-search-right"> -->
+                                    <button type="close" value="close" id="SearchCloseButton"><img src="images/find_an_advisor_close.png" /></button>
+                                <!-- </div> -->
                                     </div>
-                                </div>
-                                <div class="small-2 columns adv-search-right">
-                                    <button type="submit" value="Submit" id="SearchSubmitButton"><img src="images/search-icon-in-search-box.png" /></button>
-                                </div>
+                                <!-- </div> -->
+                                <!-- <div class="small-2 columns adv-search-right"> -->
                             </div>
                         </div>
                     </div>
@@ -129,23 +131,21 @@
                 <script id="consultant-template" type="x-tmpl-mustache">
                     <div class="row">
                         <div class="medium-4 columns">
-                          <p class="tp_08">{{length}} results</p>
+                          <p class="tp_08">{{length}} results town</p>
                         </div>
                     </div>
                     {{#.}}
                     <div class="row underline">
-                        <div class="small-5 medium-3 large-2 columns">
+                        <div class="small-12 medium-6 large-7 columns portrait-column">
                             <div class="portrait">
                                 <img src="{{myInfo.photoUrl}}" alt="{{myInfo.FName}} {{myInfo.LName}}" />
                             </div>
-                        </div>
-                        <div class="small-6 medium-3 large-4 columns">
                             <p class="tp_07 consultant_name">{{myInfo.FName}} {{myInfo.LName}}</p>
                             <p class="tp_09">{{myInfo.Ct_City}} {{myInfo.PostalCode}}</p>
                         </div>
-                        <div class="small-5 medium-3 columns phone">
+                        <div class="small-12 medium-6 large-5 columns buttons-column">
                           
-                            <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
+                            <ul class="dropdown menu phone" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
                               <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
                                       Contact Info
                                        Phone
@@ -167,13 +167,10 @@
                                   </ul>
                               </li>
                           </ul>
-                        </div>
-                        <div class="small-5 show-for-small-only columns email-button">
                             <a href="mailto:{{myInfo.Email}}" class="outline-btn secondary small-icon email" type="button"><span class="show-for-small-only"><i aria-hidden="true" class="fa fa-envelope"></i> Email</span></a>
+                          <a class="outline-btn constrained" type="button" href="{{myInfo.ConsultantUrl}}">View Profile</a>
                         </div>
-                        <div class="small-12 medium-3 columns">
-                            <a class="outline-btn constrained" type="button" href="{{myInfo.ConsultantUrl}}">View Profile</a>
-                        </div>
+                       
                         <div class="clear"></div>
                     </div>
                     {{#myConsultantTeam.length}}

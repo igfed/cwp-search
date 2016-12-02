@@ -168,3 +168,13 @@ $(function() {
 		getSearchResults(params);
 	});
 });
+
+//Lowercase text
+// $(function textTransformLowercase(){
+//      $('.search-ui').text(function (_, val) {
+// 	    return val.toLowerCase();
+// 	    $('.search-ui').addClass('capitalize');
+//     });
+// }());
+
+
