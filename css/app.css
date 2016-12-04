@@ -14444,7 +14444,6 @@ select[multiple] {
   position: absolute;
   top: 0;
   left: 100%;
-  min-width: 200px;
   z-index: 1;
   background: #fefefe;
   border: 1px solid #cacaca; }
@@ -18552,7 +18551,7 @@ html.IGv2 .section.search-results .tp_21 {
       margin-bottom: 1rem; } }
   .section.search-results .underline .dropdown .is-dropdown-submenu {
     min-width: 15rem;
-    width: 1500rem;
+    width: 15rem;
     top: 4rem; }
   .section.search-results .underline .outline-btn {
     width: 15rem; }
@@ -18615,7 +18614,9 @@ html.IGv2 .section.search-results .tp_21 {
     margin-right: 0.5rem; }
   .section.search-results .row.underline .buttons-column a:last-child {
     float: left;
-    clear: none; } }
+    clear: none; }
+  .section.search-results .row.underline .buttons-column .is-dropdown-submenu {
+    width: 100%; } }
 
 @media only screen and (max-width: 40em) {
   .section.search-results .row.underline .buttons-column a:last-child {
@@ -18681,6 +18682,17 @@ html.IGv2 .section.search-results .tp_21 {
     border: none !important; }
     .section.search-results .my-consultant-team .email i {
       border: 2px solid #0d263c !important; } }
+
+@media only screen and (min-width: 40.063em) {
+  .section.search-results .my-consultant-team .dropdown .is-dropdown-submenu {
+    width: 14rem;
+    margin: 0 auto;
+    position: relative;
+    min-width: auto; } }
+
+@media only screen and (max-width: 40em) {
+  .section.search-results .my-consultant-team .dropdown .is-dropdown-submenu {
+    width: 14rem !important; } }
 
 .clear {
   clear: both; }

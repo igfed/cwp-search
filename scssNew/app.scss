@@ -2415,7 +2415,7 @@ select[multiple] {
   position: absolute;
   top: 0;
   left: 100%;
-  min-width: 200px;
+  // min-width: 200px;
   z-index: 1;
   background: #fefefe;
   border: 1px solid #cacaca; }
@@ -6138,7 +6138,7 @@ html.IGv2 {
 
       .is-dropdown-submenu{
         min-width: 15rem;
-        width: 1500rem;
+        width: 15rem;
         top: 4rem;
       }
     }
@@ -6244,6 +6244,7 @@ html.IGv2 {
       }
 
       @media #{$small-only}{
+
         .phone{
           float: left;
           margin-right: 0.5rem;
@@ -6255,6 +6256,10 @@ html.IGv2 {
             float: left;
             clear: none;
           }
+        }
+
+        .is-dropdown-submenu{
+          width: 100%;
         }
       }
 
@@ -6364,6 +6369,22 @@ html.IGv2 {
 
         i{
           border: 2px solid #0d263c!important;
+        }
+      }
+    }
+
+    .dropdown{
+
+      .is-dropdown-submenu{
+        @media #{$medium-up}{
+          width: 14rem;
+          margin: 0 auto;
+          position: relative;
+          min-width: auto;
+        }
+
+        @media #{$small-only}{
+           width: 14rem!important;
         }
       }
     }
