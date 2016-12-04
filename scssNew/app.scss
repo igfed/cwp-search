@@ -6138,7 +6138,7 @@ html.IGv2 {
 
       .is-dropdown-submenu{
         min-width: 15rem;
-        width: 15rem;
+        width: 1500rem;
         top: 4rem;
       }
     }
@@ -6197,7 +6197,12 @@ html.IGv2 {
   }
 
   .portrait-column{
-
+    @media #{$medium-up}{
+      width: auto;
+      .consultant_name{
+        display: inline-block;
+      }
+    }
   }
 
     .buttons-column{
@@ -6205,6 +6210,20 @@ html.IGv2 {
       @media #{$medium-only}{
         padding-left: 5rem;
 
+        .phone{
+          float: left;
+          // margin-right: 0;
+
+        }
+
+        a{
+          &:last-child{
+            float: left;
+          }
+        }
+      }
+
+      @media screen and (max-width:843px){
         .phone{
           float: right;
           margin-right: 0;
@@ -6214,9 +6233,31 @@ html.IGv2 {
         a{
           &:last-child{
             float: right;
+            clear: both;
           }
         }
       }
+
+      @media #{$medium-up}{
+        float: right;
+        width: auto;
+      }
+
+      @media #{$small-only}{
+        .phone{
+          float: left;
+          margin-right: 0.5rem;
+
+        }
+
+        a{
+          &:last-child{
+            float: left;
+            clear: none;
+          }
+        }
+      }
+
       a{
         &:last-child{
           @media #{$small-only}{
@@ -6279,7 +6320,8 @@ html.IGv2 {
     .show-for-small-only{
       &.email{
          @media #{$small-only}{
-          top: -0.3rem;
+          top: -1.2rem!important;
+          padding-right:0!important;
          }
       }
     }
@@ -6312,7 +6354,7 @@ html.IGv2 {
 
     .dropdown{
       @media #{$small-only}{
-        float:left;
+        display: inline-block;
       }
     }
 
@@ -6505,19 +6547,19 @@ html.IGv2 {
   }
 }
 
-#SearchCloseButton{
+#SearchSubmitButton{
   display: inline-block;
   right: 0;
 
     img{
       height: auto;
-      width: 10px;
+      width: 17px;
       position: relative;
       display: block;
       margin: 0;
       padding: 0;
-      top: 0.5rem;
-      left: 1.5rem;
+      top: 1rem;
+      left: 0.5rem;
 
       @media #{$small-only}{
         left: -1rem;
