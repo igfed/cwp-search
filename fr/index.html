@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="IGv2" lang="en">
+<html class="IGv2" lang="fr">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -13,28 +13,28 @@
         <script src="../js/vendor/modernizr.js"></script>
     </head>
     <body>
-        <div class="body-content">
+        <div class="body-content cwp-search">
 
             <!--Search-->
             <div class="icon-wrap">
                 <form id="siteSearch" class="search-form">
                     <div class="row contact section">
-                        <div class="small-10 small-centered columns">
+                        <div class="small-12 medium-10 small-centered columns">
                             <div class="row">
-                                <img src="../images/find-an-advisor-icon.png" class="img__icon" alt="">
+                                <img src="../images/find-an-advisor-icon.png" class="img__icon">
                                 <h1 class="text-center">Trouver un conseiller</h1>
                                 <p class="text-center">Nos conseillers examineront vos objectifs financiers et vous aideront à trouver comment les réaliser.</p>
                             </div>
                             <div class="row collapse">
-                                <div class="small-10 columns search-ui" data-searchtype="location">
-                                    <div class="search-ui--location">
+                               <button type="submit" value="Submit" id="SearchSubmitButton"><img src="../images/search-icon-in-search-box.png" /></button>
+                                <!-- <div class="small-10 columns search-ui"> -->
+                                    <div class="search-ui--location search-ui" data-searchtype="location">
                                         <label class="show-for-sr hide" for="FindAnAdvisor">Entrez le nom ou la ville</label>
                                         <input class="typeahead itf_location itf_name" type="search" placeholder="Trouver un conseiller" name="Search" autocomplete="off" spellcheck="false" id="FindAnAdvisor">
                                     </div>
-                                </div>
-                                <div class="small-2 columns adv-search-right">
-                                    <button type="submit" value="Submit" id="SearchSubmitButton"><img src="../images/search-icon-in-search-box.png" /></button>
-                                </div>
+                                    <!-- <div class="adv-search-right"> -->
+                                   <!-- </div> -->
+                                <!-- </div> -->
                             </div>
                         </div>
                     </div>
@@ -55,37 +55,38 @@
                 </div>
               </div>
               <div id="info-toggle-wrapper" data-toggler=".isActive">
+              <div class="row info-toggle-content">
               {{#.}}
-
-                <div class="row info-toggle-content">
                   <div class="small-12 columns">
                     <div class="row underline">
-                      <div class="small-4 medium-3 columns">
+                      <div class="small-4 medium-3 columns map-column">
                         <div class="maps">
                           <a class="map-anchor" href="https://www.google.ca/maps/dir//{{Address_Line_1__c}} {{Address_Line_2__c}}, {{City__c}}, {{Province_Territory_State__c}}, {{Postal_Code__c}}">
                               <div class="map-container">
                                 <img src="https://maps.googleapis.com/maps/api/staticmap?center={{Address_Line_1__c}} {{Address_Line_2__c}}, {{City__c}}, {{Province_Territory_State__c}}, {{Postal_Code__c}}&zoom=17&size=130x130&key=AIzaSyB0n_92iCiJzEB2KBQ19jx88Uu6SWN7aUU" />    
                                 <div class="map-icon"></div>
                                 <div class="tp_22">Voir la carte</div>
+                                <div class="clear"></div>
                               </div>
                           </a>
                         </div>
-                      </div>
-                      <div class="small-8 medium-3 columns">
-                        <p class="tp_07">{{Address_Line_1__c}} {{Address_Line_2__c}}</p>
-                        <p class="tp_09">{{City__c}}, {{Province_Territory_State__c}}, {{Postal_Code__c}}</p>
+                        <div class="map-address">
+                         <p class="tp_07">{{Address_Line_1__c}}
+                         {{Address_Line_2__c}}</p>
+                        <p class="tp_09">{{City__c}},
+                        {{Province_Territory_State__c}}, {{Postal_Code__c}}</p>
+                        </div>
                       </div>
 
-                        <div class="row contact-buttons">
-                          <div class="small-5 medium-3 columns phone">
-                            <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
+                        <div class="columns contact-buttons buttons-column">
+                            <ul class="dropdown menu phone" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
                                 <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
                                         Informations de contact
-                                         Téléphone 
+                                         Téléphone
                                     ">
                                     <a class="outline-btn secondary small-icon phone dropdown-button" type="button" tabindex="0">
                                         <span class="hide-for-small-only">Informations de contact</span>
-                                        <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Téléphone </span>
+                                        <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Téléphone</span>
                                     </a>
                                     <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
                                         <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
@@ -106,19 +107,14 @@
                                     </ul>
                                 </li>
                             </ul>
-                          </div>
-                          <div class="small-5 show-for-small-only columns email-button">
                           <a href="mailto:{{Director__r.Email}}" class="outline-btn secondary small-icon email" type="button"><span class="show-for-small-only"><i aria-hidden="true" class="fa fa-envelope"></i> Courriel</span></a>
-                          </div>
-                           <div class="small-12 medium-3 columns">
                             <a class="outline-btn constrained" type="button" href="{{prettyURL__c}}">Voir les détails</a>
-                          </div>
                         </div>
                         <div class="clear"></div>
                     </div>
                   </div>
-                </div>
               {{/.}}
+              </div>
               </div>
             </script>
             <div id="office-search" class="section office-search info-toggle hide" info-toggle-aria="true" data-toggler=".active"></div>
@@ -131,51 +127,48 @@
                   </div>
               </div>
             </script>
-            <script id="consultant-template" type="x-tmpl-mustache">
-                {{#.}}
-                <div class="row underline">
-                    <div class="small-5 medium-3 large-2 columns">
-                        <div class="portrait">
-                            <img src="{{myInfo.photoUrl}}" alt="{{myInfo.FName}} {{myInfo.LName}}" />
+                <script id="consultant-template" type="x-tmpl-mustache">
+                    {{#.}}
+                    <div class="row underline">
+                        <div class="small-12 medium-7 large-7 columns portrait-column">
+                            <div class="portrait">
+                                <img src="{{myInfo.photoUrl}}" alt="{{myInfo.FName}} {{myInfo.LName}}" />
+                            </div>
+                            <div class="consultant-text">
+                            <p class="tp_07 consultant_name">{{myInfo.FName}} {{myInfo.LName}}</p>
+                            <p class="tp_05">{{myInfo.title}}</p>
+                            <p class="tp_09">{{myInfo.Ct_City}} {{myInfo.PostalCode}}</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="small-6 medium-3 large-4 columns">
-                        <p class="tp_07 consultant_name">{{myInfo.FName}} {{myInfo.LName}}</p>
-                        <p class="tp_06">{{myInfo.title}}</p>
-                        <p class="tp_09">{{myInfo.Ct_City}} {{myInfo.PostalCode}}</p>
-                    </div>
-                    <div class="small-5 medium-3 columns phone">
-                      
-                        <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
-                          <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
-                                  Informations de contact
-                                   Téléphone
-                              ">
-                              <a class="outline-btn secondary small-icon phone dropdown-button" type="button" tabindex="0">
-                                  <span class="hide-for-small-only">Informations de contact</span>
-                                  <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Téléphone </span>
-                              </a>
-                              <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
-                                  <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
-                                      <a href="mailto:{{myInfo.Email}}">Envoyez moi un courriel</a>
-                                  </li>
-                                  <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                      <a href="tel:{{myInfo.Phone}}">
-                                          <strong>Principal</strong>
-                                          <span>{{myInfo.Phone}}</span>
-                                      </a>
-                                  </li>
-                              </ul>
-                          </li>
-                      </ul>
-                    </div>
-                    <div class="small-5 show-for-small-only columns email-button">
-                        <a href="mailto:{{myInfo.Email}}" class="outline-btn secondary small-icon email" type="button"><span class="show-for-small-only"><i aria-hidden="true" class="fa fa-envelope"></i> Courriel</span></a>
-                    </div>
-                    <div class="small-12 medium-3 columns">
-                        <a class="outline-btn constrained" type="button" href="{{myInfo.ConsultantUrl}}">Voir le profil</a>
-                    </div>
-                    <div class="clear"></div>
+                        <div class="small-12 medium-6 large-5 columns buttons-column">
+                          
+                            <ul class="dropdown menu phone" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
+                              <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
+                                      Informations de contact
+                                        Téléphone
+                                  ">
+                                  <a class="outline-btn secondary small-icon phone dropdown-button" type="button" tabindex="0">
+                                      <span class="hide-for-small-only">Informations de contact</span>
+                                      <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Téléphone</span>
+                                  </a>
+                                  <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
+                                      <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
+                                          <a href="mailto:{{myInfo.Email}}">Envoyez moi un courriel</a>
+                                      </li>
+                                      <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                                          <a href="tel:{{myInfo.Phone}}">
+                                              <strong>Principal</strong>
+                                              <span>{{myInfo.Phone}}</span>
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </li>
+                          </ul>
+                            <a href="mailto:{{myInfo.Email}}" class="outline-btn secondary small-icon email" type="button"><span class="show-for-small-only"><i aria-hidden="true" class="fa fa-envelope"></i> Courriel</span></a>
+                          <a class="outline-btn constrained" type="button" href="{{myInfo.ConsultantUrl}}">Voir le profil</a>
+                        </div>
+                       
+                        <div class="clear"></div>
                 </div>
                 {{#myConsultantTeam.length}}
                 <div class="row my-team">
@@ -185,7 +178,7 @@
                           <div class="clear"></div>
                         </div>
                         <div class="small-4 medium-4 columns">
-                          <p class="tp_21">Mon équipe</p>
+                          <p class="tp_21">My Team</p>
                         </div>
                         <div class="small-4 medium-4 columns line">
                           <div class="clear"></div>
@@ -201,7 +194,7 @@
                           <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
                           <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
                                   Informations de contact
-                                   Téléphone 
+                                   Téléphone
                               ">
                               <a class="outline-btn secondary small-icon phone dropdown-button" type="button" tabindex="0">
                                   <span class="hide-for-small-only">Informations de contact</span>
@@ -224,16 +217,16 @@
                       <div class="clear"></div>
                         </div>
                     {{/myConsultantTeam}}
-                     <!--<div class="row show-for-small-only">
-                           <p>View All Team Members</p>
+                     <div class="row show-for-small-only">
+                           <p class="tp_05">Voir tous les membres de l'équipe</p>
                         </div>
-                    </div>--> 
+                    </div>
                 </div>
                 {{/myConsultantTeam.length}}
             {{/.}}
             </script>
             <script id="view-more-template" type="x-tmpl-mustache">
-              <div class="row">
+              <div class="row view-more">
                   <div class="medium-4 medium-centered">
                       <a class="outline-btn secondary" type="button" href="#" data-fetch-results>Afficher plus de résultats</a>
                   </div>
