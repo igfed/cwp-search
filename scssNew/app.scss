@@ -6004,9 +6004,6 @@ html.IGv2 {
           html.IGv2 .section.office-search .info-toggle-content a.map-anchor .map-container {
             width: 8rem;
             height: 8rem; } }
-    @media screen and (max-width: 39.9375em) {
-      html.IGv2 .section.office-search .info-toggle-content .small-12 .outline-btn {
-        width: 100%; } }
   html.IGv2 .section.search-results .row {
     max-width: 96rem; }
     html.IGv2 .section.search-results .row:first-child {
@@ -6070,150 +6067,20 @@ html.IGv2 {
           margin-top: 0; } }
 
 
-/*Office Search*/
+/*Search Wrapper*/
 
-.office-search{
-  #info-toggle-wrapper {
-    display: none;
+.cwp-search{
+      .buttons-column{
 
-    &.isActive {
-      display: block;
-    }
-  }
-  .info-toggle-content{
-    min-height: 130px;
-    margin-bottom: 20px;
-    // transform: translate3d(-100%,0,0);
-
-    transition: transform .5s ease 500ms;
-    
-    .row{
-        &.underline:not(:last-child){
-          &:after{
-              border-top: 0.2rem solid #c1cbd0;
-              content: "";
-              width: 100%;
-              margin-top: 2.5rem;
-              margin-bottom: 2.5rem;
-
-          }
+        .is-dropdown-submenu{
+          top: 4rem!important;
         }
-    }
-
-    .phone{
-      @media #{$small-only}{
-        float: left;
-        width: 48.2%;
-      }
-    }
-
-    .email{
-      @media #{$small-only}{
-        float: right;
-        width: 48.2%;
-      }
-    }
-  }
-}
-
-/*Counsultant Results*/
-
-.section.search-results{
-
-  .portrait{
-    padding-right: 4rem;
-  }
-
-  .underline{
-
-    padding-top: 2.5rem;
-
-    .dropdown{
-
-      @media #{$medium-up}{
-         width: 15rem!important;
-         margin-right: 1rem;
-         margin-bottom: 1rem;
-      }
-
-      .is-dropdown-submenu{
-        min-width: 15rem;
-        width: 15rem;
-        top: 4rem;
-      }
-    }
-
-    .outline-btn{
-      width: 15rem;
-    }
-
-    &:before{
-        border-top: 0.2rem solid #c1cbd0;
-        content: "";
-        width: 100%;
-        padding-top: 2.5rem;
-    }
-
-    .phone{
-      i{
-            font-size: 1.6rem;
-          }
-    }
-
-  }
-
-  .row.underline{
-
-   &:last-child{
-      text-align: inherit!important;
-      margin-top: 0!important;
-    }
-
-    .small-12{
-
-      .outline-btn{
-        @media #{$small-only}{
-          // width: 100%!important;
-        }
-      }
-
-      .phone{
-
-          float: left;
-          width: 48.2%;
-          a{
-            width: 100%;
-          }
-      }
-
-      .email{
-        display: none;
-        @media #{$small-only}{
-          float: right;
-          width: 48.2%;
-          display: block;
-        }
-    }
-  }
-
-  .portrait-column{
-    @media #{$medium-up}{
-      width: auto;
-      .consultant_name{
-        display: inline-block;
-      }
-    }
-  }
-
-    .buttons-column{
 
       @media #{$medium-only}{
         padding-left: 5rem;
 
         .phone{
           float: left;
-          // margin-right: 0;
-
         }
 
         a{
@@ -6223,7 +6090,35 @@ html.IGv2 {
         }
       }
 
+      @media #{$medium-up}{
+        margin-top: 4.8rem;
+        float: right;
+        width: auto;
+
+        .email{
+          display: none;
+        }
+
+        .outline-btn{
+          width: 15rem;
+        }
+
+        .dropdown{
+          width: 15rem!important;
+           margin-right: 1rem;
+           margin-bottom: 1rem;
+
+           .is-dropdown-submenu{
+              min-width: 15rem;
+              width: 15rem;
+              top: 4rem;
+            }
+        }
+
+      }
+
       @media screen and (max-width:843px){
+        margin-top: 2.3rem;
         .phone{
           float: right;
           margin-right: 0;
@@ -6238,12 +6133,8 @@ html.IGv2 {
         }
       }
 
-      @media #{$medium-up}{
-        float: right;
-        width: auto;
-      }
-
       @media #{$small-only}{
+        margin-top: 0;
 
         .phone{
           float: left;
@@ -6272,8 +6163,178 @@ html.IGv2 {
           }
         }
       }
+
+      .phone{
+
+          float: left;
+          width: 48.2%;
+          a{
+            width: 100%;
+          }
+
+         i{
+            font-size: 1.6rem;
+          }
+      }
+
+      .email{
+        display: none;
+        @media #{$small-only}{
+          float: right;
+          width: 48.2%;
+          display: block;
+        }
+    }
+    }
+}
+
+/*Office Search*/
+
+
+
+.office-search{
+  #info-toggle-wrapper {
+    display: none;
+
+    &.isActive {
+      display: block;
+    }
+  }
+  .info-toggle-content{
+    min-height: 130px;
+    margin-bottom: 20px;
+    // transform: translate3d(-100%,0,0);
+
+    transition: transform .5s ease 500ms;
+
+   .map-column {
+        width: auto;
     }
 
+    .map-column{
+
+        .maps{
+
+          display: inline-block;
+          margin-right: 3.6rem;
+
+          @media #{$small-only}{
+            margin-right: 1rem;
+          }
+        }
+
+    }
+
+    .map-address{
+
+      display: inline-block;
+      vertical-align: top;
+
+      @media #{$medium-up}{
+        margin-top: 4rem;
+      }
+
+      @media #{$small-only}{
+        margin-top: 1rem;
+      }
+      
+    }
+
+    .contact-buttons{
+      @media #{$medium-up}{
+        width: auto;
+      }
+    }
+
+    
+    .columns{
+      .row{
+        &.underline{
+
+          &:after{
+              border-bottom: 0.2rem solid #c1cbd0;
+              content: "";
+              width: 100%;
+              margin-top: 2.5rem;
+              margin-bottom: 2.5rem;
+
+          }
+        }
+      }
+
+       &:last-child{
+
+        .underline{
+          &:after{
+              border: none;
+            }
+        }
+        }
+    }
+
+    .phone{
+      @media #{$small-only}{
+        float: left;
+        width: 48.2%;
+      }
+    }
+
+    .email{
+      @media #{$small-only}{
+        float: right;
+        width: 48.2%;
+      }
+    }
+  }
+}
+
+/*Counsultant Results*/
+
+.section.search-results{
+
+  .portrait{
+    padding-right: 4rem;
+
+    @media #{$small-only}{
+      padding-right: 1rem;
+    }
+  }
+
+  .underline{
+
+    padding-top: 1rem;
+
+
+    &:before{
+        border-top: 0.2rem solid #c1cbd0;
+        content: "";
+        width: 100%;
+        padding-top: 2.5rem;
+    }
+
+  }
+
+  .row.underline{
+
+   &:last-child{
+      text-align: inherit!important;
+      margin-top: 0!important;
+    }
+
+  .portrait-column{
+    @media #{$medium-up}{
+      width: auto;
+      .consultant_name{
+        display: inline-block;
+      }
+    }
+
+    @media #{$small-only}{
+      p{
+        margin-bottom: 0;
+      }
+    }
+  }
 
   }
 
@@ -6306,6 +6367,8 @@ html.IGv2 {
         margin-bottom:0!important;
 
         p{
+          margin-top: -1rem;
+          margin-bottom: 1rem;
           @media #{$small-only}{
             width: 100%!important;
             text-align: center;
@@ -6358,6 +6421,12 @@ html.IGv2 {
     }
 
     .dropdown{
+
+      @media #{$medium-up}{
+        width: 14rem;
+        margin: 0 auto;
+      }
+
       @media #{$small-only}{
         display: inline-block;
       }
@@ -6379,7 +6448,6 @@ html.IGv2 {
         @media #{$medium-up}{
           width: 14rem;
           margin: 0 auto;
-          position: relative;
           min-width: auto;
         }
 

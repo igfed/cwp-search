@@ -18442,10 +18442,6 @@ html.IGv2 .section.office-search .info-toggle-content a.map-anchor .map-containe
     width: 8rem;
     height: 8rem; } }
 
-@media screen and (max-width: 39.9375em) {
-  html.IGv2 .section.office-search .info-toggle-content .small-12 .outline-btn {
-    width: 100%; } }
-
 html.IGv2 .section.search-results .row {
   max-width: 96rem; }
 
@@ -18513,6 +18509,79 @@ html.IGv2 .section.search-results .tp_21 {
     position: absolute;
     margin-top: 0; } }
 
+/*Search Wrapper*/
+.cwp-search .buttons-column .is-dropdown-submenu {
+  top: 4rem !important; }
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  .cwp-search .buttons-column {
+    padding-left: 5rem; }
+    .cwp-search .buttons-column .phone {
+      float: left; }
+    .cwp-search .buttons-column a:last-child {
+      float: left; } }
+
+@media only screen and (min-width: 40.063em) {
+  .cwp-search .buttons-column {
+    margin-top: 4.8rem;
+    float: right;
+    width: auto; }
+    .cwp-search .buttons-column .email {
+      display: none; }
+    .cwp-search .buttons-column .outline-btn {
+      width: 15rem; }
+    .cwp-search .buttons-column .dropdown {
+      width: 15rem !important;
+      margin-right: 1rem;
+      margin-bottom: 1rem; }
+      .cwp-search .buttons-column .dropdown .is-dropdown-submenu {
+        min-width: 15rem;
+        width: 15rem;
+        top: 4rem; } }
+
+@media screen and (max-width: 843px) {
+  .cwp-search .buttons-column {
+    margin-top: 2.3rem; }
+    .cwp-search .buttons-column .phone {
+      float: right;
+      margin-right: 0; }
+    .cwp-search .buttons-column a:last-child {
+      float: right;
+      clear: both; } }
+
+@media only screen and (max-width: 40em) {
+  .cwp-search .buttons-column {
+    margin-top: 0; }
+    .cwp-search .buttons-column .phone {
+      float: left;
+      margin-right: 0.5rem; }
+    .cwp-search .buttons-column a:last-child {
+      float: left;
+      clear: none; }
+    .cwp-search .buttons-column .is-dropdown-submenu {
+      width: 100%; } }
+
+@media only screen and (max-width: 40em) {
+  .cwp-search .buttons-column a:last-child {
+    margin-top: 1rem;
+    width: 100%; } }
+
+.cwp-search .buttons-column .phone {
+  float: left;
+  width: 48.2%; }
+  .cwp-search .buttons-column .phone a {
+    width: 100%; }
+  .cwp-search .buttons-column .phone i {
+    font-size: 1.6rem; }
+
+.cwp-search .buttons-column .email {
+  display: none; }
+  @media only screen and (max-width: 40em) {
+    .cwp-search .buttons-column .email {
+      float: right;
+      width: 48.2%;
+      display: block; } }
+
 /*Office Search*/
 .office-search #info-toggle-wrapper {
   display: none; }
@@ -18523,12 +18592,34 @@ html.IGv2 .section.search-results .tp_21 {
   min-height: 130px;
   margin-bottom: 20px;
   transition: transform .5s ease 500ms; }
-  .office-search .info-toggle-content .row.underline:not(:last-child):after {
-    border-top: 0.2rem solid #c1cbd0;
+  .office-search .info-toggle-content .map-column {
+    width: auto; }
+  .office-search .info-toggle-content .map-column .maps {
+    display: inline-block;
+    margin-right: 3.6rem; }
+    @media only screen and (max-width: 40em) {
+      .office-search .info-toggle-content .map-column .maps {
+        margin-right: 1rem; } }
+  .office-search .info-toggle-content .map-address {
+    display: inline-block;
+    vertical-align: top; }
+    @media only screen and (min-width: 40.063em) {
+      .office-search .info-toggle-content .map-address {
+        margin-top: 4rem; } }
+    @media only screen and (max-width: 40em) {
+      .office-search .info-toggle-content .map-address {
+        margin-top: 1rem; } }
+  @media only screen and (min-width: 40.063em) {
+    .office-search .info-toggle-content .contact-buttons {
+      width: auto; } }
+  .office-search .info-toggle-content .columns .row.underline:after {
+    border-bottom: 0.2rem solid #c1cbd0;
     content: "";
     width: 100%;
     margin-top: 2.5rem;
     margin-bottom: 2.5rem; }
+  .office-search .info-toggle-content .columns:last-child .underline:after {
+    border: none; }
   @media only screen and (max-width: 40em) {
     .office-search .info-toggle-content .phone {
       float: left;
@@ -18541,45 +18632,21 @@ html.IGv2 .section.search-results .tp_21 {
 /*Counsultant Results*/
 .section.search-results .portrait {
   padding-right: 4rem; }
+  @media only screen and (max-width: 40em) {
+    .section.search-results .portrait {
+      padding-right: 1rem; } }
 
 .section.search-results .underline {
-  padding-top: 2.5rem; }
-  @media only screen and (min-width: 40.063em) {
-    .section.search-results .underline .dropdown {
-      width: 15rem !important;
-      margin-right: 1rem;
-      margin-bottom: 1rem; } }
-  .section.search-results .underline .dropdown .is-dropdown-submenu {
-    min-width: 15rem;
-    width: 15rem;
-    top: 4rem; }
-  .section.search-results .underline .outline-btn {
-    width: 15rem; }
+  padding-top: 1rem; }
   .section.search-results .underline:before {
     border-top: 0.2rem solid #c1cbd0;
     content: "";
     width: 100%;
     padding-top: 2.5rem; }
-  .section.search-results .underline .phone i {
-    font-size: 1.6rem; }
 
 .section.search-results .row.underline:last-child {
   text-align: inherit !important;
   margin-top: 0 !important; }
-
-.section.search-results .row.underline .small-12 .phone {
-  float: left;
-  width: 48.2%; }
-  .section.search-results .row.underline .small-12 .phone a {
-    width: 100%; }
-
-.section.search-results .row.underline .small-12 .email {
-  display: none; }
-  @media only screen and (max-width: 40em) {
-    .section.search-results .row.underline .small-12 .email {
-      float: right;
-      width: 48.2%;
-      display: block; } }
 
 @media only screen and (min-width: 40.063em) {
   .section.search-results .row.underline .portrait-column {
@@ -18587,41 +18654,9 @@ html.IGv2 .section.search-results .tp_21 {
     .section.search-results .row.underline .portrait-column .consultant_name {
       display: inline-block; } }
 
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  .section.search-results .row.underline .buttons-column {
-    padding-left: 5rem; }
-    .section.search-results .row.underline .buttons-column .phone {
-      float: left; }
-    .section.search-results .row.underline .buttons-column a:last-child {
-      float: left; } }
-
-@media screen and (max-width: 843px) {
-  .section.search-results .row.underline .buttons-column .phone {
-    float: right;
-    margin-right: 0; }
-  .section.search-results .row.underline .buttons-column a:last-child {
-    float: right;
-    clear: both; } }
-
-@media only screen and (min-width: 40.063em) {
-  .section.search-results .row.underline .buttons-column {
-    float: right;
-    width: auto; } }
-
 @media only screen and (max-width: 40em) {
-  .section.search-results .row.underline .buttons-column .phone {
-    float: left;
-    margin-right: 0.5rem; }
-  .section.search-results .row.underline .buttons-column a:last-child {
-    float: left;
-    clear: none; }
-  .section.search-results .row.underline .buttons-column .is-dropdown-submenu {
-    width: 100%; } }
-
-@media only screen and (max-width: 40em) {
-  .section.search-results .row.underline .buttons-column a:last-child {
-    margin-top: 1rem;
-    width: 100%; } }
+  .section.search-results .row.underline .portrait-column p {
+    margin-bottom: 0; } }
 
 .section.search-results .my-team .columns:not(:first-child) p {
   width: auto;
@@ -18640,10 +18675,13 @@ html.IGv2 .section.search-results .tp_21 {
 .section.search-results .my-team .title .row {
   margin-top: 4rem !important;
   margin-bottom: 0 !important; }
-  @media only screen and (max-width: 40em) {
-    .section.search-results .my-team .title .row p {
-      width: 100% !important;
-      text-align: center; } }
+  .section.search-results .my-team .title .row p {
+    margin-top: -1rem;
+    margin-bottom: 1rem; }
+    @media only screen and (max-width: 40em) {
+      .section.search-results .my-team .title .row p {
+        width: 100% !important;
+        text-align: center; } }
 
 .section.search-results .my-team .title .line {
   border-top: 0.2rem solid #c1cbd0;
@@ -18673,6 +18711,11 @@ html.IGv2 .section.search-results .tp_21 {
   margin-top: 0 !important;
   margin-bottom: 0 !important; }
 
+@media only screen and (min-width: 40.063em) {
+  .section.search-results .my-consultant-team .dropdown {
+    width: 14rem;
+    margin: 0 auto; } }
+
 @media only screen and (max-width: 40em) {
   .section.search-results .my-consultant-team .dropdown {
     display: inline-block; } }
@@ -18687,7 +18730,6 @@ html.IGv2 .section.search-results .tp_21 {
   .section.search-results .my-consultant-team .dropdown .is-dropdown-submenu {
     width: 14rem;
     margin: 0 auto;
-    position: relative;
     min-width: auto; } }
 
 @media only screen and (max-width: 40em) {
