@@ -6100,17 +6100,21 @@ html.IGv2 {
         }
 
         .outline-btn{
-          width: 15rem;
+          // width: 15rem;
+          width: auto;
         }
 
         .dropdown{
-          width: 15rem!important;
+          // width: 15rem!important;
+          width: auto!important;
            margin-right: 1rem;
            margin-bottom: 1rem;
 
            .is-dropdown-submenu{
-              min-width: 15rem;
-              width: 15rem;
+              // min-width: 15rem;
+              // width: 15rem;
+              // width: auto;
+              width: 100%;
               top: 4rem;
             }
         }
@@ -6129,6 +6133,7 @@ html.IGv2 {
           &:last-child{
             float: right;
             clear: both;
+            width: 100%;
           }
         }
       }
@@ -6207,15 +6212,21 @@ html.IGv2 {
 
     transition: transform .5s ease 500ms;
 
-   .map-column {
-        width: auto;
-    }
 
     .map-column{
 
+      // @media #{$medium-up}{
+      //   width: 50%;
+      // }
+
+      @media screen and (min-width:855px) and (max-width:1059px){
+        width: 48%;
+      }
+
         .maps{
 
-          display: inline-block;
+          // display: inline-block;
+          float:left;
           margin-right: 3.6rem;
 
           @media #{$small-only}{
@@ -6227,11 +6238,13 @@ html.IGv2 {
 
     .map-address{
 
-      display: inline-block;
-      vertical-align: top;
+      width: 45%;
+      float:left;
 
-      @media #{$medium-up}{
+
+      @media #{$medium-only}{
         margin-top: 4rem;
+
       }
 
       @media #{$small-only}{
@@ -6335,6 +6348,10 @@ html.IGv2 {
       }
     }
 
+    @media screen and (min-width:844px) and (max-width:1000px){
+        width: 50%;
+      }
+
     @media #{$small-only}{
       p{
         margin-bottom: 0;
@@ -6405,8 +6422,19 @@ html.IGv2 {
       text-align: center;
 
       @media #{$medium-up}{
-        width: 30%;
+        // width: 30%;
+        width: auto;
         padding-bottom: 5rem;
+
+        &:not(:only-child){
+          margin-right: 0.5rem;
+          margin-left: 0.5rem;
+        }
+
+
+        // &:nth-child(n+4){
+        //   clear: both;
+        // }
       }
 
       @media #{$small-only}{
@@ -6429,7 +6457,7 @@ html.IGv2 {
     .dropdown{
 
       @media #{$medium-up}{
-        width: 14rem;
+        // width: 14rem;
         margin: 0 auto;
       }
 
@@ -6451,14 +6479,15 @@ html.IGv2 {
     .dropdown{
 
       .is-dropdown-submenu{
+        width: 100%;
         @media #{$medium-up}{
-          width: 14rem;
+          // width: 14rem;
           margin: 0 auto;
-          min-width: auto;
+          // min-width: auto;
         }
 
         @media #{$small-only}{
-           width: 14rem!important;
+           width: 14rem;
         }
       }
     }
@@ -6470,6 +6499,9 @@ html.IGv2 {
 }
 
 .view-more{
+  div{
+    width: auto;
+  }
   @media #{$small-only}{
     width: 100%;
     margin-top: 1rem;

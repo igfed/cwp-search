@@ -18529,14 +18529,13 @@ html.IGv2 .section.search-results .tp_21 {
     .cwp-search .buttons-column .email {
       display: none; }
     .cwp-search .buttons-column .outline-btn {
-      width: 15rem; }
+      width: auto; }
     .cwp-search .buttons-column .dropdown {
-      width: 15rem !important;
+      width: auto !important;
       margin-right: 1rem;
       margin-bottom: 1rem; }
       .cwp-search .buttons-column .dropdown .is-dropdown-submenu {
-        min-width: 15rem;
-        width: 15rem;
+        width: 100%;
         top: 4rem; } }
 
 @media screen and (max-width: 843px) {
@@ -18547,7 +18546,8 @@ html.IGv2 .section.search-results .tp_21 {
       margin-right: 0; }
     .cwp-search .buttons-column a:last-child {
       float: right;
-      clear: both; } }
+      clear: both;
+      width: 100%; } }
 
 @media only screen and (max-width: 40em) {
   .cwp-search .buttons-column {
@@ -18592,18 +18592,19 @@ html.IGv2 .section.search-results .tp_21 {
   min-height: 130px;
   margin-bottom: 20px;
   transition: transform .5s ease 500ms; }
-  .office-search .info-toggle-content .map-column {
-    width: auto; }
+  @media screen and (min-width: 855px) and (max-width: 1059px) {
+    .office-search .info-toggle-content .map-column {
+      width: 48%; } }
   .office-search .info-toggle-content .map-column .maps {
-    display: inline-block;
+    float: left;
     margin-right: 3.6rem; }
     @media only screen and (max-width: 40em) {
       .office-search .info-toggle-content .map-column .maps {
         margin-right: 1rem; } }
   .office-search .info-toggle-content .map-address {
-    display: inline-block;
-    vertical-align: top; }
-    @media only screen and (min-width: 40.063em) {
+    width: 45%;
+    float: left; }
+    @media only screen and (min-width: 40.063em) and (max-width: 64em) {
       .office-search .info-toggle-content .map-address {
         margin-top: 4rem; } }
     @media only screen and (max-width: 40em) {
@@ -18656,6 +18657,10 @@ html.IGv2 .section.search-results .tp_21 {
   .section.search-results .row.underline .portrait-column .consultant_name {
     display: inline-block; } }
 
+@media screen and (min-width: 844px) and (max-width: 1000px) {
+  .section.search-results .row.underline .portrait-column {
+    width: 50%; } }
+
 @media only screen and (max-width: 40em) {
   .section.search-results .row.underline .portrait-column p {
     margin-bottom: 0; } }
@@ -18700,8 +18705,11 @@ html.IGv2 .section.search-results .tp_21 {
   text-align: center; }
   @media only screen and (min-width: 40.063em) {
     .section.search-results .my-consultant-team .columns {
-      width: 30%;
-      padding-bottom: 5rem; } }
+      width: auto;
+      padding-bottom: 5rem; }
+      .section.search-results .my-consultant-team .columns:not(:only-child) {
+        margin-right: 0.5rem;
+        margin-left: 0.5rem; } }
   @media only screen and (max-width: 40em) {
     .section.search-results .my-consultant-team .columns:before {
       border-top: 0.2rem solid #c1cbd0;
@@ -18715,7 +18723,6 @@ html.IGv2 .section.search-results .tp_21 {
 
 @media only screen and (min-width: 40.063em) {
   .section.search-results .my-consultant-team .dropdown {
-    width: 14rem;
     margin: 0 auto; } }
 
 @media only screen and (max-width: 40em) {
@@ -18728,18 +18735,20 @@ html.IGv2 .section.search-results .tp_21 {
     .section.search-results .my-consultant-team .email i {
       border: 2px solid #0d263c !important; } }
 
-@media only screen and (min-width: 40.063em) {
-  .section.search-results .my-consultant-team .dropdown .is-dropdown-submenu {
-    width: 14rem;
-    margin: 0 auto;
-    min-width: auto; } }
-
-@media only screen and (max-width: 40em) {
-  .section.search-results .my-consultant-team .dropdown .is-dropdown-submenu {
-    width: 14rem !important; } }
+.section.search-results .my-consultant-team .dropdown .is-dropdown-submenu {
+  width: 100%; }
+  @media only screen and (min-width: 40.063em) {
+    .section.search-results .my-consultant-team .dropdown .is-dropdown-submenu {
+      margin: 0 auto; } }
+  @media only screen and (max-width: 40em) {
+    .section.search-results .my-consultant-team .dropdown .is-dropdown-submenu {
+      width: 14rem; } }
 
 .clear {
   clear: both; }
+
+.view-more div {
+  width: auto; }
 
 @media only screen and (max-width: 40em) {
   .view-more {
