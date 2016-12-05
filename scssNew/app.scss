@@ -6300,6 +6300,12 @@ html.IGv2 {
     }
   }
 
+  .consultant-text{
+    // display: inline-block;
+    width: 45%;
+    float:left;
+  }
+
   .underline{
 
     padding-top: 1rem;
@@ -6323,7 +6329,7 @@ html.IGv2 {
 
   .portrait-column{
     @media #{$medium-up}{
-      width: auto;
+      // width: auto;
       .consultant_name{
         display: inline-block;
       }
@@ -6461,6 +6467,13 @@ html.IGv2 {
 
 .clear{
   clear: both;
+}
+
+.view-more{
+  @media #{$small-only}{
+    width: 100%;
+    margin-top: 1rem;
+  }
 }
 
 /*Search Box*/

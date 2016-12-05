@@ -130,13 +130,15 @@
                 <script id="consultant-template" type="x-tmpl-mustache">
                     {{#.}}
                     <div class="row underline">
-                        <div class="small-12 medium-6 large-7 columns portrait-column">
+                        <div class="small-12 medium-7 large-7 columns portrait-column">
                             <div class="portrait">
                                 <img src="{{myInfo.photoUrl}}" alt="{{myInfo.FName}} {{myInfo.LName}}" />
                             </div>
+                            <div class="consultant-text">
                             <p class="tp_07 consultant_name">{{myInfo.FName}} {{myInfo.LName}}</p>
                             <p class="tp_05">Consultant</p>
                             <p class="tp_09">{{myInfo.Ct_City}} {{myInfo.PostalCode}}</p>
+                            </div>
                         </div>
                         <div class="small-12 medium-6 large-5 columns buttons-column">
                           
@@ -224,7 +226,7 @@
             {{/.}}
             </script>
             <script id="view-more-template" type="x-tmpl-mustache">
-              <div class="row">
+              <div class="row view-more">
                   <div class="medium-4 medium-centered">
                       <a class="outline-btn secondary" type="button" href="#" data-fetch-results>View More Results</a>
                   </div>

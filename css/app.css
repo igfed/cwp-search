@@ -18636,6 +18636,10 @@ html.IGv2 .section.search-results .tp_21 {
     .section.search-results .portrait {
       padding-right: 1rem; } }
 
+.section.search-results .consultant-text {
+  width: 45%;
+  float: left; }
+
 .section.search-results .underline {
   padding-top: 1rem; }
   .section.search-results .underline:before {
@@ -18649,10 +18653,8 @@ html.IGv2 .section.search-results .tp_21 {
   margin-top: 0 !important; }
 
 @media only screen and (min-width: 40.063em) {
-  .section.search-results .row.underline .portrait-column {
-    width: auto; }
-    .section.search-results .row.underline .portrait-column .consultant_name {
-      display: inline-block; } }
+  .section.search-results .row.underline .portrait-column .consultant_name {
+    display: inline-block; } }
 
 @media only screen and (max-width: 40em) {
   .section.search-results .row.underline .portrait-column p {
@@ -18738,6 +18740,11 @@ html.IGv2 .section.search-results .tp_21 {
 
 .clear {
   clear: both; }
+
+@media only screen and (max-width: 40em) {
+  .view-more {
+    width: 100%;
+    margin-top: 1rem; } }
 
 /*Search Box*/
 .contact.section .row:first-child img {
