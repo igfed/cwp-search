@@ -8,217 +8,221 @@
 
 .footer2 {
 
-	color: $white; padding-top: 68px;
-	background-color: #0D263C;
+    color: $white; padding-top: 68px;
+    background-color: #0D263C;
 
-	@media only screen and (max-width: 64.063em) { padding-top: 24px; }
-	
-	.full-width { max-width: 100% !important; }
+    .row { max-width: calc(62.5rem * 1.6); }
+    ul { font-size: calc(1rem * 1.6); }
 
-	// Back to Top
-	.footer-backTop {
-			border-bottom: 1px solid #ffffff;	
-			padding-bottom: 8px;
-			text-align: right;
-			margin-bottom: 70px;
-			margin-left: 22px;
-			margin-right: 22px; 
+    @media only screen and (max-width: 64.063em) { padding-top: 12px; }
+    
+    .full-width { max-width: 100% !important; }
 
-			@media only screen and (min-width: 64.063em) {
-				//border: 2px solid yellow;
-				max-width: 75rem;
-				margin: 0 auto 70px;
-			}
-	}
-	
-		// Large screens
-		@media only screen and (min-width: 64.063em) { 
-			
-			> .backTop-icon {  
-				width: 55px; height: 55px; border-radius: 50%;
-    		display: inline-block; line-height: 2.4rem;
-    		border: 2px solid #0d263c; text-align: center;
+    // Back to Top
+    .footer-backTop {
+            border-bottom: 1px solid #ffffff;   
+            padding-bottom: 8px;
+            text-align: right;
+            margin-bottom: 70px;
 
-				&:hover {
-				 	border: 2px solid #ffffff;
-				}
-  		}
-		}	
-		
-		@media only screen and (min-width: 64.063em) { // small onlyy
-			//margin-bottom: 40px; 
-		}
-	}
+           @media only screen and (min-width: 64.063em) {
+                //border-top: 2px solid yellow;
+                max-width: calc(75rem * 1.6);
+                margin: 0 auto 70px;
+            }
+            
+        
 
-	// Tabs
-	.footer-tabs {
+        // Large screens
+        @media only screen and (min-width: 64.063em) { 
+            
+            > .backTop-icon {  
+                width: 56px; height: 56px; border-radius: 50%;
+                display: inline-block; 
+                //line-height: 2.4rem;
+                border: 2px solid #0d263c; text-align: center;
 
-		// for BOTH
-		h3.tab-header, 
-		a.tab-header {
-			font-size: 1rem; color: #fff; // color: $white;
-			font-family: "whitney_semiboldregular";
-			text-transform: uppercase;
-			
-			&:hover {
-				color: $white;
-			}
-		}
-		ul.footer-tab-list a.footer-tab-item {
-			font-family: "whitney_bookregular";
-			color: #ffffff;
-			&:hover, &:active { 
-				color: $white; text-decoration: underline; 
-			}
-			&:visited, { color: #ffffff; } 
-		}
+                &:hover {
+                    border: 2px solid #ffffff;
+                }
+        }
+        }   
+        // small only
+        @media only screen and (max-width: 64.063em) { 
+            margin-bottom: 40px; 
+        }
+    }
 
-		// for DESKTOP
-		h3.tab-header {
-			margin-bottom: 35px; margin-top: 0px;  margin-left: 25%; // CENTER THE CONTENT
-			color: $white; font-size: 16px;
-		}
-		ul.footer-tab-list { list-style-type: none; margin-left: 25%; }
-		ul.footer-tab-list li { margin-bottom: 24px;  }
+    // Tabs
+    .footer-tabs {
+
+        // for BOTH
+        h3.tab-header, 
+        a.tab-header {
+            font-size: calc(1rem * 1.6); color: #fff; // color: $white;
+            font-family: "whitney_semiboldregular";
+            text-transform: uppercase;
+            
+            &:hover {
+                color: $white;
+            }
+        }
+        ul.footer-tab-list a.footer-tab-item {
+            font-family: "whitney_bookregular";
+            color: #ffffff;
+            &:hover, &:active { 
+                color: $white; text-decoration: underline; 
+            }
+            &:visited, { color: #ffffff; } 
+        }
+
+        // for DESKTOP
+        h3.tab-header {
+            margin-bottom: 35px; margin-top: 0px;  margin-left: 25%; // CENTER THE CONTENT
+            color: $white; font-size: 16px;
+        }
+        ul.footer-tab-list { list-style-type: none; margin-left: 25%; }
+        ul.footer-tab-list li { margin-bottom: 24px;  }
 
 
-		// for MOBILE
-		.accordion .accordion-nav--footer {
-			// HEADER
-			> a.tab-header { 
-				background-color: #0D263C; font-size: .875rem;
-				border-bottom: 1px solid #314659;
-				padding: 1.25rem 0px;
-				background: url("/en/images/corp/svg/expandArrow.png") no-repeat;
-			  background-position: 100% center;
-			  background-size: 16px; opacity: 1; 	  
-			}
+        // for MOBILE
+        .accordion .accordion-nav--footer {
+            // HEADER
+            > a.tab-header { 
+                background-color: #0D263C; font-size: calc(.875rem * 1.6);
+                border-bottom: 1px solid #314659;
+                padding: 1.25rem 0px;
+                background: url("/en/images/corp/svg/expandArrow.png") no-repeat;
+              background-position: 100% center;
+              background-size: 16px; opacity: 1;      
+            }
 
-			// LIST ITEM
-			ul.footer-tab-list {
-				margin: 0px;
-				
-				li { 
-					margin-bottom: 0px; margin-top: 4px;
+            // LIST ITEM
+            ul.footer-tab-list {
+                margin: 0px;
+                
+                li { 
+                    margin-bottom: 0px; margin-top: 4px;
 
-					&:last-child { margin-bottom: 18px; }
-					
-					.footer-tab-item {
-						line-height: normal; height: inherit; 
-				    font-size: 1rem; display: block;
-				    padding: .75rem 0 .75rem 1rem;
-				    
-						&:before {
-							content: "|";
-							display: inline-block;
-							margin-right: 1rem;
-							font-size: 1.25rem; font-weight: bold;
-							color: #0d263c;
-						}
+                    &:last-child { margin-bottom: 18px; }
+                    
+                    .footer-tab-item {
+                        line-height: normal; height: inherit; 
+                    font-size: calc(1rem * 1.6); display: block;
+                    padding: .75rem 0 .75rem 1rem;
+                    
+                        &:before {
+                            content: "|";
+                            display: inline-block;
+                            margin-right: 1rem;
+                            font-size: calc(1.25rem * 1.6); font-weight: bold;
+                            color: #0d263c;
+                        }
 
-						&:hover {
-							text-decoration: none;
-							background-color: #314659;
-							&:before {
-								content: "|";
-								display: inline-block;
-								margin-right: 1rem;
-								font-size: 1.25rem; font-weight: bold;
-								color: #fff;
-							}
-						}
-					}
-				}
-			}
+                        &:hover {
+                            text-decoration: none;
+                            background-color: #314659;
+                            &:before {
+                                content: "|";
+                                display: inline-block;
+                                margin-right: 1rem;
+                                //font-size: 1.25rem; font-weight: bold;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
 
-			// SET DEFAULT
-			> .content.active { background: none; }
-			> .content { &:last-of-type { border-bottom: 1px solid #263c50; } }
-			> .content, .accordion dd > .content { padding: 0px; }
-		}
-			
-	  .accordion .accordion-nav--footer:first-child, .accordion dd:first-child { padding: 0px; }
-		.accordion-nav--footer.active > a.tab-header {
-				background: url("/en/images/corp/svg/collapseArrow.png") no-repeat;
-				background-position: 100% center;
-			  background-size: 16px;
-			  opacity: 1;
-			  color: $white;
-			}
-	}
-	
-	// Social Media
-	.footer-social-media { 
-		margin-top: 30px; padding-bottom: 18px;
-		@media only screen and (min-width: 64.063em) {
-			padding-bottom: 36px;
-			margin-top: 36px;
-		} 
-		ul.socialMedia--icons {
-			list-style: none; margin: 0px;
-			> li { 
-				padding: 0px 11px;
-    		
-    		display: inline-block;
+            // SET DEFAULT
+            > .content.active { background: none; }
+            > .content { &:last-of-type { border-bottom: 1px solid #263c50; } }
+            > .content, .accordion dd > .content { padding: 0px; }
+        }
+            
+      .accordion .accordion-nav--footer:first-child, .accordion dd:first-child { padding: 0px; }
+        .accordion-nav--footer.active > a.tab-header {
+                background: url("/en/images/corp/svg/collapseArrow.png") no-repeat;
+                background-position: 100% center;
+              background-size: 16px;
+              opacity: 1;
+              color: $white;
+            }
+    }
+    
+    // Social Media
+    .footer-social-media { 
+        margin-top: 30px; padding-bottom: 18px;
+        @media only screen and (min-width: 64.063em) {
+            padding-bottom: 36px;
+            margin-top: 36px;
+        } 
+        ul.socialMedia--icons {
+            list-style: none; margin: 0px;
+            > li { 
+                padding: 0px 11px;
+            
+            display: inline-block;
 
-    		> a { 
-					width: 48px; height: 48px; display: block;
-					border-radius: 50%; 
-					border: 2px solid #0d263c; 
-					img {display: block; padding: 11px;  }
-					&:hover { 
-						border: 2px solid #fff; 
-					}
-    		} 
-    	}
-		}
-	}
+            > a { 
+                    width: 48px; height: 48px; display: block;
+                    border-radius: 50%; 
+                    border: 2px solid #0d263c; 
+                    img {display: block; padding: 11px;  }
+                    &:hover { 
+                        border: 2px solid #fff; 
+                    }
+            } 
+        }
+        }
+    }
 
-	// Footer
-	.footer-copyright { 
-		
-		.no-padding {padding-left: 0px; padding-right: 0px; }
-		// Works on mobile
-		.footer-menu-mobile,
-		.footer-menu-desktop {
-			margin: 0px; list-style: none;
-      border-top: 1px solid #263c50;
-      padding-bottom: 10px; padding-top: 10px;
-			> li { 
-				padding: 0px 24px;
-    		border-right: 1px solid #263c50;
-    		display: inline-block;
+    // Footer
+    .footer-copyright { 
+        
+        .no-padding {padding-left: 0px; padding-right: 0px; }
+        // Works on mobile
+        .footer-menu-mobile,
+        .footer-menu-desktop {
+            margin: 0px; list-style: none;
+            border-top: 1px solid #263c50;
+            padding-bottom: 10px; padding-top: 10px;
+            > li { 
+                padding: 0px 24px;
+                border-right: 1px solid #263c50;
+                display: inline-block;
 
-    		&.copyright { font-size: .75rem; font-family: "whitney_bookregular"; color: #acb7c0; }
-				> a { 
-					font-size: .75rem;
-					font-family: "whitney_bookregular";
-					&:hover {
-						border-bottom: 1px solid #fff;
-						color: #fff;
-					}
-				}
-			}
-			> li:last-child {
-				border-right: none;
-			}
-		}
+            &.copyright { font-size: calc(.75rem * 1.6); font-family: "whitney_bookregular"; color: #acb7c0; }
+                > a { 
+                    font-size: calc(.75rem * 1.6);
+                    font-family: "whitney_bookregular";
+                    color: #acb7c0;
+                    &:hover {
+                        border-bottom: 1px solid #fff;
+                        color: #fff;
+                    }
+                }
+            }
+            > li:last-child {
+                border-right: none;
+            }
+        }
 
-		.footer-menu-mobile li { padding: 0 18px; }
-		
+        .footer-menu-mobile li { padding: 0 18px; }
+        
 
-		@media only screen and (min-width: 90.063em){
-			width: 75em;
-			margin: 0 auto;
-		}
-		
-	}
+        @media only screen and (min-width: 90.063em){
+            width: calc(75rem * 1.6);
+            margin: 0 auto;
+        }
+        
+    }
 
-	@media only screen and (max-width: 64.063em) { 
-		.columns.add-padding {
-			padding-left: 1.375rem;
-			padding-right: 1.375rem;
-		}	
-	}
-	
-
+    @media only screen and (max-width: 64.063em) { 
+        .columns.add-padding {
+            padding-left: 1.375rem;
+            padding-right: 1.375rem;
+        }   
+    }
+    
+}
