@@ -1,5 +1,5 @@
-// GLOBALS
-var modelUrl = 'http://54.160.16.202:9000/api/cwpsearch?';
+// GLOBALS 
+var modelUrl = 'http://206.152.35.227:9000/api/cwpsearch?'; // prod 206.152.35.229 uat 206.152.35.227
 var $field = $('#FindAnAdvisor');
 var allConsultants = {};
 var lang = 'en';
@@ -61,7 +61,7 @@ function getSearchResults(params) {
 		console.log('Data could not be retrieved, please try again', result.status + ' ' + result.statusText);
 	});
 
-	if (params.city || params.Pcode) {
+	if (params.city || params.Pcode || params.geo) {
 		params.searchtype = 'office';
 		params.name = '';
 
@@ -71,7 +71,6 @@ function getSearchResults(params) {
 			var result = JSON.parse(data);
 			if (result.length > 0) {
 				displaySearchResults('office-template', result, 'office-search');
-				console.log(result);
 			}
 		})
 		.fail(function( result ) {
@@ -110,7 +109,7 @@ function paginateResults() {
 function parseSearchString() {
 	var result = {};
 	var search = $field.val();
-	var postalCodeFormat = new RegExp(/^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$/);
+	var postalCodeFormat = new RegExp(/[ABCEGHJKLMNPRSTVXY][0-9][ABCEGHJKLMNPRSTVWXYZ] ?[0-9][ABCEGHJKLMNPRSTVWXYZ][0-9]/);
 
 	result.city = '';
 	result.name = '';
@@ -123,7 +122,11 @@ function parseSearchString() {
 	result.searchtype = 'con';
 	// Check if there is a postal code
 	if (postalCodeFormat.test(search)) {
-		result.Pcode = search.match(postalCodeFormat)[0];
+		var postalCode = search.match(postalCodeFormat)[0];
+		if (postalCode.indexOf(' ') === -1) {
+			postalCode = postalCode.match(/.{1,3}/g).join().replace(',', ' ');
+		}
+		result.Pcode = postalCode;
 		search = search.replace(postalCodeFormat, ' ');
 	}
 
@@ -131,7 +134,8 @@ function parseSearchString() {
 	var words = search.split(' ');
 	for (i = 0; i < words.length; i++) {
 		// Check each word for a city from the predefined list
-		var city = suggestions.locations.get(words[i]);
+		var normalizedTerm = words[i].toLowerCase();
+		var city = suggestions.locations.get(normalizedTerm);
 		if (city.length > 0) {
 			result.city = city[0];
 			words.splice(i, 1);
