@@ -3,7 +3,7 @@ var modelUrl = 'http://206.152.35.227:9000/api/cwpsearch?'; // prod 206.152.35.2
 var $field = $('#FindAnAdvisor');
 var allConsultants = {};
 var lang = 'en';
-if(window.location.href.indexOf('/fr/') > -1) {
+if(window.location.href.indexOf('-fr.') > -1) {
     lang = 'fr';
 }
 
