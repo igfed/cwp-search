@@ -109,7 +109,7 @@ function paginateResults() {
 function parseSearchString() {
 	var result = {};
 	var search = $field.val();
-	var postalCodeFormat = new RegExp(/[ABCEGHJKLMNPRSTVXY][0-9][ABCEGHJKLMNPRSTVWXYZ] ?[0-9][ABCEGHJKLMNPRSTVWXYZ][0-9]/);
+	var postalCodeFormat = new RegExp(/[A-Za-z][0-9][A-Za-z] ?[0-9][A-Za-z][0-9]/);
 
 	result.city = '';
 	result.name = '';
