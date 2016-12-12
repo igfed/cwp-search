@@ -21,8 +21,17 @@ input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
 input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 
 
+/*html.IGv2 .header-wrap .row {
+    margin: 0 auto;
+    max-width: 62.5rem;
+    width: 100%;
+}*/
+
+html.IGv2 .header-wrap .accordion {
+	background-color: inherit;	
+}
 // Header
-.header-wrap {
+html.IGv2 .header-wrap {
 
   // full width
   .utility_container,
@@ -55,7 +64,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     padding: 14px 0 0; cursor: pointer;
     position:absolute; color: #282828;
     top: -16px; right: 0px;
-    background-image: url("/en/images/corp/svg/search-icon-in-search-box.png");
+    background-image: url("http://investorsgroup.com/en/images/corp/svg/search-icon-in-search-box.png");
     background-repeat: no-repeat; background-position: 0px 19px;
 
     &:focus {
@@ -64,7 +73,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
       padding-left: 30px; font-family: "whitney_bookregular";
       + .search-clsBtn::after {
         content: "\00a0"; cursor: pointer; 
-        background-image: url('/en/images/corp/svg/closeBtn_Form.png');
+        background-image: url('http://investorsgroup.com/en/images/corp/svg/closeBtn_Form.png');
         background-repeat: no-repeat; background-size: 27px;
         background-position: 0 2px;
         width: 29px; height: 29px; display: inline-block;
@@ -104,13 +113,13 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
         &:after {
           width: 14px; height: 10px; top: 15px;
           margin: 0px; border-style: none;
-          background: url("/en/images/corp/svg/expandArrow.png") no-repeat;
+          background: url("http://investorsgroup.com/en/images/corp/svg/expandArrow.png") no-repeat;
           background-position: 0 0; background-size: 14px;
         }
       } 
 
       &.hover .already-a-client:after {
-        background-image: url("/en/images/corp/svg/collapseArrow.png");
+        background-image: url("http://investorsgroup.com/en/images/corp/svg/collapseArrow.png");
       }
     }   
 
@@ -247,7 +256,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     .closeBtn-wrap {
       padding: 20px 20px 35px 20px; text-align: right;
       button.closeBtn--accordion {
-        background-image: url("/en/images/corp/svg/closeBtn_Form.png");
+        background-image: url("http://investorsgroup.com/en/images/corp/svg/closeBtn_Form.png");
         background-repeat: no-repeat; background-size: 25px;
         cursor: pointer; display: inline-block;
         height: 25px; width: 25px; 
@@ -262,12 +271,12 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
       box-shadow: none; height: initial; 
       padding: 0px; margin: 0px; padding-left: 34px;
       border: none; font-family: "whitney_scmedium"; color: #282828; text-transform: lowercase; font-size: 16px;
-      background-image: url("/en/images/corp/svg/search-icon-in-search-box.png");
+      background-image: url("http://investorsgroup.com/en/images/corp/svg/search-icon-in-search-box.png");
       background-repeat: no-repeat; background-size: 20px; background-position: 0;
       position: relative; z-index: 1000; margin-bottom: 8px;
       
       &:focus {
-        background-image: url("/en/images/corp/svg/search-icon-in-search-box.png");
+        background-image: url("http://investorsgroup.com/en/images/corp/svg/search-icon-in-search-box.png");
         background-repeat: no-repeat; background-size: 20px; background-position: 0;
         background-color: #fff; box-shadow: none; 
         font-family: "whitney_bookregular"; font-size: 16px;
@@ -279,7 +288,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
       font-size: 16px; line-height: normal;
       border-left: 1px solid #dfdfdf; opacity: 0.8;
       padding-left: 7px; display: inline-block;
-      background-image: url("/en/images/corp/svg/find_an_advisor_close.png");
+      background-image: url("http://investorsgroup.com/en/images/corp/svg/find_an_advisor_close.png");
       background-repeat: no-repeat; background-position: 7px 4px;
       width: 21px; height: 20px; background-color: #fff; margin-top: 4px;
       &:focus { outline: none;}
@@ -331,7 +340,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
       }
       // arrow down
       > .nav-link.has-subnav {
-        background-image: url("/en/images/corp/svg/expandArrow.png");
+        background-image: url("http://investorsgroup.com/en/images/corp/svg/expandArrow.png");
         background-repeat: no-repeat;
         background-position: calc(100% - 32px) 22px;
         opacity: 1;
@@ -340,7 +349,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
       // arrow up
       &.active {
         > .nav-link.has-subnav {
-            background-image: url("/en/images/corp/svg/collapseArrow.png");
+            background-image: url("http://investorsgroup.com/en/images/corp/svg/collapseArrow.png");
         }
         > .content.active { max-height: 100%;  }
       }
@@ -441,5 +450,19 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 @media #{$small-only}{
   .header-wrap .mainMenu_container { border-bottom: none; }
 }
-
-
+/* ********************* Overwrite section ************************** */
+html.IGv2 .header-wrap {
+	font-size:160%;	
+}
+html.IGv2 .top-bar {
+	padding:0;	
+}
+html.IGv2 .top-bar input {max-width:none;}
+html.IGv2 .header-wrap .main-menu li.has-dropdown .already-a-client, html.IGv2 .header-wrap .utility-menu li.has-dropdown .already-a-client {
+    padding-right: 2.6rem !important;
+}
+html.IGv2 .header-wrap .utility-menu li.has-dropdown.hover li:not(.has-form) .sub-link {font-size:1.6rem;}
+html.IGv2 .top-bar, html.IGv2 .top-bar ul.main-menu {background-color:#FFFFFF;}
+html.IGv2 .header-wrap form {padding:0;}
+html.IGv2 .header-wrap .mobile-header .brand-slogan {font-size: 1.28rem;margin-bottom: 0;padding-left: 8px;}
+html.IGv2 .header-wrap .main-menu li.has-dropdown.hover li:not(.has-form) .sub-link, .header-wrap .utility-menu li.has-dropdown.hover li:not(.has-form) .sub-link {font-size: 1.6rem;}
