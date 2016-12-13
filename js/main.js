@@ -184,11 +184,10 @@ $(function() {
 
 	// Setup the form submission
 	$('#find-an-advisor-search').submit(function(e){
-		console.log('Working');
 		e.preventDefault();
 		var params = parseSearchString();
 		getSearchResults(params);
-		ga('send','event','Consumer Engagement','Click','Header_Click_Search_EventPage:Header', 0);
+		//ga('send','event','Consumer Engagement','Click','Header_Click_Search_EventPage:Header', 0);
 	});
 });
 
