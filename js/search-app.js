@@ -93,11 +93,7 @@
         init();
 
         function init() {
-            $(document).foundation();
-
-            $('.info-toggle-small, .info-toggle').infoToggle();
-
-   
+            $('.info-toggle-small, .info-toggle').infoToggle(); 
         }
 
       
