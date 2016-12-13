@@ -1,5 +1,5 @@
 // GLOBALS 
-var modelUrl = 'http://206.152.35.229:9000/api/cwpsearch?'; // prod 206.152.35.229 uat 206.152.35.227
+var modelUrl = 'https://206.152.35.229:9000/api/cwpsearch?'; // prod 206.152.35.229 uat 206.152.35.227
 var $field = $('#FindAnAdvisor');
 var allConsultants = {};
 var lang = 'en';
