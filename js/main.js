@@ -1,5 +1,5 @@
 // GLOBALS 
-var modelUrl = 'http://206.152.35.227:9000/api/cwpsearch?'; // prod 206.152.35.229 uat 206.152.35.227
+var modelUrl = 'http://206.152.35.229:9000/api/cwpsearch?'; // prod 206.152.35.229 uat 206.152.35.227
 var $field = $('#FindAnAdvisor');
 var allConsultants = {};
 var lang = 'en';
@@ -183,10 +183,12 @@ $(function() {
 	)
 
 	// Setup the form submission
-	$('#siteSearch').submit(function(e){
+	$('#find-an-advisor-search').submit(function(e){
+		console.log('Working');
 		e.preventDefault();
 		var params = parseSearchString();
 		getSearchResults(params);
+		ga('send','event','Consumer Engagement','Click','Header_Click_Search_EventPage:Header', 0);
 	});
 });
 

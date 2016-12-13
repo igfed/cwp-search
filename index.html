@@ -83,7 +83,7 @@
                                                 <li><a href="http://investorsgroup.com/more/en/" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Advice&stories_EventPage:Header', 0);">Advice & Stories</a></li>
                                                 <li class="findAdvisor"><a href="http://investorsgroup.com/en/find-an-advisor" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Find_an_advisor_EventPage:Header', 0);">Find an advisor</a></li>
                                                 <li>
-                                                    <form id="siteSearch" class="search-form" action="http://investorsgroup.com/en/search" onsubmit="return (this.q.value == '') ? false : true; ga('send','event','Consumer Engagement','Click','Header_Click_Search_EventPage:Header', 0);">
+                                                    <form id="siteSearch" class="search-form">
                                                     	<input class="icon-search-nav search-input" type="text" name="q">
                                                     	<span class="search-clsBtn"></span>
                                                     </form>
@@ -173,7 +173,7 @@
             </div>
             <!--Search-->
             <div class="icon-wrap">
-                <form id="siteSearch" class="search-form">
+                <form id="find-an-advisor-search" class="search-form">
                     <div class="row contact section">
                         <div class="small-12 medium-10 small-centered columns">
                             <div class="row">
@@ -292,7 +292,15 @@
                             </div>
                             <div class="consultant-text">
                             <p class="tp_07 consultant_name">{{myInfo.FName}} {{myInfo.LName}}</p>
-                            <p class="tp_05">{{myInfo.title}}</p>
+                            {{#myInfo.title}}
+                                <p class="tp_05">{{myInfo.title}}</p>
+                            {{/myInfo.title}}
+                            {{^myInfo.title}}
+                                {{#myInfo.discipline}}
+                                <p class="tp_05">{{myInfo.discipline}}</p>
+                                {{/myInfo.discipline}}
+                            {{/myInfo.title}}
+                            
                             <p class="tp_09">{{myInfo.Ct_City}} {{myInfo.PostalCode}}</p>
                             </div>
                         </div>
