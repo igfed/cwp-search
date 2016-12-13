@@ -21,15 +21,36 @@ img.advisor{
 		overflow: hidden;
 }
 
-.icon-wrap, .search-form, .body-content {height: 100%}
 span.prefix {
 	background-color: $white;
 	width: 100%;
+}
+.row.contact.section {
+	padding-bottom:120px;
 }
 .contact .search-ui{
 	white-space:nowrap;
 	/*margin:7rem 0 0;*/
 	padding:0 8.2%;
+}
+#SearchSubmitButton {
+	display: block;
+	width: 100%;
+	height: 58px;
+	margin: 0;
+	img {
+		height: 20px;
+		width: 20px;
+		position: relative;
+		display: block;
+		margin: 0;
+		padding: 0;
+		top: 50%;
+		left: 50%;
+	}
+	&:hover, &:focus {
+		background: #fff;
+	}
 }
 .contact .search-ui>*{vertical-align:top;}
 .contact .search-ui.name .search-ui--location {
@@ -108,11 +129,14 @@ span.prefix {
 	display:inline-block;
 }
 .contact .search-ui .search-ui--location>input .tt-menu,.contact .search-ui .search-ui--location .twitter-typeahead .tt-menu {
-	margin-left:-74px;
-	width:120%;
+	margin-left: 0 !important;
+	width:110%;
 	z-index:20 !important;
 	margin-top:-3px;
-	border-top:1px solid #CCC;
+	border-top:1px solid rgba(0, 0, 0, 0.3);
+	box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.3);
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
 }
 .contact .search-ui .search-ui--location>input .tt-menu .no-results,.contact .search-ui .search-ui--location>input .tt-menu .tt-suggestion,.contact .search-ui .search-ui--location .twitter-typeahead .tt-menu .no-results,.contact .search-ui .search-ui--location .twitter-typeahead .tt-menu .tt-suggestion {
 	width:100%;
@@ -120,10 +144,6 @@ span.prefix {
 	text-transform:lowercase;
 	background-color:#fff;
 	cursor:pointer;
-}
-.contact .search-ui .search-ui--location>input .tt-menu .no-results,.contact .search-ui .search-ui--location>input .tt-menu .tt-suggestion:last-child,.contact .search-ui .search-ui--location .twitter-typeahead .tt-menu .no-results,.contact .search-ui .search-ui--location .twitter-typeahead .tt-menu .tt-suggestion:last-child {
-	border-bottom-right-radius: 5px;
-	border-bottom-left-radius: 5px;
 }
 .contact .search-ui .search-ui--location>input .tt-menu .no-results:hover,.contact .search-ui .search-ui--location>input .tt-menu .tt-suggestion:hover,.contact .search-ui .search-ui--location .twitter-typeahead .tt-menu .no-results:hover,.contact .search-ui .search-ui--location .twitter-typeahead .tt-menu .tt-suggestion:hover {
 	background-color:#e5e8e8;;
@@ -143,4 +163,3 @@ span.prefix {
 .contact .search-ui .search-ui--location>input .tt-menu .no-results,.contact .search-ui .search-ui--location .twitter-typeahead .tt-menu .no-results{
 	white-space:normal;
 }
-

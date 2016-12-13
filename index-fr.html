@@ -1,0 +1,602 @@
+<!doctype html>
+<html class="IGv2" lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trouver un conseiller</title>
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="css/serp-advisors-location.css"/>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
+        <script src="js/vendor/modernizr.js"></script>
+    </head>
+    <body>
+        <div class="body-content cwp-search">
+            <div class="header-wrap">
+                <!-- Utility menu -->
+                <div class="row collapse utility_container show-for-large-up">
+                    <div class="medium-12 large-11 large-centered columns add-padding">
+                        <!-- TOPBAR - UTILITY MENU -->
+                        <nav class="top-bar utility-topbar" data-topbar role="navigation" data-options="is_hover: false" >
+                            <section class="top-bar-section">
+                                <ul class="right utility-menu">
+                                    <!-- Dropdown -->
+                                    <li class="has-dropdown"> <a class="already-a-client" href="#">Connexion<span data-dropdown="drop"></span></a>
+                                    <ul class="dropdown utility-submenu">
+                                    <li><a href="https://www.clientvu.ca/login/cana/cai/clie/novopriusacquiro.do?lingua=fr" class="sub-link" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Login>Client_Login_EventPage:All_pages', 0);">Déjà client?</a></li>
+                                    <li><a href="https://bvi.bnc.ca/index/investorsgroup/indexfr.html" class="sub-link" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Login>Solutions_Banking_EventPage:All_pages', 0);">Solutions Bancaires<sup>MC</sup></a></li>
+                                    </ul>
+                                    </li>
+                                    <li class="horizontalPipe"></li>
+                                    <li><a href="http://groupeinvestors.com/fr/ressources-pour-les-clients" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Client_Support_EventPage:Header', 0);">Service à la clientèle</a></li>
+                                    <li class="horizontalPipe"></li>
+                                    <!--<li><a href="#">English</a></li>-->
+                                    <li><a href="http://investorsgroup.com/en/find-an-advisor" target="_parent">English</a></li>
+                                </ul>
+                                <!-- end right --> 
+                            </section>
+                        </nav>
+                    </div>
+                </div>
+                <!-- Main menu -->
+                <div class="row collapse mainMenu_container">
+                    <div class="small-12 medium-12 large-11 large-centered columns add-padding">
+                        <div class="row collapse main-topbar_container">
+                            <!-- 1: LOGO -->
+                            <div class="small-12 medium-12 large-3 columns">
+                                <div class="row collapse container mobile-header"> 
+                                    <!-- IG Logo -->
+                                    <div class="small-6 medium-6 large-12 columns left logo-wrap"> <a href="http://groupeinvestors.com/fr/default.aspx" class="logo-link" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Header>Investors_Group_logo_EventPage:All_pages', 0);"> <img class="logo" src="http://investorsgroup.com/Tribal/images/Logo_IG90_combined_TopLeft_F_RGB.svg" /></a>
+                                        <p class="brand-slogan">Investissez dans votre vie.</p>
+                                    </div>
+                                    <!-- Hamburger Icon -->
+                                    <div class="small-6 medium-6 columns right hide-for-large-up">
+                                        <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
+                                            <button id="menu-button" class="menu-icon" data-toggle type="button"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 2: MENU -->
+                            <div class="small-12 medium-12 large-9  columns nav-menu">
+                                <!-- LINEAR MENU - DESKTOP -->
+                                <div class="show-for-large-up">
+                                    <!-- #2 TOPBAR - MAINMENU -->
+                                    <nav class="top-bar main-topbar" data-topbar role="navigation" data-options="is_hover: false" >
+                                        <section class="top-bar-section">
+                                            <ul class="right main-menu">
+                                                <!-- Dropdown -->
+                                                <li class="has-dropdown"> 
+                                                    <a href="#" class="already-a-client">Services<span data-dropdown="drop"></span></a>
+                                                    <ul class="dropdown main-subMenu">
+                                                        <li><a href="http://www.groupeinvestors.com/fr/occasions/investissements" class="sub-link" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Services>Investments_EventPage:Header', 0);">Les investissements<span class="verticalPipe"></span></a></li>
+                                                        <li><a href="http://www.groupeinvestors.com/fr/occasions/retraite" class="sub-link" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Services>Retirement_EventPage:Header', 0);">La retraite<span class="verticalPipe"></span></a></li>
+                                                        <li><a href="http://www.groupeinvestors.com/fr/occasions/prets-hypothecaires" class="sub-link" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Services>Mortgage_EventPage:Header', 0);">Les prêts hypothécaires<span class="verticalPipe"></span></a></li>
+                                                        <li><a href="http://www.groupeinvestors.com/fr/occasions/planification-successorale" class="sub-link" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Services>EstatePlanning_EventPage:Header', 0);">La planification successorale<span class="verticalPipe"></span></a></li>
+                                                        <li><a href="http://www.groupeinvestors.com/fr/occasions/planification-fiscale" class="sub-link" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Services>TaxPlanning_EventPage:Header', 0);">La planification fiscale<span class="verticalPipe"></span></a></li>
+                                                        <li><a href="http://www.groupeinvestors.com/fr/occasions/assurances" class="sub-link" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Services>Insurance_EventPage:Header', 0);">Les assurances</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="horizontalPipe"></li>
+                                                <li><a href="http://www.groupeinvestors.com/plus/fr/" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Advice&stories_EventPage:Header', 0);">Conseils et Sujets</a></li>
+                                                <li class="findAdvisor"><a href="/fr/trouver-un-conseiller" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Find_an_advisor_EventPage:Header', 0);">Trouver un conseiller</a></li>
+                                                <li>
+                                                    <form id="siteSearch" class="search-form" action="http://www.groupeinvestors.com/fr/search" onsubmit="return (this.q.value == '') ? false : true; ga('send','event','Consumer Engagement','Click','Header_Click_Search_EventPage:Header', 0);">
+                                                        <input class="icon-search-nav search-input" type="text" name="q">
+                                                        <span class="search-clsBtn"></span>
+                                                    </form>
+                                                </li>
+                                            </ul>
+                                            <!-- end right --> 
+                                        </section>
+                                    </nav>
+                                </div>
+                                <!-- BOXED MENU - MOBILE -->
+                                <div class="hide-for-large-up boxed-menu">
+                                    <dl class="accordion" data-accordion role="tablist">
+                                        <dd>
+                                            <div class="row collapse">
+                                                <div class="small-12 columns">
+                                                    <div class="row collapse">
+                                                        <!-- Close button -->
+                                                        <div class="closeBtn-wrap">
+                                                            <button class="closeBtn--accordion"></button>
+                                                        </div>
+                                                    </div>
+                                                    <form id="siteSearch" class="search-form mb-search-form" action="http://www.groupeinvestors.com/fr/search" onsubmit="return (this.q.value == '') ? false : true; ga('send','event','Consumer Engagement','Click','Header_Click_Search_EventPage:Header', 0);">
+                                                        <div class="row collapse">
+                                                            <!-- Form -->
+                                                            <div class="small-11 columns">
+                                                                <span class="mb-search">
+                                                                    <input type="text" name="q" placeholder="Rechercher Groupe Investors" class="mb-search-input">
+                                                                </span>
+                                                            </div>
+                                                            <div class="small-1 columns text-right">
+                                                                <span class="">
+                                                                    <button type="reset" value="Reset" 
+                                                                        class="mb-search-reset">
+                                                                    </button>  
+                                                                </span> 
+                                                            </div>  
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                        <dd class="accordion--nav"> <a href="#panel1a" role="tab" id="panel1a-heading" aria-controls="panel1a" class="has-subnav nav-link">Services</a>
+                                            <div id="panel1a" class="content" role="tabpanel" aria-labelledby="panel1a-heading">
+                                                <ul class="accordion--subnav">
+                                                    <li><a href="http://www.groupeinvestors.com/fr/occasions/investissements" class="subnav-link" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Services>Investments_EventPage:Header', 0);">Les investissements</a></li>
+                                                    <li><span class="subMenu--divider"></span></li>
+                                                    <li><a href="http://www.groupeinvestors.com/fr/occasions/retraite" class="subnav-link" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Services>Retirement_EventPage:Header', 0);">La retraite</a></li>
+                                                    <li><span class="subMenu--divider"></span></li>
+                                                    <li><a href="http://www.groupeinvestors.com/fr/occasions/prets-hypothecaires" class="subnav-link" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Services>Mortgage_EventPage:Header', 0);">Les pr&ecirc;ts hypoth&eacute;caires</a></li>
+                                                    <li><span class="subMenu--divider"></span></li>
+                                                    <li><a href="http://www.groupeinvestors.com/fr/occasions/planification-successorale" class="subnav-link" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Services>EstatePlanning_EventPage:Header', 0);">La planification successorale</a></li>
+                                                    <li><span class="subMenu--divider"></span></li>
+                                                    <li><a href="http://www.groupeinvestors.com/fr/occasions/planification-fiscale" class="subnav-link" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Services>TaxPlanning_EventPage:Header', 0);">La planification fiscale</a></li>
+                                                    <li><span class="subMenu--divider"></span></li>
+                                                    <li><a href="http://www.groupeinvestors.com/fr/occasions/assurances" class="subnav-link" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Services>Insurance_EventPage:Header', 0);">Les assurances</a></li>
+                                                </ul>
+                                            </div>
+                                        </dd>
+                                        <dd class="accordion--nav accordion--divider"></dd>
+                                        <dd class="accordion--nav"><a href="http://www.groupeinvestors.com/plus/fr/" class="nav-link" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Advice&stories_EventPage:Header', 0);">Conseils et Sujets</a></dd>
+                                        <dd class="accordion--nav accordion--divider"></dd>
+                                        <dd class="accordion--nav"><a href="http://www.groupeinvestors.com/fr/trouver-un-conseiller" class="nav-link" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Find_an_advisor_EventPage:Header', 0);">Trouver un conseiller</a></dd>
+                                        <dd class="accordion--nav accordion--divider"></dd>
+                                        <dd class="accordion--nav"> <a href="#panel1b" role="tab" id="panel1b-heading" aria-controls="panel1b" class="has-subnav  nav-link">Connexion</a>
+                                            <div id="panel1b" class="content" role="tabpanel" aria-labelledby="panel1b-heading">
+                                                <ul class="accordion--subnav">
+                                                    <!-- <li><a href="/fr/ressources-pour-les-clients" class="subnav-link">Ressources pour les clients</a></li>
+                                                    <li><span class="subMenu--divider"></span></li> -->
+                                                    <li><a href="https://www.clientvu.ca/login/cana/cai/clie/novopriusacquiro.do?lingua=fr" class="subnav-link" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Login>Client_Login_EventPage:All_pages', 0);">D&eacute;j&agrave; client?</a></li>
+                                                    <li><span class="subMenu--divider"></span></li>
+                                                    <!-- <li><a href="http://digital.lipperweb.com/invgrp/list?lang=fr#FundDetail" class="subnav-link">Afficher mes fonds</a></li> -->
+                                                    <li><span class="subMenu--divider"></span></li>
+                                                    <li><a href="https://bvi.bnc.ca/index/investorsgroup/indexfr.html" class="subnav-link" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Login>Solutions_Banking_EventPage:All_pages', 0);">acc&eacute;der &agrave; Solutions Bancaires<sup>MC</sup></a></li>
+                                                </ul>
+                                            </div>
+                                        </dd>
+                                        <dd class="accordion--nav accordion--divider"></dd>
+                                        <dd class="accordion--nav"><a href="http://www.groupeinvestors.com/fr/ressources-pour-les-clients" class="nav-link">Service &agrave; la client&egrave;le</a></dd>
+                                        <dd class="accordion--nav accordion--divider"></dd>
+                                        <dd class="accordion--nav"><a href="http://investorsgroup.com/en/find-an-advisor" target="_parent" class="nav-link">English</a></dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Search-->
+            <div class="icon-wrap">
+                <form id="siteSearch" class="search-form">
+                    <div class="row contact section">
+                        <div class="small-12 medium-10 small-centered columns">
+                            <div class="row">
+                                <img src="images/find-an-advisor-icon.png" class="img__icon">
+                                <h1 class="text-center">Trouver un conseiller</h1>
+                                <p class="text-center">Nos conseillers examineront vos objectifs financiers et vous aideront à trouver comment les réaliser.</p>
+                            </div>
+                            <div class="row collapse">
+                               <button type="submit" value="Submit" id="SearchSubmitButton"><img src="images/search-icon-in-search-box.png" /></button>
+                                <!-- <div class="small-10 columns search-ui"> -->
+                                    <div class="search-ui--location search-ui" data-searchtype="location">
+                                        <label class="show-for-sr hide" for="FindAnAdvisor">Entrez le nom ou la ville</label>
+                                        <input class="typeahead itf_location itf_name" type="search" placeholder="Trouver un conseiller" name="Search" autocomplete="off" spellcheck="false" id="FindAnAdvisor">
+                                    </div>
+                                    <!-- <div class="adv-search-right"> -->
+                                   <!-- </div> -->
+                                <!-- </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!--Office-->
+            <script id="office-template" type="x-tmpl-mustache">
+              <div class="row info-toggle-trigger" data-toggler=".isActive" data-toggle="info-toggle-wrapper">
+                <div class="small-3 medium-2 columns">
+                  <img class="illustration" data-illustrationid="consultant-about" src="img/illustrations/office-building.svg" alt="icon book and glasses">
+                </div>
+                <div class="small-6 medium-3 columns">
+                  <p class="tp_08">{{length}} bureaux trouvés</p>
+                </div>
+                <div class="small-2 medium-3 columns">
+                  <i class="fa fa-chevron-down"></i>
+                </div>
+              </div>
+              <div id="info-toggle-wrapper" data-toggler=".isActive">
+              <div class="row info-toggle-content">
+              {{#.}}
+                  <div class="small-12 columns">
+                    <div class="row underline">
+                      <div class="small-12 medium-7 large-6 columns map-column">
+                        <div class="maps">
+                          <a class="map-anchor" href="https://www.google.ca/maps/dir//{{Address_Line_1__c}} {{Address_Line_2__c}}, {{City__c}}, {{Province_Territory_State__c}}, {{Postal_Code__c}}">
+                              <div class="map-container">
+                                <img src="https://maps.googleapis.com/maps/api/staticmap?center={{Address_Line_1__c}} {{Address_Line_2__c}}, {{City__c}}, {{Province_Territory_State__c}}, {{Postal_Code__c}}&zoom=17&size=130x130&key=AIzaSyB0n_92iCiJzEB2KBQ19jx88Uu6SWN7aUU" />    
+                                <div class="map-icon"></div>
+                                <div class="tp_22">Voir la carte</div>
+                                <div class="clear"></div>
+                              </div>
+                          </a>
+                        </div>
+                        <div class="map-address">
+                         <p class="tp_07">{{Address_Line_1__c}}
+                         {{Address_Line_2__c}}</p>
+                        <p class="tp_09">{{City__c}},
+                        {{Province_Territory_State__c}}, {{Postal_Code__c}}</p>
+                        </div>
+                      </div>
+
+                        <div class="columns contact-buttons buttons-column">
+                            <ul class="dropdown menu phone" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
+                                <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
+                                        Informations de contact
+                                         Téléphone
+                                    ">
+                                    <a class="outline-btn secondary small-icon phone dropdown-button" type="button" tabindex="0">
+                                        <span class="hide-for-small-only">Informations de contact</span>
+                                        <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Téléphone</span>
+                                    </a>
+                                    <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
+                                        <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
+                                            <a href="mailto:{{Director__r.Email}}">Envoyez moi un courriel</a>
+                                        </li>
+                                        <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                                            <a href="tel:{{Phone__c}}">
+                                                <strong>Principal</strong>
+                                                <span>{{Phone__c}}</span>
+                                            </a>
+                                        </li>
+                                        <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                                            <a href="tel:{{Fax__c}}">
+                                                <strong>Télécopieur</strong>
+                                                <span>{{Fax__c}}</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                          <a href="mailto:{{Director__r.Email}}" class="outline-btn secondary small-icon email" type="button"><span class="show-for-small-only"><i aria-hidden="true" class="fa fa-envelope"></i> Courriel</span></a>
+                            <a class="outline-btn constrained" type="button" href="{{prettyURL__c}}">Voir les détails</a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                  </div>
+              {{/.}}
+              </div>
+              </div>
+            </script>
+            <div id="office-search" class="section office-search info-toggle hide" info-toggle-aria="true" data-toggler=".active"></div>
+
+            <!--Search Results-->
+            <script id="result-amount-template" type="x-tmpl-mustache">
+              <div class="row">
+                  <div class="medium-4 columns">
+                    <p class="tp_08">{{length}} résultats</p>
+                  </div>
+              </div>
+            </script>
+                <script id="consultant-template" type="x-tmpl-mustache">
+                    {{#.}}
+                    <div class="row underline">
+                        <div class="small-12 medium-7 large-6 columns portrait-column">
+                            <div class="portrait">
+                                <img src="{{myInfo.photoUrl}}" alt="{{myInfo.FName}} {{myInfo.LName}}" />
+                            </div>
+                            <div class="consultant-text">
+                            <p class="tp_07 consultant_name">{{myInfo.FName}} {{myInfo.LName}}</p>
+                            <p class="tp_05">{{myInfo.title}}</p>
+                            <p class="tp_09">{{myInfo.Ct_City}} {{myInfo.PostalCode}}</p>
+                            </div>
+                        </div>
+                        <div class="small-12 medium-6 large-5 columns buttons-column">
+                          
+                            <ul class="dropdown menu phone" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
+                              <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
+                                      Informations de contact
+                                        Téléphone
+                                  ">
+                                  <a class="outline-btn secondary small-icon phone dropdown-button" type="button" tabindex="0">
+                                      <span class="hide-for-small-only">Informations de contact</span>
+                                      <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Téléphone</span>
+                                  </a>
+                                  <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
+                                      <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
+                                          <a href="mailto:{{myInfo.Email}}">Envoyez moi un courriel</a>
+                                      </li>
+                                      <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                                          <a href="tel:{{myInfo.Phone}}">
+                                              <strong>Principal</strong>
+                                              <span>{{myInfo.Phone}}</span>
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </li>
+                          </ul>
+                            <a href="mailto:{{myInfo.Email}}" class="outline-btn secondary small-icon email" type="button"><span class="show-for-small-only"><i aria-hidden="true" class="fa fa-envelope"></i> Courriel</span></a>
+                          <a class="outline-btn constrained" type="button" href="{{myInfo.ConsultantUrl}}">Voir le profil</a>
+                        </div>
+                       
+                        <div class="clear"></div>
+                </div>
+                {{#myConsultantTeam.length}}
+                <div class="row my-team">
+                    <div class="medium-12 columns title">
+                      <div class="row">
+                        <div class="small-4 medium-4 columns line">
+                          <div class="clear"></div>
+                        </div>
+                        <div class="small-4 medium-4 columns">
+                          <p class="tp_21">Mon équipe</p>
+                        </div>
+                        <div class="small-4 medium-4 columns line">
+                          <div class="clear"></div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="my-consultant-team">
+                    {{#myConsultantTeam}}
+                        <div class="medium-4 columns">
+                          <p class="tp_09 consultant_name">{{FName}} {{LName}}</p>
+                    
+
+                          <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
+                          <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
+                                  Informations de contact
+                                   Téléphone
+                              ">
+                              <a class="outline-btn secondary small-icon phone dropdown-button" type="button" tabindex="0">
+                                  <span class="hide-for-small-only">Informations de contact</span>
+                                  <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i></span>
+                              </a>
+                              <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
+                                  <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
+                                      <a href="mailto:{{Email}}">Envoyez moi un courriel</a>
+                                  </li>
+                                  <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                                      <a href="tel:{{Phone}}">
+                                          <strong>Principal</strong>
+                                          <span>{{Phone}}</span>
+                                      </a>
+                                  </li>
+                              </ul>
+                          </li>
+                      </ul>
+                    <a href="mailto:{{Email}}" class="outline-btn secondary small-icon email show-for-small-only" type="button"><span><i aria-hidden="true" class="fa fa-envelope"></i></span></a>
+                      <div class="clear"></div>
+                        </div>
+                    {{/myConsultantTeam}}
+                     <div class="row show-for-small-only">
+                           <p class="tp_05">Voir tous les membres de l'équipe</p>
+                        </div>
+                    </div>
+                </div>
+                {{/myConsultantTeam.length}}
+                {{#associates.length}}
+                <div class="row my-team">
+                    <div class="medium-12 columns title">
+                      <div class="row">
+                        <div class="small-4 medium-4 columns line">
+                          <div class="clear"></div>
+                        </div>
+                        <div class="small-4 medium-4 columns">
+                          <p class="tp_21">Associés</p>
+                        </div>
+                        <div class="small-4 medium-4 columns line">
+                          <div class="clear"></div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="my-consultant-team">
+                    {{#associates}}
+                        <div class="medium-4 columns">
+                          <p class="tp_09 consultant_name">{{First_Name__c}} {{Last_Name__c}}</p>
+                    
+
+                          <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
+                          <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
+                                  Informations de contact
+                                   Téléphone
+                              ">
+                              <a class="outline-btn secondary small-icon phone dropdown-button" type="button" tabindex="0">
+                                  <span class="hide-for-small-only">Informations de contact</span>
+                                  <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i></span>
+                              </a>
+                              <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
+                                  <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
+                                      <a href="mailto:{{Email__c}}">Envoyez moi un courriel</a>
+                                  </li>
+                                  <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                                      <a href="tel:{{Phone__c}}">
+                                          <strong>Principal</strong>
+                                          <span>{{Phone__c}}</span>
+                                      </a>
+                                  </li>
+                              </ul>
+                          </li>
+                      </ul>
+                    <a href="mailto:{{Email__c}}" class="outline-btn secondary small-icon email show-for-small-only" type="button"><span><i aria-hidden="true" class="fa fa-envelope"></i></span></a>
+                      <div class="clear"></div>
+                        </div>
+                    {{/associates}}
+                      <div class="row show-for-small-only">
+                           <p class="tp_05">Voir tous les membres de l'équipe</p>
+                        </div>
+                    </div>
+                </div>
+                {{/associates.length}}
+            {{/.}}
+            </script>
+            <script id="view-more-template" type="x-tmpl-mustache">
+              <div class="row view-more">
+                  <div class="medium-4 medium-centered">
+                      <a class="outline-btn secondary" type="button" href="#" data-fetch-results>Afficher plus de résultats</a>
+                  </div>
+              </div>
+            </script>
+            <div class="section search-results hide" id="results-container"></div>
+
+            <!--18.Footer-->
+            <!-- Footer -->
+            <div class="full-background footer2">
+                <!-- BackToTop -->
+                <div class="row collapse full-width">
+                    <div class="large-10 large-centered columns text-right add-padding">
+                        <section class="footer-backTop">
+                            <div class="backtotop" onclick="ScrollMan.toTop()">
+                            <img src="http://www.investorsgroup.com/en/images/corp/svg/Footer---Large-Top.png" alt="" class="backTop-icon fr-text">
+                            </div>
+                        </section>
+                    </div>
+                </div>    
+                <!-- Tabs -->
+                <div class="row">
+                    <!-- Show for large -->
+                    <section class="footer-tabs show-for-large-up">
+                        <div class="large-4 columns">
+                            <h3 class="tab-header">La Soci&eacute;t&eacute;</h3>
+                            <ul class="footer-tab-list">
+                                <li><a href="http://groupeinvestors.com/fr/notre-societe" class="footer-tab-item" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Who_we_are_EventPage:All_pages', 0);">Qui nous sommes</a></li>
+                                <li><a href="http://groupeinvestors.com/fr/dans-les-medias" class="footer-tab-item" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Media_room_EventPage:All_pages', 0);">Dans les m&eacute;dias</a></li>
+                                <li><a href="http://groupeinvestors.com/fr/Carrieres" class="footer-tab-item" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Careers_EventPage:All_pages', 0);">Carri&egrave;res</a></li>
+                                <li><a href="http://groupeinvestors.com/fr/pour-nous-joindre" class="footer-tab-item" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Contact_Us_EventPage:All_pages', 0);">Pour nous joindre</a></li>
+                            </ul>
+                        </div>
+                        <div class="large-4 columns">
+                            <h3 class="tab-header">Conseils financiers</h3>
+                            <ul class="footer-tab-list">
+                                <li><a href="http://groupeinvestors.com/fr/produits" class="footer-tab-item" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Products_EventPage:All_pages', 0);">Produits</a></li>
+                                <li><a href="http://groupeinvestors.com/fr/pouvons-nous-vous-aider" class="footer-tab-item" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_How_Can_We_Help_EventPage:All_pages', 0);">Comment nous pouvons vous aider</a></li>
+                                <li><a href="http://groupeinvestors.com/fr/la-valeur-du-plan" class="footer-tab-item" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Value_of_the_plan_EventPage:All_pages', 0);">La valeur de notre plan</a></li>
+                                <li><a href="http://groupeinvestors.com/plus/fr/" class="footer-tab-item" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_More_-_Advice_&_Stories_EventPage:All_pages', 0);">Conseils et sujets</a></li>
+                            </ul>
+                        </div>
+                        <div class="large-4 columns">
+                            <h3 class="tab-header">Ressources</h3>
+                            <ul class="footer-tab-list">
+                                <li><a href="https://www.clientvu.ca/login/cana/cai/clie/novopriusacquiro.do?lingua=fr" class="footer-tab-item">Acc&egrave;s – Compte client</a></li>
+                                <li><a href="https://bvi.bnc.ca/index/investorsgroup/indexfr.html" class="footer-tab-item">Acc&eacute;der &agrave; Solutions Bancaires</a></li>
+                                <li><a href="http://groupeinvestors.com/fr/produits/produits-de-placement/fonds-communs-de-placement" class="footer-tab-item">Fonds communs de placement</a></li>
+                                <li><a href="http://groupeinvestors.com/fr/ressources-pour-les-clients/prix-et-taux/taux-hypothecaires" class="footer-tab-item">Taux hypoth&eacute;caires</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <!-- Show for small -->
+                    <section class="footer-tabs hide-for-large-up">
+                        <div class="small-12 medium-12 medium-centered small-centered columns add-padding">
+                            <!-- Also works with <dl>'s and <dt>'s in place of <ul>'s and <li>'s. --> 
+                            <dl class="accordion" data-accordion>
+                                <dd class="accordion-nav--footer">
+                                    <a href="#panel1b" class="tab-header">La Soci&eacute;t&eacute;</a>
+                                    <div id="panel1b" class="content">
+                                        <ul class="footer-tab-list">
+                                            <li><a href="http://groupeinvestors.com/fr/notre-societe" class="footer-tab-item" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Who_we_are_EventPage:All_pages', 0);">Qui nous sommes</a></li>
+                                            <li><a href="http://groupeinvestors.com/fr/dans-les-medias" class="footer-tab-item" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Media_room_EventPage:All_pages', 0);">Dans les m&eacute;dias</a></li>
+                                            <li><a href="http://groupeinvestors.com/fr/Carrieres" class="footer-tab-item" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Careers_EventPage:All_pages', 0);">Carri&egrave;res</a></li>
+                                            <li><a href="http://groupeinvestors.com/fr/pour-nous-joindre" class="footer-tab-item" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Contact_Us_EventPage:All_pages', 0);">Pour nous joindre</a></li>
+                                        </ul>
+                                    </div>
+                                </dd>
+                                <dd class="accordion-nav--footer">
+                                    <a href="#panel2b" class="tab-header">Conseils financiers</a>
+                                    <div id="panel2b" class="content">
+                                        <ul class="footer-tab-list">
+                                            <li><a href="http://groupeinvestors.com/fr/produits" class="footer-tab-item" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Products_EventPage:All_pages', 0);">Produits</a></li>
+                                            <li><a href="http://groupeinvestors.com/fr/pouvons-nous-vous-aider" class="footer-tab-item" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_How_Can_We_Help_EventPage:All_pages', 0);">Comment nous pouvons vous aider</a></li>
+                                            <li><a href="http://groupeinvestors.com/fr/la-valeur-du-plan" class="footer-tab-item" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Value_of_the_plan_EventPage:All_pages', 0);">La valeur de notre plan</a></li>
+                                            <li><a href="http://groupeinvestors.com/plus/fr/" class="footer-tab-item" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_More_-_Advice_&_Stories_EventPage:All_pages', 0);">Conseils et sujets</a></li>
+                                        </ul>
+                                    </div>
+                                </dd>
+                                <dd class="accordion-nav--footer">
+                                    <a href="#panel3b" class="tab-header">Ressources</a>
+                                    <div id="panel3b" class="content">
+                                        <ul class="footer-tab-list">
+                                            <li><a href="https://www.clientvu.ca/login/cana/cai/clie/novopriusacquiro.do?lingua=fr" class="footer-tab-item" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Client_Account_Access_EventPage:All_pages', 0);">Acc&egrave;s – Compte client</a></li>
+                                            <li><a href="https://bvi.bnc.ca/index/investorsgroup/indexfr.html" class="footer-tab-item" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Solutions_Banking_Access_EventPage:All_pages', 0);">Acc&eacute;der &agrave; Solutions Bancaires</a></li>
+                                            <li><a href="http://www.investorsgroup.com/fr/produits/produits-de-placement/fonds-communs-de-placement" class="footer-tab-item" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Mutual_Funds_EventPage:All_pages', 0);">Fonds communs de placement</a></li>
+                                            <li><a href="http://groupeinvestors.com/fr/ressources-pour-les-clients/prix-et-taux/taux-hypothecaires" class="footer-tab-item" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Mortgage_Rates_EventPage:All_pages', 0);">Taux hypoth&eacute;caires</a></li>
+                                        </ul>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </section>
+                </div>
+                <!-- Social Media -->
+                <div class="row collapse full-width">
+                    <div class="large-10 large-centered columns text-center footer-border-top"> <!--Check this out-->
+                        <section class="footer-social-media">
+                            <ul class="socialMedia--icons">
+                                <li><a href="http://www.facebook.com/GroupeInvestors" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Facebook_EventPage:All_pages', 0);"><img src="http://investorsgroup.com/en/images/corp/svg/fb-icon.png"></a></li>
+                                <li><a href="http://www.linkedin.com/company/115929" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_LinkedIn_EventPage:All_pages', 0);"><img src="http://investorsgroup.com/en/images/corp/svg/li-icon.png"></a></li>
+                                <li><a href="https://twitter.com/GroupeInvestors" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Twitter_EventPage:All_pages', 0);"><img src="http://investorsgroup.com/en/images/corp/svg/tw-icon.png"></a></li>
+                                <li><a href="http://www.youtube.com/user/GroupeInvestors" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_YouTube_EventPage:All_pages', 0);"><img src="http://investorsgroup.com/en/images/corp/svg/yt-icon.png"></a></li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>      
+                <!-- Copyright -->
+                <div class="row collapse full-width">
+                    <div class="large-10 large-centered columns text-center"> <!--Check this out-->
+                        <!-- Copyright -->
+                        <div class="row collapse">
+                            <section class="footer-copyright show-for-large-up"> 
+                                <div class="medium-12 large-12 no-padding columns">
+                                    <ul class="footer-menu-desktop">
+                                        <li class="copyright">© 2016 Groupe Investors Inc.</li>
+                                        <li><a href="http://groupeinvestors.com/fr/juridique">Juridique</a></li>
+                                        <li><a href="http://groupeinvestors.com/fr/juridique/utilisation">Conditions d&rsquo;utilisation</a></li>
+                                        <li><a href="http://groupeinvestors.com/fr/juridique/confidentialite-et-renseinements-personnels">Politique de confidentialit&eacute;</a></li>
+                                        <li><a href="http://groupeinvestors.com/fr/pour-nous-joindre/accessibilite">Accessibilit&eacute;</a></li>
+                                        <li><a href="http://investorsgroup.com/en/find-an-advisor" target="_parent">View in English</a></li>
+                                    </ul>  
+                                </div>
+                            </section>
+                            <section class="footer-copyright hide-for-large-up"> 
+                                <div class="small-12 medium-12 add-padding columns">
+                                    <ul class="footer-menu-mobile">
+                                        <li class="copyright">© 2016 Groupe Investors Inc.</li>
+                                    </ul>
+                                </div>
+                                <div class="small-12 medium-12 add-padding columns">
+                                    <ul class="footer-menu-mobile">
+                                        <li><a href="http://groupeinvestors.com/fr/juridique">Juridique</a></li>
+                                        <li><a href="http://groupeinvestors.com/fr/juridique/utilisation">Conditions d&rsquo;utilisation</a></li>
+                                        <li><a href="http://groupeinvestors.com/fr/juridique/confidentialite-et-renseinements-personnels">Politique de confidentialit&eacute;</a></li>
+                                    </ul>
+                                </div>
+                                <div class="small-12 medium-12 add-padding columns">
+                                    <ul class="footer-menu-mobile">
+                                        <li><a href="http://groupeinvestors.com/fr/pour-nous-joindre/accessibilite">Accessibilit&eacute;</a></li>
+                                        <li><a href="http://investorsgroup.com/en/find-an-advisor" target="_parent">View in English</a></li>
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="http://investorsgroup.com/en/js/corp/foundation.js"></script>
+    <script src="http://investorsgroup.com/en/js/corp/foundation.topbar.js" type="text/javascript"></script>
+	<script src="http://investorsgroup.com/en/js/corp/foundation.accordion.js" type="text/javascript"></script>
+	<script src="http://investorsgroup.com/en/js/corp/foundation.reveal.js" type="text/javascript"></script>
+    <script src="js/vendor/typeahead.bundle.min.js"></script>
+    <script src="js/vendor/mustache.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="http://investorsgroup.com/external/app/tribal/js/globalnav-yellow.js" type="text/javascript"></script>
+    <script>
+		$(document).foundation(); 
+	</script>
+
+</body>
+
+</html>
