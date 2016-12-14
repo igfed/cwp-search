@@ -6,14 +6,28 @@
 }
 
 
-.footer2 {
+html.IGv2 .footer2 .row {
+    margin: 0 auto;
+    max-width: 62.5rem;
+    width: 100%;
+}
+html.IGv2 .footer2 .row .row.collapse {
+    margin: 0;
+    max-width: none;
+    width: auto;
+}
+
+html.IGv2 .footer2 .accordion {
+	background-color: inherit;	
+}
+html.IGv2 .footer2 {
 
     color: $white; padding-top: 68px;
     background-color: #0D263C;
 
     .row { max-width: calc(62.5rem * 1.6); }
     ul { font-size: calc(1rem * 1.6); }
-
+	h3 {line-height: 1.2;}
     @media only screen and (max-width: 64.063em) { padding-top: 12px; }
     
     .full-width { max-width: 100% !important; }
@@ -92,7 +106,7 @@
                 background-color: #0D263C; font-size: calc(.875rem * 1.6);
                 border-bottom: 1px solid #314659;
                 padding: 1.25rem 0px;
-                background: url("/en/images/corp/svg/expandArrow.png") no-repeat;
+                background: url("http://www.investorsgroup.com/en/images/corp/svg/expandArrow.png") no-repeat;
               background-position: 100% center;
               background-size: 16px; opacity: 1;      
             }
@@ -142,7 +156,7 @@
             
       .accordion .accordion-nav--footer:first-child, .accordion dd:first-child { padding: 0px; }
         .accordion-nav--footer.active > a.tab-header {
-                background: url("/en/images/corp/svg/collapseArrow.png") no-repeat;
+                background: url("http://www.investorsgroup.com/en/images/corp/svg/collapseArrow.png") no-repeat;
                 background-position: 100% center;
               background-size: 16px;
               opacity: 1;

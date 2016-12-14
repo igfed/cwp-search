@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Trouver un conseiller</title>
         <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="css/head_foot_responsive.css">
         <link rel="stylesheet" href="css/serp-advisors-location.css"/>
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
         <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
@@ -14,10 +15,150 @@
     </head>
     <body>
         <div class="body-content cwp-search">
-
+            <div class="header-wrap">
+                <!-- Utility Topbar -->
+                <div class="utility-topbar-row">
+                	<!-- Utility topbar -->
+                	<div class="large-12 columns nopadding show-for-large"> 
+                		<div class="utility-topbar-wrap">
+                			<div class="top-bar utility-topbar text-right ">
+                                <ul class="dropdown menu" data-dropdown-menu data-options="disableHover:true;closingTime:5000;clickOpen:true;">
+                                    <li>
+                                        <a href="#" class="main-topbar-link with-subitems">Connexion</a>
+                                        <ul class="menu vertical text-left utility-topbar-submenu">
+                                        	<li><a href="https://www.clientvu.ca/login/cana/cai/clie/novopriusacquiro.do?lingua=fr" class="main-topbar-sublink">D&eacute;j&agrave; client?</a></li>
+                                        	<li><a href="https://bvi.bnc.ca/index/investorsgroup/indexfr.html" class="main-topbar-sublink">Solutions Bancaires<sup>MC</sup></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="divider-menu-link"></li>
+                                    <li><a href="http://groupeinvestors.com/fr/ressources-pour-les-clients" class="main-topbar-link">Service &agrave; la client&egrave;le</a></li>
+                                    <li class="divider-menu-link"></li>
+                                    <li><a href="http://www.investorsgroup.com/en/default.aspx" class="main-topbar-link">English</a></li>
+                                </ul>
+                			</div>
+                		</div>
+                	</div>
+                </div>
+                
+                <!-- Main Topbar -->
+                <div class="main-topbar-row ">
+                	<!-- LOGO -->
+                	<div class="small-6 medium-6 large-3 columns left nopadding">
+                		<!-- Logo for large -->
+                		<img src="http://investorsgroup.com/Tribal/images/Logo_IG90_combined_TopLeft_F_RGB.svg" alt="" class="ig-brand-logo">
+                		<p class="ig-brand-slogan">Investissez dans votre vie.</p>    
+                	</div>
+                
+                	<!-- Humberger Icon & Main Topbar -->
+                	<div class="small-6 medium-6 large-9 columns nopadding">
+                		<!-- Topbar for large -->
+                		<div class="main-topbar-wrap show-for-large">
+                			<div class="top-bar text-right main-topbar" data-options="is_hover: false">
+                				<div id="responsive-menu">
+                                    <ul class="dropdown menu main-topbar-menu" id="main-topbar-menu" data-dropdown-menu data-options="disableHover:true;closingTime:5000;clickOpen:true;">
+                                        <li>
+                                            <a href="#" class="main-topbar-link with-subitems">Services</a>
+                                            <ul class="menu vertical text-left main-topbar-submenu">
+                                                <li><a href="http://www.groupeinvestors.com/fr/occasions/investissements" class="main-topbar-sublink" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Services>Investments_EventPage:Header', 0);">Les investissements<span class="verticalPipe"></span></a></li>
+                                                <li><a href="http://www.groupeinvestors.com/fr/occasions/retraite" class="main-topbar-sublink" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Services>Retirement_EventPage:Header', 0);">La retraite<span class="verticalPipe"></span></a></li>
+                                                <li><a href="http://www.groupeinvestors.com/fr/occasions/prets-hypothecaires" class="main-topbar-sublink" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Services>Mortgage_EventPage:Header', 0);">Les prêts hypothécaires<span class="verticalPipe"></span></a></li>
+                                                <li><a href="http://www.groupeinvestors.com/fr/occasions/planification-successorale" class="main-topbar-sublink" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Services>EstatePlanning_EventPage:Header', 0);">La planification successorale<span class="verticalPipe"></span></a></li>
+                                                <li><a href="http://www.groupeinvestors.com/fr/occasions/planification-fiscale" class="main-topbar-sublink" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Services>TaxPlanning_EventPage:Header', 0);">La planification fiscale<span class="verticalPipe"></span></a></li>
+                                                <li><a href="http://www.groupeinvestors.com/fr/occasions/assurances" class="main-topbar-sublink" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Services>Insurance_EventPage:Header', 0);">Les assurances</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="divider-menu-link"></li>
+                                        <li><a href="http://www.groupeinvestors.com/plus/fr/" class="main-topbar-link">Conseils et Sujets</a></li>
+                                        <li class="findAdvisor"><a href="http://www.groupeinvestors.com/fr/trouver-un-conseiller" class="main-topbar-link">Trouver un conseiller</a></li>
+                                        <li class="form-input-search">
+                                            <form id="siteSearch" class="search-form" action="http://www.groupeinvestors.com/fr/search" onsubmit="return emptysearch_validateForm();">
+                                            	<input class="search-input" type="text" name="Search" placeholder="">
+                                            	<span class="search-input-close"></span>
+                                            </form> 
+                                        </li>
+                                    </ul>
+                				</div>
+                			</div>
+                		</div>
+                		<!-- humberger icon -->
+                		<div class="topbar mb-main-topbar-wrap right hide-for-large">
+                			<div class="title-bar text-right">
+                				<span data-responsive-toggle="example-menu" data-hide-for="large">
+                					<button class="menu-icon" type="button" data-toggle id="menu-button"></button> 
+                				</span>
+                			</div>
+                		</div>
+                	</div>
+                	<!-- Accordion Menu -->
+                	<div class="small-12 medium-12 hide-for-large">
+                		<!-- Header accordion wrapper -->
+                		<div id="example-menu" class="header-accordion-wrap">
+                			<!-- Close button -->
+                            <div class="closeBtn-wrap">
+                            	<button class="closeBtn--accordion" id="closeBtn--accordion"></button>
+                            </div>
+                			<!-- form -->
+                            <form action="http://www.groupeinvestors.com/fr/search" class="mb-search-form">
+                                <div class="row collapse">
+                                    <!-- Form -->
+                                    <div class="small-11 columns">
+                                        <span class="mb-search">
+                                            <input type="text" name="mb-search" 
+                                            	placeholder="Rechercher Groupe Investors"
+                                            	class="mb-search-input">
+                                        </span>
+                                    </div>
+                                    <div class="small-1 columns text-right">
+                                        <span class="">
+                                        	<button type="reset" value="Reset" 
+                                        		class="mb-search-reset">
+                                        	</button>  
+                                        </span> 
+                                    </div>  
+                                </div>
+                            </form>
+                            <!-- mb-accordion menu -->
+                            <ul class="vertical menu header-accordion-menu" data-accordion-menu>
+                                <li>
+                                    <a href="#" class="menu-link">Services</a>
+                                    <ul class="menu vertical nested header-accordion-submenu">
+                                        <li><a href="http://www.groupeinvestors.com/fr/occasions/investissements" class="submenu-link" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Services>Investments_EventPage:Header', 0);">Les investissements</a></li>
+                                        <li class="main-link-divider"></li>
+                                        <li><a href="http://www.groupeinvestors.com/fr/occasions/retraite" class="submenu-link" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Services>Retirement_EventPage:Header', 0);">La retraite</a></li>
+                                        <li class="main-link-divider"></li>
+                                        <li><a href="http://www.groupeinvestors.com/fr/occasions/prets-hypothecaires" class="submenu-link" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Services>Mortgage_EventPage:Header', 0);">Les pr&ecirc;ts hypoth&eacute;caires</a></li>
+                                        <li class="main-link-divider"></li>
+                                        <li><a href="http://www.groupeinvestors.com/fr/occasions/planification-successorale" class="submenu-link" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Services>EstatePlanning_EventPage:Header', 0);">La planification successorale</a></li>
+                                        <li class="main-link-divider"></li>
+                                        <li><a href="http://www.groupeinvestors.com/fr/occasions/planification-fiscale" class="submenu-link" onClick="ga('send','event','Consumer Engagement','Click','Header_Click_Services>TaxPlanning_EventPage:Header', 0);">La planification fiscale</a></li>
+                                        <li class="main-link-divider"></li>
+                                        <li><a href="http://www.groupeinvestors.com/fr/occasions/assurances" class="submenu-link">Les assurances</a></li>
+                                    </ul>
+                                </li>
+                                <li class="main-link-divider"></li>
+                                <li><a href="http://groupeinvestors.com/fr/trouver-un-conseiller" class="menu-link">Trouver un conseiller</a></li>
+                                <li class="main-link-divider"></li>
+                                <li>
+                                    <a href="#" class="menu-link">Connexion</a>
+                                    <ul class="menu vertical nested header-accordion-submenu">
+                                    	<li><a href="https://www.clientvu.ca/login/cana/cai/clie/novopriusacquiro.do?lingua=fr" class="submenu-link">D&eacute;j&agrave; client?</a></li>
+                                    	<li class="main-link-divider"></li>
+                                    	<li><a href="https://bvi.bnc.ca/index/investorsgroup/indexfr.html" class="submenu-link">acc&eacute;der &agrave; Solutions Bancaires<sup>MC</sup></a></li>
+                                    </ul>
+                                </li>
+                                <li class="main-link-divider"></li>
+                                <li><a href="http://groupeinvestors.com/fr/ressources-pour-les-clients" class="menu-link">Service &agrave; la client&egrave;le</a></li>
+                                <li class="main-link-divider"></li>
+                                <li><a href="http://www.investorsgroup.com/en/find-an-advisor" class="menu-link lang">>English</a></li>
+                            </ul>
+                		</div>
+                	</div>
+                </div>
+            </div>
+            
             <!--Search-->
             <div class="icon-wrap">
-                <form id="siteSearch" class="search-form">
+                <form id="find-an-advisor-search" class="search-form">
                     <div class="row contact section">
                         <div class="small-12 medium-10 small-centered columns">
                             <div class="row">
@@ -45,7 +186,7 @@
             <script id="office-template" type="x-tmpl-mustache">
               <div class="row info-toggle-trigger" data-toggler=".isActive" data-toggle="info-toggle-wrapper">
                 <div class="small-3 medium-2 columns">
-                  <img class="illustration" data-illustrationid="consultant-about" src="img/illustrations/consultant_webpage_open_icon_3C_191016.svg" alt="icon book and glasses">
+                  <img class="illustration" data-illustrationid="consultant-about" src="img/illustrations/office-building.svg" alt="icon book and glasses">
                 </div>
                 <div class="small-6 medium-3 columns">
                   <p class="tp_08">{{length}} bureaux trouvés</p>
@@ -132,20 +273,18 @@
                     <div class="row underline">
                         <div class="small-12 medium-7 large-6 columns portrait-column">
                             <div class="portrait">
-                                <img src="{{myInfo.photoUrl}}" alt="{{myInfo.FName}} {{myInfo.LName}}" />
+                                <img src="{{myInfo.photoUrl}}" alt="" />
                             </div>
                             <div class="consultant-text">
                             <p class="tp_07 consultant_name">{{myInfo.FName}} {{myInfo.LName}}</p>
                             {{#myInfo.title}}
-                            <p class="tp_05">
-                              {{myInfo.title}}
-                            </p>
+                                <p class="tp_05">{{myInfo.title}}</p>
                             {{/myInfo.title}}
-                            {{#myInfo.discipline}}
-                            <p class="tp_05">
-                              {{myInfo.discipline}}
-                            </p>
-                            {{/myInfo.discipline}}
+                            {{^myInfo.title}}
+                                {{#myInfo.discipline}}
+                                  <p class="tp_05">{{myInfo.discipline}}</p>
+                                {{/myInfo.discipline}}
+                            {{/myInfo.title}}
                             <p class="tp_09">{{myInfo.Ct_City}} {{myInfo.PostalCode}}</p>
                             </div>
                         </div>
@@ -172,9 +311,10 @@
                                       </li>
                                   </ul>
                               </li>
+
                           </ul>
                             <a href="mailto:{{myInfo.Email}}" class="outline-btn secondary small-icon email" type="button"><span class="show-for-small-only"><i aria-hidden="true" class="fa fa-envelope"></i> Courriel</span></a>
-                          <a class="outline-btn constrained" type="button" href="{{myInfo.ConsultantUrl}}">Voir le profil</a>
+                          <a class="outline-btn constrained" type="button" href="http://{{myInfo.ConsultantUrl}}">Voir le profil</a>
                         </div>
                        
                         <div class="clear"></div>
@@ -297,13 +437,215 @@
             <div class="section search-results hide" id="results-container"></div>
 
             <!--18.Footer-->
+            <!-- Footer navigation -->
+    <div class="footer">
+        <!-- BackToTop -->
+        <div class="backtotop-row">
+        	<div class="large-12 large-centered columns nopadding">
+                <section class="footer-backTop text-right">
+                    <a href="" class="backTop-link">
+                    	<img src="http://investorsgroup.com/en/images/corp/svg/tp-icon.png" alt="">
+                    </a>
+                </section>
+        	</div>
+        </div>  
+        
+        <!-- Tabs -->
+        <div class="tab-row">
+        <!-- Show for large -->
+            <section class="footer-tabs show-for-large">
+                <div class="large-4 columns">
+                    <h3 class="tab-header">La Soci&eacute;t&eacute;</h3>
+                    <ul class="footer-tab-list">
+                        <li><a href="http://groupeinvestors.com/fr/notre-societe" class="footer-tab-item" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Who_we_are_EventPage:All_pages', 0);">Qui nous sommes</a></li>
+                        <li><a href="http://groupeinvestors.com/fr/dans-les-medias" class="footer-tab-item" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Media_room_EventPage:All_pages', 0);">Dans les m&eacute;dias</a></li>
+                        <li><a href="http://groupeinvestors.com/fr/Carrieres" class="footer-tab-item" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Careers_EventPage:All_pages', 0);">Carri&egrave;res</a></li>
+                        <li><a href="http://groupeinvestors.com/fr/pour-nous-joindre" class="footer-tab-item" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Contact_Us_EventPage:All_pages', 0);">Pour nous joindre</a></li>
+                    </ul>
+                </div>
+                <div class="large-4 columns">
+                    <h3 class="tab-header">Conseils financiers</h3>
+                    <ul class="footer-tab-list">
+                        <li><a href="http://groupeinvestors.com/fr/produits" class="footer-tab-item" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Products_EventPage:All_pages', 0);">Produits</a></li>
+                        <li><a href="http://groupeinvestors.com/fr/pouvons-nous-vous-aider" class="footer-tab-item" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_How_Can_We_Help_EventPage:All_pages', 0);">Comment nous pouvons vous aider</a></li>
+                        <li><a href="http://groupeinvestors.com/fr/la-valeur-du-plan" class="footer-tab-item" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Value_of_the_plan_EventPage:All_pages', 0);">La valeur de notre plan</a></li>
+                        <li><a href="http://groupeinvestors.com/plus/fr/" class="footer-tab-item" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_More_-_Advice_&_Stories_EventPage:All_pages', 0);">Conseils et sujets</a></li>
+                    </ul>
+                </div>
+                <div class="large-4 columns">
+                    <h3 class="tab-header">Ressources</h3>
+                    <ul class="footer-tab-list">
+                    	<li><a href="https://www.clientvu.ca/login/cana/cai/clie/novopriusacquiro.do?lingua=fr" class="footer-tab-item">Acc&egrave;s – Compte client</a></li>
+                        <li><a href="https://bvi.bnc.ca/index/investorsgroup/indexfr.html" class="footer-tab-item">Acc&eacute;der &agrave; Solutions Bancaires</a></li>
+                        <li><a href="http://groupeinvestors.com/fr/produits/produits-de-placement/fonds-communs-de-placement" class="footer-tab-item">Fonds communs de placement</a></li>
+                        <li><a href="http://groupeinvestors.com/fr/ressources-pour-les-clients/prix-et-taux/taux-hypothecaires" class="footer-tab-item">Taux hypoth&eacute;caires</a></li>
+                    </ul>
+                </div>
+            </section>
+        
+            <!-- Show for small -->
+            <section class="footer-accordion-section hide-for-large">
+                <ul class="accordion footer-accordion-menu" data-accordion data-allow-all-closed="true">
+                    <li class="accordion-item footer-accordion-item" data-accordion-item>
+                        <a href="#" class="accordion-title menu-link">La Soci&eacute;t&eacute;</a>
+                        <ul class="accordion-content accordion-submenu" data-tab-content>
+                            <li><a href="http://groupeinvestors.com/fr/notre-societe" class="submenu-link" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Who_we_are_EventPage:All_pages', 0);">Qui nous sommes</a></li>
+                            <li><a href="http://groupeinvestors.com/fr/dans-les-medias" class="submenu-link" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Media_room_EventPage:All_pages', 0);">Dans les m&eacute;dias</a></li>
+                            <li><a href="http://groupeinvestors.com/fr/Carrieres" class="submenu-link" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Careers_EventPage:All_pages', 0);">Carri&egrave;res</a></li>
+                            <li><a href="http://groupeinvestors.com/fr/pour-nous-joindre" class="submenu-link" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Contact_Us_EventPage:All_pages', 0);">Pour nous joindre</a></li>
+                        </ul>
+                	</li>
+                    <li class="accordion-item footer-accordion-item" data-accordion-item>
+                        <a href="#" class="accordion-title menu-link">Conseils financiers</a>
+                        <ul class="accordion-content accordion-submenu" data-tab-content>
+                            <li><a href="http://groupeinvestors.com/fr/produits" class="submenu-link" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Products_EventPage:All_pages', 0);">Produits</a></li>
+                            <li><a href="http://groupeinvestors.com/fr/pouvons-nous-vous-aider" class="submenu-link" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_How_Can_We_Help_EventPage:All_pages', 0);">Comment nous pouvons vous aider</a></li>
+                            <li><a href="http://groupeinvestors.com/fr/la-valeur-du-plan" class="submenu-link" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Value_of_the_plan_EventPage:All_pages', 0);">La valeur de notre plan</a></li>
+                            <li><a href="http://groupeinvestors.com/plus/fr/" class="submenu-link" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_More_-_Advice_&_Stories_EventPage:All_pages', 0);">Conseils et sujets</a></li>
+                        </ul>
+                    </li>
+                    <li class="accordion-item footer-accordion-item" data-accordion-item>
+                        <a href="#" class="accordion-title menu-link">Ressources</a>
+                        <ul class="accordion-content accordion-submenu" data-tab-content>
+                            <li><a href="https://www.clientvu.ca/login/cana/cai/clie/novopriusacquiro.do?lingua=fr" class="submenu-link" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Client_Account_Access_EventPage:All_pages', 0);">Acc&egrave;s – Compte client</a></li>
+                            <li><a href="https://bvi.bnc.ca/index/investorsgroup/indexfr.html" class="submenu-link" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Solutions_Banking_Access_EventPage:All_pages', 0);">Acc&eacute;der &agrave; Solutions Bancaires</a></li>
+                            <li><a href="http://groupeinvestors.com/fr/produits/produits-de-placement/fonds-communs-de-placement" class="submenu-link" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Mutual_Funds_EventPage:All_pages', 0);">Fonds communs de placement</a></li>
+                            <li><a href="http://groupeinvestors.com/fr/ressources-pour-les-clients/prix-et-taux/taux-hypothecaires" class="submenu-link" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Mortgage_Rates_EventPage:All_pages', 0);">Taux hypoth&eacute;caires</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        
+        <!-- Social Media -->
+        <div class="social-media-row">
+            <div class="large-12 columns"> <!--Check this out-->
+                <div class="menu-centered">
+                    <ul class="menu">
+                        <li><a href="http://www.facebook.com/GroupeInvestors" class="social-media-link" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Facebook_EventPage:All_pages', 0);"><img src="http://investorsgroup.com/en/images/corp/svg/fb-icon.png"></a></li>
+                        <li><a href="http://www.linkedin.com/company/115929" class="social-media-link" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_LinkedIn_EventPage:All_pages', 0);"><img src="http://investorsgroup.com/en/images/corp/svg/li-icon.png"></a></li>
+                        <li><a href="https://twitter.com/GroupeInvestors" class="social-media-link" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_Twitter_EventPage:All_pages', 0);"><img src="http://investorsgroup.com/en/images/corp/svg/tw-icon.png"></a></li>
+                        <li><a href="http://www.youtube.com/user/GroupeInvestors" class="social-media-link" onClick="ga('send','event','Consumer Consideration','Click','Footerlinks_Click_YouTube_EventPage:All_pages', 0);"><img src="http://investorsgroup.com/en/images/corp/svg/yt-icon.png"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Copyright -->
+        <div class="footer-copyright">
+        	<div class="large-12 columns nopadding show-for-large">
+        		<div class="menu-centered dt-copyright-menu">
+                    <ul class="menu">
+                        <li class="menu-textt">© 2016 Groupe Investors Inc.</li>
+                        <li><a href="http://groupeinvestors.com/fr/juridique">Juridique</a></li>
+                        <li><a href="http://groupeinvestors.com/fr/juridique/utilisation">Conditions d&rsquo;utilisation</a></li>
+                        <li><a href="http://groupeinvestors.com/fr/juridique/confidentialite-et-renseinements-personnels">Politique de confidentialit&eacute;</a></li>
+                        <li><a href="http://groupeinvestors.com/fr/pour-nous-joindre/accessibilite">Accessibilit&eacute;</a></li>
+                        <li><a href="http://investorsgroup.com/en/find-an-advisor" target="_parent">View in English</a></li>
+                    </ul>
+        		</div>
+        	</div>
+        	<div class="small-12 medium-12 columns nopadding hide-for-large">
+        		<div class="menu-centered mb-copyright-menu">
+                    <ul class="menu">
+                    	<li class="copyright">© 2016 Groupe Investors Inc.</li>
+                    </ul>
+        		</div>
+        	</div>
+        	<div class="small-12 medium-12 columns nopadding hide-for-large">
+        		<div class="menu-centered mb-copyright-menu">
+                    <ul class="menu">
+                        <li><a href="http://groupeinvestors.com/fr/juridique">Juridique</a></li>
+                        <li><a href="http://groupeinvestors.com/fr/juridique/utilisation">Conditions d&rsquo;utilisation</a></li>
+                        <li><a href="http://groupeinvestors.com/fr/juridique/confidentialite-et-renseinements-personnels">Politique de confidentialit&eacute;</a></li>
+                    </ul>
+        		</div>
+        	</div>
+        	<div class="small-12 medium-12 columns nopadding hide-for-large">
+        		<div class="menu-centered mb-copyright-menu">
+                    <ul class="menu">
+                        <li><a href="http://groupeinvestors.com/fr/pour-nous-joindre/accessibilite">Accessibilit&eacute;</a></li>
+                        <li><a href="http://investorsgroup.com/en/find-an-advisor" target="_parent">View in English</a></li>
+                    </ul>
+        		</div>
+        	</div>
+        </div>  
+    </div>
+<script src="js/vendor/jquery.js"></script>
+   <script src="js/foundation.min.js"></script>
+   <script src="js/vendor/typeahead.bundle.min.js"></script>
+   <script src="js/vendor/mustache.min.js"></script>
+   <script src="js/main.js"></script>
+   <script>
+		$(document).foundation();
+   </script>
+    <script>
+          (function ($) {
+    
+  // Variables
+  var $accordionBtnClose = $("#closeBtn--accordion"),
+      $mainTopbar = $('#main-topbar-menu'),
+      $searchInput = $mainTopbar.find('.search-input'),
+      $mbSearchInput = $(".mb-search-input"),
+      $mbSearchReset = $(".mb-search-reset"),
+      $mbSearchForm = $(".mb-search-form"),
+      $headerAccordionWrap = $("#example-menu"),
+      $bodyContent = $(".body-content")
 
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script src="js/vendor/typeahead.bundle.min.js"></script>
-    <script src="js/vendor/mustache.min.js"></script>
-    <script src="js/main.js"></script>
+      // Close Mobile accordion 
+      $accordionBtnClose.on("click", function(){
+        $(this).closest(".body-content").removeClass("active");
+        $(".header-accordion-wrap").hide();
+      })
+
+      // Add active class to body-content when humberger icon is click
+      $(function() {
+        var acc = document.getElementById("menu-button");
+        acc.onclick = function(e) {
+          e.preventDefault();
+          $bodyContent.toggleClass('active')
+        }
+      });
+
+      // Hide topbar menu items
+      $searchInput.focus(function(){
+        $(this).closest("li")
+            .siblings().css("visibility", "hidden");
+      }).blur(function(){
+        $(this).val("")
+            .closest("li").siblings()
+            .css("visibility", "visible")
+      });
+
+  
+      // Show reset button of search input   
+      $mbSearchInput.focus(function(){
+        if(!$mbSearchForm.hasClass("active")) 
+            $mbSearchForm.addClass('active');
+      }).blur(function(){
+        $mbSearchForm.removeClass('active')
+        $(this).val("");
+      });
+      $mbSearchReset.click(function(){
+        $mbSearchForm.removeClass("active");
+      });  
+
+      // Topbar screen size effect
+      window.addEventListener('resize', removeBodyContentClass);
+
+      function removeBodyContentClass (){
+        if($headerAccordionWrap.css("display") === "none") {
+          if($bodyContent.hasClass("active")){
+             $bodyContent.removeClass("active")
+          }
+        }
+      }
+
+}(jQuery)); 
+        </script>
 
 </body>
 
 </html>
+
+>>>>>>> fb6087b7e36fd73dc6d1d5e6b7f69e6a1c7c6b35

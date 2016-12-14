@@ -10427,29 +10427,37 @@ input:focus:-ms-input-placeholder {
   color: transparent; }
 
 /* IE 10+ */
-.header-wrap .utility_container,
-.header-wrap .mainMenu_container {
+/*html.IGv2 .header-wrap .row {
+    margin: 0 auto;
+    max-width: 62.5rem;
+    width: 100%;
+}*/
+html.IGv2 .header-wrap .accordion {
+  background-color: inherit; }
+
+html.IGv2 .header-wrap .utility_container,
+html.IGv2 .header-wrap .mainMenu_container {
   max-width: 100% !important; }
 
-.header-wrap .utility_container,
-.header-wrap .utility-topbar,
-.header-wrap .utility-menu > li:not(.has-form) > a:not(.button) {
+html.IGv2 .header-wrap .utility_container,
+html.IGv2 .header-wrap .utility-topbar,
+html.IGv2 .header-wrap .utility-menu > li:not(.has-form) > a:not(.button) {
   background-color: #e5e8e8; }
 
-.header-wrap .utility-topbar {
+html.IGv2 .header-wrap .utility-topbar {
   height: 36px; }
 
-.header-wrap .main-topbar {
+html.IGv2 .header-wrap .main-topbar {
   height: 71px;
   padding-top: 22px; }
 
 @media only screen and (min-width: 90.063em) {
-  .header-wrap .utility-topbar,
-  .header-wrap .mainMenu_container .main-topbar_container {
+  html.IGv2 .header-wrap .utility-topbar,
+  html.IGv2 .header-wrap .mainMenu_container .main-topbar_container {
     width: 1200px;
     margin: 0 auto; } }
 
-.header-wrap input[type="text"].search-input {
+html.IGv2 .header-wrap input[type="text"].search-input {
   outline: none;
   box-shadow: none;
   border: none;
@@ -10467,10 +10475,10 @@ input:focus:-ms-input-placeholder {
   color: #282828;
   top: -16px;
   right: 0px;
-  background-image: url("/en/images/corp/svg/search-icon-in-search-box.png");
+  background-image: url("http://investorsgroup.com/en/images/corp/svg/search-icon-in-search-box.png");
   background-repeat: no-repeat;
   background-position: 0px 19px; }
-  .header-wrap input[type="text"].search-input:focus {
+  html.IGv2 .header-wrap input[type="text"].search-input:focus {
     position: absolute;
     width: 82%;
     margin-right: 17%;
@@ -10479,10 +10487,10 @@ input:focus:-ms-input-placeholder {
     border-bottom: 1px solid #a9a9a9;
     padding-left: 30px;
     font-family: "whitney_bookregular"; }
-    .header-wrap input[type="text"].search-input:focus + .search-clsBtn::after {
+    html.IGv2 .header-wrap input[type="text"].search-input:focus + .search-clsBtn::after {
       content: "\00a0";
       cursor: pointer;
-      background-image: url("/en/images/corp/svg/closeBtn_Form.png");
+      background-image: url("http://investorsgroup.com/en/images/corp/svg/closeBtn_Form.png");
       background-repeat: no-repeat;
       background-size: 27px;
       background-position: 0 2px;
@@ -10494,57 +10502,57 @@ input:focus:-ms-input-placeholder {
       left: -6px;
       z-index: 200; }
 
-.header-wrap .mainMenu_container {
+html.IGv2 .header-wrap .mainMenu_container {
   background-color: #fff;
   box-sizing: border-box;
   border-bottom: 1px solid #cbcccc;
   height: 75px; }
   @media only screen and (max-width: 64em) and (min-width: 40.063em) {
-    .header-wrap .mainMenu_container {
+    html.IGv2 .header-wrap .mainMenu_container {
       height: auto; } }
 
-.header-wrap .main-menu li:not(.has-form) a:not(.button),
-.header-wrap .utility-menu li:not(.has-form) a:not(.button) {
+html.IGv2 .header-wrap .main-menu li:not(.has-form) a:not(.button),
+html.IGv2 .header-wrap .utility-menu li:not(.has-form) a:not(.button) {
   font-family: "whitney_bookregular";
   font-size: 14px;
   line-height: normal;
   color: #282828; }
 
-.header-wrap .main-menu > li:not(.has-form) > a:not(.button),
-.header-wrap .utility-menu > li:not(.has-form) > a:not(.button) {
+html.IGv2 .header-wrap .main-menu > li:not(.has-form) > a:not(.button),
+html.IGv2 .header-wrap .utility-menu > li:not(.has-form) > a:not(.button) {
   padding: 10px 0px 7px;
   border-bottom: 3px solid #e5e8e8; }
-  .header-wrap .main-menu > li:not(.has-form) > a:not(.button):hover,
-  .header-wrap .utility-menu > li:not(.has-form) > a:not(.button):hover {
+  html.IGv2 .header-wrap .main-menu > li:not(.has-form) > a:not(.button):hover,
+  html.IGv2 .header-wrap .utility-menu > li:not(.has-form) > a:not(.button):hover {
     border-bottom: 3px solid #282828; }
 
-.header-wrap .main-menu li.has-dropdown .already-a-client,
-.header-wrap .utility-menu li.has-dropdown .already-a-client {
+html.IGv2 .header-wrap .main-menu li.has-dropdown .already-a-client,
+html.IGv2 .header-wrap .utility-menu li.has-dropdown .already-a-client {
   padding-right: 1.625rem !important; }
-  .header-wrap .main-menu li.has-dropdown .already-a-client + span,
-  .header-wrap .utility-menu li.has-dropdown .already-a-client + span {
+  html.IGv2 .header-wrap .main-menu li.has-dropdown .already-a-client + span,
+  html.IGv2 .header-wrap .utility-menu li.has-dropdown .already-a-client + span {
     font-size: inherit; }
-  .header-wrap .main-menu li.has-dropdown .already-a-client:after,
-  .header-wrap .utility-menu li.has-dropdown .already-a-client:after {
+  html.IGv2 .header-wrap .main-menu li.has-dropdown .already-a-client:after,
+  html.IGv2 .header-wrap .utility-menu li.has-dropdown .already-a-client:after {
     width: 14px;
     height: 10px;
     top: 15px;
     margin: 0px;
     border-style: none;
-    background: url("/en/images/corp/svg/expandArrow.png") no-repeat;
+    background: url("http://investorsgroup.com/en/images/corp/svg/expandArrow.png") no-repeat;
     background-position: 0 0;
     background-size: 14px; }
 
-.header-wrap .main-menu li.has-dropdown.hover .already-a-client:after,
-.header-wrap .utility-menu li.has-dropdown.hover .already-a-client:after {
-  background-image: url("/en/images/corp/svg/collapseArrow.png"); }
+html.IGv2 .header-wrap .main-menu li.has-dropdown.hover .already-a-client:after,
+html.IGv2 .header-wrap .utility-menu li.has-dropdown.hover .already-a-client:after {
+  background-image: url("http://investorsgroup.com/en/images/corp/svg/collapseArrow.png"); }
 
-.header-wrap .main-menu li.has-dropdown.hover .already-a-client,
-.header-wrap .utility-menu li.has-dropdown.hover .already-a-client {
+html.IGv2 .header-wrap .main-menu li.has-dropdown.hover .already-a-client,
+html.IGv2 .header-wrap .utility-menu li.has-dropdown.hover .already-a-client {
   border-bottom: 3px solid #282828; }
 
-.header-wrap .main-menu li.has-dropdown.hover .dropdown,
-.header-wrap .utility-menu li.has-dropdown.hover .dropdown {
+html.IGv2 .header-wrap .main-menu li.has-dropdown.hover .dropdown,
+html.IGv2 .header-wrap .utility-menu li.has-dropdown.hover .dropdown {
   padding: 15px 0 19px 0;
   border-top: 1px solid #c9cbcb;
   min-width: 180px;
@@ -10558,33 +10566,33 @@ input:focus:-ms-input-placeholder {
   -webkit-box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3); }
 
-.header-wrap .main-menu li.has-dropdown.hover li:not(.has-form) .sub-link,
-.header-wrap .utility-menu li.has-dropdown.hover li:not(.has-form) .sub-link {
+html.IGv2 .header-wrap .main-menu li.has-dropdown.hover li:not(.has-form) .sub-link,
+html.IGv2 .header-wrap .utility-menu li.has-dropdown.hover li:not(.has-form) .sub-link {
   background-color: #e5e8e8;
   color: #282828;
   padding: 0 16px;
   font-size: 1rem; }
-  .header-wrap .main-menu li.has-dropdown.hover li:not(.has-form) .sub-link:before,
-  .header-wrap .utility-menu li.has-dropdown.hover li:not(.has-form) .sub-link:before {
+  html.IGv2 .header-wrap .main-menu li.has-dropdown.hover li:not(.has-form) .sub-link:before,
+  html.IGv2 .header-wrap .utility-menu li.has-dropdown.hover li:not(.has-form) .sub-link:before {
     content: "\00a0";
     background-color: #e5e8e8;
     display: inline-block;
     width: 2px;
     margin: 10px 10px 10px 0; }
-  .header-wrap .main-menu li.has-dropdown.hover li:not(.has-form) .sub-link:hover, .header-wrap .main-menu li.has-dropdown.hover li:not(.has-form) .sub-link.active,
-  .header-wrap .utility-menu li.has-dropdown.hover li:not(.has-form) .sub-link:hover,
-  .header-wrap .utility-menu li.has-dropdown.hover li:not(.has-form) .sub-link.active {
+  html.IGv2 .header-wrap .main-menu li.has-dropdown.hover li:not(.has-form) .sub-link:hover, html.IGv2 .header-wrap .main-menu li.has-dropdown.hover li:not(.has-form) .sub-link.active,
+  html.IGv2 .header-wrap .utility-menu li.has-dropdown.hover li:not(.has-form) .sub-link:hover,
+  html.IGv2 .header-wrap .utility-menu li.has-dropdown.hover li:not(.has-form) .sub-link.active {
     background-color: #ffffff; }
-    .header-wrap .main-menu li.has-dropdown.hover li:not(.has-form) .sub-link:hover:before, .header-wrap .main-menu li.has-dropdown.hover li:not(.has-form) .sub-link.active:before,
-    .header-wrap .utility-menu li.has-dropdown.hover li:not(.has-form) .sub-link:hover:before,
-    .header-wrap .utility-menu li.has-dropdown.hover li:not(.has-form) .sub-link.active:before {
+    html.IGv2 .header-wrap .main-menu li.has-dropdown.hover li:not(.has-form) .sub-link:hover:before, html.IGv2 .header-wrap .main-menu li.has-dropdown.hover li:not(.has-form) .sub-link.active:before,
+    html.IGv2 .header-wrap .utility-menu li.has-dropdown.hover li:not(.has-form) .sub-link:hover:before,
+    html.IGv2 .header-wrap .utility-menu li.has-dropdown.hover li:not(.has-form) .sub-link.active:before {
       background-color: #282828; }
 
-.header-wrap .main-menu .horizontalPipe,
-.header-wrap .utility-menu .horizontalPipe {
+html.IGv2 .header-wrap .main-menu .horizontalPipe,
+html.IGv2 .header-wrap .utility-menu .horizontalPipe {
   background-color: #e5e8e8; }
-  .header-wrap .main-menu .horizontalPipe:before,
-  .header-wrap .utility-menu .horizontalPipe:before {
+  html.IGv2 .header-wrap .main-menu .horizontalPipe:before,
+  html.IGv2 .header-wrap .utility-menu .horizontalPipe:before {
     content: "\00a0";
     background-color: #d2d4d4;
     width: 1px;
@@ -10592,7 +10600,7 @@ input:focus:-ms-input-placeholder {
     display: block;
     margin: 5px 20px 0px 20px; }
 
-.header-wrap .main-menu > li:not(.has-form) > a:not(.button) {
+html.IGv2 .header-wrap .main-menu > li:not(.has-form) > a:not(.button) {
   font-family: "whitney_scmedium";
   text-align: center;
   text-transform: uppercase;
@@ -10602,54 +10610,54 @@ input:focus:-ms-input-placeholder {
   height: 53px;
   box-sizing: border-box; }
 
-.header-wrap .main-menu li.has-dropdown .already-a-client:after {
+html.IGv2 .header-wrap .main-menu li.has-dropdown .already-a-client:after {
   top: 10px; }
 
-.header-wrap .main-menu li.has-dropdown.hover .dropdown {
+html.IGv2 .header-wrap .main-menu li.has-dropdown.hover .dropdown {
   border-top: 0px;
   right: -40px;
   background-color: #fff; }
-  .header-wrap .main-menu li.has-dropdown.hover .dropdown .verticalPipe {
+  html.IGv2 .header-wrap .main-menu li.has-dropdown.hover .dropdown .verticalPipe {
     height: 1px;
     background-color: #e5e8e8;
     display: block;
     margin: 0 12px; }
 
-.header-wrap .main-menu li.has-dropdown.hover li:not(.has-form) .sub-link {
+html.IGv2 .header-wrap .main-menu li.has-dropdown.hover li:not(.has-form) .sub-link {
   background-color: #fff; }
-  .header-wrap .main-menu li.has-dropdown.hover li:not(.has-form) .sub-link:before {
+  html.IGv2 .header-wrap .main-menu li.has-dropdown.hover li:not(.has-form) .sub-link:before {
     background-color: #fff; }
-  .header-wrap .main-menu li.has-dropdown.hover li:not(.has-form) .sub-link:hover, .header-wrap .main-menu li.has-dropdown.hover li:not(.has-form) .sub-link.active {
+  html.IGv2 .header-wrap .main-menu li.has-dropdown.hover li:not(.has-form) .sub-link:hover, html.IGv2 .header-wrap .main-menu li.has-dropdown.hover li:not(.has-form) .sub-link.active {
     background-color: #e5e8e8; }
 
-.header-wrap .main-menu > li.findAdvisor:not(.has-form) > a:not(.button) {
+html.IGv2 .header-wrap .main-menu > li.findAdvisor:not(.has-form) > a:not(.button) {
   border-radius: 5px;
   border: 1px solid #b4b4b4;
   padding: 6px 27px;
   height: auto; }
-  .header-wrap .main-menu > li.findAdvisor:not(.has-form) > a:not(.button):hover {
+  html.IGv2 .header-wrap .main-menu > li.findAdvisor:not(.has-form) > a:not(.button):hover {
     border-color: #282828;
     background-color: #282828;
     color: #fff; }
 
-.header-wrap .main-menu li.findAdvisor {
+html.IGv2 .header-wrap .main-menu li.findAdvisor {
   margin: 0 64px 0 30px; }
 
-.header-wrap .main-menu .horizontalPipe:before {
+html.IGv2 .header-wrap .main-menu .horizontalPipe:before {
   margin: 0 30px;
   height: 30px; }
 
-.header-wrap .main-menu li:not(.has-form) {
+html.IGv2 .header-wrap .main-menu li:not(.has-form) {
   background-color: #fff; }
 
-.header-wrap .mobile-header .brand-slogan {
+html.IGv2 .header-wrap .mobile-header .brand-slogan {
   margin-bottom: 0px;
   font-size: 0.8rem; }
 
-.header-wrap .mobile-header .title-bar {
+html.IGv2 .header-wrap .mobile-header .title-bar {
   position: absolute;
   right: 0; }
-  .header-wrap .mobile-header .title-bar .menu-icon {
+  html.IGv2 .header-wrap .mobile-header .title-bar .menu-icon {
     cursor: pointer;
     display: inline-block;
     height: 16px;
@@ -10659,7 +10667,7 @@ input:focus:-ms-input-placeholder {
     border: none;
     margin-left: 0rem;
     margin-right: 0rem; }
-    .header-wrap .mobile-header .title-bar .menu-icon::after {
+    html.IGv2 .header-wrap .mobile-header .title-bar .menu-icon::after {
       background: #282828 none repeat scroll 0 0;
       box-shadow: 0 7px 0 #282828, 0 14px 0 #282828;
       content: "";
@@ -10669,37 +10677,37 @@ input:focus:-ms-input-placeholder {
       left: 0;
       top: 0;
       width: 100%; }
-    .header-wrap .mobile-header .title-bar .menu-icon:hover, .header-wrap .mobile-header .title-bar .menu-icon:focus {
+    html.IGv2 .header-wrap .mobile-header .title-bar .menu-icon:hover, html.IGv2 .header-wrap .mobile-header .title-bar .menu-icon:focus {
       background-color: #fff;
       outline: none; }
 
 @media only screen and (max-width: 64em) and (min-width: 40.063em) {
-  .header-wrap .mobile-header .logo-wrap .logo {
+  html.IGv2 .header-wrap .mobile-header .logo-wrap .logo {
     max-width: 220px;
     margin-top: 0px; } }
 
-.header-wrap .boxed-menu {
+html.IGv2 .header-wrap .boxed-menu {
   position: relative; }
-  .header-wrap .boxed-menu .search-form {
+  html.IGv2 .header-wrap .boxed-menu .search-form {
     padding: 0 32px; }
-  .header-wrap .boxed-menu .closeBtn-wrap {
+  html.IGv2 .header-wrap .boxed-menu .closeBtn-wrap {
     padding: 20px 20px 35px 20px;
     text-align: right; }
-    .header-wrap .boxed-menu .closeBtn-wrap button.closeBtn--accordion {
-      background-image: url("/en/images/corp/svg/closeBtn_Form.png");
+    html.IGv2 .header-wrap .boxed-menu .closeBtn-wrap button.closeBtn--accordion {
+      background-image: url("http://investorsgroup.com/en/images/corp/svg/closeBtn_Form.png");
       background-repeat: no-repeat;
       background-size: 25px;
       cursor: pointer;
       display: inline-block;
       height: 25px;
       width: 25px; }
-      .header-wrap .boxed-menu .closeBtn-wrap button.closeBtn--accordion:hover, .header-wrap .boxed-menu .closeBtn-wrap button.closeBtn--accordion:focus {
+      html.IGv2 .header-wrap .boxed-menu .closeBtn-wrap button.closeBtn--accordion:hover, html.IGv2 .header-wrap .boxed-menu .closeBtn-wrap button.closeBtn--accordion:focus {
         background-color: #fff;
         outline: none; }
-  .header-wrap .boxed-menu .mb-search-form {
+  html.IGv2 .header-wrap .boxed-menu .mb-search-form {
     border-bottom: 1px solid #282828;
     margin: 0 32px 18px 32px; }
-  .header-wrap .boxed-menu .mb-search-input {
+  html.IGv2 .header-wrap .boxed-menu .mb-search-input {
     box-shadow: none;
     height: initial;
     padding: 0px;
@@ -10710,15 +10718,15 @@ input:focus:-ms-input-placeholder {
     color: #282828;
     text-transform: lowercase;
     font-size: 16px;
-    background-image: url("/en/images/corp/svg/search-icon-in-search-box.png");
+    background-image: url("http://investorsgroup.com/en/images/corp/svg/search-icon-in-search-box.png");
     background-repeat: no-repeat;
     background-size: 20px;
     background-position: 0;
     position: relative;
     z-index: 1000;
     margin-bottom: 8px; }
-    .header-wrap .boxed-menu .mb-search-input:focus {
-      background-image: url("/en/images/corp/svg/search-icon-in-search-box.png");
+    html.IGv2 .header-wrap .boxed-menu .mb-search-input:focus {
+      background-image: url("http://investorsgroup.com/en/images/corp/svg/search-icon-in-search-box.png");
       background-repeat: no-repeat;
       background-size: 20px;
       background-position: 0;
@@ -10726,7 +10734,7 @@ input:focus:-ms-input-placeholder {
       box-shadow: none;
       font-family: "whitney_bookregular";
       font-size: 16px; }
-  .header-wrap .boxed-menu .mb-search-form.active .mb-search-reset {
+  html.IGv2 .header-wrap .boxed-menu .mb-search-form.active .mb-search-reset {
     padding: 0px;
     margin: 0px;
     font-size: 16px;
@@ -10735,17 +10743,17 @@ input:focus:-ms-input-placeholder {
     opacity: 0.8;
     padding-left: 7px;
     display: inline-block;
-    background-image: url("/en/images/corp/svg/find_an_advisor_close.png");
+    background-image: url("http://investorsgroup.com/en/images/corp/svg/find_an_advisor_close.png");
     background-repeat: no-repeat;
     background-position: 7px 4px;
     width: 21px;
     height: 20px;
     background-color: #fff;
     margin-top: 4px; }
-    .header-wrap .boxed-menu .mb-search-form.active .mb-search-reset:focus {
+    html.IGv2 .header-wrap .boxed-menu .mb-search-form.active .mb-search-reset:focus {
       outline: none; }
   @media only screen {
-    .header-wrap .boxed-menu input[type="text"].search-input {
+    html.IGv2 .header-wrap .boxed-menu input[type="text"].search-input {
       position: inherit;
       width: 100%;
       height: 30px;
@@ -10755,12 +10763,12 @@ input:focus:-ms-input-placeholder {
       font-family: "whitney_scmedium";
       background-position: 0px 0px;
       background-color: #fff; }
-      .header-wrap .boxed-menu input[type="text"].search-input:focus {
+      html.IGv2 .header-wrap .boxed-menu input[type="text"].search-input:focus {
         position: inherit;
         width: 100%;
         cursor: none;
         font-family: "whitney_bookregular"; } }
-  .header-wrap .boxed-menu .accordion .accordion--nav > .nav-link {
+  html.IGv2 .header-wrap .boxed-menu .accordion .accordion--nav > .nav-link {
     background-color: #fff;
     font-size: 0.875rem;
     font-family: "whitney_scmedium";
@@ -10768,9 +10776,9 @@ input:focus:-ms-input-placeholder {
     line-height: normal;
     padding: 20px 0;
     box-sizing: border-box; }
-    .header-wrap .boxed-menu .accordion .accordion--nav > .nav-link.nav-link--lang {
+    html.IGv2 .header-wrap .boxed-menu .accordion .accordion--nav > .nav-link.nav-link--lang {
       padding-top: 24px; }
-    .header-wrap .boxed-menu .accordion .accordion--nav > .nav-link:before {
+    html.IGv2 .header-wrap .boxed-menu .accordion .accordion--nav > .nav-link:before {
       content: "";
       color: white;
       margin: 0 10px 0 21px;
@@ -10779,36 +10787,36 @@ input:focus:-ms-input-placeholder {
       height: 18px;
       width: 2px;
       vertical-align: bottom; }
-    .header-wrap .boxed-menu .accordion .accordion--nav > .nav-link:hover {
+    html.IGv2 .header-wrap .boxed-menu .accordion .accordion--nav > .nav-link:hover {
       background-color: #e5e8e8;
       color: #282828; }
-      .header-wrap .boxed-menu .accordion .accordion--nav > .nav-link:hover:before {
+      html.IGv2 .header-wrap .boxed-menu .accordion .accordion--nav > .nav-link:hover:before {
         border-color: #282828; }
-  .header-wrap .boxed-menu .accordion .accordion--nav > .nav-link.has-subnav {
-    background-image: url("/en/images/corp/svg/expandArrow.png");
+  html.IGv2 .header-wrap .boxed-menu .accordion .accordion--nav > .nav-link.has-subnav {
+    background-image: url("http://investorsgroup.com/en/images/corp/svg/expandArrow.png");
     background-repeat: no-repeat;
     background-position: calc(100% - 32px) 22px;
     opacity: 1;
     background-size: 16px; }
-  .header-wrap .boxed-menu .accordion .accordion--nav.active > .nav-link.has-subnav {
-    background-image: url("/en/images/corp/svg/collapseArrow.png"); }
-  .header-wrap .boxed-menu .accordion .accordion--nav.active > .content.active {
+  html.IGv2 .header-wrap .boxed-menu .accordion .accordion--nav.active > .nav-link.has-subnav {
+    background-image: url("http://investorsgroup.com/en/images/corp/svg/collapseArrow.png"); }
+  html.IGv2 .header-wrap .boxed-menu .accordion .accordion--nav.active > .content.active {
     max-height: 100%; }
-  .header-wrap .boxed-menu .accordion .accordion--nav:last-child > .nav-link {
+  html.IGv2 .header-wrap .boxed-menu .accordion .accordion--nav:last-child > .nav-link {
     border-bottom: none;
     text-align: center; }
-    .header-wrap .boxed-menu .accordion .accordion--nav:last-child > .nav-link:before {
+    html.IGv2 .header-wrap .boxed-menu .accordion .accordion--nav:last-child > .nav-link:before {
       margin-left: 0px; }
-  .header-wrap .boxed-menu .accordion .accordion--nav.accordion--divider {
+  html.IGv2 .header-wrap .boxed-menu .accordion .accordion--nav.accordion--divider {
     border-bottom: 1px solid #dbdfe2;
     margin-left: 32px;
     margin-right: 32px;
     margin-top: -1px; }
-  .header-wrap .boxed-menu .accordion .accordion--nav.active > .nav-link {
+  html.IGv2 .header-wrap .boxed-menu .accordion .accordion--nav.active > .nav-link {
     border-bottom: none; }
-  .header-wrap .boxed-menu .accordion .accordion--nav.active .content.active {
+  html.IGv2 .header-wrap .boxed-menu .accordion .accordion--nav.active .content.active {
     padding: 0px; }
-  .header-wrap .boxed-menu .accordion .accordion--nav.active .accordion--subnav {
+  html.IGv2 .header-wrap .boxed-menu .accordion .accordion--nav.active .accordion--subnav {
     margin: 0;
     list-style: none;
     background-color: #e5e8e8;
@@ -10816,7 +10824,7 @@ input:focus:-ms-input-placeholder {
     padding-bottom: 14px;
     margin-left: 30px;
     margin-right: 30px; }
-  .header-wrap .boxed-menu .accordion .accordion--nav.active .subnav-link {
+  html.IGv2 .header-wrap .boxed-menu .accordion .accordion--nav.active .subnav-link {
     display: block;
     line-height: normal;
     font-size: 16px;
@@ -10824,7 +10832,7 @@ input:focus:-ms-input-placeholder {
     color: #282828;
     padding-top: 12px;
     padding-bottom: 12px; }
-    .header-wrap .boxed-menu .accordion .accordion--nav.active .subnav-link:before {
+    html.IGv2 .header-wrap .boxed-menu .accordion .accordion--nav.active .subnav-link:before {
       content: "";
       color: #e5e8e8;
       margin: 0 20px 0 50px;
@@ -10833,16 +10841,16 @@ input:focus:-ms-input-placeholder {
       height: 18px;
       width: 3px;
       vertical-align: bottom; }
-    .header-wrap .boxed-menu .accordion .accordion--nav.active .subnav-link:hover {
+    html.IGv2 .header-wrap .boxed-menu .accordion .accordion--nav.active .subnav-link:hover {
       background-color: #fff; }
-      .header-wrap .boxed-menu .accordion .accordion--nav.active .subnav-link:hover:before {
+      html.IGv2 .header-wrap .boxed-menu .accordion .accordion--nav.active .subnav-link:hover:before {
         border-color: #282828; }
-  .header-wrap .boxed-menu .accordion .accordion--nav.active span.subMenu--divider {
+  html.IGv2 .header-wrap .boxed-menu .accordion .accordion--nav.active span.subMenu--divider {
     display: block;
     border-bottom: 1px solid #dbdfe2;
     margin-left: 70px;
     margin-right: 70px; }
-  .header-wrap .boxed-menu .accordion {
+  html.IGv2 .header-wrap .boxed-menu .accordion {
     margin-bottom: 40px; }
 
 @media only screen and (max-width: 64.063em) {
@@ -10874,6 +10882,36 @@ input:focus:-ms-input-placeholder {
 @media only screen and (max-width: 40em) {
   .header-wrap .mainMenu_container {
     border-bottom: none; } }
+
+/* ********************* Overwrite section ************************** */
+html.IGv2 .header-wrap {
+  font-size: 160%; }
+
+html.IGv2 .top-bar {
+  padding: 0; }
+
+html.IGv2 .top-bar input {
+  max-width: none; }
+
+html.IGv2 .header-wrap .main-menu li.has-dropdown .already-a-client, html.IGv2 .header-wrap .utility-menu li.has-dropdown .already-a-client {
+  padding-right: 2.6rem !important; }
+
+html.IGv2 .header-wrap .utility-menu li.has-dropdown.hover li:not(.has-form) .sub-link {
+  font-size: 1.6rem; }
+
+html.IGv2 .top-bar, html.IGv2 .top-bar ul.main-menu {
+  background-color: #FFFFFF; }
+
+html.IGv2 .header-wrap form {
+  padding: 0; }
+
+html.IGv2 .header-wrap .mobile-header .brand-slogan {
+  font-size: 1.28rem;
+  margin-bottom: 0;
+  padding-left: 8px; }
+
+html.IGv2 .header-wrap .main-menu li.has-dropdown.hover li:not(.has-form) .sub-link, .header-wrap .utility-menu li.has-dropdown.hover li:not(.has-form) .sub-link {
+  font-size: 1.6rem; }
 
 /* SCSS Document */
 .localnavigation ul,
@@ -11182,184 +11220,199 @@ span.prefix {
   font-family: 'Whitney-regularSemiBold';
   src: url("/en/fonts/corp/whitney-semibold-webfont.ttf") format("truetype"); }
 
-.footer2 {
+html.IGv2 .footer2 .row {
+  margin: 0 auto;
+  max-width: 62.5rem;
+  width: 100%; }
+
+html.IGv2 .footer2 .row .row.collapse {
+  margin: 0;
+  max-width: none;
+  width: auto; }
+
+html.IGv2 .footer2 .accordion {
+  background-color: inherit; }
+
+html.IGv2 .footer2 {
   color: #FFFFFF;
   padding-top: 68px;
   background-color: #0D263C; }
-  .footer2 .row {
+  html.IGv2 .footer2 .row {
     max-width: calc(62.5rem * 1.6); }
-  .footer2 ul {
+  html.IGv2 .footer2 ul {
     font-size: calc(1rem * 1.6); }
+  html.IGv2 .footer2 h3 {
+    line-height: 1.2; }
   @media only screen and (max-width: 64.063em) {
-    .footer2 {
+    html.IGv2 .footer2 {
       padding-top: 12px; } }
-  .footer2 .full-width {
+  html.IGv2 .footer2 .full-width {
     max-width: 100% !important; }
-  .footer2 .footer-backTop {
+  html.IGv2 .footer2 .footer-backTop {
     border-bottom: 1px solid #ffffff;
     padding-bottom: 8px;
     text-align: right;
     margin-bottom: 70px; }
     @media only screen and (min-width: 64.063em) {
-      .footer2 .footer-backTop {
+      html.IGv2 .footer2 .footer-backTop {
         max-width: calc(75rem * 1.6);
         margin: 0 auto 70px; } }
     @media only screen and (min-width: 64.063em) {
-      .footer2 .footer-backTop > .backTop-icon {
+      html.IGv2 .footer2 .footer-backTop > .backTop-icon {
         width: 56px;
         height: 56px;
         border-radius: 50%;
         display: inline-block;
         border: 2px solid #0d263c;
         text-align: center; }
-        .footer2 .footer-backTop > .backTop-icon:hover {
+        html.IGv2 .footer2 .footer-backTop > .backTop-icon:hover {
           border: 2px solid #ffffff; } }
     @media only screen and (max-width: 64.063em) {
-      .footer2 .footer-backTop {
+      html.IGv2 .footer2 .footer-backTop {
         margin-bottom: 40px; } }
-  .footer2 .footer-tabs h3.tab-header,
-  .footer2 .footer-tabs a.tab-header {
+  html.IGv2 .footer2 .footer-tabs h3.tab-header,
+  html.IGv2 .footer2 .footer-tabs a.tab-header {
     font-size: calc(1rem * 1.6);
     color: #fff;
     font-family: "whitney_semiboldregular";
     text-transform: uppercase; }
-    .footer2 .footer-tabs h3.tab-header:hover,
-    .footer2 .footer-tabs a.tab-header:hover {
+    html.IGv2 .footer2 .footer-tabs h3.tab-header:hover,
+    html.IGv2 .footer2 .footer-tabs a.tab-header:hover {
       color: #FFFFFF; }
-  .footer2 .footer-tabs ul.footer-tab-list a.footer-tab-item {
+  html.IGv2 .footer2 .footer-tabs ul.footer-tab-list a.footer-tab-item {
     font-family: "whitney_bookregular";
     color: #ffffff; }
-    .footer2 .footer-tabs ul.footer-tab-list a.footer-tab-item:hover, .footer2 .footer-tabs ul.footer-tab-list a.footer-tab-item:active {
+    html.IGv2 .footer2 .footer-tabs ul.footer-tab-list a.footer-tab-item:hover, html.IGv2 .footer2 .footer-tabs ul.footer-tab-list a.footer-tab-item:active {
       color: #FFFFFF;
       text-decoration: underline; }
-    .footer2 .footer-tabs ul.footer-tab-list a.footer-tab-item:visited {
+    html.IGv2 .footer2 .footer-tabs ul.footer-tab-list a.footer-tab-item:visited {
       color: #ffffff; }
-  .footer2 .footer-tabs h3.tab-header {
+  html.IGv2 .footer2 .footer-tabs h3.tab-header {
     margin-bottom: 35px;
     margin-top: 0px;
     margin-left: 25%;
     color: #FFFFFF;
     font-size: 16px; }
-  .footer2 .footer-tabs ul.footer-tab-list {
+  html.IGv2 .footer2 .footer-tabs ul.footer-tab-list {
     list-style-type: none;
     margin-left: 25%; }
-  .footer2 .footer-tabs ul.footer-tab-list li {
+  html.IGv2 .footer2 .footer-tabs ul.footer-tab-list li {
     margin-bottom: 24px; }
-  .footer2 .footer-tabs .accordion .accordion-nav--footer > a.tab-header {
+  html.IGv2 .footer2 .footer-tabs .accordion .accordion-nav--footer > a.tab-header {
     background-color: #0D263C;
     font-size: calc(.875rem * 1.6);
     border-bottom: 1px solid #314659;
     padding: 1.25rem 0px;
-    background: url("/en/images/corp/svg/expandArrow.png") no-repeat;
+    background: url("http://www.investorsgroup.com/en/images/corp/svg/expandArrow.png") no-repeat;
     background-position: 100% center;
     background-size: 16px;
     opacity: 1; }
-  .footer2 .footer-tabs .accordion .accordion-nav--footer ul.footer-tab-list {
+  html.IGv2 .footer2 .footer-tabs .accordion .accordion-nav--footer ul.footer-tab-list {
     margin: 0px; }
-    .footer2 .footer-tabs .accordion .accordion-nav--footer ul.footer-tab-list li {
+    html.IGv2 .footer2 .footer-tabs .accordion .accordion-nav--footer ul.footer-tab-list li {
       margin-bottom: 0px;
       margin-top: 4px; }
-      .footer2 .footer-tabs .accordion .accordion-nav--footer ul.footer-tab-list li:last-child {
+      html.IGv2 .footer2 .footer-tabs .accordion .accordion-nav--footer ul.footer-tab-list li:last-child {
         margin-bottom: 18px; }
-      .footer2 .footer-tabs .accordion .accordion-nav--footer ul.footer-tab-list li .footer-tab-item {
+      html.IGv2 .footer2 .footer-tabs .accordion .accordion-nav--footer ul.footer-tab-list li .footer-tab-item {
         line-height: normal;
         height: inherit;
         font-size: calc(1rem * 1.6);
         display: block;
         padding: .75rem 0 .75rem 1rem; }
-        .footer2 .footer-tabs .accordion .accordion-nav--footer ul.footer-tab-list li .footer-tab-item:before {
+        html.IGv2 .footer2 .footer-tabs .accordion .accordion-nav--footer ul.footer-tab-list li .footer-tab-item:before {
           content: "|";
           display: inline-block;
           margin-right: 1rem;
           font-size: calc(1.25rem * 1.6);
           font-weight: bold;
           color: #0d263c; }
-        .footer2 .footer-tabs .accordion .accordion-nav--footer ul.footer-tab-list li .footer-tab-item:hover {
+        html.IGv2 .footer2 .footer-tabs .accordion .accordion-nav--footer ul.footer-tab-list li .footer-tab-item:hover {
           text-decoration: none;
           background-color: #314659; }
-          .footer2 .footer-tabs .accordion .accordion-nav--footer ul.footer-tab-list li .footer-tab-item:hover:before {
+          html.IGv2 .footer2 .footer-tabs .accordion .accordion-nav--footer ul.footer-tab-list li .footer-tab-item:hover:before {
             content: "|";
             display: inline-block;
             margin-right: 1rem;
             color: #fff; }
-  .footer2 .footer-tabs .accordion .accordion-nav--footer > .content.active {
+  html.IGv2 .footer2 .footer-tabs .accordion .accordion-nav--footer > .content.active {
     background: none; }
-  .footer2 .footer-tabs .accordion .accordion-nav--footer > .content:last-of-type {
+  html.IGv2 .footer2 .footer-tabs .accordion .accordion-nav--footer > .content:last-of-type {
     border-bottom: 1px solid #263c50; }
-  .footer2 .footer-tabs .accordion .accordion-nav--footer > .content, .footer2 .footer-tabs .accordion .accordion-nav--footer .accordion dd > .content {
+  html.IGv2 .footer2 .footer-tabs .accordion .accordion-nav--footer > .content, html.IGv2 .footer2 .footer-tabs .accordion .accordion-nav--footer .accordion dd > .content {
     padding: 0px; }
-  .footer2 .footer-tabs .accordion .accordion-nav--footer:first-child, .footer2 .footer-tabs .accordion dd:first-child {
+  html.IGv2 .footer2 .footer-tabs .accordion .accordion-nav--footer:first-child, html.IGv2 .footer2 .footer-tabs .accordion dd:first-child {
     padding: 0px; }
-  .footer2 .footer-tabs .accordion-nav--footer.active > a.tab-header {
-    background: url("/en/images/corp/svg/collapseArrow.png") no-repeat;
+  html.IGv2 .footer2 .footer-tabs .accordion-nav--footer.active > a.tab-header {
+    background: url("http://www.investorsgroup.com/en/images/corp/svg/collapseArrow.png") no-repeat;
     background-position: 100% center;
     background-size: 16px;
     opacity: 1;
     color: #FFFFFF; }
-  .footer2 .footer-social-media {
+  html.IGv2 .footer2 .footer-social-media {
     margin-top: 30px;
     padding-bottom: 18px; }
     @media only screen and (min-width: 64.063em) {
-      .footer2 .footer-social-media {
+      html.IGv2 .footer2 .footer-social-media {
         padding-bottom: 36px;
         margin-top: 36px; } }
-    .footer2 .footer-social-media ul.socialMedia--icons {
+    html.IGv2 .footer2 .footer-social-media ul.socialMedia--icons {
       list-style: none;
       margin: 0px; }
-      .footer2 .footer-social-media ul.socialMedia--icons > li {
+      html.IGv2 .footer2 .footer-social-media ul.socialMedia--icons > li {
         padding: 0px 11px;
         display: inline-block; }
-        .footer2 .footer-social-media ul.socialMedia--icons > li > a {
+        html.IGv2 .footer2 .footer-social-media ul.socialMedia--icons > li > a {
           width: 48px;
           height: 48px;
           display: block;
           border-radius: 50%;
           border: 2px solid #0d263c; }
-          .footer2 .footer-social-media ul.socialMedia--icons > li > a img {
+          html.IGv2 .footer2 .footer-social-media ul.socialMedia--icons > li > a img {
             display: block;
             padding: 11px; }
-          .footer2 .footer-social-media ul.socialMedia--icons > li > a:hover {
+          html.IGv2 .footer2 .footer-social-media ul.socialMedia--icons > li > a:hover {
             border: 2px solid #fff; }
-  .footer2 .footer-copyright .no-padding {
+  html.IGv2 .footer2 .footer-copyright .no-padding {
     padding-left: 0px;
     padding-right: 0px; }
-  .footer2 .footer-copyright .footer-menu-mobile,
-  .footer2 .footer-copyright .footer-menu-desktop {
+  html.IGv2 .footer2 .footer-copyright .footer-menu-mobile,
+  html.IGv2 .footer2 .footer-copyright .footer-menu-desktop {
     margin: 0px;
     list-style: none;
     border-top: 1px solid #263c50;
     padding-bottom: 10px;
     padding-top: 10px; }
-    .footer2 .footer-copyright .footer-menu-mobile > li,
-    .footer2 .footer-copyright .footer-menu-desktop > li {
+    html.IGv2 .footer2 .footer-copyright .footer-menu-mobile > li,
+    html.IGv2 .footer2 .footer-copyright .footer-menu-desktop > li {
       padding: 0px 24px;
       border-right: 1px solid #263c50;
       display: inline-block; }
-      .footer2 .footer-copyright .footer-menu-mobile > li.copyright,
-      .footer2 .footer-copyright .footer-menu-desktop > li.copyright {
+      html.IGv2 .footer2 .footer-copyright .footer-menu-mobile > li.copyright,
+      html.IGv2 .footer2 .footer-copyright .footer-menu-desktop > li.copyright {
         font-size: calc(.75rem * 1.6);
         font-family: "whitney_bookregular";
         color: #acb7c0; }
-      .footer2 .footer-copyright .footer-menu-mobile > li > a,
-      .footer2 .footer-copyright .footer-menu-desktop > li > a {
+      html.IGv2 .footer2 .footer-copyright .footer-menu-mobile > li > a,
+      html.IGv2 .footer2 .footer-copyright .footer-menu-desktop > li > a {
         font-size: calc(.75rem * 1.6);
         font-family: "whitney_bookregular";
         color: #acb7c0; }
-        .footer2 .footer-copyright .footer-menu-mobile > li > a:hover,
-        .footer2 .footer-copyright .footer-menu-desktop > li > a:hover {
+        html.IGv2 .footer2 .footer-copyright .footer-menu-mobile > li > a:hover,
+        html.IGv2 .footer2 .footer-copyright .footer-menu-desktop > li > a:hover {
           border-bottom: 1px solid #fff;
           color: #fff; }
-    .footer2 .footer-copyright .footer-menu-mobile > li:last-child,
-    .footer2 .footer-copyright .footer-menu-desktop > li:last-child {
+    html.IGv2 .footer2 .footer-copyright .footer-menu-mobile > li:last-child,
+    html.IGv2 .footer2 .footer-copyright .footer-menu-desktop > li:last-child {
       border-right: none; }
-  .footer2 .footer-copyright .footer-menu-mobile li {
+  html.IGv2 .footer2 .footer-copyright .footer-menu-mobile li {
     padding: 0 18px; }
   @media only screen and (min-width: 90.063em) {
-    .footer2 .footer-copyright {
+    html.IGv2 .footer2 .footer-copyright {
       width: calc(75rem * 1.6);
       margin: 0 auto; } }
   @media only screen and (max-width: 64.063em) {
-    .footer2 .columns.add-padding {
+    html.IGv2 .footer2 .columns.add-padding {
       padding-left: 1.375rem;
       padding-right: 1.375rem; } }
 
