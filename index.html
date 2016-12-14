@@ -94,7 +94,7 @@
                                         </li>
                                         <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
                                             <a href="tel:{{Phone__c}}">
-                                                <strong>Main</strong>
+                                                <strong>Phone</strong>
                                                 <span>{{Phone__c}}</span>
                                             </a>
                                         </li>
@@ -136,7 +136,16 @@
                             </div>
                             <div class="consultant-text">
                             <p class="tp_07 consultant_name">{{myInfo.FName}} {{myInfo.LName}}</p>
-                            <p class="tp_05">{{myInfo.title}}</p>
+                            {{#myInfo.title}}
+                            <p class="tp_05">
+                              {{myInfo.title}}
+                            </p>
+                            {{/myInfo.title}}
+                            {{#myInfo.discipline}}
+                            <p class="tp_05">
+                              {{myInfo.discipline}}
+                            </p>
+                            {{/myInfo.discipline}}
                             <p class="tp_09">{{myInfo.Ct_City}} {{myInfo.PostalCode}}</p>
                             </div>
                         </div>
@@ -157,7 +166,7 @@
                                       </li>
                                       <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
                                           <a href="tel:{{myInfo.Phone}}">
-                                              <strong>Main</strong>
+                                              <strong>Phone</strong>
                                               <span>{{myInfo.Phone}}</span>
                                           </a>
                                       </li>
@@ -206,7 +215,7 @@
                                   </li>
                                   <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
                                       <a href="tel:{{Phone}}">
-                                          <strong>Main</strong>
+                                          <strong>Phone</strong>
                                           <span>{{Phone}}</span>
                                       </a>
                                   </li>
@@ -259,7 +268,7 @@
                                   </li>
                                   <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
                                       <a href="tel:{{Phone__c}}">
-                                          <strong>Main</strong>
+                                          <strong>Phone</strong>
                                           <span>{{Phone__c}}</span>
                                       </a>
                                   </li>
