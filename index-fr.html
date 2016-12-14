@@ -273,7 +273,7 @@
                     <div class="row underline">
                         <div class="small-12 medium-7 large-6 columns portrait-column">
                             <div class="portrait">
-                                <img src="{{myInfo.photoUrl}}" alt="" alt="" onerror="this.onerror=null;this.src='silhouette-{{Gender__c }}{{^Gender__c }}m{{/Gender__c }}.png';" />
+                                <img src="{{myInfo.photoUrl}}" alt="" onerror="this.onerror=null;this.src='https://www.investorsgroup.com/en/images/ig-cwpb/profilePhotos/silhouette-{{myInfo.gender}}{{^myInfo.gender}}m{{/myInfo.gender}}.png';" />
                             </div>
                             <div class="consultant-text">
                             <p class="tp_07 consultant_name">{{myInfo.FName}} {{myInfo.LName}}</p>
@@ -645,5 +645,3 @@
 </body>
 
 </html>
-
->>>>>>> fb6087b7e36fd73dc6d1d5e6b7f69e6a1c7c6b35
