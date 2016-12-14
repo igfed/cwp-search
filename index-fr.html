@@ -277,14 +277,12 @@
                             </div>
                             <div class="consultant-text">
                             <p class="tp_07 consultant_name">{{myInfo.FName}} {{myInfo.LName}}</p>
-                            {{#myInfo.title}}
+                            {{#myInfo.displayTitleDisc.DisplayTitle}}
                                 <p class="tp_05">{{myInfo.title}}</p>
-                            {{/myInfo.title}}
-                            {{^myInfo.title}}
-                                {{#myInfo.discipline}}
-                                  <p class="tp_05">{{myInfo.discipline}}</p>
-                                {{/myInfo.discipline}}
-                            {{/myInfo.title}}
+                            {{/myInfo.displayTitleDisc.DisplayTitle}}
+                            {{#myInfo.displayTitleDisc.DisplayDiscipline}}
+                                <p class="tp_05">{{myInfo.discipline}}</p>
+                            {{/myInfo.displayTitleDisc.DisplayDiscipline}}
                             <p class="tp_09">{{myInfo.Ct_City}} {{myInfo.PostalCode}}</p>
                             </div>
                         </div>
