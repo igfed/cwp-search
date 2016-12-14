@@ -270,7 +270,7 @@
                     <div class="row underline">
                         <div class="small-12 medium-7 large-6 columns portrait-column">
                             <div class="portrait">
-                                <img src="{{myInfo.photoUrl}}" alt="" />
+                                <img src="{{myInfo.photoUrl}}" alt="" onerror="this.onerror=null;this.src='https://www.investorsgroup.com/en/images/ig-cwpb/profilePhotos/silhouette-{{myInfo.gender }}{{^myInfo.gender }}m{{/myInfo.gender }}.png';" />
                             </div>
                             <div class="consultant-text">
                             <p class="tp_07 consultant_name">{{myInfo.FName}} {{myInfo.LName}}</p>

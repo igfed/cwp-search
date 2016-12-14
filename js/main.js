@@ -1,5 +1,5 @@
 // GLOBALS 
-var modelUrl = 'http://206.152.35.229:9000/api/cwpsearch?';
+var modelUrl = 'https://search.investorsgroup.com:9000/api/cwpsearch?';
 var $field = $('#FindAnAdvisor');
 var allConsultants = {};
 var lang = 'en';
@@ -53,7 +53,6 @@ function getSearchResults(params) {
 	.done(function( data ) {
 		var result = JSON.parse(data);
 		allConsultants = shuffle(result);
-		console.log(allConsultants[0]);
 		displaySearchResults('result-amount-template', allConsultants, 'results-container');
 		paginateResults();
 		$('html, body').animate({scrollTop: $('#office-search').offset().top}, 750);
