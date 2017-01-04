@@ -6651,6 +6651,8 @@ html.IGv2 {
     position: absolute;
     width: auto;
     height: auto;
+	z-index:200;
+	padding:12px 18px;
     // left: -5rem;
 
     img{
@@ -6692,7 +6694,7 @@ html.IGv2 {
       display: block;
       margin: 0;
       padding: 0;
-      top: 1rem;
+      top: 0.2rem;
       left: 0.5rem;
 
       @media #{$small-only}{
