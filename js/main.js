@@ -166,6 +166,16 @@ function attachComponents(){
 		paginateResults();
 	});
 }
+function sendGoogleAnalytics(params) {
+	console.log('params ', params);
+	if (params.name !== '') {
+		ga('send','event','Convert','Search','ConnectToAdvisor_Name?' + params.name, 0);
+	} else if (params.city !== '') {
+		ga('send','event','Convert','Search','ConnectToAdvisor_Location?' + params.city, 0);
+	} else if (params.Pcode !== '') {
+		ga('send','event','Convert','Search','ConnectToAdvisor_Pcode?' + params.Pcode, 0);
+	}
+}
 
 //Init everything
 $(function() {
@@ -187,7 +197,8 @@ $(function() {
 		e.preventDefault();
 		var params = parseSearchString();
 		getSearchResults(params);
-		//ga('send','event','Consumer Engagement','Click','Header_Click_Search_EventPage:Header', 0);
+		//ga('send','event','Convert','Search','ConnectToAdvisor_Location?Toronto, ON', 0);
+		sendGoogleAnalytics(params)
 	});
 });
 
