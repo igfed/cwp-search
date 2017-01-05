@@ -167,7 +167,6 @@ function attachComponents(){
 	});
 }
 function sendGoogleAnalytics(params) {
-	console.log('params ', params);
 	if (params.name !== '') {
 		ga('send','event','Convert','Search','ConnectToAdvisor_Name?' + params.name, 0);
 	} else if (params.city !== '') {
