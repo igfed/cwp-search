@@ -6548,17 +6548,25 @@ html.IGv2 {
   }
 
   .collapse{
-    background-color: white;
-    border-radius: 0.5rem;
+    // background-color: white;
+    // border-radius: 0.5rem;
 
     .columns{
       margin-bottom: 0!important;
     }
 
-    .search-ui--location{
-      padding-left: 2.5rem;
+    .search-ui-location, .search-ui-name{
+      // padding-left: 2.5rem;
+      background-color: white;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
       label{
         font-family: "whitney_lightregular";
+      }
+
+      input[type="search"]{
+
+        margin-bottom: 0;
       }
     }
 

@@ -1,6 +1,7 @@
 // GLOBALS 
 var modelUrl = 'https://search.investorsgroup.com:9000/api/cwpsearch?';
-var $field = $('#FindAnAdvisor');
+var $location_field = $('#FindAnAdvisor_location');
+var $name_field = $('#FindAnAdvisor_name');
 var allConsultants = {};
 var lang = 'en';
 if(window.location.href.indexOf('-fr.') > -1) {
@@ -108,10 +109,12 @@ function paginateResults() {
 }
 function parseSearchString() {
 	var result = {};
-	var search = $field.val();
+	var search_location = $location_field.val();
+	var search_name = $name_field.val();
 	var postalCodeFormat = new RegExp(/[A-Za-z][0-9][A-Za-z] ?[0-9][A-Za-z][0-9]/);
 
-	result.city = '';
+	// result.city = '';
+	result.location = '';
 	result.name = '';
 	result.Pcode = '';
 	result.geo = '';
@@ -121,31 +124,34 @@ function parseSearchString() {
 	// We only search consultants from this method
 	result.searchtype = 'con';
 	// Check if there is a postal code
-	if (postalCodeFormat.test(search)) {
-		var postalCode = search.match(postalCodeFormat)[0];
-		if (postalCode.indexOf(' ') === -1) {
-			postalCode = postalCode.match(/.{1,3}/g).join().replace(',', ' ');
-		}
-		result.Pcode = postalCode;
-		search = search.replace(postalCodeFormat, ' ');
-	}
+	// if (postalCodeFormat.test(search)) {
+	// 	var postalCode = search.match(postalCodeFormat)[0];
+	// 	if (postalCode.indexOf(' ') === -1) {
+	// 		postalCode = postalCode.match(/.{1,3}/g).join().replace(',', ' ');
+	// 	}
+	// 	result.Pcode = postalCode;
+	// 	search = search.replace(postalCodeFormat, ' ');
+	// }
 
 	// Check the search string for a previously defined location
-	var words = search.split(' ');
-	for (i = 0; i < words.length; i++) {
+	// var words = search.split(' ');
+	// for (i = 0; i < words.length; i++) {
 		// Check each word for a city from the predefined list
-		var normalizedTerm = words[i].toLowerCase();
-		var city = suggestions.locations.get(normalizedTerm);
-		if (city.length > 0) {
-			result.city = city[0];
-			words.splice(i, 1);
-		}
-	}
+	// 	var normalizedTerm = words[i].toLowerCase();
+	// 	var city = suggestions.locations.get(normalizedTerm);
+	// 	if (city.length > 0) {
+	// 		result.city = city[0];
+	// 		words.splice(i, 1);
+	// 	}
+	// }
 
 	// All remaining words should be a name
-	if  (words.length > 0) {
-		result.name = words.join(' ');
-	}
+	// if  (words.length > 0) {
+	// 	result.name = words.join(' ');
+	// }
+
+	result.name = search_name;
+	result.location = search_location;
 
 	return result;
 }
@@ -183,12 +189,17 @@ $(function() {
 	getCoordinates();
 
 	// Setup the typeahead
-	$('.typeahead').typeahead({
+	$('.typeahead.itf_location').typeahead({
 		highlight: true
 	},
 		{ name: 'locations', source: suggestions.locations, limit: 2 },
-		{ name: 'consultants', source: suggestions.consultants, limit: 3 },
 		{ name: 'postalCode', source: suggestions.postalCode, limit: 2 }
+	)
+
+	$('.typeahead.itf_name').typeahead({
+		highlight: true
+	},
+		{ name: 'consultants', source: suggestions.consultants, limit: 3 }
 	)
 
 	// Setup the form submission

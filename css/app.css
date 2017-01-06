@@ -18819,15 +18819,17 @@ html.IGv2 .section.search-results .tp_21 {
     .contact.section .row:first-child p {
       padding-top: 1rem; } }
 
-.contact.section .collapse {
+.contact.section .collapse .columns {
+  margin-bottom: 0 !important; }
+
+.contact.section .collapse .search-ui-location, .contact.section .collapse .search-ui-name {
   background-color: white;
-  border-radius: 0.5rem; }
-  .contact.section .collapse .columns {
-    margin-bottom: 0 !important; }
-  .contact.section .collapse .search-ui--location {
-    padding-left: 2.5rem; }
-    .contact.section .collapse .search-ui--location label {
-      font-family: "whitney_lightregular"; }
+  border-radius: 0.5rem;
+  padding: 0.5rem; }
+  .contact.section .collapse .search-ui-location label, .contact.section .collapse .search-ui-name label {
+    font-family: "whitney_lightregular"; }
+  .contact.section .collapse .search-ui-location input[type="search"], .contact.section .collapse .search-ui-name input[type="search"] {
+    margin-bottom: 0; }
 
 .contact.section .tt-menu, .contact.section .typeahead {
   font-size: 1.6rem !important; }
@@ -18902,7 +18904,9 @@ html.IGv2 .section.search-results .tp_21 {
 .contact.section #SearchSubmitButton, .contact.section #SearchCloseButton {
   position: absolute;
   width: auto;
-  height: auto; }
+  height: auto;
+  z-index: 200;
+  padding: 12px 18px; }
   .contact.section #SearchSubmitButton img, .contact.section #SearchCloseButton img {
     height: auto; }
   .contact.section #SearchSubmitButton:hover, .contact.section #SearchCloseButton:hover {
@@ -18931,7 +18935,7 @@ html.IGv2 .section.search-results .tp_21 {
     display: block;
     margin: 0;
     padding: 0;
-    top: 1rem;
+    top: 0.2rem;
     left: 0.5rem; }
     @media only screen and (max-width: 40em) {
       #SearchSubmitButton img {
