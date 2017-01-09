@@ -4756,7 +4756,7 @@ html.IGv2 {
     color: #0d263c; }
     @media screen and (min-width: 64em) {
       html.IGv2 .tp_03 {
-        font-size: 3.6rem;
+        font-size: 3.6rem!important;
         line-height: 4.6rem; } }
   html.IGv2 .tp_04 {
     font-family: "whitney_scmedium";
@@ -6070,7 +6070,7 @@ html.IGv2 {
 /*Search Wrapper*/
 
 .cwp-search{
-      .buttons-column{
+    .buttons-column{
 
         .is-dropdown-submenu{
           top: 4rem!important;
@@ -6189,8 +6189,9 @@ html.IGv2 {
           width: 48.2%;
           display: block;
         }
+      }
     }
-    }
+
 }
 
 /*Office Search*/
@@ -6517,7 +6518,7 @@ html.IGv2 {
       img{
         position: relative!important;
         top: 0!important;
-        width: auto!important;
+        width: 140px!important;
         left: 0!important;
 
         @media #{$small-only}{
@@ -6528,20 +6529,22 @@ html.IGv2 {
        h1{
           @media #{$large-only}{
             font-size: 5.2rem;
-            margin-bottom: 2.5rem!important;
           }
         }
 
         p{
-          font-size: 2.8rem;
-          font-family: "whitney_lightregular";
           color: #0d263c;
           max-width: 80rem;
           margin: 0 auto;
-          padding-bottom: 8rem;
+          padding-bottom: 4rem;
 
           @media #{$medium-up}{
             padding-top: 1rem;
+          }
+
+          @media #{$small-only}{
+            margin-bottom: 0!important;
+            line-height: 2.5rem;
           }
         }
     }
@@ -6559,6 +6562,10 @@ html.IGv2 {
       display: inline-block;
       float: none;
       padding: 0!important;
+
+      @media #{$small-only}{
+        margin-top: 2rem;
+      }
 
       .search-ui-location, .search-ui-name{
         background-color: white;
@@ -6630,11 +6637,12 @@ html.IGv2 {
     margin-left: 0!important;
     border-bottom-right-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
-    // top: 3rem!important;
+    top: 4rem!important;
         // display: block!important;
     box-shadow: 0 4px 10px rgba(1, 0, 0, 0.3);
     border-top: 1px solid #a9a9a9;
     padding-top:4rem;
+    text-align: left;
 
 
     :last-child{
@@ -6660,7 +6668,7 @@ html.IGv2 {
     position: relative;
     width: 100%;
     display: inline-block;
-    padding: 1rem 3rem 1rem 4rem;
+    padding: 1rem 3rem 1rem 3rem;
 
     input{
       &:first-child{
