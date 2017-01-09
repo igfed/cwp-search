@@ -207,10 +207,15 @@ $(function() {
 	// Setup the form submission
 	$('#find-an-advisor-search').submit(function(e){
 		e.preventDefault();
+		$('#SearchSubmitButton').attr('disabled','disabled');
 		var params = parseSearchString();
 		getSearchResults(params);
 		//ga('send','event','Convert','Search','ConnectToAdvisor_Location?Toronto, ON', 0);
-		sendGoogleAnalytics(params)
+		sendGoogleAnalytics(params);
+		// Debounce the button
+		setTimeout(function(){
+			$('#SearchSubmitButton').removeAttr('disabled');
+		}, 1500);
 	});
 });
 
