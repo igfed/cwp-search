@@ -5148,7 +5148,7 @@ html.IGv2 {
     @media screen and (max-width: 39.9375em) {
       html.IGv2 .show-for-small-only {
         display: block; } }
-  html.IGv2 a.outline-btn {
+  html.IGv2 .outline-btn {
     background: #0ed59a none repeat scroll 0 0;
     border: 2px solid #0ed59a;
     border-radius: 5px;
@@ -5181,18 +5181,18 @@ html.IGv2 {
     /*Icons*/
     /*Media Query*/ }
     @media screen and (min-width: 64em) {
-      html.IGv2 a.outline-btn {
+      html.IGv2 .outline-btn {
         font-size: 1.6rem; } }
-    html.IGv2 a.outline-btn[disabled] {
+    html.IGv2 .outline-btn[disabled] {
       border-color: #bbb;
       background-color: #bbb; }
     @media screen and (max-width: 39.9375em) {
-      html.IGv2 a.outline-btn {
+      html.IGv2 .outline-btn {
         text-align: center; } }
-    html.IGv2 a.outline-btn:hover {
+    html.IGv2 .outline-btn:hover {
       color: #fff;
       text-decoration: none; }
-    html.IGv2 a.outline-btn.primary {
+    html.IGv2 .outline-btn.primary {
       background-color: #0d263c;
       border-color: #0d263c;
       font-family: "whitney_scmedium";
@@ -5201,74 +5201,74 @@ html.IGv2 {
       text-transform: lowercase;
       letter-spacing: 1px; }
       @media screen and (min-width: 64em) {
-        html.IGv2 a.outline-btn.primary {
+        html.IGv2 .outline-btn.primary {
           font-size: 1.6rem; } }
-      html.IGv2 a.outline-btn.primary:hover {
+      html.IGv2 .outline-btn.primary:hover {
         background-color: transparent;
         color: #0d263c; }
-    html.IGv2 a.outline-btn.secondary {
+    html.IGv2 .outline-btn.secondary {
       color: #0d263c;
       background-color: transparent;
       border-color: #0d263c; }
-      html.IGv2 a.outline-btn.secondary:hover {
+      html.IGv2 .outline-btn.secondary:hover {
         color: white;
         background-color: #0d263c; }
-        html.IGv2 a.outline-btn.secondary:hover.email, html.IGv2 a.outline-btn.secondary:hover.phone {
+        html.IGv2 .outline-btn.secondary:hover.email, html.IGv2 .outline-btn.secondary:hover.phone {
           color: #0d263c !important; }
         @media screen and (max-width: 39.9375em) {
-          html.IGv2 a.outline-btn.secondary:hover.small-icon {
+          html.IGv2 .outline-btn.secondary:hover.small-icon {
             background-color: transparent; } }
-        html.IGv2 a.outline-btn.secondary:hover i.fa {
+        html.IGv2 .outline-btn.secondary:hover i.fa {
           background-color: #0d263c;
           border-color: #0d263c;
           color: white;
           transition: color 0.3s ease 0s, background-color 0.3s ease 0s; }
       @media screen and (max-width: 39.9375em) {
-        html.IGv2 a.outline-btn.secondary.email, html.IGv2 a.outline-btn.secondary.phone {
+        html.IGv2 .outline-btn.secondary.email, html.IGv2 .outline-btn.secondary.phone {
           min-width: auto; } }
-    html.IGv2 a.outline-btn.constrained {
+    html.IGv2 .outline-btn.constrained {
       color: #0d263c; }
-      html.IGv2 a.outline-btn.constrained:hover {
+      html.IGv2 .outline-btn.constrained:hover {
         background-color: transparent;
         color: #0d263c; }
-    html.IGv2 a.outline-btn.dropdown-button {
+    html.IGv2 .outline-btn.dropdown-button {
       padding-right: 4rem; }
-      html.IGv2 a.outline-btn.dropdown-button .is-dropdown-submenu {
+      html.IGv2 .outline-btn.dropdown-button .is-dropdown-submenu {
         border: none;
         border-radius: 5.5px;
         box-shadow: 0 1px 7.5px rgba(0, 0, 0, 0.35);
         padding: .8rem 0 2.5rem; }
         @media screen and (max-width: 39.9375em) {
-          html.IGv2 a.outline-btn.dropdown-button .is-dropdown-submenu {
+          html.IGv2 .outline-btn.dropdown-button .is-dropdown-submenu {
             left: 70%;
             top: 40px; } }
-    html.IGv2 a.outline-btn.navigation {
+    html.IGv2 .outline-btn.navigation {
       background-color: #0d263c;
       border-color: #0d263c;
       color: #fff;
       width: auto;
       padding-left: 3.4rem;
       padding-right: 2.7rem; }
-      html.IGv2 a.outline-btn.navigation .fa {
+      html.IGv2 .outline-btn.navigation .fa {
         position: absolute;
         top: 50%; }
-      html.IGv2 a.outline-btn.navigation.back .fa {
+      html.IGv2 .outline-btn.navigation.back .fa {
         -ms-transform: rotate(-90deg) translateX(50%);
             transform: rotate(-90deg) translateX(50%);
         left: .75rem; }
-      html.IGv2 a.outline-btn.navigation:hover {
+      html.IGv2 .outline-btn.navigation:hover {
         color: #0ed59a; }
-    html.IGv2 a.outline-btn i.fa {
+    html.IGv2 .outline-btn i.fa {
       transition: border-color 0.3s ease 0s; }
     @media screen and (max-width: 39.9375em) {
-      html.IGv2 a.outline-btn.small-icon {
+      html.IGv2 .outline-btn.small-icon {
         border: none;
         font-size: 1.5rem;
         padding-left: 0;
         padding-right: 0; }
-        html.IGv2 a.outline-btn.small-icon.secondary:hover {
+        html.IGv2 .outline-btn.small-icon.secondary:hover {
           background-color: transparent; }
-        html.IGv2 a.outline-btn.small-icon i.fa {
+        html.IGv2 .outline-btn.small-icon i.fa {
           border: 2px solid #0d263c;
           height: 2.9rem;
           width: 2.9rem;
@@ -5278,25 +5278,25 @@ html.IGv2 {
           padding-left: 1px;
           margin-top: -6px; } }
     @media screen and (max-width: 39.9375em) {
-      html.IGv2 a.outline-btn {
+      html.IGv2 .outline-btn {
         text-align: center; } }
   html.IGv2 .dropdown.menu {
     /*Dropdown button*/
     /*Submenu Arrow*/
     /*Submenu*/
     /*Media Query*/ }
-    html.IGv2 .dropdown.menu a.outline-btn {
+    html.IGv2 .dropdown.menu .outline-btn {
       /*Icon*/
       /*Media Query*/ }
-      html.IGv2 .dropdown.menu a.outline-btn.dropdown-button {
+      html.IGv2 .dropdown.menu .outline-btn.dropdown-button {
         padding-right: 4rem; }
-      html.IGv2 .dropdown.menu a.outline-btn::after {
+      html.IGv2 .dropdown.menu .outline-btn::after {
         border-color: #0d263c transparent transparent;
         border-width: .6rem .6rem 0;
         right: 1rem;
         margin-top: -.4rem;
         transition: transform .3s ease 0s, border-color .3s ease 0s; }
-      html.IGv2 .dropdown.menu a.outline-btn::before {
+      html.IGv2 .dropdown.menu .outline-btn::before {
         content: "";
         display: block;
         border-left: 0.1rem solid #45757a;
@@ -5304,27 +5304,27 @@ html.IGv2 {
         position: absolute;
         right: 2.8rem;
         top: 20%; }
-      html.IGv2 .dropdown.menu a.outline-btn.small-icon {
+      html.IGv2 .dropdown.menu .outline-btn.small-icon {
         /*Media Query*/ }
-        html.IGv2 .dropdown.menu a.outline-btn.small-icon:hover {
+        html.IGv2 .dropdown.menu .outline-btn.small-icon:hover {
           background-color: transparent; }
         @media screen and (max-width: 39.9375em) {
-          html.IGv2 .dropdown.menu a.outline-btn.small-icon {
+          html.IGv2 .dropdown.menu .outline-btn.small-icon {
             padding-right: 0; } }
       @media screen and (max-width: 39.9375em) {
-        html.IGv2 .dropdown.menu a.outline-btn.small-icon::before, html.IGv2 .dropdown.menu a.outline-btn.small-icon::after {
+        html.IGv2 .dropdown.menu .outline-btn.small-icon::before, html.IGv2 .dropdown.menu .outline-btn.small-icon::after {
           display: none; }
-        html.IGv2 .dropdown.menu a.outline-btn.small-icon + ul {
+        html.IGv2 .dropdown.menu .outline-btn.small-icon + ul {
           left: 50%;
           -ms-transform: translateX(-50%);
               transform: translateX(-50%); } }
     html.IGv2 .dropdown.menu > li.is-dropdown-submenu-parent {
       display: block; }
-      html.IGv2 .dropdown.menu > li.is-dropdown-submenu-parent.is-active a.outline-btn::after {
+      html.IGv2 .dropdown.menu > li.is-dropdown-submenu-parent.is-active .outline-btn::after {
         -ms-transform: rotate(180deg);
             transform: rotate(180deg); }
       @media screen and (max-width: 39.9375em) {
-        html.IGv2 .dropdown.menu > li.is-dropdown-submenu-parent.is-active a.outline-btn.secondary.small-icon {
+        html.IGv2 .dropdown.menu > li.is-dropdown-submenu-parent.is-active .outline-btn.secondary.small-icon {
           background-color: transparent; } }
     html.IGv2 .dropdown.menu .is-dropdown-submenu {
       left: auto;
@@ -5403,7 +5403,7 @@ html.IGv2 {
       html.IGv2 .dropdown.menu .is-dropdown-submenu li + li {
         text-align: left; }
     @media screen and (max-width: 39.9375em) {
-      html.IGv2 .dropdown.menu.small-grid > li.is-dropdown-submenu-parent a.outline-btn {
+      html.IGv2 .dropdown.menu.small-grid > li.is-dropdown-submenu-parent .outline-btn {
         display: none; }
       html.IGv2 .dropdown.menu.small-grid > li.is-dropdown-submenu-parent .submenu {
         display: block;
@@ -6048,19 +6048,19 @@ html.IGv2 {
   @media screen and (max-width: 39.9375em) {
     // html.IGv2 .office-search a.outline-btn.email, html.IGv2 .office-search .phone a.outline-btn, html.IGv2 .search-results a.outline-btn.email, html.IGv2 .search-results .phone a.outline-btn {
     //   width: 50%; }
-      html.IGv2 .office-search a.outline-btn.secondary.email:hover i.fa, html.IGv2 .office-search .phone a.outline-btn.secondary:hover i.fa, html.IGv2 .search-results a.outline-btn.secondary.email:hover i.fa, html.IGv2 .search-results .phone a.outline-btn.secondary:hover i.fa {
+      html.IGv2 .office-search .outline-btn.secondary.email:hover i.fa, html.IGv2 .office-search .phone .outline-btn.secondary:hover i.fa, html.IGv2 .search-results .outline-btn.secondary.email:hover i.fa, html.IGv2 .search-results .phone .outline-btn.secondary:hover i.fa {
         background-color: transparent;
         border: none;
         color: #0d263c; }
-      html.IGv2 .office-search a.outline-btn.small-icon.email, html.IGv2 .office-search .phone a.outline-btn.small-icon, html.IGv2 .search-results a.outline-btn.small-icon.email, html.IGv2 .search-results .buttons-column a.outline-btn.small-icon {
+      html.IGv2 .office-search .outline-btn.small-icon.email, html.IGv2 .office-search .phone .outline-btn.small-icon, html.IGv2 .search-results .outline-btn.small-icon.email, html.IGv2 .search-results .buttons-column .outline-btn.small-icon {
         padding-right: 4rem;
         padding-left: 4.5rem;
         border: 2px solid #0d263c; } }
     @media screen and (max-width: 39.9375em) and (max-width: 39.9375em) {
-      html.IGv2 .office-search a.outline-btn.small-icon.email, html.IGv2 .office-search .phone a.outline-btn.small-icon, html.IGv2 .search-results a.outline-btn.small-icon.email, html.IGv2 .search-results .buttons-column a.outline-btn.small-icon {
+      html.IGv2 .office-search .outline-btn.small-icon.email, html.IGv2 .office-search .phone .outline-btn.small-icon, html.IGv2 .search-results .outline-btn.small-icon.email, html.IGv2 .search-results .buttons-column .outline-btn.small-icon {
         border: 2px solid #0d263c; } }
   @media screen and (max-width: 39.9375em) {
-        html.IGv2 .office-search a.outline-btn.small-icon.email i.fa, html.IGv2 .office-search .phone a.outline-btn.small-icon i.fa, html.IGv2 .search-results a.outline-btn.small-icon.email i.fa, html.IGv2 .search-results .phone a.outline-btn.small-icon i.fa {
+        html.IGv2 .office-search .outline-btn.small-icon.email i.fa, html.IGv2 .office-search .phone .outline-btn.small-icon i.fa, html.IGv2 .search-results .outline-btn.small-icon.email i.fa, html.IGv2 .search-results .phone .outline-btn.small-icon i.fa {
           border: none;
           left: 2rem;
           position: absolute;
@@ -6686,13 +6686,9 @@ html.IGv2 {
 
   #SearchSubmitButton, #SearchCloseButton{
 
-    // display: inline-block;
-    // position: absolute;
     width: auto;
     height: auto;
-	// z-index:200;
-	// padding:12px 18px;
-    // left: -5rem;
+    border-radius: 5px;
 
     img{
       height: auto;
