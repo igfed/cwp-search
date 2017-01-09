@@ -18822,14 +18822,26 @@ html.IGv2 .section.search-results .tp_21 {
 .contact.section .collapse .columns {
   margin-bottom: 0 !important; }
 
-.contact.section .collapse .search-ui-location, .contact.section .collapse .search-ui-name {
-  background-color: white;
-  border-radius: 0.5rem;
-  padding: 0.5rem; }
-  .contact.section .collapse .search-ui-location label, .contact.section .collapse .search-ui-name label {
-    font-family: "whitney_lightregular"; }
-  .contact.section .collapse .search-ui-location input[type="search"], .contact.section .collapse .search-ui-name input[type="search"] {
-    margin-bottom: 0; }
+.contact.section .collapse .search-ui {
+  display: inline-block;
+  float: none;
+  padding: 0 !important; }
+  .contact.section .collapse .search-ui .search-ui-location, .contact.section .collapse .search-ui .search-ui-name {
+    background-color: white;
+    border-radius: 0.5rem; }
+    .contact.section .collapse .search-ui .search-ui-location label, .contact.section .collapse .search-ui .search-ui-name label {
+      font-family: "whitney_lightregular"; }
+    .contact.section .collapse .search-ui .search-ui-location input[type="search"], .contact.section .collapse .search-ui .search-ui-name input[type="search"] {
+      margin-bottom: 0; }
+  @media only screen and (min-width: 40.063em) {
+    .contact.section .collapse .search-ui .search-ui-location {
+      margin-right: 0.8rem; } }
+  @media only screen and (min-width: 40.063em) {
+    .contact.section .collapse .search-ui .search-ui-name {
+      margin-left: 0.8rem; } }
+
+.contact.section .collapse .outline-btn {
+  margin-top: 3.5rem !important; }
 
 .contact.section .tt-menu, .contact.section .typeahead {
   font-size: 1.6rem !important; }
@@ -18867,7 +18879,6 @@ html.IGv2 .section.search-results .tp_21 {
   margin-left: 0 !important;
   border-bottom-right-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
-  top: 3rem !important;
   box-shadow: 0 4px 10px rgba(1, 0, 0, 0.3);
   border-top: 1px solid #a9a9a9;
   padding-top: 4rem; }
@@ -18890,8 +18901,7 @@ html.IGv2 .section.search-results .tp_21 {
   position: relative;
   width: 100%;
   display: inline-block;
-  padding-left: 4rem;
-  padding-right: 3rem; }
+  padding: 1rem 3rem 1rem 4rem; }
   .contact.section .twitter-typeahead input:first-child {
     display: none; }
 
@@ -18902,11 +18912,8 @@ html.IGv2 .section.search-results .tp_21 {
   right: 48px; }
 
 .contact.section #SearchSubmitButton, .contact.section #SearchCloseButton {
-  position: absolute;
   width: auto;
-  height: auto;
-  z-index: 200;
-  padding: 12px 18px; }
+  height: auto; }
   .contact.section #SearchSubmitButton img, .contact.section #SearchCloseButton img {
     height: auto; }
   .contact.section #SearchSubmitButton:hover, .contact.section #SearchCloseButton:hover {

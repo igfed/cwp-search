@@ -113,8 +113,8 @@ function parseSearchString() {
 	var search_name = $name_field.val();
 	var postalCodeFormat = new RegExp(/[A-Za-z][0-9][A-Za-z] ?[0-9][A-Za-z][0-9]/);
 
-	// result.city = '';
-	result.location = '';
+	result.city = '';
+	// result.location = '';
 	result.name = '';
 	result.Pcode = '';
 	result.geo = '';
@@ -151,7 +151,9 @@ function parseSearchString() {
 	// }
 
 	result.name = search_name;
-	result.location = search_location;
+	// result.location = search_location;
+	result.city = search_location;
+
 
 	return result;
 }

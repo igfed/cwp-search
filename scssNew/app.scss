@@ -6555,19 +6555,43 @@ html.IGv2 {
       margin-bottom: 0!important;
     }
 
-    .search-ui-location, .search-ui-name{
-      // padding-left: 2.5rem;
-      background-color: white;
-      border-radius: 0.5rem;
-      padding: 0.5rem;
-      label{
-        font-family: "whitney_lightregular";
+    .search-ui{
+      display: inline-block;
+      float: none;
+      padding: 0!important;
+
+      .search-ui-location, .search-ui-name{
+        background-color: white;
+        border-radius: 0.5rem;
+        // padding: 0.8rem;
+        label{
+          font-family: "whitney_lightregular";
+        }
+
+        input[type="search"]{
+
+          margin-bottom: 0;
+        }
       }
 
-      input[type="search"]{
+      .search-ui-location{
 
-        margin-bottom: 0;
+        @media #{$medium-up}{
+           margin-right: 0.8rem;
+        }
       }
+
+      .search-ui-name{
+
+         @media #{$medium-up}{
+           margin-left: 0.8rem;
+         }
+      }
+
+    }
+
+    .outline-btn{
+      margin-top: 3.5rem!important;
     }
 
   }
@@ -6606,7 +6630,7 @@ html.IGv2 {
     margin-left: 0!important;
     border-bottom-right-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
-    top: 3rem!important;
+    // top: 3rem!important;
         // display: block!important;
     box-shadow: 0 4px 10px rgba(1, 0, 0, 0.3);
     border-top: 1px solid #a9a9a9;
@@ -6636,8 +6660,7 @@ html.IGv2 {
     position: relative;
     width: 100%;
     display: inline-block;
-    padding-left: 4rem;
-    padding-right: 3rem;
+    padding: 1rem 3rem 1rem 4rem;
 
     input{
       &:first-child{
@@ -6656,11 +6679,11 @@ html.IGv2 {
   #SearchSubmitButton, #SearchCloseButton{
 
     // display: inline-block;
-    position: absolute;
+    // position: absolute;
     width: auto;
     height: auto;
-	z-index:200;
-	padding:12px 18px;
+	// z-index:200;
+	// padding:12px 18px;
     // left: -5rem;
 
     img{
@@ -6714,4 +6737,3 @@ html.IGv2 {
 .capitalize{
   text-transform: capitalize;
 }
-
