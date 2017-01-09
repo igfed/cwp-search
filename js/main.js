@@ -1,5 +1,5 @@
 // GLOBALS 
-var modelUrl = 'https://search.investorsgroup.com:9000/api/cwpsearch?';
+var modelUrl = 'https://search.investorsgroup.com/api/cwpsearch?';
 var $location_field = $('#FindAnAdvisor_location');
 var $name_field = $('#FindAnAdvisor_name');
 var allConsultants = {};
