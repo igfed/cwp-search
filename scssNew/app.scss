@@ -6551,8 +6551,10 @@ html.IGv2 {
   }
 
   .collapse{
-    // background-color: white;
-    // border-radius: 0.5rem;
+    
+    @media #{$medium-up}{
+      text-align:center;
+    }
 
     .columns{
       margin-bottom: 0!important;
@@ -6565,12 +6567,47 @@ html.IGv2 {
 
       @media #{$small-only}{
         margin-top: 2rem;
+        width: 100%;
+      }
+
+      @media #{$medium-only}{
+        width: 260px;
+        height: 50px;
+      }
+
+      @media #{$medium-up}{
+        margin-right: 0.8rem;
+      }
+
+      @media #{$large-up}{
+        width: 330px;
+        height: 50px;
+      }
+
+      p{
+        padding-right: 2rem;
+      }
+
+      img{
+        width: 13px!important;
+        position: relative!important;
+        margin-right: 2rem;
+        top: 0rem!important;
+        margin-bottom: 0;
+
+        @media #{$small-only}{
+          margin-left: -2rem;
+        }
       }
 
       .search-ui-location, .search-ui-name{
         background-color: white;
         border-radius: 0.5rem;
-        // padding: 0.8rem;
+
+        // .typeahead{
+        //   color: #d8d8d8;
+        // }
+
         label{
           font-family: "whitney_lightregular";
         }
@@ -6597,14 +6634,36 @@ html.IGv2 {
 
     }
 
-    .outline-btn{
-      margin-top: 3.5rem!important;
+    .search-ui-button{
+
+      @media #{$small-only}{
+        text-align: center;
+      }
+
+      .outline-btn{
+        margin-top: 4.5rem!important;
+        background-image: url(../images/search-icon-in-search-box-white.png);
+        background-position: 60px 9px;
+        background-repeat: no-repeat;
+        padding-left: 3rem;
+
+
+        @media #{$medium-only}{
+           background-position: 70px 9px;
+        }
+
+        @media #{$small-only}{
+          background-position: 55px 9px;
+        }
+      }
+
     }
 
   }
 
   .tt-menu, .typeahead {
       font-size: 1.6rem!important;
+      text-transform: none;
     }
 
     ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -6668,7 +6727,7 @@ html.IGv2 {
     position: relative;
     width: 100%;
     display: inline-block;
-    padding: 1rem 3rem 1rem 3rem;
+    padding: 1rem 3rem 1rem 0.5rem;
 
     input{
       &:first-child{
@@ -6686,9 +6745,14 @@ html.IGv2 {
 
   #SearchSubmitButton, #SearchCloseButton{
 
-    width: auto;
+    width: 280px;
     height: auto;
     border-radius: 5px;
+
+    @media #{$small-only}{
+      // width: 100%;
+      width: 250px;
+    }
 
     img{
       height: auto;

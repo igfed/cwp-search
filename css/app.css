@@ -18820,6 +18820,10 @@ html.IGv2 .section.search-results .tp_21 {
       margin-bottom: 0 !important;
       line-height: 2.5rem; } }
 
+@media only screen and (min-width: 40.063em) {
+  .contact.section .collapse {
+    text-align: center; } }
+
 .contact.section .collapse .columns {
   margin-bottom: 0 !important; }
 
@@ -18829,7 +18833,30 @@ html.IGv2 .section.search-results .tp_21 {
   padding: 0 !important; }
   @media only screen and (max-width: 40em) {
     .contact.section .collapse .search-ui {
-      margin-top: 2rem; } }
+      margin-top: 2rem;
+      width: 100%; } }
+  @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    .contact.section .collapse .search-ui {
+      width: 260px;
+      height: 50px; } }
+  @media only screen and (min-width: 40.063em) {
+    .contact.section .collapse .search-ui {
+      margin-right: 0.8rem; } }
+  @media only screen and (min-width: 64.063em) {
+    .contact.section .collapse .search-ui {
+      width: 330px;
+      height: 50px; } }
+  .contact.section .collapse .search-ui p {
+    padding-right: 2rem; }
+  .contact.section .collapse .search-ui img {
+    width: 13px !important;
+    position: relative !important;
+    margin-right: 2rem;
+    top: 0rem !important;
+    margin-bottom: 0; }
+    @media only screen and (max-width: 40em) {
+      .contact.section .collapse .search-ui img {
+        margin-left: -2rem; } }
   .contact.section .collapse .search-ui .search-ui-location, .contact.section .collapse .search-ui .search-ui-name {
     background-color: white;
     border-radius: 0.5rem; }
@@ -18844,11 +18871,26 @@ html.IGv2 .section.search-results .tp_21 {
     .contact.section .collapse .search-ui .search-ui-name {
       margin-left: 0.8rem; } }
 
-.contact.section .collapse .outline-btn {
-  margin-top: 3.5rem !important; }
+@media only screen and (max-width: 40em) {
+  .contact.section .collapse .search-ui-button {
+    text-align: center; } }
+
+.contact.section .collapse .search-ui-button .outline-btn {
+  margin-top: 4.5rem !important;
+  background-image: url(../images/search-icon-in-search-box-white.png);
+  background-position: 60px 9px;
+  background-repeat: no-repeat;
+  padding-left: 3rem; }
+  @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    .contact.section .collapse .search-ui-button .outline-btn {
+      background-position: 70px 9px; } }
+  @media only screen and (max-width: 40em) {
+    .contact.section .collapse .search-ui-button .outline-btn {
+      background-position: 55px 9px; } }
 
 .contact.section .tt-menu, .contact.section .typeahead {
-  font-size: 1.6rem !important; }
+  font-size: 1.6rem !important;
+  text-transform: none; }
 
 .contact.section ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
@@ -18907,7 +18949,7 @@ html.IGv2 .section.search-results .tp_21 {
   position: relative;
   width: 100%;
   display: inline-block;
-  padding: 1rem 3rem 1rem 3rem; }
+  padding: 1rem 3rem 1rem 0.5rem; }
   .contact.section .twitter-typeahead input:first-child {
     display: none; }
 
@@ -18918,9 +18960,12 @@ html.IGv2 .section.search-results .tp_21 {
   right: 48px; }
 
 .contact.section #SearchSubmitButton, .contact.section #SearchCloseButton {
-  width: auto;
+  width: 280px;
   height: auto;
   border-radius: 5px; }
+  @media only screen and (max-width: 40em) {
+    .contact.section #SearchSubmitButton, .contact.section #SearchCloseButton {
+      width: 250px; } }
   .contact.section #SearchSubmitButton img, .contact.section #SearchCloseButton img {
     height: auto; }
   .contact.section #SearchSubmitButton:hover, .contact.section #SearchCloseButton:hover {
