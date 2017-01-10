@@ -18887,6 +18887,11 @@ html.IGv2 .section.search-results .tp_21 {
   @media only screen and (max-width: 40em) {
     .contact.section .collapse .search-ui-button .outline-btn {
       background-position: 55px 9px; } }
+  .contact.section .collapse .search-ui-button .outline-btn:hover {
+    background-image: url(../images/search-icon-in-search-box.png) !important;
+    background-position: 60px 9px !important;
+    background-repeat: no-repeat !important;
+    padding-left: 3rem !important; }
 
 .contact.section .tt-menu, .contact.section .typeahead {
   font-size: 1.6rem !important;

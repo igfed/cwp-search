@@ -6647,13 +6647,19 @@ html.IGv2 {
         background-repeat: no-repeat;
         padding-left: 3rem;
 
-
         @media #{$medium-only}{
            background-position: 70px 9px;
         }
 
         @media #{$small-only}{
           background-position: 55px 9px;
+        }
+
+        &:hover{
+          background-image: url(../images/search-icon-in-search-box.png)!important;
+          background-position: 60px 9px!important;
+          background-repeat: no-repeat!important;
+          padding-left: 3rem!important;
         }
       }
 
