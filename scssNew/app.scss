@@ -6100,20 +6100,15 @@ html.IGv2 {
         }
 
         .outline-btn{
-          // width: 15rem;
           width: auto;
         }
 
         .dropdown{
-          // width: 15rem!important;
           width: auto!important;
            margin-right: 1rem;
            margin-bottom: 1rem;
 
            .is-dropdown-submenu{
-              // min-width: 15rem;
-              // width: 15rem;
-              // width: auto;
               width: 100%;
               top: 4rem;
             }
@@ -6209,16 +6204,11 @@ html.IGv2 {
   .info-toggle-content{
     min-height: 130px;
     margin-bottom: 20px;
-    // transform: translate3d(-100%,0,0);
 
     transition: transform .5s ease 500ms;
 
 
     .map-column{
-
-      // @media #{$medium-up}{
-      //   width: 50%;
-      // }
 
       @media screen and (min-width:855px) and (max-width:1059px){
         width: 48%;
@@ -6226,7 +6216,6 @@ html.IGv2 {
 
         .maps{
 
-          // display: inline-block;
           float:left;
           margin-right: 3.6rem;
 
@@ -6315,7 +6304,6 @@ html.IGv2 {
   }
 
   .consultant-text{
-    // display: inline-block;
     width: 45%;
     float:left;
   }
@@ -6343,7 +6331,6 @@ html.IGv2 {
 
   .portrait-column{
     @media #{$medium-up}{
-      // width: auto;
       .consultant_name{
         display: inline-block;
       }
@@ -6423,7 +6410,6 @@ html.IGv2 {
       text-align: center;
 
       @media #{$medium-up}{
-        // width: 30%;
         width: auto;
         padding-bottom: 5rem;
 
@@ -6431,11 +6417,6 @@ html.IGv2 {
           margin-right: 0.5rem;
           margin-left: 0.5rem;
         }
-
-
-        // &:nth-child(n+4){
-        //   clear: both;
-        // }
       }
 
       @media #{$small-only}{
@@ -6458,7 +6439,6 @@ html.IGv2 {
     .dropdown{
 
       @media #{$medium-up}{
-        // width: 14rem;
         margin: 0 auto;
       }
 
@@ -6482,9 +6462,7 @@ html.IGv2 {
       .is-dropdown-submenu{
         width: 100%;
         @media #{$medium-up}{
-          // width: 14rem;
           margin: 0 auto;
-          // min-width: auto;
         }
 
         @media #{$small-only}{
@@ -6564,6 +6542,7 @@ html.IGv2 {
       display: inline-block;
       float: none;
       padding: 0!important;
+      height: auto;
 
       @media #{$small-only}{
         margin-top: 2rem;
@@ -6572,20 +6551,18 @@ html.IGv2 {
 
       @media #{$medium-only}{
         width: 260px;
-        height: 50px;
-      }
-
-      @media #{$medium-up}{
-        margin-right: 0.8rem;
       }
 
       @media #{$large-up}{
         width: 330px;
-        height: 50px;
       }
 
       p{
         padding-right: 2rem;
+
+        text-align: left;
+        margin-left: -1.5rem;
+
       }
 
       img{
@@ -6594,19 +6571,13 @@ html.IGv2 {
         margin-right: 2rem;
         top: 0rem!important;
         margin-bottom: 0;
-
-        @media #{$small-only}{
-          margin-left: -2rem;
-        }
+        margin-right: 2.5rem;
       }
 
       .search-ui-location, .search-ui-name{
         background-color: white;
         border-radius: 0.5rem;
-
-        // .typeahead{
-        //   color: #d8d8d8;
-        // }
+        height: 50px;
 
         label{
           font-family: "whitney_lightregular";
@@ -6618,34 +6589,76 @@ html.IGv2 {
         }
       }
 
-      .search-ui-location{
+    }
+
+    .search-ui-and-or{
+      display: inline-block;
+      float: none;
+      text-align: center;
+      width: auto;
+      padding-left: 10px!important;
+      padding-right: 10px!important;
+
+      @media #{$small-only}{
+        width: 100%;
+      }
+
+      @media #{$medium-up}{
+        vertical-align: middle;
+      }
+
+      p{
+        display: inline-block;
+        width: auto;
+      }
+
+      p.tp_25{
+        line-height: 12px;
+        margin-bottom: 0;
 
         @media #{$medium-up}{
-           margin-right: 0.8rem;
+
+          display: block;
         }
       }
 
-      .search-ui-name{
+      .search-ui-border-bottom, .search-ui-border-top{
+        @media #{$small-only}{
+          border-bottom: 0.1rem solid #549493;
+          width: 50px;
+          margin-bottom: 4px;
+        }
 
-         @media #{$medium-up}{
-           margin-left: 0.8rem;
-         }
+        @media #{$medium-up}{
+          border-left: 0.1rem solid #549493;
+          height: 20px;
+          position: absolute;
+        }
+
       }
 
+      .search-ui-border-top{
+        @media #{$medium-up}{
+          top: -26px;
+        }
+      }
+
+      .search-ui-border-bottom{
+        @media #{$medium-up}{
+          bottom: -4rem;
+        }
+      }
     }
 
     .search-ui-button{
+
+      margin-top: 4.5rem;
 
       @media #{$small-only}{
         text-align: center;
       }
 
       .outline-btn{
-        margin-top: 4.5rem!important;
-        background-image: url(../images/search-icon-in-search-box-white.png);
-        background-position: 60px 9px;
-        background-repeat: no-repeat;
-        padding-left: 3rem;
 
         @media #{$medium-only}{
            background-position: 70px 9px;
@@ -6653,13 +6666,6 @@ html.IGv2 {
 
         @media #{$small-only}{
           background-position: 55px 9px;
-        }
-
-        &:hover{
-          background-image: url(../images/search-icon-in-search-box.png)!important;
-          background-position: 60px 9px!important;
-          background-repeat: no-repeat!important;
-          padding-left: 3rem!important;
         }
       }
 
@@ -6703,7 +6709,6 @@ html.IGv2 {
     border-bottom-right-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
     top: 4rem!important;
-        // display: block!important;
     box-shadow: 0 4px 10px rgba(1, 0, 0, 0.3);
     border-top: 1px solid #a9a9a9;
     padding-top:4rem;
@@ -6751,14 +6756,8 @@ html.IGv2 {
 
   #SearchSubmitButton, #SearchCloseButton{
 
-    width: 280px;
     height: auto;
     border-radius: 5px;
-
-    @media #{$small-only}{
-      // width: 100%;
-      width: 250px;
-    }
 
     img{
       height: auto;
@@ -6771,13 +6770,31 @@ html.IGv2 {
 
   .typeahead{
     border-color: transparent;
-    box-shadow: none;;
+    box-shadow: none;
+    height: 30px;
   }
 
   .tt-suggestion{
       border-bottom: 1px solid #eff1f2;
       padding-bottom: 0.5rem;
       padding-top: 0.5rem;
+
+      &:hover{
+
+        @media #{$medium-up}{
+          background-color: #eff1f2;
+          margin-left: -3rem;
+          padding-left: 3rem;
+        }
+
+        @media #{$medium-only}{
+          width: 130%;
+        }
+
+        @media #{$large-only}{
+          width: 122%;
+        }
+      }
   }
 }
 

@@ -176,28 +176,35 @@
                                 <div class="small-10 medium-8 large-7 columns small-centered">
                                     <img src="images/find-an-advisor-icon.png" class="img__icon">
                                     <h1 class="text-center tp_03">Find an Advisor</h1>
-                                    <p class="text-center tp_09">Our consultants can help no matter what financial situation you’re in. Use&nbsp;&nbsp;these tools to set up your meeting&nbsp;&nbsp;today.</p>
                                 </div>
                             </div>
                             <div class="row collapse">
-                                <div class="medium-6 columns search-ui">
-                                     <p class="tp_25"><img src="images/map-marker-blue.png"> By: location or postal code</p>
+                                <div class="medium-5 columns search-ui">
+                                     <p class="tp_25"><img src="images/map-marker-blue.png"> By Location</p>
                                     <div class="search-ui-location" data-searchtype="location">
-                                        <label class="show-for-sr hide" for="FindAnAdvisor">By: location or postal code</label>
+                                        <label class="show-for-sr hide" for="FindAnAdvisor">By Location</label>
                                         <input class="typeahead itf_location" type="search" placeholder="Example: R3B 3H5" name="Search" autocomplete="off" spellcheck="false" id="FindAnAdvisor_location">
                                     </div>
                                 </div>
 
-                                <div class="medium-6 columns search-ui">
-                                    <p class="tp_25"><img src="images/find-an-advisor-advisor-icon.png"> By: Advisor's name</p>
+                                <div class="small-12 medium-1 columns search-ui-and-or">
+                                    <p class="search-ui-border-left search-ui-border-top"></p>
+                                    <p class="tp_25">and</p>
+                                    <p class="tp_25 show-for-small-only">|</p>
+                                    <p class="tp_25">or</p>
+                                    <p class="search-ui-border-right search-ui-border-bottom"></p>
+                                </div>
+
+                                <div class="medium-5 columns search-ui">
+                                    <p class="tp_25"><img src="images/find-an-advisor-advisor-icon.png">By Name</p>
                                     <div class="search-ui-name" data-searchtype="location">
-                                        <label class="show-for-sr hide" for="FindAnAdvisor">By: Advisor's name</label>
+                                        <label class="show-for-sr hide" for="FindAnAdvisor">By Name</label>
                                         <input class="typeahead itf_name" type="search" placeholder="Example: First &amp; Last Name" name="Search" autocomplete="off" spellcheck="false" id="FindAnAdvisor_name">
                                     </div>
                                   </div>
 
-                                  <div class="medium-6 medium-centered search-ui-button">
-                                     <input type="submit" class="outline-btn primary" id="SearchSubmitButton" value="find an advisor">
+                                  <div class="medium-3 medium-centered search-ui-button">
+                                     <input type="submit" class="outline-btn primary" id="SearchSubmitButton" value="find">
                                   </div>
                             </div>
                         </div>
@@ -286,7 +293,8 @@
             <!--Search Results-->
             <script id="result-amount-template" type="x-tmpl-mustache">
               <div class="row">
-                  <div class="medium-4 columns">
+                  <div class="medium-12 columns">
+                  <p class="text-center tp_09">Our consultants can help no matter what financial situation you’re in</p>
                     <p class="tp_08">{{length}} results</p>
                   </div>
               </div>
