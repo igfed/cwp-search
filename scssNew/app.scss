@@ -6191,8 +6191,6 @@ html.IGv2 {
 
 /*Office Search*/
 
-
-
 .office-search{
   #info-toggle-wrapper {
     display: none;
@@ -6294,6 +6292,20 @@ html.IGv2 {
 /*Counsultant Results*/
 
 .section.search-results{
+
+  &#results-placeholder{
+    .row{
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &#results-container{
+    >.row{
+       margin-top: 4rem;
+      margin-bottom: 4rem;
+    }
+  }
 
   .portrait{
     padding-right: 4rem;
@@ -6491,6 +6503,15 @@ html.IGv2 {
 
 .contact.section{
 
+  @media #{$small-only}{
+    padding-bottom: 0!important;
+  }
+
+  @media #{$medium-up}{
+    padding-bottom: 3rem!important;
+    padding-top: 5rem!important;
+  }
+
   .row{
     &:first-child{
       img{
@@ -6498,15 +6519,22 @@ html.IGv2 {
         top: 0!important;
         width: 140px!important;
         left: 0!important;
+        padding-top: 0;
 
         @media #{$small-only}{
           width: 14rem!important;
+          padding-bottom: 1rem!important;
+          width: 125px!important;
         }
       }
 
        h1{
           @media #{$large-only}{
             font-size: 5.2rem;
+          }
+
+          @media #{$small-only}{
+            margin-bottom: 0!important;
           }
         }
 
@@ -6536,6 +6564,12 @@ html.IGv2 {
 
     .columns{
       margin-bottom: 0!important;
+    }
+
+    >.search-ui:first-child{
+      @media #{$small-only}{
+        margin-top: 0;
+      }
     }
 
     .search-ui{
@@ -6652,10 +6686,13 @@ html.IGv2 {
 
     .search-ui-button{
 
-      margin-top: 4.5rem;
-
       @media #{$small-only}{
         text-align: center;
+        margin-top: 2rem;
+      }
+
+      @media #{$medium-up}{
+        margin-top: 4.5rem;
       }
 
       .outline-btn{

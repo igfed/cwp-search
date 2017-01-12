@@ -18669,6 +18669,14 @@ html.IGv2 .section.search-results .tp_21 {
       width: 48.2%; } }
 
 /*Counsultant Results*/
+.section.search-results#results-placeholder .row {
+  margin-top: 4rem;
+  margin-bottom: 4rem; }
+
+.section.search-results#results-container > .row {
+  margin-top: 4rem;
+  margin-bottom: 4rem; }
+
 .section.search-results .portrait {
   padding-right: 4rem; }
   @media only screen and (max-width: 40em) {
@@ -18794,18 +18802,34 @@ html.IGv2 .section.search-results .tp_21 {
     margin-top: 1rem; } }
 
 /*Search Box*/
+@media only screen and (max-width: 40em) {
+  .contact.section {
+    padding-bottom: 0 !important; } }
+
+@media only screen and (min-width: 40.063em) {
+  .contact.section {
+    padding-bottom: 3rem !important;
+    padding-top: 5rem !important; } }
+
 .contact.section .row:first-child img {
   position: relative !important;
   top: 0 !important;
   width: 140px !important;
-  left: 0 !important; }
+  left: 0 !important;
+  padding-top: 0; }
   @media only screen and (max-width: 40em) {
     .contact.section .row:first-child img {
-      width: 14rem !important; } }
+      width: 14rem !important;
+      padding-bottom: 1rem !important;
+      width: 125px !important; } }
 
 @media only screen and (min-width: 64.063em) and (max-width: 90em) {
   .contact.section .row:first-child h1 {
     font-size: 5.2rem; } }
+
+@media only screen and (max-width: 40em) {
+  .contact.section .row:first-child h1 {
+    margin-bottom: 0 !important; } }
 
 .contact.section .row:first-child p {
   color: #0d263c;
@@ -18826,6 +18850,10 @@ html.IGv2 .section.search-results .tp_21 {
 
 .contact.section .collapse .columns {
   margin-bottom: 0 !important; }
+
+@media only screen and (max-width: 40em) {
+  .contact.section .collapse > .search-ui:first-child {
+    margin-top: 0; } }
 
 .contact.section .collapse .search-ui {
   display: inline-block;
@@ -18901,17 +18929,22 @@ html.IGv2 .section.search-results .tp_21 {
     .contact.section .collapse .search-ui-and-or .search-ui-border-bottom {
       bottom: -4rem; } }
 
-.contact.section .collapse .search-ui-button {
-  margin-top: 4.5rem; }
-  @media only screen and (max-width: 40em) {
-    .contact.section .collapse .search-ui-button {
-      text-align: center; } }
-  @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-    .contact.section .collapse .search-ui-button .outline-btn {
-      background-position: 70px 9px; } }
-  @media only screen and (max-width: 40em) {
-    .contact.section .collapse .search-ui-button .outline-btn {
-      background-position: 55px 9px; } }
+@media only screen and (max-width: 40em) {
+  .contact.section .collapse .search-ui-button {
+    text-align: center;
+    margin-top: 2rem; } }
+
+@media only screen and (min-width: 40.063em) {
+  .contact.section .collapse .search-ui-button {
+    margin-top: 4.5rem; } }
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  .contact.section .collapse .search-ui-button .outline-btn {
+    background-position: 70px 9px; } }
+
+@media only screen and (max-width: 40em) {
+  .contact.section .collapse .search-ui-button .outline-btn {
+    background-position: 55px 9px; } }
 
 .contact.section .tt-menu, .contact.section .typeahead {
   font-size: 1.6rem !important;
