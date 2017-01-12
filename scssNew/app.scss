@@ -6779,7 +6779,7 @@ html.IGv2 {
       padding-bottom: 0.5rem;
       padding-top: 0.5rem;
 
-      &:hover{
+      &:hover, &.tt-cursor{
 
         @media #{$medium-up}{
           background-color: #eff1f2;

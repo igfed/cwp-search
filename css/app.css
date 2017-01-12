@@ -19002,15 +19002,15 @@ html.IGv2 .section.search-results .tp_21 {
   padding-bottom: 0.5rem;
   padding-top: 0.5rem; }
   @media only screen and (min-width: 40.063em) {
-    .contact.section .tt-suggestion:hover {
+    .contact.section .tt-suggestion:hover, .contact.section .tt-suggestion.tt-cursor {
       background-color: #eff1f2;
       margin-left: -3rem;
       padding-left: 3rem; } }
   @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-    .contact.section .tt-suggestion:hover {
+    .contact.section .tt-suggestion:hover, .contact.section .tt-suggestion.tt-cursor {
       width: 130%; } }
   @media only screen and (min-width: 64.063em) and (max-width: 90em) {
-    .contact.section .tt-suggestion:hover {
+    .contact.section .tt-suggestion:hover, .contact.section .tt-suggestion.tt-cursor {
       width: 122%; } }
 
 #SearchSubmitButton img {

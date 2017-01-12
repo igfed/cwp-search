@@ -60,7 +60,6 @@ function getSearchResults(params) {
 	})
 	.fail(function( result ) {
 		console.log('Data could not be retrieved, please try again', result.status + ' ' + result.statusText);
-		$( "#search-result-text" ).text("This is a test.");
 	});
 
 	if (params.city || params.Pcode || params.geo) {
@@ -76,7 +75,6 @@ function getSearchResults(params) {
 			}
 		})
 		.fail(function( result ) {
-			$( "#search-result-text" ).text("This is a test.");
 			console.log('Data could not be retrieved, please try again', result.status + ' ' + result.statusText);
 		});
 	}
@@ -126,14 +124,14 @@ function parseSearchString() {
 	// We only search consultants from this method
 	result.searchtype = 'con';
 	// Check if there is a postal code
-	// if (postalCodeFormat.test(search)) {
-	// 	var postalCode = search.match(postalCodeFormat)[0];
-	// 	if (postalCode.indexOf(' ') === -1) {
-	// 		postalCode = postalCode.match(/.{1,3}/g).join().replace(',', ' ');
-	// 	}
-	// 	result.Pcode = postalCode;
-	// 	search = search.replace(postalCodeFormat, ' ');
-	// }
+	if (postalCodeFormat.test(search_location)) {
+		var postalCode = search_location.match(postalCodeFormat)[0];
+		if (postalCode.indexOf(' ') === -1) {
+			postalCode = postalCode.match(/.{1,3}/g).join().replace(',', ' ');
+		}
+		result.Pcode = postalCode;
+		search_location = search_location.replace(postalCodeFormat, ' ');
+	}
 
 	// Check the search string for a previously defined location
 	// var words = search.split(' ');
@@ -145,11 +143,6 @@ function parseSearchString() {
 	// 		result.city = city[0];
 	// 		words.splice(i, 1);
 	// 	}
-	// }
-
-	// All remaining words should be a name
-	// if  (words.length > 0) {
-	// 	result.name = words.join(' ');
 	// }
 
 	result.name = search_name;
@@ -166,6 +159,7 @@ function displaySearchResults( templateID, json, destination ) {
 	var rendered = Mustache.render(template, json);
 	$('#'+destination).removeClass('hide').append(rendered);
 	attachComponents();
+	$('#results-placeholder').addClass('hide');
 }
 
 function attachComponents(){
@@ -210,6 +204,7 @@ $(function() {
 	$('#find-an-advisor-search').submit(function(e){
 		e.preventDefault();
 		$('#SearchSubmitButton').attr('disabled','disabled');
+		$('#results-placeholder').removeClass('hide');
 		var params = parseSearchString();
 		getSearchResults(params);
 		//ga('send','event','Convert','Search','ConnectToAdvisor_Location?Toronto, ON', 0);

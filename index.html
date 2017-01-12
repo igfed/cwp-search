@@ -216,7 +216,7 @@
             <script id="office-template" type="x-tmpl-mustache">
               <div class="row info-toggle-trigger" data-toggler=".isActive" data-toggle="info-toggle-wrapper">
                 <div class="small-3 medium-2 columns">
-                  <img class="illustration" data-illustrationid="consultant-about" src="img/illustrations/office-building.svg" alt="icon book and glasses">
+                  <img class="illustration" data-illustrationid="consultant-about" src="img/illustrations/office-building.svg" alt="">
                 </div>
                 <div class="small-6 medium-3 columns">
                   <p class="tp_08">{{length}} Offices found</p>
@@ -294,8 +294,13 @@
             <script id="result-amount-template" type="x-tmpl-mustache">
               <div class="row">
                   <div class="medium-12 columns">
-                  <p class="text-center tp_09" id="search-result-text">Our consultants can help no matter what financial situation you’re in</p>
-                    <p class="tp_08">{{length}} results</p>
+                    {{#length}}
+                        <p class="tp_08">{{length}} results</p>
+                    {{/length}}
+                    {{^length}}
+                        <p class="tp_08">No results match your search</p>
+                        <p class="tp_08">Please try different spellings or more general terms</p>
+                    {{/length}}
                   </div>
               </div>
             </script>
@@ -462,7 +467,16 @@
                   </div>
               </div>
             </script>
-            <div class="section search-results hide" id="results-container"></div>
+            <div class="section search-results hide" id="results-container">
+                
+            </div>
+            <div class="section search-results" id="results-placeholder">
+                <div class="row">
+                    <div class="medium-12 columns">
+                        <p class="text-center tp_09" id="search-result-text">Our consultants can help no matter what financial situation you're in</p>
+                    </div>
+                </div>
+            </div>
 
             <!--18.Footer-->
             <!-- Footer navigation -->
