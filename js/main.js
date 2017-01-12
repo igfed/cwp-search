@@ -60,6 +60,7 @@ function getSearchResults(params) {
 	})
 	.fail(function( result ) {
 		console.log('Data could not be retrieved, please try again', result.status + ' ' + result.statusText);
+		$( "#search-result-text" ).text("This is a test.");
 	});
 
 	if (params.city || params.Pcode || params.geo) {
@@ -75,6 +76,7 @@ function getSearchResults(params) {
 			}
 		})
 		.fail(function( result ) {
+			$( "#search-result-text" ).text("This is a test.");
 			console.log('Data could not be retrieved, please try again', result.status + ' ' + result.statusText);
 		});
 	}
