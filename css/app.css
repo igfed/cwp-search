@@ -18868,9 +18868,9 @@ html.IGv2 .section.search-results .tp_21 {
     text-align: left; }
   .contact.section .collapse .search-ui img {
     width: 13px !important;
-    position: relative !important;
     margin-right: 2rem;
-    top: -2px !important;
+    position: absolute !important;
+    top: 10px !important;
     margin-bottom: 0;
     margin-right: 2rem; }
   .contact.section .collapse .search-ui .search-ui-location, .contact.section .collapse .search-ui .search-ui-name {
@@ -18879,16 +18879,19 @@ html.IGv2 .section.search-results .tp_21 {
     .contact.section .collapse .search-ui .search-ui-location label, .contact.section .collapse .search-ui .search-ui-name label {
       font-family: "whitney_lightregular"; }
     .contact.section .collapse .search-ui .search-ui-location input[type="search"], .contact.section .collapse .search-ui .search-ui-name input[type="search"] {
-      margin-bottom: 0; }
-  @media only screen and (max-width: 40em) {
-    .contact.section .collapse .search-ui .search-ui-location {
-      width: 100%; } }
-  @media only screen and (min-width: 40.063em) {
-    .contact.section .collapse .search-ui .search-ui-location {
-      width: 220px; } }
-  @media only screen and (min-width: 64.063em) {
-    .contact.section .collapse .search-ui .search-ui-location {
-      width: 400px; } }
+      margin-bottom: 0;
+      margin-left: 3rem; }
+  .contact.section .collapse .search-ui .search-ui-location {
+    position: relative; }
+    @media only screen and (max-width: 40em) {
+      .contact.section .collapse .search-ui .search-ui-location {
+        width: 100%; } }
+    @media only screen and (min-width: 40.063em) {
+      .contact.section .collapse .search-ui .search-ui-location {
+        width: 220px; } }
+    @media only screen and (min-width: 64.063em) {
+      .contact.section .collapse .search-ui .search-ui-location {
+        width: 400px; } }
 
 .contact.section .collapse .search-ui-and-or {
   display: inline-block;
@@ -18983,7 +18986,7 @@ html.IGv2 .section.search-results .tp_21 {
   margin-left: 0 !important;
   border-bottom-right-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
-  top: 4rem !important;
+  top: 3.7rem !important;
   box-shadow: 0 4px 10px rgba(1, 0, 0, 0.3);
   border-top: 1px solid #a9a9a9;
   padding-top: 4rem;

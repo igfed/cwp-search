@@ -6590,9 +6590,9 @@ html.IGv2 {
 
       img{
         width: 13px!important;
-        position: relative!important;
         margin-right: 2rem;
-        top: -2px!important;
+        position: absolute!important;
+        top: 10px!important;
         margin-bottom: 0;
         margin-right: 2rem;
       }
@@ -6608,10 +6608,12 @@ html.IGv2 {
         input[type="search"]{
 
           margin-bottom: 0;
+          margin-left: 3rem;
         }
       }
 
       .search-ui-location{
+        position: relative;
         
         @media #{$small-only}{
           width: 100%;
@@ -6748,7 +6750,7 @@ html.IGv2 {
     margin-left: 0!important;
     border-bottom-right-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
-    top: 4rem!important;
+    top: 3.7rem!important;
     box-shadow: 0 4px 10px rgba(1, 0, 0, 0.3);
     border-top: 1px solid #a9a9a9;
     padding-top:4rem;

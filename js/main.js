@@ -8,6 +8,29 @@ if(window.location.href.indexOf('-fr.') > -1) {
     lang = 'fr';
 }
 
+//Search dropdown
+
+$(function() {
+  $('.select-dropdown').change(function() { 
+    if( $('.select-dropdown').val() == 'Location') {
+      $('#FindAnAdvisor_name').attr('id', 'FindAnAdvisor_location');
+      $('.search-ui-location input').addClass('itf_location');
+      $('.search-ui-location input').removeClass('itf_name');
+      $('.itf_location').attr("placeholder", 'Enter a location');
+
+
+    }
+    else if( $('.select-dropdown').val() == 'Name') {
+      $('#FindAnAdvisor_location').attr('id', 'FindAnAdvisor_name');
+      $('.search-ui-location input').toggleClass('itf_name');
+      $('.search-ui-location input').removeClass('itf_location');
+      $('.itf_name').attr("placeholder", 'Enter a name');
+
+    }         
+  }).trigger('change');
+});
+
+
 // Process the local prefetched data
 var suggestions = {};
 	suggestions.locations = new Bloodhound({
@@ -182,7 +205,7 @@ function sendGoogleAnalytics(params) {
 
 //Init everything
 $(function() {
-	
+
 	// Try to predetermine what results should show
 	getCoordinates();
 
@@ -223,6 +246,5 @@ $(function() {
 // 	    $('.search-ui').addClass('capitalize');
 //     });
 // }());
-
 
 
