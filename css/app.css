@@ -18808,7 +18808,7 @@ html.IGv2 .section.search-results .tp_21 {
 
 @media only screen and (min-width: 40.063em) {
   .contact.section {
-    padding-bottom: 3rem !important;
+    padding-bottom: 15rem !important;
     padding-top: 5rem !important; } }
 
 .contact.section .row:first-child img {
@@ -18864,31 +18864,31 @@ html.IGv2 .section.search-results .tp_21 {
     .contact.section .collapse .search-ui {
       margin-top: 2rem;
       width: 100%; } }
-  @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-    .contact.section .collapse .search-ui {
-      width: 260px; } }
-  @media only screen and (min-width: 64.063em) {
-    .contact.section .collapse .search-ui {
-      width: 330px; } }
   .contact.section .collapse .search-ui p {
-    padding-right: 2rem;
-    text-align: left;
-    margin-left: -1.5rem; }
+    text-align: left; }
   .contact.section .collapse .search-ui img {
     width: 13px !important;
     position: relative !important;
     margin-right: 2rem;
-    top: 0rem !important;
+    top: -2px !important;
     margin-bottom: 0;
-    margin-right: 2.5rem; }
+    margin-right: 2rem; }
   .contact.section .collapse .search-ui .search-ui-location, .contact.section .collapse .search-ui .search-ui-name {
     background-color: white;
-    border-radius: 0.5rem;
-    height: 50px; }
+    border-radius: 0.5rem; }
     .contact.section .collapse .search-ui .search-ui-location label, .contact.section .collapse .search-ui .search-ui-name label {
       font-family: "whitney_lightregular"; }
     .contact.section .collapse .search-ui .search-ui-location input[type="search"], .contact.section .collapse .search-ui .search-ui-name input[type="search"] {
       margin-bottom: 0; }
+  @media only screen and (max-width: 40em) {
+    .contact.section .collapse .search-ui .search-ui-location {
+      width: 100%; } }
+  @media only screen and (min-width: 40.063em) {
+    .contact.section .collapse .search-ui .search-ui-location {
+      width: 220px; } }
+  @media only screen and (min-width: 64.063em) {
+    .contact.section .collapse .search-ui .search-ui-location {
+      width: 400px; } }
 
 .contact.section .collapse .search-ui-and-or {
   display: inline-block;
@@ -18932,11 +18932,11 @@ html.IGv2 .section.search-results .tp_21 {
 @media only screen and (max-width: 40em) {
   .contact.section .collapse .search-ui-button {
     text-align: center;
-    margin-top: 2rem; } }
+    margin-top: 3.5rem; } }
 
 @media only screen and (min-width: 40.063em) {
   .contact.section .collapse .search-ui-button {
-    margin-top: 4.5rem; } }
+    vertical-align: bottom; } }
 
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
   .contact.section .collapse .search-ui-button .outline-btn {
@@ -19001,13 +19001,16 @@ html.IGv2 .section.search-results .tp_21 {
   font-family: "whitney_bookregular";
   font-size: 1.6rem;
   color: #0d263c;
-  width: auto; }
+  width: auto;
+  vertical-align: top;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem; }
 
 .contact.section .twitter-typeahead {
   position: relative;
   width: 100%;
   display: inline-block;
-  padding: 1rem 3rem 1rem 0.5rem; }
+  padding: 0.5rem; }
   .contact.section .twitter-typeahead input:first-child {
     display: none; }
 
@@ -19046,10 +19049,6 @@ html.IGv2 .section.search-results .tp_21 {
     .contact.section .tt-suggestion:hover, .contact.section .tt-suggestion.tt-cursor {
       width: 122%; } }
 
-#SearchSubmitButton img {
-  width: 17px;
-  left: 80%; }
-
 #SearchSubmitButton {
   display: inline-block;
   right: 0; }
@@ -19068,3 +19067,17 @@ html.IGv2 .section.search-results .tp_21 {
 
 .capitalize {
   text-transform: capitalize; }
+
+/*Search Dropdrown*/
+.select-dropdown {
+  border-radius: 0.5rem;
+  width: 15rem;
+  background-position: right -1px center !important;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem; }
+  @media only screen and (max-width: 40em) {
+    .select-dropdown {
+      width: 100%; } }
+  @media only screen and (min-width: 40.063em) {
+    .select-dropdown {
+      width: 190px; } }

@@ -6508,7 +6508,7 @@ html.IGv2 {
   }
 
   @media #{$medium-up}{
-    padding-bottom: 3rem!important;
+    padding-bottom: 15rem!important;
     padding-top: 5rem!important;
   }
 
@@ -6583,35 +6583,23 @@ html.IGv2 {
         width: 100%;
       }
 
-      @media #{$medium-only}{
-        width: 260px;
-      }
-
-      @media #{$large-up}{
-        width: 330px;
-      }
 
       p{
-        padding-right: 2rem;
-
         text-align: left;
-        margin-left: -1.5rem;
-
       }
 
       img{
         width: 13px!important;
         position: relative!important;
         margin-right: 2rem;
-        top: 0rem!important;
+        top: -2px!important;
         margin-bottom: 0;
-        margin-right: 2.5rem;
+        margin-right: 2rem;
       }
 
       .search-ui-location, .search-ui-name{
         background-color: white;
         border-radius: 0.5rem;
-        height: 50px;
 
         label{
           font-family: "whitney_lightregular";
@@ -6620,6 +6608,21 @@ html.IGv2 {
         input[type="search"]{
 
           margin-bottom: 0;
+        }
+      }
+
+      .search-ui-location{
+        
+        @media #{$small-only}{
+          width: 100%;
+        }
+
+        @media #{$medium-up}{
+          width: 220px;
+        }
+
+        @media #{$large-up}{
+          width: 400px;
         }
       }
 
@@ -6688,11 +6691,11 @@ html.IGv2 {
 
       @media #{$small-only}{
         text-align: center;
-        margin-top: 2rem;
+        margin-top: 3.5rem;
       }
 
       @media #{$medium-up}{
-        margin-top: 4.5rem;
+        vertical-align: bottom;
       }
 
       .outline-btn{
@@ -6769,13 +6772,16 @@ html.IGv2 {
     font-size: 1.6rem;
     color: #0d263c;
     width: auto;
+    vertical-align: top;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
 
   .twitter-typeahead{
     position: relative;
     width: 100%;
     display: inline-block;
-    padding: 1rem 3rem 1rem 0.5rem;
+    padding: 0.5rem;
 
     input{
       &:first-child{
@@ -6836,13 +6842,6 @@ html.IGv2 {
 }
 
 #SearchSubmitButton{
-  img{
-    width: 17px;
-    left: 80%;
-  }
-}
-
-#SearchSubmitButton{
   display: inline-block;
   right: 0;
 
@@ -6864,4 +6863,23 @@ html.IGv2 {
 
 .capitalize{
   text-transform: capitalize;
+}
+
+
+/*Search Dropdrown*/
+
+.select-dropdown{
+  border-radius: 0.5rem;
+  width: 15rem;
+  background-position: right -1px center!important;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+  @media #{$small-only}{
+     width: 100%;
+  }
+
+  @media #{$medium-up}{
+    width: 190px;
+  }
 }
