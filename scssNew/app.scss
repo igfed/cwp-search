@@ -6601,6 +6601,7 @@ html.IGv2 {
         background-color: white;
         border-radius: 0.5rem;
         position: relative;
+        height: 40px;
 
         label{
           font-family: "whitney_lightregular";
@@ -6609,7 +6610,7 @@ html.IGv2 {
         input[type="search"]{
 
           margin-bottom: 0;
-          margin-left: 3rem;
+          padding-left: 4rem;
         }
 
         position: relative;
@@ -6875,6 +6876,7 @@ html.IGv2 {
   background-position: right -1px center!important;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIpJREFUeNrEkckNgDAMBBfRkEt0ObRBBdsGXUDgmQfK4XhH2m8czQAAy27R3tsw4Qfe2x8uOO6oYLb6GlOor3GF+swURAOmUJ+RwtEJs9WvTGEYxBXqI1MQAZhCfUQKRzDMVj+TwrAIV6jvSUEkYAr1LSkcyTBb/V+KYfX7xAeusq3sLDtGH3kEGACPWIflNZfhRQAAAABJRU5ErkJggg==")!important;
 
   @media #{$small-only}{
      width: 100%;

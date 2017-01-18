@@ -18876,12 +18876,13 @@ html.IGv2 .section.search-results .tp_21 {
     background-color: white;
     border-radius: 0.5rem;
     position: relative;
+    height: 40px;
     position: relative; }
     .contact.section .collapse .search-ui .search-ui-location-field label, .contact.section .collapse .search-ui .search-ui-name-field label {
       font-family: "whitney_lightregular"; }
     .contact.section .collapse .search-ui .search-ui-location-field input[type="search"], .contact.section .collapse .search-ui .search-ui-name-field input[type="search"] {
       margin-bottom: 0;
-      margin-left: 3rem; }
+      padding-left: 4rem; }
     @media only screen and (max-width: 40em) {
       .contact.section .collapse .search-ui .search-ui-location-field, .contact.section .collapse .search-ui .search-ui-name-field {
         width: 100%; } }
@@ -19076,7 +19077,8 @@ html.IGv2 .section.search-results .tp_21 {
   width: 15rem;
   background-position: right -1px center !important;
   padding-left: 1.5rem;
-  padding-right: 1.5rem; }
+  padding-right: 1.5rem;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIpJREFUeNrEkckNgDAMBBfRkEt0ObRBBdsGXUDgmQfK4XhH2m8czQAAy27R3tsw4Qfe2x8uOO6oYLb6GlOor3GF+swURAOmUJ+RwtEJs9WvTGEYxBXqI1MQAZhCfUQKRzDMVj+TwrAIV6jvSUEkYAr1LSkcyTBb/V+KYfX7xAeusq3sLDtGH3kEGACPWIflNZfhRQAAAABJRU5ErkJggg==") !important; }
   @media only screen and (max-width: 40em) {
     .select-dropdown {
       width: 100%; } }
