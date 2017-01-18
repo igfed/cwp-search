@@ -12,16 +12,18 @@ if(window.location.href.indexOf('-fr.') > -1) {
 //Search dropdown
 
 $(function() {
+
   $('.select-dropdown').change(function() { 
     if( $('.select-dropdown').val() == 'Location') {
       $('.search-ui-location').show();
+      $location_field.focus();
       $('.search-ui-name').hide();
       is_name_query = false;
 
     }
     else if( $('.select-dropdown').val() == 'Name') {
-      $('.search-ui p').text('By Name')
       $('.search-ui-name').show();
+       $name_field.focus();
       $('.search-ui-location').hide();
       is_name_query = true;
 
@@ -227,6 +229,8 @@ $(function() {
 			$('#SearchSubmitButton').removeAttr('disabled');
 		}, 1500);
 	});
+
+	$location_field.focus();
 });
 
 //Lowercase text

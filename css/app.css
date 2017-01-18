@@ -18808,8 +18808,8 @@ html.IGv2 .section.search-results .tp_21 {
 
 @media only screen and (min-width: 40.063em) {
   .contact.section {
-    padding-bottom: 15rem !important;
-    padding-top: 5rem !important; } }
+    padding-bottom: 10rem !important;
+    padding-top: 10rem !important; } }
 
 .contact.section .row:first-child img {
   position: relative !important;
@@ -18851,10 +18851,6 @@ html.IGv2 .section.search-results .tp_21 {
 .contact.section .collapse .columns {
   margin-bottom: 0 !important; }
 
-@media only screen and (max-width: 40em) {
-  .contact.section .collapse > .search-ui:first-child {
-    margin-top: 0; } }
-
 .contact.section .collapse .search-ui {
   display: inline-block;
   float: none;
@@ -18873,24 +18869,27 @@ html.IGv2 .section.search-results .tp_21 {
     top: 10px !important;
     margin-bottom: 0;
     margin-right: 2rem; }
-  .contact.section .collapse .search-ui .search-ui-location, .contact.section .collapse .search-ui .search-ui-name {
+  @media only screen and (max-width: 40em) {
+    .contact.section .collapse .search-ui .search-ui-location, .contact.section .collapse .search-ui .search-ui-name {
+      margin-top: 0; } }
+  .contact.section .collapse .search-ui .search-ui-location-field, .contact.section .collapse .search-ui .search-ui-name-field {
     background-color: white;
     border-radius: 0.5rem;
     position: relative;
     position: relative; }
-    .contact.section .collapse .search-ui .search-ui-location label, .contact.section .collapse .search-ui .search-ui-name label {
+    .contact.section .collapse .search-ui .search-ui-location-field label, .contact.section .collapse .search-ui .search-ui-name-field label {
       font-family: "whitney_lightregular"; }
-    .contact.section .collapse .search-ui .search-ui-location input[type="search"], .contact.section .collapse .search-ui .search-ui-name input[type="search"] {
+    .contact.section .collapse .search-ui .search-ui-location-field input[type="search"], .contact.section .collapse .search-ui .search-ui-name-field input[type="search"] {
       margin-bottom: 0;
       margin-left: 3rem; }
     @media only screen and (max-width: 40em) {
-      .contact.section .collapse .search-ui .search-ui-location, .contact.section .collapse .search-ui .search-ui-name {
+      .contact.section .collapse .search-ui .search-ui-location-field, .contact.section .collapse .search-ui .search-ui-name-field {
         width: 100%; } }
     @media only screen and (min-width: 40.063em) {
-      .contact.section .collapse .search-ui .search-ui-location, .contact.section .collapse .search-ui .search-ui-name {
+      .contact.section .collapse .search-ui .search-ui-location-field, .contact.section .collapse .search-ui .search-ui-name-field {
         width: 220px; } }
     @media only screen and (min-width: 64.063em) {
-      .contact.section .collapse .search-ui .search-ui-location, .contact.section .collapse .search-ui .search-ui-name {
+      .contact.section .collapse .search-ui .search-ui-location-field, .contact.section .collapse .search-ui .search-ui-name-field {
         width: 400px; } }
 
 .contact.section .collapse .search-ui-and-or {

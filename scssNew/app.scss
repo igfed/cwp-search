@@ -6508,8 +6508,8 @@ html.IGv2 {
   }
 
   @media #{$medium-up}{
-    padding-bottom: 15rem!important;
-    padding-top: 5rem!important;
+    padding-bottom: 10rem!important;
+    padding-top: 10rem!important;
   }
 
   .row{
@@ -6566,12 +6566,6 @@ html.IGv2 {
       margin-bottom: 0!important;
     }
 
-    >.search-ui:first-child{
-      @media #{$small-only}{
-        margin-top: 0;
-      }
-    }
-
     .search-ui{
       display: inline-block;
       float: none;
@@ -6598,6 +6592,12 @@ html.IGv2 {
       }
 
       .search-ui-location, .search-ui-name{
+         @media #{$small-only}{
+           margin-top: 0;
+         }
+      }
+
+      .search-ui-location-field, .search-ui-name-field{
         background-color: white;
         border-radius: 0.5rem;
         position: relative;
