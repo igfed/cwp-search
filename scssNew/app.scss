@@ -6600,6 +6600,7 @@ html.IGv2 {
       .search-ui-location, .search-ui-name{
         background-color: white;
         border-radius: 0.5rem;
+        position: relative;
 
         label{
           font-family: "whitney_lightregular";
@@ -6610,9 +6611,7 @@ html.IGv2 {
           margin-bottom: 0;
           margin-left: 3rem;
         }
-      }
 
-      .search-ui-location{
         position: relative;
         
         @media #{$small-only}{
@@ -6833,11 +6832,11 @@ html.IGv2 {
         }
 
         @media #{$medium-only}{
-          width: 130%;
+          width: 137.5%;
         }
 
         @media #{$large-only}{
-          width: 122%;
+          width: 117.5%;
         }
       }
   }

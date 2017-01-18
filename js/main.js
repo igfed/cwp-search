@@ -4,6 +4,7 @@ var $location_field = $('#FindAnAdvisor_location');
 var $name_field = $('#FindAnAdvisor_name');
 var allConsultants = {};
 var lang = 'en';
+var is_name_query = false;
 if(window.location.href.indexOf('-fr.') > -1) {
     lang = 'fr';
 }
@@ -13,18 +14,16 @@ if(window.location.href.indexOf('-fr.') > -1) {
 $(function() {
   $('.select-dropdown').change(function() { 
     if( $('.select-dropdown').val() == 'Location') {
-      $('#FindAnAdvisor_name').attr('id', 'FindAnAdvisor_location');
-      $('.search-ui-location input').addClass('itf_location');
-      $('.search-ui-location input').removeClass('itf_name');
-      $('.itf_location').attr("placeholder", 'Enter a location');
-
+      $('.search-ui-location').show();
+      $('.search-ui-name').hide();
+      is_name_query = false;
 
     }
     else if( $('.select-dropdown').val() == 'Name') {
-      $('#FindAnAdvisor_location').attr('id', 'FindAnAdvisor_name');
-      $('.search-ui-location input').toggleClass('itf_name');
-      $('.search-ui-location input').removeClass('itf_location');
-      $('.itf_name').attr("placeholder", 'Enter a name');
+      $('.search-ui p').text('By Name')
+      $('.search-ui-name').show();
+      $('.search-ui-location').hide();
+      is_name_query = true;
 
     }         
   }).trigger('change');
@@ -156,21 +155,12 @@ function parseSearchString() {
 		search_location = search_location.replace(postalCodeFormat, ' ');
 	}
 
-	// Check the search string for a previously defined location
-	// var words = search.split(' ');
-	// for (i = 0; i < words.length; i++) {
-		// Check each word for a city from the predefined list
-	// 	var normalizedTerm = words[i].toLowerCase();
-	// 	var city = suggestions.locations.get(normalizedTerm);
-	// 	if (city.length > 0) {
-	// 		result.city = city[0];
-	// 		words.splice(i, 1);
-	// 	}
-	// }
-
-	result.name = search_name;
-	// result.location = search_location;
-	result.city = search_location;
+	if(is_name_query){
+		result.name = search_name;
+	}
+	else{
+		result.city = search_location;
+	}
 
 
 	return result;

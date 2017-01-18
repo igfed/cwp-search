@@ -18875,22 +18875,22 @@ html.IGv2 .section.search-results .tp_21 {
     margin-right: 2rem; }
   .contact.section .collapse .search-ui .search-ui-location, .contact.section .collapse .search-ui .search-ui-name {
     background-color: white;
-    border-radius: 0.5rem; }
+    border-radius: 0.5rem;
+    position: relative;
+    position: relative; }
     .contact.section .collapse .search-ui .search-ui-location label, .contact.section .collapse .search-ui .search-ui-name label {
       font-family: "whitney_lightregular"; }
     .contact.section .collapse .search-ui .search-ui-location input[type="search"], .contact.section .collapse .search-ui .search-ui-name input[type="search"] {
       margin-bottom: 0;
       margin-left: 3rem; }
-  .contact.section .collapse .search-ui .search-ui-location {
-    position: relative; }
     @media only screen and (max-width: 40em) {
-      .contact.section .collapse .search-ui .search-ui-location {
+      .contact.section .collapse .search-ui .search-ui-location, .contact.section .collapse .search-ui .search-ui-name {
         width: 100%; } }
     @media only screen and (min-width: 40.063em) {
-      .contact.section .collapse .search-ui .search-ui-location {
+      .contact.section .collapse .search-ui .search-ui-location, .contact.section .collapse .search-ui .search-ui-name {
         width: 220px; } }
     @media only screen and (min-width: 64.063em) {
-      .contact.section .collapse .search-ui .search-ui-location {
+      .contact.section .collapse .search-ui .search-ui-location, .contact.section .collapse .search-ui .search-ui-name {
         width: 400px; } }
 
 .contact.section .collapse .search-ui-and-or {
@@ -19047,10 +19047,10 @@ html.IGv2 .section.search-results .tp_21 {
       padding-left: 3rem; } }
   @media only screen and (min-width: 40.063em) and (max-width: 64em) {
     .contact.section .tt-suggestion:hover, .contact.section .tt-suggestion.tt-cursor {
-      width: 130%; } }
+      width: 137.5%; } }
   @media only screen and (min-width: 64.063em) and (max-width: 90em) {
     .contact.section .tt-suggestion:hover, .contact.section .tt-suggestion.tt-cursor {
-      width: 122%; } }
+      width: 117.5%; } }
 
 #SearchSubmitButton {
   display: inline-block;
