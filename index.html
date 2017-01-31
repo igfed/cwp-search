@@ -178,17 +178,24 @@
                                     <h1 class="text-center tp_03">Find an Advisor</h1>
                                 </div>
                             </div>
-                            <div class="row collapse">
+                            <div class="row collapse search-wrapper">
+                                <div class="medium-5 columns search-ui">
+                                     <p class="tp_25">Search By</p>
+                                      <select class="select-dropdown">
+                                        <option value="Location">Location</option>
+                                        <option value="Name">Name</option>
+                                    </select>
+                                </div>
                                 <div class="medium-5 columns search-ui search-ui-location">
-                                     <p class="tp_25">By Location</p>
+                                     
                                     <div class="search-ui-location-field" data-searchtype="location">
                                         <img src="images/map-marker-blue.png">
                                         <label class="show-for-sr hide" for="FindAnAdvisor">By Location</label>
-                                        <input class="typeahead itf_location" type="search" placeholder="Enter a location" name="Search" autocomplete="off" spellcheck="false" id="FindAnAdvisor_location">
+                                        <input class="typeahead itf_location" type="search" placeholder="Enter a city" name="Search" autocomplete="off" spellcheck="false" id="FindAnAdvisor_location">
                                     </div>
                                 </div>
                                 <div class="medium-5 columns search-ui search-ui-name" style="display:none;">
-                                     <p class="tp_25">By Name</p>
+
                                     <div class="search-ui-name-field" data-searchtype="name">
                                         <img src="images/find-an-advisor-advisor-icon.png">
                                         <label class="show-for-sr hide" for="FindAnAdvisor">By Name</label>
@@ -196,17 +203,15 @@
                                     </div>
                                 </div>
 
-                                  <div class="medium-5 columns search-ui">
-                                     <p class="tp_25">Search</p>
-                                      <select class="select-dropdown">
-                                        <option value="Location">Location</option>
-                                        <option value="Name">Name</option>
-                                    </select>
-                                </div>
-
                                   <div class="medium-3 large-2 columns search-ui search-ui-button">
                                      <input type="submit" class="outline-btn primary" id="SearchSubmitButton" value="Go">
                                   </div>
+                            </div>
+
+                            <div class="row search-headline">
+                                <div class="small-12 columns">
+                                     <p class="text-center tp_07">Our consultants can help no matter what financial situation you're in.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -470,13 +475,6 @@
             </script>
             <div class="section search-results hide" id="results-container">
                 
-            </div>
-            <div class="section search-results" id="results-placeholder">
-                <div class="row">
-                    <div class="medium-12 columns">
-                        <p class="text-center tp_09" id="search-result-text">Our consultants can help no matter what financial situation you're in</p>
-                    </div>
-                </div>
             </div>
 
             <!--18.Footer-->

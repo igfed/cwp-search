@@ -6599,9 +6599,12 @@ html.IGv2 {
 
       .search-ui-location-field, .search-ui-name-field{
         background-color: white;
-        border-radius: 0.5rem;
         position: relative;
         height: 40px;
+
+        @media #{$small-only}{
+          border-radius: 0.5rem;
+        }
 
         label{
           font-family: "whitney_lightregular";
@@ -6620,7 +6623,7 @@ html.IGv2 {
         }
 
         @media #{$medium-up}{
-          width: 220px;
+          width: 320px;
         }
 
         @media #{$large-up}{
@@ -6766,6 +6769,14 @@ html.IGv2 {
     padding-right: 2.5rem;
   }
 
+  .search-wrapper{
+    @media #{$medium-up}{
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+  }
+
   .search-ui{
     padding-left: 0!important;
     padding-right: 0;
@@ -6775,8 +6786,33 @@ html.IGv2 {
     color: #0d263c;
     width: auto;
     vertical-align: top;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    margin: 0;
+  }
+
+  .search-headline{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    @media #{$small-only}{
+      .tp_07{
+        font-size: 22px!important;
+        line-height: 3rem;
+      }
+    }
+
+    @media #{$medium-only}{
+      .tp_07{
+        font-size: 22px!important;
+        line-height: 3rem;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+      }
+    }
+
+    @media #{$large-up}{
+      margin-top: 8rem;
+      margin-bottom: 8rem;
+    }
   }
 
   .twitter-typeahead{
@@ -6802,7 +6838,11 @@ html.IGv2 {
   #SearchSubmitButton, #SearchCloseButton{
 
     height: auto;
-    border-radius: 5px;
+    border-radius: 0.5rem;
+
+    @media #{$medium-up}{
+      border-radius: 0 0.5rem 0.5rem 0;
+    }
 
     img{
       height: auto;
@@ -6871,18 +6911,20 @@ html.IGv2 {
 /*Search Dropdrown*/
 
 .select-dropdown{
-  border-radius: 0.5rem;
   width: 15rem;
   background-position: right -1px center!important;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  background-color: #e5e8e8;
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIpJREFUeNrEkckNgDAMBBfRkEt0ObRBBdsGXUDgmQfK4XhH2m8czQAAy27R3tsw4Qfe2x8uOO6oYLb6GlOor3GF+swURAOmUJ+RwtEJs9WvTGEYxBXqI1MQAZhCfUQKRzDMVj+TwrAIV6jvSUEkYAr1LSkcyTBb/V+KYfX7xAeusq3sLDtGH3kEGACPWIflNZfhRQAAAABJRU5ErkJggg==")!important;
 
   @media #{$small-only}{
      width: 100%;
+     border-radius: 0.5rem;
   }
 
   @media #{$medium-up}{
-    width: 190px;
+    width: 140px;
+    border-radius: 0.5rem 0 0 0.5rem;
   }
 }

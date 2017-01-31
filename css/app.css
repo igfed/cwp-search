@@ -18874,10 +18874,12 @@ html.IGv2 .section.search-results .tp_21 {
       margin-top: 0; } }
   .contact.section .collapse .search-ui .search-ui-location-field, .contact.section .collapse .search-ui .search-ui-name-field {
     background-color: white;
-    border-radius: 0.5rem;
     position: relative;
     height: 40px;
     position: relative; }
+    @media only screen and (max-width: 40em) {
+      .contact.section .collapse .search-ui .search-ui-location-field, .contact.section .collapse .search-ui .search-ui-name-field {
+        border-radius: 0.5rem; } }
     .contact.section .collapse .search-ui .search-ui-location-field label, .contact.section .collapse .search-ui .search-ui-name-field label {
       font-family: "whitney_lightregular"; }
     .contact.section .collapse .search-ui .search-ui-location-field input[type="search"], .contact.section .collapse .search-ui .search-ui-name-field input[type="search"] {
@@ -18888,7 +18890,7 @@ html.IGv2 .section.search-results .tp_21 {
         width: 100%; } }
     @media only screen and (min-width: 40.063em) {
       .contact.section .collapse .search-ui .search-ui-location-field, .contact.section .collapse .search-ui .search-ui-name-field {
-        width: 220px; } }
+        width: 320px; } }
     @media only screen and (min-width: 64.063em) {
       .contact.section .collapse .search-ui .search-ui-location-field, .contact.section .collapse .search-ui .search-ui-name-field {
         width: 400px; } }
@@ -18997,6 +18999,12 @@ html.IGv2 .section.search-results .tp_21 {
 .contact.section .adv-search-right {
   padding-right: 2.5rem; }
 
+@media only screen and (min-width: 40.063em) {
+  .contact.section .search-wrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center; } }
+
 .contact.section .search-ui {
   padding-left: 0 !important;
   padding-right: 0;
@@ -19006,8 +19014,25 @@ html.IGv2 .section.search-results .tp_21 {
   color: #0d263c;
   width: auto;
   vertical-align: top;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem; }
+  margin: 0; }
+
+.contact.section .search-headline {
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
+  @media only screen and (max-width: 40em) {
+    .contact.section .search-headline .tp_07 {
+      font-size: 22px !important;
+      line-height: 3rem; } }
+  @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    .contact.section .search-headline .tp_07 {
+      font-size: 22px !important;
+      line-height: 3rem;
+      margin-top: 4rem;
+      margin-bottom: 4rem; } }
+  @media only screen and (min-width: 64.063em) {
+    .contact.section .search-headline {
+      margin-top: 8rem;
+      margin-bottom: 8rem; } }
 
 .contact.section .twitter-typeahead {
   position: relative;
@@ -19025,7 +19050,10 @@ html.IGv2 .section.search-results .tp_21 {
 
 .contact.section #SearchSubmitButton, .contact.section #SearchCloseButton {
   height: auto;
-  border-radius: 5px; }
+  border-radius: 0.5rem; }
+  @media only screen and (min-width: 40.063em) {
+    .contact.section #SearchSubmitButton, .contact.section #SearchCloseButton {
+      border-radius: 0 0.5rem 0.5rem 0; } }
   .contact.section #SearchSubmitButton img, .contact.section #SearchCloseButton img {
     height: auto; }
   .contact.section #SearchSubmitButton:hover, .contact.section #SearchCloseButton:hover {
@@ -19073,15 +19101,17 @@ html.IGv2 .section.search-results .tp_21 {
 
 /*Search Dropdrown*/
 .select-dropdown {
-  border-radius: 0.5rem;
   width: 15rem;
   background-position: right -1px center !important;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  background-color: #e5e8e8;
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIpJREFUeNrEkckNgDAMBBfRkEt0ObRBBdsGXUDgmQfK4XhH2m8czQAAy27R3tsw4Qfe2x8uOO6oYLb6GlOor3GF+swURAOmUJ+RwtEJs9WvTGEYxBXqI1MQAZhCfUQKRzDMVj+TwrAIV6jvSUEkYAr1LSkcyTBb/V+KYfX7xAeusq3sLDtGH3kEGACPWIflNZfhRQAAAABJRU5ErkJggg==") !important; }
   @media only screen and (max-width: 40em) {
     .select-dropdown {
-      width: 100%; } }
+      width: 100%;
+      border-radius: 0.5rem; } }
   @media only screen and (min-width: 40.063em) {
     .select-dropdown {
-      width: 190px; } }
+      width: 140px;
+      border-radius: 0.5rem 0 0 0.5rem; } }

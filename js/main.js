@@ -218,7 +218,8 @@ $(function() {
 	// Setup the form submission
 	$('#find-an-advisor-search').submit(function(e){
 		e.preventDefault();
-		$('#SearchSubmitButton').attr('disabled','disabled');
+		$('#SearchSubmitButton').attr('disabled','disabled')
+		// $('.section.search-results').show();
 		$('#results-placeholder').removeClass('hide');
 		var params = parseSearchString();
 		getSearchResults(params);
