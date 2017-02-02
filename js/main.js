@@ -228,7 +228,7 @@ $(function() {
 		// Debounce the button
 		setTimeout(function(){
 			$('#SearchSubmitButton').removeAttr('disabled');
-		}, 1500);
+		}, 10);
 	});
 
 	$(".twitter-typeahead input").on('keyup', function (e) {

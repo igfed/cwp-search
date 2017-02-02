@@ -4815,7 +4815,7 @@ html.IGv2 {
         line-height: 2.8rem; } }
     @media screen and (max-width: 39.9375em) {
       html.IGv2 .tp_09 {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         line-height: 1.9rem; } }
   html.IGv2 .tp_11 {
     font-family: "whitney_semiboldregular";
@@ -5980,7 +5980,8 @@ html.IGv2 {
   html.IGv2 .section.office-search {
     background-color: #f1f7f7;
     margin-top: 0;
-    margin-bottom: 2.5rem; }
+    // margin-bottom: 2.5rem;
+     }
     html.IGv2 .section.office-search .row {
       max-width: 96rem; }
     html.IGv2 .section.office-search .info-toggle-trigger .illustration {
@@ -6007,11 +6008,12 @@ html.IGv2 {
   html.IGv2 .section.search-results .row {
     max-width: 96rem; }
     html.IGv2 .section.search-results .row:first-child {
-      margin-bottom: 1rem; }
+      margin-bottom: 0;
+    }
     html.IGv2 .section.search-results .row:last-child {
       text-align: center;
       margin-top: 7.2rem;
-      margin-bottom: 12rem; }
+      margin-bottom: 6rem; }
   html.IGv2 .section.search-results .portrait {
     width: 12.3rem;
     height: 15.6rem;
@@ -6302,7 +6304,7 @@ html.IGv2 {
 
   &#results-container{
     >.row{
-       margin-top: 3rem;
+          padding-right: 0;
     }
   }
 
@@ -6334,7 +6336,10 @@ html.IGv2 {
   }
 
   .row.underline{
-
+    &:first-child{
+      padding-top: 0;
+      margin-top: 0!important;
+    }
    &:last-child{
       text-align: inherit!important;
       margin-top: 0!important;
@@ -6593,7 +6598,7 @@ html.IGv2 {
         width: 13px!important;
         margin-right: 2rem;
         position: absolute!important;
-        top: 10px!important;
+        top: 11px!important;
         margin-bottom: 0;
         margin-right: 2rem;
       }
@@ -6892,13 +6897,18 @@ html.IGv2 {
       padding-bottom: 0.5rem;
       padding-top: 0.5rem;
       position: relative;
+      color: #767676;
+
+      strong{
+        color: #0c263c;
+      }
 
       &:hover, &.tt-cursor{
 
         &:before{
           content: "";
           display: block;
-          border-left: 0.2rem solid #45757a;
+          border-left: 0.2rem solid #282828;
           height: 17px;
           position: absolute;
           left: 10px;
@@ -6977,4 +6987,11 @@ html.IGv2 {
     width: 140px;
     border-radius: 0.5rem 0 0 0.5rem;
   }
+}
+
+.results-row{
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 0!important;
+
 }

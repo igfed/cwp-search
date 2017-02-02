@@ -17024,7 +17024,7 @@ html.IGv2 .tp_09 {
 
 @media screen and (max-width: 39.9375em) {
   html.IGv2 .tp_09 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     line-height: 1.9rem; } }
 
 html.IGv2 .tp_11 {
@@ -18447,8 +18447,7 @@ html.IGv2 .section.filter .dropdown.menu .outline-btn:focus {
 
 html.IGv2 .section.office-search {
   background-color: #f1f7f7;
-  margin-top: 0;
-  margin-bottom: 2.5rem; }
+  margin-top: 0; }
 
 html.IGv2 .section.office-search .row {
   max-width: 96rem; }
@@ -18484,12 +18483,12 @@ html.IGv2 .section.search-results .row {
   max-width: 96rem; }
 
 html.IGv2 .section.search-results .row:first-child {
-  margin-bottom: 1rem; }
+  margin-bottom: 0; }
 
 html.IGv2 .section.search-results .row:last-child {
   text-align: center;
   margin-top: 7.2rem;
-  margin-bottom: 12rem; }
+  margin-bottom: 6rem; }
 
 html.IGv2 .section.search-results .portrait {
   width: 12.3rem;
@@ -18674,7 +18673,7 @@ html.IGv2 .section.search-results .tp_21 {
   margin-bottom: 4rem; }
 
 .section.search-results#results-container > .row {
-  margin-top: 3rem; }
+  padding-right: 0; }
 
 .section.search-results .portrait {
   padding-right: 4rem; }
@@ -18693,6 +18692,10 @@ html.IGv2 .section.search-results .tp_21 {
     content: "";
     width: 100%;
     padding-top: 2.5rem; }
+
+.section.search-results .row.underline:first-child {
+  padding-top: 0;
+  margin-top: 0 !important; }
 
 .section.search-results .row.underline:last-child {
   text-align: inherit !important;
@@ -18865,7 +18868,7 @@ html.IGv2 .section.search-results .tp_21 {
       width: 13px !important;
       margin-right: 2rem;
       position: absolute !important;
-      top: 10px !important;
+      top: 11px !important;
       margin-bottom: 0;
       margin-right: 2rem; }
     @media only screen and (max-width: 40em) {
@@ -19063,11 +19066,14 @@ html.IGv2 .section.search-results .tp_21 {
     border-bottom: 1px solid #eff1f2;
     padding-bottom: 0.5rem;
     padding-top: 0.5rem;
-    position: relative; }
+    position: relative;
+    color: #767676; }
+    .contact.section .tt-suggestion strong {
+      color: #0c263c; }
     .contact.section .tt-suggestion:hover:before, .contact.section .tt-suggestion.tt-cursor:before {
       content: "";
       display: block;
-      border-left: 0.2rem solid #45757a;
+      border-left: 0.2rem solid #282828;
       height: 17px;
       position: absolute;
       left: 10px;
@@ -19124,3 +19130,8 @@ html.IGv2 .section.search-results .tp_21 {
     .select-dropdown {
       width: 140px;
       border-radius: 0.5rem 0 0 0.5rem; } }
+
+.results-row {
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 0 !important; }
