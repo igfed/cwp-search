@@ -18674,8 +18674,7 @@ html.IGv2 .section.search-results .tp_21 {
   margin-bottom: 4rem; }
 
 .section.search-results#results-container > .row {
-  margin-top: 4rem;
-  margin-bottom: 4rem; }
+  margin-top: 3rem; }
 
 .section.search-results .portrait {
   padding-right: 4rem; }
@@ -18802,283 +18801,292 @@ html.IGv2 .section.search-results .tp_21 {
     margin-top: 1rem; } }
 
 /*Search Box*/
-@media only screen and (max-width: 40em) {
-  .contact.section {
-    padding-bottom: 0 !important; } }
-
-@media only screen and (min-width: 40.063em) {
-  .contact.section {
-    padding-bottom: 10rem !important;
-    padding-top: 10rem !important; } }
-
-.contact.section .row:first-child img {
-  position: relative !important;
-  top: 0 !important;
-  width: 140px !important;
-  left: 0 !important;
-  padding-top: 0; }
+.contact.section {
+  padding-left: 5px !important;
+  padding-right: 5px !important; }
   @media only screen and (max-width: 40em) {
-    .contact.section .row:first-child img {
-      width: 14rem !important;
-      padding-bottom: 1rem !important;
-      width: 125px !important; } }
-
-@media only screen and (min-width: 64.063em) and (max-width: 90em) {
-  .contact.section .row:first-child h1 {
-    font-size: 5.2rem; } }
-
-@media only screen and (max-width: 40em) {
-  .contact.section .row:first-child h1 {
-    margin-bottom: 0 !important; } }
-
-.contact.section .row:first-child p {
-  color: #0d263c;
-  max-width: 80rem;
-  margin: 0 auto;
-  padding-bottom: 4rem; }
+    .contact.section {
+      padding-bottom: 0 !important; } }
   @media only screen and (min-width: 40.063em) {
-    .contact.section .row:first-child p {
-      padding-top: 1rem; } }
-  @media only screen and (max-width: 40em) {
-    .contact.section .row:first-child p {
-      margin-bottom: 0 !important;
-      line-height: 2.5rem; } }
-
-@media only screen and (min-width: 40.063em) {
-  .contact.section .collapse {
-    text-align: center; } }
-
-.contact.section .collapse .columns {
-  margin-bottom: 0 !important; }
-
-.contact.section .collapse .search-ui {
-  display: inline-block;
-  float: none;
-  padding: 0 !important;
-  height: auto; }
-  @media only screen and (max-width: 40em) {
-    .contact.section .collapse .search-ui {
-      margin-top: 2rem;
-      width: 100%; } }
-  .contact.section .collapse .search-ui p {
-    text-align: left; }
-  .contact.section .collapse .search-ui img {
-    width: 13px !important;
-    margin-right: 2rem;
-    position: absolute !important;
-    top: 10px !important;
-    margin-bottom: 0;
-    margin-right: 2rem; }
-  @media only screen and (max-width: 40em) {
-    .contact.section .collapse .search-ui .search-ui-location, .contact.section .collapse .search-ui .search-ui-name {
-      margin-top: 0; } }
-  .contact.section .collapse .search-ui .search-ui-location-field, .contact.section .collapse .search-ui .search-ui-name-field {
-    background-color: white;
-    position: relative;
-    height: 40px;
-    position: relative; }
+    .contact.section {
+      padding-bottom: 10rem !important;
+      padding-top: 5rem !important; } }
+  .contact.section .row:first-child img {
+    position: relative !important;
+    top: 0 !important;
+    width: 140px !important;
+    left: 0 !important;
+    padding-top: 0;
+    padding-bottom: 25px; }
     @media only screen and (max-width: 40em) {
-      .contact.section .collapse .search-ui .search-ui-location-field, .contact.section .collapse .search-ui .search-ui-name-field {
-        border-radius: 0.5rem; } }
-    .contact.section .collapse .search-ui .search-ui-location-field label, .contact.section .collapse .search-ui .search-ui-name-field label {
-      font-family: "whitney_lightregular"; }
-    .contact.section .collapse .search-ui .search-ui-location-field input[type="search"], .contact.section .collapse .search-ui .search-ui-name-field input[type="search"] {
+      .contact.section .row:first-child img {
+        width: 14rem !important;
+        padding-bottom: 1rem !important;
+        width: 125px !important; } }
+  .contact.section .row:first-child h1 {
+    letter-spacing: 0; }
+    @media only screen and (min-width: 64.063em) and (max-width: 90em) {
+      .contact.section .row:first-child h1 {
+        font-size: 5.2rem; } }
+    @media only screen and (max-width: 40em) {
+      .contact.section .row:first-child h1 {
+        margin-bottom: 0 !important; } }
+  .contact.section .row:first-child p {
+    color: #0d263c;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding-bottom: 4rem; }
+    @media only screen and (min-width: 40.063em) {
+      .contact.section .row:first-child p {
+        padding-top: 1rem; } }
+    @media only screen and (max-width: 40em) {
+      .contact.section .row:first-child p {
+        margin-bottom: 0 !important;
+        line-height: 2.5rem; } }
+  @media only screen and (min-width: 40.063em) {
+    .contact.section .collapse {
+      text-align: center; } }
+  .contact.section .collapse .columns {
+    margin-bottom: 0 !important; }
+  .contact.section .collapse .search-ui {
+    display: inline-block;
+    float: none;
+    padding: 0 !important;
+    height: auto; }
+    @media only screen and (max-width: 40em) {
+      .contact.section .collapse .search-ui {
+        margin-top: 2rem;
+        width: 100%; } }
+    .contact.section .collapse .search-ui:first-child {
+      margin-top: 9px; }
+    .contact.section .collapse .search-ui p {
+      text-align: left; }
+    .contact.section .collapse .search-ui img {
+      width: 13px !important;
+      margin-right: 2rem;
+      position: absolute !important;
+      top: 10px !important;
       margin-bottom: 0;
-      padding-left: 4rem; }
+      margin-right: 2rem; }
     @media only screen and (max-width: 40em) {
-      .contact.section .collapse .search-ui .search-ui-location-field, .contact.section .collapse .search-ui .search-ui-name-field {
+      .contact.section .collapse .search-ui .search-ui-location, .contact.section .collapse .search-ui .search-ui-name {
+        margin-top: 0; } }
+    .contact.section .collapse .search-ui .search-ui-location-field, .contact.section .collapse .search-ui .search-ui-name-field {
+      background-color: white;
+      position: relative;
+      height: 40px;
+      position: relative; }
+      @media only screen and (max-width: 40em) {
+        .contact.section .collapse .search-ui .search-ui-location-field, .contact.section .collapse .search-ui .search-ui-name-field {
+          border-radius: 0.5rem; } }
+      .contact.section .collapse .search-ui .search-ui-location-field label, .contact.section .collapse .search-ui .search-ui-name-field label {
+        font-family: "whitney_lightregular"; }
+      .contact.section .collapse .search-ui .search-ui-location-field input[type="search"], .contact.section .collapse .search-ui .search-ui-name-field input[type="search"] {
+        margin-bottom: 0;
+        padding-left: 4rem; }
+      @media only screen and (max-width: 40em) {
+        .contact.section .collapse .search-ui .search-ui-location-field, .contact.section .collapse .search-ui .search-ui-name-field {
+          width: 100%; } }
+      @media only screen and (min-width: 40.063em) {
+        .contact.section .collapse .search-ui .search-ui-location-field, .contact.section .collapse .search-ui .search-ui-name-field {
+          width: 320px; } }
+      @media only screen and (min-width: 64.063em) {
+        .contact.section .collapse .search-ui .search-ui-location-field, .contact.section .collapse .search-ui .search-ui-name-field {
+          width: 480px; } }
+  .contact.section .collapse .search-ui-and-or {
+    display: inline-block;
+    float: none;
+    text-align: center;
+    width: auto;
+    padding-left: 10px !important;
+    padding-right: 10px !important; }
+    @media only screen and (max-width: 40em) {
+      .contact.section .collapse .search-ui-and-or {
         width: 100%; } }
     @media only screen and (min-width: 40.063em) {
-      .contact.section .collapse .search-ui .search-ui-location-field, .contact.section .collapse .search-ui .search-ui-name-field {
-        width: 320px; } }
-    @media only screen and (min-width: 64.063em) {
-      .contact.section .collapse .search-ui .search-ui-location-field, .contact.section .collapse .search-ui .search-ui-name-field {
-        width: 400px; } }
-
-.contact.section .collapse .search-ui-and-or {
-  display: inline-block;
-  float: none;
-  text-align: center;
-  width: auto;
-  padding-left: 10px !important;
-  padding-right: 10px !important; }
-  @media only screen and (max-width: 40em) {
-    .contact.section .collapse .search-ui-and-or {
-      width: 100%; } }
-  @media only screen and (min-width: 40.063em) {
-    .contact.section .collapse .search-ui-and-or {
-      vertical-align: middle; } }
-  .contact.section .collapse .search-ui-and-or p {
-    display: inline-block;
-    width: auto; }
-  .contact.section .collapse .search-ui-and-or p.tp_25 {
-    line-height: 12px;
-    margin-bottom: 0; }
+      .contact.section .collapse .search-ui-and-or {
+        vertical-align: middle; } }
+    .contact.section .collapse .search-ui-and-or p {
+      display: inline-block;
+      width: auto; }
+    .contact.section .collapse .search-ui-and-or p.tp_25 {
+      line-height: 12px;
+      margin-bottom: 0; }
+      @media only screen and (min-width: 40.063em) {
+        .contact.section .collapse .search-ui-and-or p.tp_25 {
+          display: block; } }
+    @media only screen and (max-width: 40em) {
+      .contact.section .collapse .search-ui-and-or .search-ui-border-bottom, .contact.section .collapse .search-ui-and-or .search-ui-border-top {
+        border-bottom: 0.1rem solid #549493;
+        width: 50px;
+        margin-bottom: 4px; } }
     @media only screen and (min-width: 40.063em) {
-      .contact.section .collapse .search-ui-and-or p.tp_25 {
-        display: block; } }
+      .contact.section .collapse .search-ui-and-or .search-ui-border-bottom, .contact.section .collapse .search-ui-and-or .search-ui-border-top {
+        border-left: 0.1rem solid #549493;
+        height: 20px;
+        position: absolute; } }
+    @media only screen and (min-width: 40.063em) {
+      .contact.section .collapse .search-ui-and-or .search-ui-border-top {
+        top: -26px; } }
+    @media only screen and (min-width: 40.063em) {
+      .contact.section .collapse .search-ui-and-or .search-ui-border-bottom {
+        bottom: -4rem; } }
   @media only screen and (max-width: 40em) {
-    .contact.section .collapse .search-ui-and-or .search-ui-border-bottom, .contact.section .collapse .search-ui-and-or .search-ui-border-top {
-      border-bottom: 0.1rem solid #549493;
-      width: 50px;
-      margin-bottom: 4px; } }
+    .contact.section .collapse .search-ui-button {
+      text-align: center;
+      margin-top: 2.5rem; } }
   @media only screen and (min-width: 40.063em) {
-    .contact.section .collapse .search-ui-and-or .search-ui-border-bottom, .contact.section .collapse .search-ui-and-or .search-ui-border-top {
-      border-left: 0.1rem solid #549493;
-      height: 20px;
-      position: absolute; } }
-  @media only screen and (min-width: 40.063em) {
-    .contact.section .collapse .search-ui-and-or .search-ui-border-top {
-      top: -26px; } }
-  @media only screen and (min-width: 40.063em) {
-    .contact.section .collapse .search-ui-and-or .search-ui-border-bottom {
-      bottom: -4rem; } }
-
-@media only screen and (max-width: 40em) {
-  .contact.section .collapse .search-ui-button {
-    text-align: center;
-    margin-top: 3.5rem; } }
-
-@media only screen and (min-width: 40.063em) {
-  .contact.section .collapse .search-ui-button {
-    vertical-align: bottom; } }
-
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  .contact.section .collapse .search-ui-button .outline-btn {
-    background-position: 70px 9px; } }
-
-@media only screen and (max-width: 40em) {
-  .contact.section .collapse .search-ui-button .outline-btn {
-    background-position: 55px 9px; } }
-
-.contact.section .tt-menu, .contact.section .typeahead {
-  font-size: 1.6rem !important;
-  text-transform: none; }
-
-.contact.section ::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
-  color: #666666;
-  opacity: 1;
-  font-size: 1.6rem !important; }
-
-.contact.section ::-moz-placeholder {
-  /* Firefox 19+ */
-  color: #666666;
-  opacity: 1;
-  font-size: 1.6rem !important; }
-
-.contact.section :-ms-input-placeholder {
-  /* IE 10+ */
-  color: #666666;
-  opacity: 1;
-  font-size: 1.6rem !important; }
-
-.contact.section :-moz-placeholder {
-  /* Firefox 18- */
-  color: #666666;
-  opacity: 1;
-  font-size: 1.6rem !important; }
-
-.contact.section .tt-menu {
-  background: white;
-  width: 100%;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  padding-bottom: 4rem;
-  margin-left: 0 !important;
-  border-bottom-right-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
-  top: 3.7rem !important;
-  box-shadow: 0 4px 10px rgba(1, 0, 0, 0.3);
-  border-top: 1px solid #a9a9a9;
-  padding-top: 4rem;
-  text-align: left; }
-  .contact.section .tt-menu :last-child {
-    border: none; }
-
-.contact.section .adv-search-right {
-  padding-right: 2.5rem; }
-
-@media only screen and (min-width: 40.063em) {
-  .contact.section .search-wrapper {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center; } }
-
-.contact.section .search-ui {
-  padding-left: 0 !important;
-  padding-right: 0;
-  padding-top: 1rem;
-  font-family: "whitney_bookregular";
-  font-size: 1.6rem;
-  color: #0d263c;
-  width: auto;
-  vertical-align: top;
-  margin: 0; }
-
-.contact.section .search-headline {
-  margin-top: 2rem;
-  margin-bottom: 2rem; }
+    .contact.section .collapse .search-ui-button {
+      vertical-align: bottom; } }
+  @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    .contact.section .collapse .search-ui-button .outline-btn {
+      background-position: 70px 9px; } }
   @media only screen and (max-width: 40em) {
-    .contact.section .search-headline .tp_07 {
-      font-size: 22px !important;
-      line-height: 3rem; } }
-  @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-    .contact.section .search-headline .tp_07 {
-      font-size: 22px !important;
-      line-height: 3rem;
-      margin-top: 4rem;
-      margin-bottom: 4rem; } }
-  @media only screen and (min-width: 64.063em) {
-    .contact.section .search-headline {
-      margin-top: 8rem;
-      margin-bottom: 8rem; } }
-
-.contact.section .twitter-typeahead {
-  position: relative;
-  width: 100%;
-  display: inline-block;
-  padding: 0.5rem; }
-  .contact.section .twitter-typeahead input:first-child {
-    display: none; }
-
-.contact.section .adv-search-right {
-  width: auto;
-  position: absolute;
-  top: 0;
-  right: 48px; }
-
-.contact.section #SearchSubmitButton, .contact.section #SearchCloseButton {
-  height: auto;
-  border-radius: 0.5rem; }
+    .contact.section .collapse .search-ui-button .outline-btn {
+      background-position: 55px 9px; } }
+  .contact.section .tt-menu, .contact.section .typeahead {
+    font-size: 1.6rem !important;
+    text-transform: none; }
+  .contact.section ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #666666;
+    opacity: 1;
+    font-size: 1.6rem !important; }
+  .contact.section ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #666666;
+    opacity: 1;
+    font-size: 1.6rem !important; }
+  .contact.section :-ms-input-placeholder {
+    /* IE 10+ */
+    color: #666666;
+    opacity: 1;
+    font-size: 1.6rem !important; }
+  .contact.section :-moz-placeholder {
+    /* Firefox 18- */
+    color: #666666;
+    opacity: 1;
+    font-size: 1.6rem !important; }
+  .contact.section .tt-menu {
+    background: white;
+    width: 100%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 4rem;
+    margin-left: 0 !important;
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    top: 4.03rem !important;
+    box-shadow: 0 4px 10px rgba(1, 0, 0, 0.3);
+    border-top: 1px solid #a9a9a9;
+    padding-top: 4rem;
+    text-align: left; }
+    @media only screen and (max-width: 40em) {
+      .contact.section .tt-menu {
+        top: 3.8rem !important; } }
+    .contact.section .tt-menu :last-child {
+      border: none; }
+    .contact.section .tt-menu:before {
+      content: 'Suggested Results';
+      position: absolute;
+      z-index: 55555;
+      left: 5px;
+      top: 0;
+      font-size: 13px;
+      padding-left: 24px;
+      padding-top: 14px;
+      color: grey; }
+  .contact.section .adv-search-right {
+    padding-right: 2.5rem; }
   @media only screen and (min-width: 40.063em) {
-    .contact.section #SearchSubmitButton, .contact.section #SearchCloseButton {
-      border-radius: 0 0.5rem 0.5rem 0; } }
-  .contact.section #SearchSubmitButton img, .contact.section #SearchCloseButton img {
-    height: auto; }
-  .contact.section #SearchSubmitButton:hover, .contact.section #SearchCloseButton:hover {
-    background: transparent; }
+    .contact.section .search-wrapper {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center; } }
+  .contact.section .search-ui {
+    padding-left: 0 !important;
+    padding-right: 0;
+    padding-top: 1rem;
+    font-family: "whitney_bookregular";
+    font-size: 1.6rem;
+    color: #0d263c;
+    width: auto;
+    vertical-align: top;
+    margin: 0; }
+  .contact.section .search-headline {
+    margin-top: 2rem;
+    margin-bottom: 2rem; }
+    @media only screen and (max-width: 40em) {
+      .contact.section .search-headline .tp_07 {
+        font-size: 22px !important;
+        line-height: 3rem; } }
+    @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+      .contact.section .search-headline .tp_07 {
+        font-size: 22px !important;
+        line-height: 3rem;
+        margin-top: 4rem;
+        margin-bottom: 4rem; } }
+    @media only screen and (min-width: 64.063em) {
+      .contact.section .search-headline {
+        margin-top: 8rem;
+        margin-bottom: 8rem; } }
+  .contact.section .twitter-typeahead {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    padding: 0.5rem;
+    padding-top: 4px; }
+    .contact.section .twitter-typeahead input:first-child {
+      display: none; }
+  .contact.section .adv-search-right {
+    width: auto;
+    position: absolute;
+    top: 0;
+    right: 48px; }
+  .contact.section #SearchSubmitButton, .contact.section #SearchCloseButton {
+    height: auto;
+    border-radius: 0.5rem; }
+    @media only screen and (min-width: 40.063em) {
+      .contact.section #SearchSubmitButton, .contact.section #SearchCloseButton {
+        border-radius: 0 0.5rem 0.5rem 0; } }
+    .contact.section #SearchSubmitButton img, .contact.section #SearchCloseButton img {
+      height: auto; }
+    .contact.section #SearchSubmitButton:hover, .contact.section #SearchCloseButton:hover {
+      background: transparent; }
+  .contact.section .typeahead {
+    border-color: transparent;
+    box-shadow: none;
+    height: 30px; }
+  .contact.section .tt-dataset-postalCode {
+    border-top: 1px solid #eff1f2 !important; }
+  .contact.section .tt-suggestion {
+    border-bottom: 1px solid #eff1f2;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    position: relative; }
+    .contact.section .tt-suggestion:hover:before, .contact.section .tt-suggestion.tt-cursor:before {
+      content: "";
+      display: block;
+      border-left: 0.2rem solid #45757a;
+      height: 17px;
+      position: absolute;
+      left: 10px;
+      top: 9px; }
+      @media only screen and (max-width: 40em) {
+        .contact.section .tt-suggestion:hover:before, .contact.section .tt-suggestion.tt-cursor:before {
+          left: -20px; } }
+    @media only screen and (min-width: 40.063em) {
+      .contact.section .tt-suggestion:hover, .contact.section .tt-suggestion.tt-cursor {
+        background-color: #eff1f2;
+        margin-left: -3rem;
+        padding-left: 3rem;
+        width: 114%; } }
+    @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+      .contact.section .tt-suggestion:hover, .contact.section .tt-suggestion.tt-cursor {
+        width: 123%; } }
 
-.contact.section .typeahead {
-  border-color: transparent;
-  box-shadow: none;
-  height: 30px; }
-
-.contact.section .tt-suggestion {
-  border-bottom: 1px solid #eff1f2;
-  padding-bottom: 0.5rem;
-  padding-top: 0.5rem; }
-  @media only screen and (min-width: 40.063em) {
-    .contact.section .tt-suggestion:hover, .contact.section .tt-suggestion.tt-cursor {
-      background-color: #eff1f2;
-      margin-left: -3rem;
-      padding-left: 3rem; } }
-  @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-    .contact.section .tt-suggestion:hover, .contact.section .tt-suggestion.tt-cursor {
-      width: 137.5%; } }
-  @media only screen and (min-width: 64.063em) and (max-width: 90em) {
-    .contact.section .tt-suggestion:hover, .contact.section .tt-suggestion.tt-cursor {
-      width: 117.5%; } }
+.fr .tt-menu:before {
+  content: "Résultats suggérés" !important; }
 
 #SearchSubmitButton {
   display: inline-block;
@@ -19105,6 +19113,7 @@ html.IGv2 .section.search-results .tp_21 {
   background-position: right -1px center !important;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  padding-top: 1px;
   background-color: #e5e8e8;
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIpJREFUeNrEkckNgDAMBBfRkEt0ObRBBdsGXUDgmQfK4XhH2m8czQAAy27R3tsw4Qfe2x8uOO6oYLb6GlOor3GF+swURAOmUJ+RwtEJs9WvTGEYxBXqI1MQAZhCfUQKRzDMVj+TwrAIV6jvSUEkYAr1LSkcyTBb/V+KYfX7xAeusq3sLDtGH3kEGACPWIflNZfhRQAAAABJRU5ErkJggg==") !important; }
   @media only screen and (max-width: 40em) {

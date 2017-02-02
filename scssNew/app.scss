@@ -6302,8 +6302,7 @@ html.IGv2 {
 
   &#results-container{
     >.row{
-       margin-top: 4rem;
-      margin-bottom: 4rem;
+       margin-top: 3rem;
     }
   }
 
@@ -6502,6 +6501,8 @@ html.IGv2 {
 /*Search Box*/
 
 .contact.section{
+  padding-left: 5px!important;
+  padding-right: 5px!important;
 
   @media #{$small-only}{
     padding-bottom: 0!important;
@@ -6509,7 +6510,7 @@ html.IGv2 {
 
   @media #{$medium-up}{
     padding-bottom: 10rem!important;
-    padding-top: 10rem!important;
+    padding-top: 5rem!important;
   }
 
   .row{
@@ -6520,6 +6521,7 @@ html.IGv2 {
         width: 140px!important;
         left: 0!important;
         padding-top: 0;
+        padding-bottom: 25px;
 
         @media #{$small-only}{
           width: 14rem!important;
@@ -6529,6 +6531,8 @@ html.IGv2 {
       }
 
        h1{
+          letter-spacing: 0;
+
           @media #{$large-only}{
             font-size: 5.2rem;
           }
@@ -6577,6 +6581,9 @@ html.IGv2 {
         width: 100%;
       }
 
+      &:first-child{
+        margin-top: 9px;
+      }
 
       p{
         text-align: left;
@@ -6627,7 +6634,7 @@ html.IGv2 {
         }
 
         @media #{$large-up}{
-          width: 400px;
+          width: 480px;
         }
       }
 
@@ -6696,7 +6703,7 @@ html.IGv2 {
 
       @media #{$small-only}{
         text-align: center;
-        margin-top: 3.5rem;
+        margin-top: 2.5rem;
       }
 
       @media #{$medium-up}{
@@ -6753,15 +6760,31 @@ html.IGv2 {
     margin-left: 0!important;
     border-bottom-right-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
-    top: 3.7rem!important;
+    top: 4.03rem!important;
     box-shadow: 0 4px 10px rgba(1, 0, 0, 0.3);
     border-top: 1px solid #a9a9a9;
     padding-top:4rem;
     text-align: left;
 
+    @media #{$small-only}{
+      top: 3.8rem!important;
+    }
+
 
     :last-child{
       border: none;
+    }
+
+    &:before{
+      content: 'Suggested Results';
+      position: absolute;
+      z-index: 55555;
+      left: 5px;
+      top: 0;
+      font-size: 13px;
+      padding-left: 24px;
+      padding-top: 14px;
+      color: grey;
     }
   }
 
@@ -6820,6 +6843,7 @@ html.IGv2 {
     width: 100%;
     display: inline-block;
     padding: 0.5rem;
+    padding-top: 4px;
 
     input{
       &:first-child{
@@ -6859,27 +6883,52 @@ html.IGv2 {
     height: 30px;
   }
 
+  .tt-dataset-postalCode{
+    border-top: 1px solid #eff1f2!important;
+  }
+
   .tt-suggestion{
       border-bottom: 1px solid #eff1f2;
       padding-bottom: 0.5rem;
       padding-top: 0.5rem;
+      position: relative;
 
       &:hover, &.tt-cursor{
+
+        &:before{
+          content: "";
+          display: block;
+          border-left: 0.2rem solid #45757a;
+          height: 17px;
+          position: absolute;
+          left: 10px;
+          top: 9px;
+
+          @media #{$small-only}{
+             left: -20px;
+          }
+        }
 
         @media #{$medium-up}{
           background-color: #eff1f2;
           margin-left: -3rem;
           padding-left: 3rem;
+          width: 114%;
         }
 
         @media #{$medium-only}{
-          width: 137.5%;
-        }
-
-        @media #{$large-only}{
-          width: 117.5%;
+          width: 123%;
         }
       }
+  }
+
+}
+
+
+.fr .tt-menu{
+
+  &:before{
+    content: 'Résultats suggérés'!important;
   }
 }
 
@@ -6915,6 +6964,7 @@ html.IGv2 {
   background-position: right -1px center!important;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  padding-top: 1px;
   background-color: #e5e8e8;
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIpJREFUeNrEkckNgDAMBBfRkEt0ObRBBdsGXUDgmQfK4XhH2m8czQAAy27R3tsw4Qfe2x8uOO6oYLb6GlOor3GF+swURAOmUJ+RwtEJs9WvTGEYxBXqI1MQAZhCfUQKRzDMVj+TwrAIV6jvSUEkYAr1LSkcyTBb/V+KYfX7xAeusq3sLDtGH3kEGACPWIflNZfhRQAAAABJRU5ErkJggg==")!important;
 

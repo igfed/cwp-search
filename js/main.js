@@ -80,7 +80,7 @@ function getSearchResults(params) {
 		allConsultants = shuffle(result);
 		displaySearchResults('result-amount-template', allConsultants, 'results-container');
 		paginateResults();
-		$('html, body').animate({scrollTop: $('#office-search').offset().top}, 750);
+		$('html, body').animate({scrollTop: $('#results-container').offset().top}, 750);
 	})
 	.fail(function( result ) {
 		console.log('Data could not be retrieved, please try again', result.status + ' ' + result.statusText);
@@ -231,7 +231,15 @@ $(function() {
 		}, 1500);
 	});
 
+	$(".twitter-typeahead input").on('keyup', function (e) {
+	    if (e.keyCode == 13) {
+	    	// $('#find-an-advisor-search').submit();
+	        $('.tt-menu').hide();
+    	}
+	});
+
 	$location_field.focus();
+
 });
 
 //Lowercase text
@@ -241,5 +249,4 @@ $(function() {
 // 	    $('.search-ui').addClass('capitalize');
 //     });
 // }());
-
 

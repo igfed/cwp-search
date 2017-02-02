@@ -187,17 +187,17 @@
                                     </select>
                                 </div>
                                 <div class="medium-5 columns search-ui search-ui-location">
-                                     
+                                     <p class="tp_25 show-for-small-only">By Location</p>
                                     <div class="search-ui-location-field" data-searchtype="location">
-                                        <img src="images/map-marker-blue.png">
+                                        <img src="images/map-marker-blue.svg">
                                         <label class="show-for-sr hide" for="FindAnAdvisor">By Location</label>
                                         <input class="typeahead itf_location" type="search" placeholder="Enter a city" name="Search" autocomplete="off" spellcheck="false" id="FindAnAdvisor_location">
                                     </div>
                                 </div>
                                 <div class="medium-5 columns search-ui search-ui-name" style="display:none;">
-
+                                    <p class="tp_25 show-for-small-only">By Name</p>
                                     <div class="search-ui-name-field" data-searchtype="name">
-                                        <img src="images/find-an-advisor-advisor-icon.png">
+                                        <img src="images/find-an-advisor-advisor-icon.svg">
                                         <label class="show-for-sr hide" for="FindAnAdvisor">By Name</label>
                                         <input class="typeahead itf_name" type="search" placeholder="Enter a name" name="Search" autocomplete="off" spellcheck="false" id="FindAnAdvisor_name">
                                     </div>
@@ -304,8 +304,8 @@
                         <p class="tp_08">{{length}} results</p>
                     {{/length}}
                     {{^length}}
-                        <p class="tp_08">No results match your search</p>
-                        <p class="tp_09">Please try different spellings or more general terms</p>
+                        <p class="tp_08">No results match your search.</p>
+                        <p class="tp_09">Please try different spellings or more general terms.</p>
                     {{/length}}
                   </div>
               </div>
