@@ -250,3 +250,8 @@ $(function() {
 //     });
 // }());
 
+$(function(){
+	$('.section.office-search .info-toggle-trigger').on('click', function(){
+		$('.section.office-search .info-toggle-trigger .fa').toggleClass('active');
+	});
+});

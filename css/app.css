@@ -18459,6 +18459,19 @@ html.IGv2 .section.office-search .info-toggle-trigger .illustration {
   margin: 0 auto;
   margin-bottom: 3rem; }
 
+html.IGv2 .section.office-search .info-toggle-trigger .fa {
+  font-size: 30px;
+  float: right;
+  color: #0d263c; }
+
+html.IGv2 .section.office-search .info-toggle-trigger .fa.active {
+  -webkit-transform: rotate(180deg) translate3d(0, 0, 0);
+  transform: rotate(180deg) translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out; }
+
 html.IGv2 .section.office-search .info-toggle-trigger .columns:nth-child(2) p {
   margin-top: 2rem;
   margin-left: 2rem; }
