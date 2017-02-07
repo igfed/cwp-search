@@ -7035,3 +7035,10 @@ html.IGv2 {
     border-radius: 0.5rem 0 0 0.5rem;
   }
 }
+
+.office-illustration{
+  @media #{$small-only}{
+    width:auto;
+    margin-right:2rem;
+  }
+}
