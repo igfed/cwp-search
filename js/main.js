@@ -250,8 +250,19 @@ $(function() {
 //     });
 // }());
 
-$(function(){
-	$('.section.office-search .info-toggle-trigger').on('click', function(){
-		$('.section.office-search .info-toggle-trigger .fa').toggleClass('active');
-	});
-});
+// $(function(){
+// 	if($('#info-toggle-wrapper').hasClass('isActive')){
+// 		$('.accordion-arrow').toggleClass('active');
+// 	}
+// });
+
+// $(function(){
+// 	$('.office-search').on('click', function(){
+// 		alert();
+// 		$('.accordion-arrow').toggleClass('active');
+// 	});
+// });
+
+
+
+

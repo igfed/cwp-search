@@ -171,10 +171,12 @@
             <div class="icon-wrap">
                 <form id="find-an-advisor-search" class="search-form">
                     <div class="row contact section">
-                        <div class="small-12 medium-10 small-centered columns">
+                        <div class="small-12 small-centered columns">
                             <div class="row">
-                                <img src="images/find-an-advisor-icon.png" class="img__icon">
-                                <h1 class="text-center tp_03">Trouver un conseiller</h1>
+                                <div class="small-10 medium-8 large-7 columns small-centered">
+                                    <img src="images/find-an-advisor-icon.png" class="img__icon">
+                                    <h1 class="text-center tp_03">Trouver un conseiller</h1>
+                                </div>
                             </div>
                             <div class="row collapse search-wrapper">
                                 <div class="medium-5 columns search-ui">
@@ -187,7 +189,7 @@
                                 <div class="medium-5 columns search-ui search-ui-location">
                                     <p class="tp_25 show-for-small-only">Par Endroit</p>
                                     <div class="search-ui-location-field" data-searchtype="location">
-                                        <img src="images/map-marker-blue.png">
+                                        <img src="images/map-marker-blue.svg">
                                         <label class="show-for-sr hide" for="FindAnAdvisor">Par Endroit</label>
                                         <input class="typeahead itf_location" type="search" placeholder="Entrer un emplacement" name="Search" autocomplete="off" spellcheck="false" id="FindAnAdvisor_location">
                                     </div>
@@ -195,7 +197,7 @@
                                 <div class="medium-5 columns search-ui search-ui-name" style="display:none;">
                                      <p class="tp_25 show-for-small-only">Par Nom</p>
                                     <div class="search-ui-name-field" data-searchtype="name">
-                                        <img src="images/find-an-advisor-advisor-icon.png">
+                                        <img src="images/find-an-advisor-advisor-icon.svg">
                                         <label class="show-for-sr hide" for="FindAnAdvisor">Par Nom</label>
                                         <input class="typeahead itf_name" type="search" placeholder="Entrez un nom" name="Search" autocomplete="off" spellcheck="false" id="FindAnAdvisor_name">
                                     </div>
@@ -220,13 +222,13 @@
             <script id="office-template" type="x-tmpl-mustache">
               <div class="row info-toggle-trigger" data-toggler=".isActive" data-toggle="info-toggle-wrapper">
                 <div class="small-3 medium-2 columns">
-                  <img class="illustration" data-illustrationid="consultant-about" src="img/illustrations/office-building.svg" alt="">
+                  <img class="illustration" data-illustrationid="consultant-about" src="images/contact-us_head-office.png" alt="">
                 </div>
                 <div class="small-6 medium-3 columns">
                   <p class="tp_08">{{length}} bureaux trouvés</p>
                 </div>
                 <div class="small-2 medium-3 columns">
-                  <i class="fa fa-chevron-down"></i>
+                  <i class="fa fa-angle-down"></i>
                 </div>
               </div>
               <div id="info-toggle-wrapper" data-toggler=".isActive">
@@ -299,7 +301,7 @@
               <div class="row">
                   <div class="medium-12 columns">
                     {{#length}}
-                        <p class="tp_08">{{length}} résultats</p>
+                        <p class="tp_08 text-left">{{length}} résultats</p>
                     {{/length}}
                     {{^length}}
                         <p class="tp_08">Aucun résultat ne correspond à votre recherche.</p>
