@@ -6561,7 +6561,7 @@ html.IGv2 {
   }
 
   @media #{$medium-up}{
-    padding-bottom: 10rem!important;
+    padding-bottom: 0rem!important;
     padding-top: 5rem!important;
   }
 
@@ -6872,6 +6872,7 @@ html.IGv2 {
       .tp_07{
         font-size: 22px!important;
         line-height: 3rem;
+        margin-bottom: 40px!important;
       }
     }
 
@@ -6880,13 +6881,13 @@ html.IGv2 {
         font-size: 22px!important;
         line-height: 3rem;
         margin-top: 4rem;
-        margin-bottom: 4rem;
+        margin-bottom: 9rem;
       }
     }
 
     @media #{$large-up}{
       margin-top: 8rem;
-      margin-bottom: 8rem;
+      margin-bottom: 7rem;
     }
   }
 

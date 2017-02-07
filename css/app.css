@@ -18853,7 +18853,7 @@ html.IGv2 .section.search-results .tp_21 {
       padding-bottom: 0 !important; } }
   @media only screen and (min-width: 40.063em) {
     .contact.section {
-      padding-bottom: 10rem !important;
+      padding-bottom: 0rem !important;
       padding-top: 5rem !important; } }
   .contact.section .row:first-child img {
     position: relative !important;
@@ -19063,17 +19063,18 @@ html.IGv2 .section.search-results .tp_21 {
     @media only screen and (max-width: 40em) {
       .contact.section .search-headline .tp_07 {
         font-size: 22px !important;
-        line-height: 3rem; } }
+        line-height: 3rem;
+        margin-bottom: 40px !important; } }
     @media only screen and (min-width: 40.063em) and (max-width: 64em) {
       .contact.section .search-headline .tp_07 {
         font-size: 22px !important;
         line-height: 3rem;
         margin-top: 4rem;
-        margin-bottom: 4rem; } }
+        margin-bottom: 9rem; } }
     @media only screen and (min-width: 64.063em) {
       .contact.section .search-headline {
         margin-top: 8rem;
-        margin-bottom: 8rem; } }
+        margin-bottom: 7rem; } }
   .contact.section .twitter-typeahead {
     position: relative;
     width: 100%;
