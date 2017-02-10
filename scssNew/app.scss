@@ -6846,9 +6846,21 @@ html.IGv2 {
 
   .search-wrapper{
     @media #{$medium-up}{
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
       display: flex;
+
+    -webkit-box-align: flex-end; -moz-box-align: flex-end; /* OLD… */
+     -ms-flex-align: flex-end;
+     -webkit-align-items: flex-end;
       align-items: flex-end;
+
+      -webkit-box-pack: center; -moz-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
       justify-content: center;
+
     }
   }
 

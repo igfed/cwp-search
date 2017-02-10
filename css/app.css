@@ -19044,8 +19044,20 @@ html.IGv2 .section.search-results .tp_21 {
     padding-right: 2.5rem; }
   @media only screen and (min-width: 40.063em) {
     .contact.section .search-wrapper {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: flex-end;
+      -moz-box-align: flex-end;
+      /* OLD… */
+      -ms-flex-align: flex-end;
+      -webkit-align-items: flex-end;
       align-items: flex-end;
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
       justify-content: center; } }
   .contact.section .search-ui {
     padding-left: 0 !important;

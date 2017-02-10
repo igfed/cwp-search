@@ -9,14 +9,14 @@ html.IGv2 .header-wrap .dropdown.menu .is-dropdown-submenu li a:hover::after {
     left: calc(22.25% - 0.8rem);
     top: calc(35% + 0.3rem);
 }
-@media screen and (max-width: 63.9375em), screen and (min-width: 75em) {
+@media screen and (min-width: 1024px){
   .footer .show-for-large,
   .header-wrap .show-for-large {
     display: inherit !important; }
 	.footer .hide-for-large,
 	.header-wrap .hide-for-large {
     display: none !important; } }
-	@media screen and (max-width: 39.9375em) {
+	@media screen and (max-width: 1023px) {
   .footer .hide-for-large,
   .header-wrap .hide-for-large {
     display: inherit !important; }
