@@ -4306,9 +4306,14 @@ table.hover tr:nth-of-type(even):hover {
       display: table; }
     .header-wrap .main-topbar-row::after {
       clear: both; }
-    @media screen and (max-width: 64em) {
+      @media screen and (min-width: 641px) and (max-width: 1023px){
+        .header-wrap .main-topbar-row {
+         padding: 16px 20px 9px 20px;
+       }
+      }
+    @media screen and (max-width: 640px) {
       .header-wrap .main-topbar-row {
-        padding: 16px 22px 9px; } }
+        padding: 16px 20px 9px 20px; } }
     .header-wrap .main-topbar-row .main-topbar ul.dropdown {
       background-color: #fff;
       position: relative; }
@@ -7053,5 +7058,29 @@ html.IGv2 {
   @media #{$small-only}{
     width:auto;
     margin-right:2rem;
+  }
+}
+
+.header-wrap .logo {
+  max-width: 140px;
+  max-height: 100%;
+  margin-top: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .header-wrap .logo {
+    padding-top: 12px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .utility-topbar-wrap {
+    padding: 0 40px!important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main-topbar-row {
+    width: 91.66667%;
   }
 }
