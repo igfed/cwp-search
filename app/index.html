@@ -10,16 +10,23 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
 
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
     <link rel="stylesheet" href="styles/vendor.css">
     <link rel="stylesheet" href="styles/main-project.css">
     <!-- build:css styles/find-an-advisor.css -->
     <link rel="stylesheet" href="styles/find-an-advisor.css">
     <!-- endbuild -->
     
+  <script src="//www.google-analytics.com/analytics.js"></script>
+  <script>
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function()
+    { (i[r].q=i[r].q||[]).push(arguments)}
+    ,i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+     ga('create', 'UA-2868753-2', 'auto');
+     ga('require', 'displayfeatures');
+     ga('send', 'pageview');
+  </script>
   </head>
   <body>
     <!--[if lt IE 10]>
@@ -79,6 +86,12 @@
           </form>
       </div>
 
+          
+    <div class="row search-results-consultant-wrapper">
+        <div class="small-12 columns">
+        </div>
+    </div>
+    <script id="office-template" type="x-tmpl-mustache">
       <div class="search-results">
           <div class="bg-secondary full-width search-results-offices-wrapper">
             <div class="row">
@@ -161,353 +174,81 @@
                     </div>
                   </div>
                 </div>
-                <div class="row divider">
-                  <div class="small-12 columns">
-                    <div class="row search-results-office">
-                      <div class="small-12 medium-8 large-6 columns map-column">
-                        <div class="row search-results-info">
-                          <div class="small-6 columns maps search-results-info-map">
-                              <a class="map-anchor" href="https://www.google.ca/maps/dir//{{Address_Line_1__c}} {{Address_Line_2__c}}, {{City__c}}, {{Province_Territory_State__c}}, {{Postal_Code__c}}">
-                                  <div class="search-results-map-container image-circle">
-                                    <img src="https://maps.googleapis.com/maps/api/staticmap?center={{Address_Line_1__c}} {{Address_Line_2__c}}, {{City__c}}, {{Province_Territory_State__c}}, {{Postal_Code__c}}&zoom=17&size=130x130&key=AIzaSyB0n_92iCiJzEB2KBQ19jx88Uu6SWN7aUU" />   
-                                    <div class="tp_22 search-results-map-tooltip">View Map</div>
-                                  </div>
-                              </a>
-                          </div>
-                          <div class="small-6 columns search-results-office-info">
-                            <div class="map-address">
-                              <p class="callout-body-copy">145 King St W</p>
-                              <p class="body-copy">Toronto, ON, M5H 1J8</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="small-12 medium-4 large-6 columns search-results-buttons">
-                        <div class="row">
-                          <div class="small-6 medium-12 large-6 columns search-results-button">
-                            <ul onmouseover="ga('send','event','Consumer Engagement','Hover','Hover_Contact_Numbers_EventPage:FAA', 0);" data-dropdown-menu="svjkem-dropdown-menu" role="menubar" class="dropdown menu">
-                            <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
-                                    Contact Info
-                                     Phone
-                                ">
-                                <a class="button secondary small-icon phone dropdown" type="button" tabindex="0">
-                                    <span class="hide-for-small-only">Contact Info</span>
-                                    <span class="show-for-small-only"><i aria-hidden="true" class="phone-icon"></i> Phone</span>
-                                </a>
-                                <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
-                                    <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
-                                        <a href="mailto:{{myInfo.Email}}">email me</a>
-                                    </li>
-                                    <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                        <a href="tel:{{myInfo.Phone}}">
-                                            <strong>phone</strong>
-                                            <span>(416) 860-1668</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                           </ul>
-                          </div>
-                          <div class="small-6 medium-3 columns search-results-button">
-                            <a onclick="ga('send','event','Consumer Engagement','Click','Click_Email_me_EventPage:FAA', 0);" href="mailto:{{myInfo.Email}}" class="button secondary small-icon email show-for-small-only" type="button"><span><i aria-hidden="true" class="email-icon"></i> Email</span></a>
-                          </div>
-                          <div class="small-12 medium-12 large-6 columns search-results-button">
-                            <a onclick="ga('send','event','Consumer Engagement','Click','Click_View_Profile_EventPage:FAA', 0);" class="button" type="button" href="{{myInfo.ConsultantUrl}}">View Profile</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+              </div>
+            </div>
+          </div>
+    </script>
+    <script id="result-amount-template" type="x-tmpl-mustache">
+      <div class="row search-results-number">
+        <div class="medium-12 columns">
+          {{#length}}
+              <p class="large-body-copy">{{length}} results</p>
+          {{/length}}
+          {{^length}}
+            <p class="large-body-copy text-center">No results match your search</p>
+            <p class="body-copy text-center">Please try different spellings or more general terms</p>
+          {{/length}}
+        </div>
+      </div>
+    </script>
+    <script id="consultant-template" type="x-tmpl-mustache">
+      {{#.}}
+      <div class="row divider">
+        <div class="small-12 columns">
+          <div class="row search-results-consultant">
+            <div class="medium-8 large-6 columns">
+              <div class="row search-results-info">
+                <div class="search-results-consultant-portrait small-5 columns">
+                  <img src="{{myInfo.photoUrl}}" alt="" />
                 </div>
-                <div class="row divider">
-                  <div class="small-12 columns">
-                    <div class="row search-results-office">
-                      <div class="small-12 medium-8 large-6 columns map-column">
-                        <div class="row search-results-info">
-                          <div class="small-6 columns maps search-results-info-map">
-                              <a class="map-anchor" href="https://www.google.ca/maps/dir//{{Address_Line_1__c}} {{Address_Line_2__c}}, {{City__c}}, {{Province_Territory_State__c}}, {{Postal_Code__c}}">
-                                  <div class="search-results-map-container image-circle">
-                                    <img src="https://maps.googleapis.com/maps/api/staticmap?center={{Address_Line_1__c}} {{Address_Line_2__c}}, {{City__c}}, {{Province_Territory_State__c}}, {{Postal_Code__c}}&zoom=17&size=130x130&key=AIzaSyB0n_92iCiJzEB2KBQ19jx88Uu6SWN7aUU" />   
-                                    <div class="tp_22 search-results-map-tooltip">View Map</div>
-                                  </div>
+                <div class="small-8 medium-9 columns search-results-consultant-info">
+                  <p class="callout-body-copy search-results-consultant-info-name">{{myInfo.FName}} {{myInfo.LName}}</p>
+                  {{#myInfo.displayTitleDisc.DisplayTitle}}
+                      <p class="sub-title">{{myInfo.title}}</p>
+                  {{/myInfo.displayTitleDisc.DisplayTitle}}
+                  {{#myInfo.displayTitleDisc.DisplayDiscipline}}
+                      <p class="sub-title">{{myInfo.discipline}}</p>
+                  {{/myInfo.displayTitleDisc.DisplayDiscipline}}
+                  <p>{{myInfo.Ct_City}} {{myInfo.PostalCode}}</p>
+                </div>
+              </div>
+            </div>
+            <div class="small-12 medium-4 large-6 columns search-results-buttons">
+              <div class="row">
+                <div class="small-6 medium-12 large-6 columns search-results-button">
+                  <ul onmouseover="ga('send','event','Consumer Engagement','Hover','Hover_Contact_Numbers_EventPage:FAA', 0);" data-dropdown-menu="svjkem-dropdown-menu" role="menubar" class="dropdown menu">
+                  <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
+                          Contact Info
+                           Phone
+                      ">
+                      <a class="button secondary small-icon phone dropdown" type="button" tabindex="0">
+                          <span class="hide-for-small-only">Contact Info</span>
+                          <span class="show-for-small-only"><i aria-hidden="true" class="phone-icon"></i> Phone</span>
+                      </a>
+                      <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
+                          <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
+                              <a href="mailto:{{myInfo.Email}}">email me</a>
+                          </li>
+                          <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                              <a href="tel:{{myInfo.Phone}}">
+                                  <strong>phone</strong>
+                                  <span>(416) 860-1668</span>
                               </a>
-                          </div>
-                          <div class="small-6 columns search-results-office-info">
-                            <div class="map-address">
-                              <p class="callout-body-copy">1 Yorkland Rd</p>
-                              <p class="body-copy">Toronto, ON, M6A 3A1</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="small-12 medium-4 large-6 columns search-results-buttons">
-                        <div class="row">
-                          <div class="small-6 medium-12 large-6 columns search-results-button">
-                            <ul onmouseover="ga('send','event','Consumer Engagement','Hover','Hover_Contact_Numbers_EventPage:FAA', 0);" data-dropdown-menu="svjkem-dropdown-menu" role="menubar" class="dropdown menu">
-                            <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
-                                    Contact Info
-                                     Phone
-                                ">
-                                <a class="button secondary small-icon phone dropdown" type="button" tabindex="0">
-                                    <span class="hide-for-small-only">Contact Info</span>
-                                    <span class="show-for-small-only"><i aria-hidden="true" class="phone-icon"></i> Phone</span>
-                                </a>
-                                <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
-                                    <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
-                                        <a href="mailto:{{myInfo.Email}}">email me</a>
-                                    </li>
-                                    <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                        <a href="tel:{{myInfo.Phone}}">
-                                            <strong>phone</strong>
-                                            <span>(416) 860-1668</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                           </ul>
-                          </div>
-                          <div class="small-6 medium-3 columns search-results-button">
-                            <a onclick="ga('send','event','Consumer Engagement','Click','Click_Email_me_EventPage:FAA', 0);" href="mailto:{{myInfo.Email}}" class="button secondary small-icon email show-for-small-only" type="button"><span><i aria-hidden="true" class="email-icon"></i> Email</span></a>
-                          </div>
-                          <div class="small-12 medium-12 large-6 columns search-results-button">
-                            <a onclick="ga('send','event','Consumer Engagement','Click','Click_View_Profile_EventPage:FAA', 0);" class="button" type="button" href="{{myInfo.ConsultantUrl}}">View Profile</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                          </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div class="small-6 medium-3 columns search-results-button">
+                  <a onclick="ga('send','event','Consumer Engagement','Click','Click_Email_me_EventPage:FAA', 0);" href="mailto:{{myInfo.Email}}" class="button secondary small-icon email show-for-small-only" type="button"><span><i aria-hidden="true" class="email-icon"></i> Email</span></a>
+                </div>
+                <div class="small-12 medium-12 large-6 columns search-results-button">
+                  <a onclick="ga('send','event','Consumer Engagement','Click','Click_View_Profile_EventPage:FAA', 0);" class="button" type="button" href="{{myInfo.ConsultantUrl}}">View Profile</a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row search-results-number">
-            <div class="medium-12 columns">
-              <p class="large-body-copy">24 results in Whitby, ON </p>
-            </div>
-          </div>
-          <div class="callout row search-no-results is-hidden">
-            <div class="medium-12 columns">
-               <p class="large-body-copy text-center">No results match your search</p>
-                <p class="body-copy text-center">Please try different spellings or more general terms</p>
-            </div>
-          </div>
-          <div class="row search-results-consultant-wrapper">
-              <div class="small-12 columns">
-                <div class="row divider">
-                  <div class="small-12 columns">
-                    <div class="row search-results-consultant">
-                      <div class="small-12 medium-8 large-6 columns">
-                        <div class="row search-results-info">
-                          <div class="search-results-consultant-portrait small-5 columns">
-                            <img src="images/find-an-advisor-consultant-phyllisvance.png" />
-                          </div>
-                          <div class="small-8 medium-9 columns search-results-consultant-info">
-                            <p class="callout-body-copy search-results-consultant-info-name">Phyllis Vance</p>
-                            <p class="sub-title">Consultant</p>
-                            <p class="body-copy">Whitby, ON, M6Q 8H0</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="small-12 medium-4 large-6 columns search-results-buttons">
-                        <div class="row">
-                          <div class="small-6 medium-12 large-6 columns search-results-button">
-                            <ul onmouseover="ga('send','event','Consumer Engagement','Hover','Hover_Contact_Numbers_EventPage:FAA', 0);" data-dropdown-menu="svjkem-dropdown-menu" role="menubar" class="dropdown menu">
-                            <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
-                                    Contact Info
-                                     Phone
-                                ">
-                                <a class="button secondary small-icon phone dropdown" type="button" tabindex="0">
-                                    <span class="hide-for-small-only">Contact Info</span>
-                                    <span class="show-for-small-only"><i aria-hidden="true" class="phone-icon"></i> Phone</span>
-                                </a>
-                                <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
-                                    <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
-                                        <a href="mailto:{{myInfo.Email}}">email me</a>
-                                    </li>
-                                    <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                        <a href="tel:{{myInfo.Phone}}">
-                                            <strong>phone</strong>
-                                            <span>(416) 860-1668</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                           </ul>
-                          </div>
-                          <div class="small-6 medium-3 columns search-results-button">
-                            <a onclick="ga('send','event','Consumer Engagement','Click','Click_Email_me_EventPage:FAA', 0);" href="mailto:{{myInfo.Email}}" class="button secondary small-icon email show-for-small-only" type="button"><span><i aria-hidden="true" class="email-icon"></i> Email</span></a>
-                          </div>
-                          <div class="small-12 medium-12 large-6 columns search-results-button">
-                            <a onclick="ga('send','event','Consumer Engagement','Click','Click_View_Profile_EventPage:FAA', 0);" class="button" type="button" href="{{myInfo.ConsultantUrl}}">View Profile</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row divider">
-                  <div class="small-12 columns">
-                    <div class="row search-results-consultant">
-                      <div class="small-12 medium-8 large-6 columns">
-                        <div class="row search-results-info">
-                          <div class="search-results-consultant-portrait small-5 columns">
-                            <img src="images/find-an-advisor-consultant-michaelscott.png" />
-                          </div>
-                          <div class="small-8 medium-9 columns search-results-consultant-info">
-                            <p class="callout-body-copy search-results-consultant-info-name">Michael Scott</p>
-                            <p class="sub-title">Consultant</p>
-                            <p class="body-copy">Whitby, ON, M6Q 8H0</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="small-12 medium-4 large-6 columns search-results-buttons">
-                        <div class="row">
-                          <div class="small-6 medium-12 large-6 columns search-results-button">
-                            <ul onmouseover="ga('send','event','Consumer Engagement','Hover','Hover_Contact_Numbers_EventPage:FAA', 0);" data-dropdown-menu="svjkem-dropdown-menu" role="menubar" class="dropdown menu">
-                            <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
-                                    Contact Info
-                                     Phone
-                                ">
-                                <a class="button secondary small-icon phone dropdown" type="button" tabindex="0">
-                                    <span class="hide-for-small-only">Contact Info</span>
-                                    <span class="show-for-small-only"><i aria-hidden="true" class="phone-icon"></i> Phone</span>
-                                </a>
-                                <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
-                                    <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
-                                        <a href="mailto:{{myInfo.Email}}">email me</a>
-                                    </li>
-                                    <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                        <a href="tel:{{myInfo.Phone}}">
-                                            <strong>phone</strong>
-                                            <span>(416) 860-1668</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                           </ul>
-                          </div>
-                          <div class="small-6 medium-3 columns search-results-button">
-                            <a onclick="ga('send','event','Consumer Engagement','Click','Click_Email_me_EventPage:FAA', 0);" href="mailto:{{myInfo.Email}}" class="button secondary small-icon email show-for-small-only" type="button"><span><i aria-hidden="true" class="email-icon"></i> Email</span></a>
-                          </div>
-                          <div class="small-12 medium-12 large-6 columns search-results-button">
-                            <a onclick="ga('send','event','Consumer Engagement','Click','Click_View_Profile_EventPage:FAA', 0);" class="button" type="button" href="{{myInfo.ConsultantUrl}}">View Profile</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="small-12 columns">
-                        <div id="view-all-team-members-expand-1" class="row is-hidden-mobile" data-toggler="is-hidden-mobile">
-                          <div class="medium-12 columns">
-                            <div class="row search-results-consultant-team-section-divider">
-                              <div class="small-3 medium-6 columns overline">
-                              </div>
-                              <div class="small-4 medium-3 large-2 columns">
-                                <p class="section-title text-center">My Team</p>
-                              </div>
-                              <div class="small-3 medium-6 columns overline">
-                              </div>
-                              </div>
-                          </div>
-                          <div class="small-12 columns">
-                              <div class="row">
-                                <div class="small-11 small-centered medium-12 columns text-center search-results-consultant-team-members">
-                                  <div class="row search-results-consultant-team-member underline">
-                                    <div class="small-6 medium-12 columns search-results-consultant-team-member-name">
-                                      <p class="tp_09 consultant_name">John Smith</p>
-                                    </div>
-                                    <div class="small-6 medium-12 columns search-results-consultant-team-member-contact">
-                                      <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
-                                        <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
-                                              Contact Info
-                                               Phone
-                                          ">
-                                          <a class="button dropdown secondary small-icon phone-icon dropdown-button" type="button" tabindex="0">
-                                              <span class="hide-for-small-only">Contact Info</span>
-                                          </a>
-                                          <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
-                                              <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
-                                                  <a href="mailto:{{Email__c}}">email me</a>
-                                              </li>
-                                              <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                                  <a href="tel:{{Phone__c}}">
-                                                      <strong>phone</strong>
-                                                      <span>(416) 860-1668</span>
-                                                  </a>
-                                              </li>
-                                          </ul>
-                                        </li>
-                                      </ul>
-                                      <a href="mailto:{{Email__c}}" class="button secondary small-icon email-icon show-for-small-only" type="button"></a>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="small-12 columns">
-                          <div class="row show-for-small-only text-center" >
-                             <p id="view-all-team-members-expand-arrow"class="section-title text-center search-results-consultant-team-members-view-all overline" data-toggle="view-all-team-members-expand-1 view-all-team-members-arrrow-expand-1">View All Team Members
-                              <span id="view-all-team-members-arrrow-expand-1"class="accordion-arrow" data-toggler="expanded-accordion-arrow"></span>
-                            </p>
-                          </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row divider">
-                  <div class="small-12 columns">
-                    <div class="row search-results-consultant">
-                      <div class="small-12 medium-8 large-6 columns">
-                        <div class="row search-results-info">
-                          <div class="search-results-consultant-portrait small-5 columns">
-                            <img src="images/find-an-advisor-consultant-davidwallace.png" />
-                          </div>
-                          <div class="small-8 medium-9 columns search-results-consultant-info">
-                            <p class="callout-body-copy search-results-consultant-info-name">David Wallace</p>
-                            <p class="sub-title">Consultant</p>
-                            <p class="body-copy">Whitby, ON, M6Q 8H0</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="small-12 medium-4 large-6 columns search-results-buttons">
-                        <div class="row">
-                          <div class="small-6 medium-12 large-6 columns search-results-button">
-                            <ul onmouseover="ga('send','event','Consumer Engagement','Hover','Hover_Contact_Numbers_EventPage:FAA', 0);" data-dropdown-menu="svjkem-dropdown-menu" role="menubar" class="dropdown menu">
-                            <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
-                                    Contact Info
-                                     Phone
-                                ">
-                                <a class="button secondary small-icon phone dropdown" type="button" tabindex="0">
-                                    <span class="hide-for-small-only">Contact Info</span>
-                                    <span class="show-for-small-only"><i aria-hidden="true" class="phone-icon"></i> Phone</span>
-                                </a>
-                                <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
-                                    <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
-                                        <a href="mailto:{{myInfo.Email}}">email me</a>
-                                    </li>
-                                    <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                        <a href="tel:{{myInfo.Phone}}">
-                                            <strong>phone</strong>
-                                            <span>(416) 860-1668</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                           </ul>
-                          </div>
-                          <div class="small-6 medium-3 columns search-results-button">
-                            <a onclick="ga('send','event','Consumer Engagement','Click','Click_Email_me_EventPage:FAA', 0);" href="mailto:{{myInfo.Email}}" class="button secondary small-icon email show-for-small-only" type="button"><span><i aria-hidden="true" class="email-icon"></i> Email</span></a>
-                          </div>
-                          <div class="small-12 medium-12 large-6 columns search-results-button">
-                            <a onclick="ga('send','event','Consumer Engagement','Click','Click_View_Profile_EventPage:FAA', 0);" class="button" type="button" href="{{myInfo.ConsultantUrl}}">View Profile</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+          {{#myConsultantTeam.length}}
                     <div class="row">
                       <div class="small-12 columns">
                         <div id="view-all-team-members-expand-2" class="row is-hidden-mobile" data-toggler="is-hidden-mobile">
@@ -596,6 +337,8 @@
                           </div>
                       </div>
                     </div>
+                    {{/myConsultantTeam.length}}
+                    {{#associates.length}}
                     <div class="row">
                       <div class="small-12 columns">
                         <div id="view-all-team-members-expand-3" class="row is-hidden-mobile" data-toggler="is-hidden-mobile">
@@ -657,249 +400,30 @@
                     </div>
                   </div>
                 </div>
-                <div class="row divider">
-                  <div class="small-12 columns">
-                    <div class="row search-results-consultant">
-                      <div class="small-12 medium-8 large-6 columns">
-                        <div class="row search-results-info">
-                          <div class="search-results-consultant-portrait small-5 columns">
-                            <img src="images/find-an-advisor-consultant-angelamartin.png" />
-                          </div>
-                          <div class="small-8 medium-9 columns search-results-consultant-info">
-                            <p class="callout-body-copy search-results-consultant-info-name">Angela Martin</p>
-                            <p class="sub-title">executive financial consultant</p>
-                            <p class="body-copy">Whitby, ON, M6Q 8H0</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="small-12 medium-4 large-6 columns search-results-buttons">
-                        <div class="row">
-                          <div class="small-6 medium-12 large-6 columns search-results-button">
-                            <ul onmouseover="ga('send','event','Consumer Engagement','Hover','Hover_Contact_Numbers_EventPage:FAA', 0);" data-dropdown-menu="svjkem-dropdown-menu" role="menubar" class="dropdown menu">
-                            <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
-                                    Contact Info
-                                     Phone
-                                ">
-                                <a class="button secondary small-icon phone dropdown" type="button" tabindex="0">
-                                    <span class="hide-for-small-only">Contact Info</span>
-                                    <span class="show-for-small-only"><i aria-hidden="true" class="phone-icon"></i> Phone</span>
-                                </a>
-                                <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
-                                    <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
-                                        <a href="mailto:{{myInfo.Email}}">email me</a>
-                                    </li>
-                                    <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                        <a href="tel:{{myInfo.Phone}}">
-                                            <strong>phone</strong>
-                                            <span>(416) 860-1668</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                           </ul>
-                          </div>
-                          <div class="small-6 medium-3 columns search-results-button">
-                            <a onclick="ga('send','event','Consumer Engagement','Click','Click_Email_me_EventPage:FAA', 0);" href="mailto:{{myInfo.Email}}" class="button secondary small-icon email show-for-small-only" type="button"><span><i aria-hidden="true" class="email-icon"></i> Email</span></a>
-                          </div>
-                          <div class="small-12 medium-12 large-6 columns search-results-button">
-                            <a onclick="ga('send','event','Consumer Engagement','Click','Click_View_Profile_EventPage:FAA', 0);" class="button" type="button" href="{{myInfo.ConsultantUrl}}">View Profile</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="small-12 columns">
-                        <div id="view-all-team-members-expand-4" class="row is-hidden-mobile" data-toggler="is-hidden-mobile">
-                          <div class="medium-12 columns">
-                            <div class="row search-results-consultant-team-section-divider">
-                              <div class="small-3 medium-6 columns overline">
-                              </div>
-                              <div class="small-4 medium-3 large-2 columns">
-                                <p class="section-title text-center">My Team</p>
-                              </div>
-                              <div class="small-3 medium-6 columns overline">
-                              </div>
-                              </div>
-                          </div>
-                          <div class="small-12 columns">
-                              <div class="row">
-                                <div class="small-11 small-centered medium-12 columns text-center search-results-consultant-team-members">
-                                  <div class="row search-results-consultant-team-member underline">
-                                    <div class="small-6 medium-12 columns search-results-consultant-team-member-name">
-                                      <p class="tp_09 consultant_name">John Smith</p>
-                                    </div>
-                                      <div class="small-6 medium-12 columns search-results-consultant-team-member-contact">
-                                      <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
-                                        <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
-                                              Contact Info
-                                               Phone
-                                          ">
-                                          <a class="button dropdown secondary small-icon phone-icon dropdown-button" type="button" tabindex="0">
-                                              <span class="hide-for-small-only">Contact Info</span>
-                                          </a>
-                                          <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
-                                              <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
-                                                  <a href="mailto:{{Email__c}}">email me</a>
-                                              </li>
-                                              <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                                  <a href="tel:{{Phone__c}}">
-                                                      <strong>phone</strong>
-                                                      <span>(416) 860-1668</span>
-                                                  </a>
-                                              </li>
-                                          </ul>
-                                        </li>
-                                      </ul>
-                                      <a href="mailto:{{Email__c}}" class="button secondary small-icon email-icon show-for-small-only" type="button"></a>
-                                    </div>
-                                  </div>
-                                  <div class="row search-results-consultant-team-member underline">
-                                    <div class="small-6 medium-12 columns search-results-consultant-team-member-name">
-                                      <p class="tp_09 consultant_name">John Smith</p>
-                                    </div>
-                                      <div class="small-6 medium-12 columns search-results-consultant-team-member-contact">
-                                      <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
-                                        <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
-                                              Contact Info
-                                               Phone
-                                          ">
-                                          <a class="button dropdown secondary small-icon phone-icon dropdown-button" type="button" tabindex="0">
-                                              <span class="hide-for-small-only">Contact Info</span>
-                                          </a>
-                                          <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
-                                              <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
-                                                  <a href="mailto:{{Email__c}}">email me</a>
-                                              </li>
-                                              <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                                  <a href="tel:{{Phone__c}}">
-                                                      <strong>phone</strong>
-                                                      <span>(416) 860-1668</span>
-                                                  </a>
-                                              </li>
-                                          </ul>
-                                        </li>
-                                      </ul>
-                                      <a href="mailto:{{Email__c}}" class="button secondary small-icon email-icon show-for-small-only" type="button"></a>
-                                    </div>
-                                  </div>
-                                  <div class="row search-results-consultant-team-member underline">
-                                    <div class="small-6 medium-12 columns search-results-consultant-team-member-name">
-                                      <p class="tp_09 consultant_name">John Smith</p>
-                                    </div>
-                                      <div class="small-6 medium-12 columns search-results-consultant-team-member-contact">
-                                      <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
-                                        <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
-                                              Contact Info
-                                               Phone
-                                          ">
-                                          <a class="button dropdown secondary small-icon phone-icon dropdown-button" type="button" tabindex="0">
-                                              <span class="hide-for-small-only">Contact Info</span>
-                                          </a>
-                                          <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
-                                              <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
-                                                  <a href="mailto:{{Email__c}}">email me</a>
-                                              </li>
-                                              <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                                  <a href="tel:{{Phone__c}}">
-                                                      <strong>phone</strong>
-                                                      <span>(416) 860-1668</span>
-                                                  </a>
-                                              </li>
-                                          </ul>
-                                        </li>
-                                      </ul>
-                                      <a href="mailto:{{Email__c}}" class="button secondary small-icon email-icon show-for-small-only" type="button"></a>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="small-12 columns">
-                          <div class="row show-for-small-only text-center" >
-                             <p id="view-all-team-members-expand-arrow"class="section-title text-center search-results-consultant-team-members-view-all overline" data-toggle="view-all-team-members-expand-4 view-all-team-members-arrrow-expand-4">View All Team Members
-                              <span id="view-all-team-members-arrrow-expand-4"class="accordion-arrow" data-toggler="expanded-accordion-arrow"></span>
-                            </p>
-                          </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row divider">
-                  <div class="small-12 columns">
-                    <div class="row search-results-consultant">
-                      <div class="small-12 medium-8 large-6 columns">
-                        <div class="row search-results-info">
-                          <div class="search-results-consultant-portrait small-5 columns">
-                            <img src="images/find-an-advisor-consultant-jimhalpert.png" />
-                          </div>
-                          <div class="small-8 medium-9 columns search-results-consultant-info">
-                            <p class="callout-body-copy search-results-consultant-info-name">Jim Halpert</p>
-                            <p class="sub-title">Associate Consultant</p>
-                            <p class="body-copy">Whitby, ON, M6Q 8H0</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="small-12 medium-4 large-6 columns search-results-buttons">
-                        <div class="row">
-                          <div class="small-6 medium-12 large-6 columns search-results-button">
-                            <ul onmouseover="ga('send','event','Consumer Engagement','Hover','Hover_Contact_Numbers_EventPage:FAA', 0);" data-dropdown-menu="svjkem-dropdown-menu" role="menubar" class="dropdown menu">
-                            <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
-                                    Contact Info
-                                     Phone
-                                ">
-                                <a class="button secondary small-icon phone dropdown" type="button" tabindex="0">
-                                    <span class="hide-for-small-only">Contact Info</span>
-                                    <span class="show-for-small-only"><i aria-hidden="true" class="phone-icon"></i> Phone</span>
-                                </a>
-                                <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
-                                    <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
-                                        <a href="mailto:{{myInfo.Email}}">email me</a>
-                                    </li>
-                                    <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                        <a href="tel:{{myInfo.Phone}}">
-                                            <strong>phone</strong>
-                                            <span>(416) 860-1668</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                           </ul>
-                          </div>
-                          <div class="small-6 medium-3 columns search-results-button">
-                            <a onclick="ga('send','event','Consumer Engagement','Click','Click_Email_me_EventPage:FAA', 0);" href="mailto:{{myInfo.Email}}" class="button secondary small-icon email show-for-small-only" type="button"><span><i aria-hidden="true" class="email-icon"></i> Email</span></a>
-                          </div>
-                          <div class="small-12 medium-12 large-6 columns search-results-button">
-                            <a onclick="ga('send','event','Consumer Engagement','Click','Click_View_Profile_EventPage:FAA', 0);" class="button" type="button" href="{{myInfo.ConsultantUrl}}">View Profile</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-          <div class="row divider">
-            <div class="small-12 columns text-center view-more-results-button">
-                <a class="button secondary" type="button" href="#" data-fetch-results>View More Results</a>
-            </div>
-          </div>
+        {{/associates.length}}
+      {{/.}}
+    </script>
+    <script id="view-more-template" type="x-tmpl-mustache">
+      <div class="row divider">
+        <div class="small-12 columns text-center view-more-results-button">
+            <a class="button secondary" type="button" href="#" data-fetch-results>View More Results</a>
+        </div>
       </div>
-
+    </script>
+    <div class="section search-results hide" id="results-container"></div>
     </main>
+    <script src="scripts/pattern-lib/vendor-project.js"></script>
+    <script src="scripts/pattern-lib/main-project.js"></script>
 
-    <script src="scripts/vendor.js"></script>
-    <script src="scripts/main-project.js"></script>
-
-    <!-- build:js scripts/faa-vendor.js -->
+    <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="../bower_components/typeahead.js/dist/typeahead.bundle.min.js"></script>
-    <script src="../bower_components/mustache.js/mustache.min.js"></script>
+    <script src="/bower_components/typeahead.js/dist/typeahead.bundle.min.js"></script>
+    <script src="/bower_components/mustache.js/mustache.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-    <!-- build:js scripts/find-an-advisor.js -->
-    <script src="scripts/find-an-advisor.js"></script>
+
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
     <!-- endbuild -->
   </body>
 </html>

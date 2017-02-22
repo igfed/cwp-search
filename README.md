@@ -1,0 +1,21 @@
+# Find an advisor
+Here is a getting started guide.
+This project uses NPM and node.js to help us automate some of our tasks and reduce the complexity of the overall project.
+Before proceeding please install them both.
+
+```bash
+git clone https://github.com/igfed/cwp-search
+cd cwp-search
+# Install the project's dependencies
+npm install
+# If you dont have bower installed now is the time to do that.
+npm install -g bower
+# Then add your dependancies
+bower install
+
+# Run the project locally
+gulp serve
+
+# Build the project for distrobution
+gulp build
+```
