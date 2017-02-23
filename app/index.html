@@ -87,96 +87,91 @@
       </div>
 
           
-    <div class="row search-results-consultant-wrapper">
-        <div class="small-12 columns">
-        </div>
-    </div>
+    <div class="bg-secondary full-width search-results search-results-offices-wrapper" id="office-search"></div>
     <script id="office-template" type="x-tmpl-mustache">
-      <div class="search-results">
-          <div class="bg-secondary full-width search-results-offices-wrapper">
-            <div class="row">
-              <div class="small-12 columns" data-toggle="search-results-offices-expand search-results-offices-accordion-arrow">
-                <div id="search-results-offices-accordion-arrow" class="row search-results-offices accordion-arrow" data-toggler="expanded-accordion-arrow">
-                  <div class="small-3 medium-2 columns">
-                    <figure class="ex-small-figure">
-                      <img class="image-circle image-6-pillars" src="images/contact-us_head-office.png" alt="">
-                    </figure>
-                  </div>
-                  <div class="small-6 medium-3 columns">
-                    <p class="large-body-copy">3 Offices found</p>
+      <div class="row">
+        <div class="small-12 columns" data-toggle="search-results-offices-expand search-results-offices-accordion-arrow">
+          <div id="search-results-offices-accordion-arrow" class="row search-results-offices accordion-arrow" data-toggler="expanded-accordion-arrow">
+            <div class="small-3 medium-2 columns">
+              <figure class="ex-small-figure">
+                <img class="image-circle" src="images/contact-us_head-office.png" alt="">
+              </figure>
+            </div>
+            <div class="small-6 medium-3 columns">
+              <p class="large-body-copy">{{length}} Offices found</p>
+            </div>
+          </div>
+        </div>
+        <div id="search-results-offices-expand" class="small-12 columns is-hidden" data-toggler="is-hidden">
+          {{#.}}
+          <div class="row divider">
+            <div class="small-12 columns">
+              <div class="row search-results-office">
+                <div class="small-12 medium-8 large-6 columns map-column">
+                  <div class="row search-results-info">
+                    <div class="small-6 columns maps search-results-info-map">
+                        <a class="map-anchor" href="https://www.google.ca/maps/dir//{{Address_Line_1__c}} {{Address_Line_2__c}}, {{City__c}}, {{Province_Territory_State__c}}, {{Postal_Code__c}}">
+                            <div class="search-results-map-container image-circle">
+                              <img src="https://maps.googleapis.com/maps/api/staticmap?center={{Address_Line_1__c}} {{Address_Line_2__c}}, {{City__c}}, {{Province_Territory_State__c}}, {{Postal_Code__c}}&zoom=17&size=130x130&key=AIzaSyB0n_92iCiJzEB2KBQ19jx88Uu6SWN7aUU" />   
+                              <div class="tp_22 search-results-map-tooltip">View Map</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="small-6 columns search-results-office-info">
+                      <div class="map-address">
+                        <p class="callout-body-copy">{{Address_Line_1__c}} {{Address_Line_2__c}}</p>
+                        <p class="body-copy">{{City__c}}, {{Province_Territory_State__c}}, {{Postal_Code__c}}</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div id="search-results-offices-expand" class="small-12 columns is-hidden" data-toggler="is-hidden">
-                <div class="row divider">
-                  <div class="small-12 columns">
-                    <div class="row search-results-office">
-                      <div class="small-12 medium-8 large-6 columns map-column">
-                        <div class="row search-results-info">
-                          <div class="small-6 columns maps search-results-info-map">
-                              <a class="map-anchor" href="https://www.google.ca/maps/dir//{{Address_Line_1__c}} {{Address_Line_2__c}}, {{City__c}}, {{Province_Territory_State__c}}, {{Postal_Code__c}}">
-                                  <div class="search-results-map-container image-circle">
-                                    <img src="https://maps.googleapis.com/maps/api/staticmap?center={{Address_Line_1__c}} {{Address_Line_2__c}}, {{City__c}}, {{Province_Territory_State__c}}, {{Postal_Code__c}}&zoom=17&size=130x130&key=AIzaSyB0n_92iCiJzEB2KBQ19jx88Uu6SWN7aUU" />   
-                                    <div class="tp_22 search-results-map-tooltip">View Map</div>
-                                  </div>
-                              </a>
-                          </div>
-                          <div class="small-6 columns search-results-office-info">
-                            <div class="map-address">
-                              <p class="callout-body-copy">200 Yorkland Blvd</p>
-                              <p class="body-copy">Toronto, ON, M2J 5C1</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
 
-                      <div class="small-12 medium-4 large-6 columns search-results-buttons">
-                        <div class="row">
-                          <div class="small-6 medium-12 large-6 columns search-results-button">
-                            <ul onmouseover="ga('send','event','Consumer Engagement','Hover','Hover_Contact_Numbers_EventPage:FAA', 0);" data-dropdown-menu="svjkem-dropdown-menu" role="menubar" class="dropdown menu">
-                            <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
-                                    Contact Info
-                                     Phone
-                                ">
-                                <a class="button secondary small-icon phone dropdown" type="button" tabindex="0">
-                                    <span class="hide-for-small-only">Contact Info</span>
-                                    <span class="show-for-small-only"><i aria-hidden="true" class="phone-icon"></i> Phone</span>
-                                </a>
-                                <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
-                                    <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
-                                        <a href="mailto:{{myInfo.Email}}">email me</a>
-                                    </li>
-                                    <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                        <a href="tel:{{myInfo.Phone}}">
-                                            <strong>phone</strong>
-                                            <span>(416) 860-1668</span>
-                                            <span>ext. 251</span>
-                                        </a>
-                                    </li>
-                                    <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                       <a href="tel:{{myInfo.Phone}}">
-                                            <strong>tax</strong>
-                                            <span>(416) 860-1668</span>
-                                       </a>
-                                    </li>
-                                </ul>
-                            </li>
-                           </ul>
-                          </div>
-                          <div class="small-6 medium-3 columns search-results-button">
-                            <a onclick="ga('send','event','Consumer Engagement','Click','Click_Email_me_EventPage:FAA', 0);" href="mailto:{{myInfo.Email}}" class="button secondary small-icon email show-for-small-only" type="button"><span><i aria-hidden="true" class="email-icon"></i> Email</span></a>
-                          </div>
-                          <div class="small-12 medium-12 large-6 columns search-results-button">
-                            <a onclick="ga('send','event','Consumer Engagement','Click','Click_View_Profile_EventPage:FAA', 0);" class="button" type="button" href="{{myInfo.ConsultantUrl}}">View Profile</a>
-                          </div>
-                        </div>
-                      </div>
+                <div class="small-12 medium-4 large-6 columns search-results-buttons">
+                  <div class="row">
+                    <div class="small-6 medium-12 large-6 columns search-results-button">
+                      <ul onmouseover="ga('send','event','Consumer Engagement','Hover','Hover_Contact_Numbers_EventPage:FAA', 0);" data-dropdown-menu="svjkem-dropdown-menu" role="menubar" class="dropdown menu">
+                      <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
+                              Contact Info
+                               Phone
+                          ">
+                          <a class="button secondary small-icon phone dropdown" type="button" tabindex="0">
+                              <span class="hide-for-small-only">Contact Info</span>
+                              <span class="show-for-small-only"><i aria-hidden="true" class="phone-icon"></i> Phone</span>
+                          </a>
+                          <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
+                              <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
+                                  <a href="mailto:{{Director__r.Email}}">email me</a>
+                              </li>
+                              <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                                  <a href="tel:{{Phone__c}}">
+                                      <strong>phone</strong>
+                                      <span>{{Phone__c}}</span>
+                                  </a>
+                              </li>
+                              <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                                 <a href="tel:{{Fax__c}}">
+                                      <strong>fax</strong>
+                                      <span>{{Fax__c}}</span>
+                                 </a>
+                              </li>
+                          </ul>
+                      </li>
+                     </ul>
+                    </div>
+                    <div class="small-6 medium-3 columns search-results-button">
+                      <a onclick="ga('send','event','Consumer Engagement','Click','Click_Email_me_EventPage:FAA', 0);" href="mailto:{{Director__r.Email}}" class="button secondary small-icon email show-for-small-only" type="button"><span><i aria-hidden="true" class="email-icon"></i> Email</span></a>
+                    </div>
+                    <div class="small-12 medium-12 large-6 columns search-results-button">
+                      <a onclick="ga('send','event','Consumer Engagement','Click','Click_View_Profile_EventPage:FAA', 0);" class="button" type="button" href="{{prettyURL__c}}">View Profile</a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          {{/.}}
+        </div>
+      </div>
     </script>
     <script id="result-amount-template" type="x-tmpl-mustache">
       <div class="row search-results-number">
@@ -232,7 +227,7 @@
                           <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
                               <a href="tel:{{myInfo.Phone}}">
                                   <strong>phone</strong>
-                                  <span>(416) 860-1668</span>
+                                  <span>{{myInfo.Phone}}</span>
                               </a>
                           </li>
                       </ul>
@@ -385,7 +380,7 @@
         </div>
       </div>
     </script>
-    <div class="section search-results hide" id="results-container"></div>
+    <div class="section search-results search-results-consultant-wrapper hide" id="results-container"></div>
     </main>
     <script src="scripts/pattern-lib/vendor-project.js"></script>
     <script src="scripts/pattern-lib/main-project.js"></script>
