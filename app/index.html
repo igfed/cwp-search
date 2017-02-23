@@ -261,14 +261,15 @@
                               </div>
                               <div class="small-3 medium-6 columns overline">
                               </div>
-                              </div>
+                            </div>
                           </div>
                           <div class="small-12 columns">
                               <div class="row">
                                 <div class="small-11 small-centered medium-12 columns text-center search-results-consultant-team-members">
                                   <div class="row search-results-consultant-team-member underline">
+                                    {{#myConsultantTeam}}
                                     <div class="small-6 medium-12 columns search-results-consultant-team-member-name">
-                                      <p class="tp_09 consultant_name">John Smith</p>
+                                      <p class="tp_09 consultant_name">{{FName}} {{LName}}</p>
                                     </div>
                                     <div class="small-6 medium-12 columns search-results-consultant-team-member-contact">
                                       <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
@@ -286,7 +287,7 @@
                                               <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
                                                   <a href="tel:{{Phone__c}}">
                                                       <strong>phone</strong>
-                                                      <span>(416) 860-1668</span>
+                                                      <span>{{Phone__c}}</span>
                                                   </a>
                                               </li>
                                           </ul>
@@ -295,35 +296,7 @@
                                       <a href="mailto:{{Email__c}}" class="button secondary small-icon email-icon show-for-small-only" type="button"></a>
                                     </div>
                                   </div>
-                                  <div class="row search-results-consultant-team-member underline">
-                                    <div class="small-6 medium-12 columns search-results-consultant-team-member-name">
-                                      <p class="tp_09 consultant_name">John Smith</p>
-                                    </div>
-                                      <div class="small-6 medium-12 columns search-results-consultant-team-member-contact">
-                                      <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
-                                        <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
-                                              Contact Info
-                                               Phone
-                                          ">
-                                          <a class="button dropdown secondary small-icon phone-icon dropdown-button" type="button" tabindex="0">
-                                              <span class="hide-for-small-only">Contact Info</span>
-                                          </a>
-                                          <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
-                                              <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
-                                                  <a href="mailto:{{Email__c}}">email me</a>
-                                              </li>
-                                              <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                                  <a href="tel:{{Phone__c}}">
-                                                      <strong>phone</strong>
-                                                      <span>(416) 860-1668</span>
-                                                  </a>
-                                              </li>
-                                          </ul>
-                                        </li>
-                                      </ul>
-                                      <a href="mailto:{{Email__c}}" class="button secondary small-icon email-icon show-for-small-only" type="button"></a>
-                                    </div>
-                                  </div>
+                                  {{/myConsultantTeam}}
                                 </div>
                               </div>
                           </div>
@@ -357,8 +330,9 @@
                               <div class="row">
                                 <div class="small-11 small-centered medium-12 columns text-center search-results-consultant-team-members">
                                   <div class="row search-results-consultant-team-member">
+                                  {{#associates}}
                                     <div class="small-6 medium-12 columns search-results-consultant-team-member-name">
-                                      <p class="tp_09 consultant_name">John Smith</p>
+                                      <p class="tp_09 consultant_name">{{First_Name__c}} {{Last_Name__c}}</p>
                                     </div>
                                       <div class="small-6 medium-12 columns search-results-consultant-team-member-contact">
                                         <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
@@ -376,7 +350,7 @@
                                                 <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
                                                     <a href="tel:{{Phone__c}}">
                                                         <strong>phone</strong>
-                                                        <span>(416) 860-1668</span>
+                                                        <span>{{Phone__c}}</span>
                                                     </a>
                                                 </li>
                                             </ul>
@@ -384,6 +358,7 @@
                                         </ul>
                                       <a href="mailto:{{Email__c}}" class="button secondary small-icon email-icon show-for-small-only" type="button"></a>
                                     </div>
+                                    {{/associates}}
                                   </div>
                                 </div>
                               </div>
