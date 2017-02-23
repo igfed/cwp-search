@@ -840,13 +840,6 @@ $font-stack-sc-medium: $font-whitney-sc-medium, $font-stack;
   flex-flow: column;
 }
 
-.search-results-consultant-info, .search-results-office-info{
-  @include respond-to(medium){
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-}
-
 .search-results-consultant-info-name{
   @include respond-to(medium){
     padding-bottom: 1rem;
