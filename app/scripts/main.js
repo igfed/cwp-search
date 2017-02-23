@@ -77,6 +77,11 @@ function getSearchResults(params) {
 	.always()
 	.done(function( data ) {
 		var result = JSON.parse(data);
+		console.log(result)
+		for (var i=0; i<result.length; i++) {
+			result[i].myInfo.FName = result[i].myInfo.FName.toLowerCase();
+			result[i].myInfo.LName = result[i].myInfo.LName.toLowerCase();
+		}
 		allConsultants = shuffle(result);
 		displaySearchResults('result-amount-template', allConsultants, 'results-container');
 		paginateResults();
@@ -180,7 +185,7 @@ function attachComponents(){
 	$(document).foundation();
 	$('[data-fetch-results]').on('click',function(e){
 		e.preventDefault();
-		$(this).remove();
+		$(this).parent().parent().remove();
 		paginateResults();
 	});
 }
