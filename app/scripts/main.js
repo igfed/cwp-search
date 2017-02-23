@@ -13,18 +13,18 @@ if(window.location.href.indexOf('-fr.') > -1) {
 
 $(function() {
 
-  $('.select-dropdown').change(function() { 
-    if( $('.select-dropdown').val() == 'Location') {
-      $('.search-ui-location').show();
+  $('.search-select').change(function() { 
+    if( $('.search-select').val() == 'Location') {
+      $('.find-an-advisor-search-form-field-location').show();
       $location_field.focus();
-      $('.search-ui-name').hide();
+      $('.find-an-advisor-search-form-field-name').hide();
       is_name_query = false;
 
     }
-    else if( $('.select-dropdown').val() == 'Name') {
-      $('.search-ui-name').show();
+    else if( $('.search-select').val() == 'Name') {
+      $('.find-an-advisor-search-form-field-name').show();
        $name_field.focus();
-      $('.search-ui-location').hide();
+      $('.find-an-advisor-search-form-field-location').hide();
       is_name_query = true;
 
     }         

@@ -59,16 +59,13 @@ $font-stack-sc-medium: $font-whitney-sc-medium, $font-stack;
 }
 
 .ex-small-figure{
-  width: 90px;
-  height: 90px;
+  width: 60px;
 
   @include respond-to(medium){
-    width: 95px;
-    height: 95px;
+    width: 70px;
   }
   @include respond-to(large){
-    width: 115px;
-    height: 115px;
+    width: 90px;
   }
 }
 
@@ -827,13 +824,33 @@ $font-stack-sc-medium: $font-whitney-sc-medium, $font-stack;
 
 .search-results-consultant-portrait{
   width: 80px;
+  // overflow: hidden;
+  // margin-left: 15px;
+
   @include respond-to(medium){
     width: 125px;
   }
 
   @include respond-to(large){
     width: 150px;
+    // max-width: 120px;
+    // height: 160px;
+
   }
+
+  // img{
+  //   position: relative;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  //   max-width: none;
+  //   height: auto;
+
+  //   width: 60px;
+
+  //   @include respond-to(large){
+  //     width: 130px;
+  //   }
+  // }
 }
 
 .search-results-consultant-info{
