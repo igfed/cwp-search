@@ -841,6 +841,7 @@ $font-stack-sc-medium: $font-whitney-sc-medium, $font-stack;
 }
 
 .search-results-consultant-info-name{
+  text-transform: capitalize;
   @include respond-to(medium){
     padding-bottom: 1rem;
   }
