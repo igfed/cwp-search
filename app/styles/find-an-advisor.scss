@@ -467,6 +467,7 @@ $font-stack-sc-medium: $font-whitney-sc-medium, $font-stack;
 
     margin-bottom: 0;
     padding-left: 2rem;
+    box-shadow: none;
 
     font-family: $font-stack;
     font-size: 16px;
@@ -475,6 +476,7 @@ $font-stack-sc-medium: $font-whitney-sc-medium, $font-stack;
     line-height: 1.5em;
     border-radius: 0.5rem;
     border: none;
+    top: -7.5px;
 
     @include respond-to(medium){
       border-radius: 0;
@@ -807,6 +809,10 @@ $font-stack-sc-medium: $font-whitney-sc-medium, $font-stack;
   @include respond-to(large){
     width: 150px;
   }
+}
+
+.search-results-consultant-info{
+  flex-flow: column;
 }
 
 .search-results-consultant-info, .search-results-office-info{
