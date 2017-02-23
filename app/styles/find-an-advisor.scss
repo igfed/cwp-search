@@ -109,7 +109,7 @@ $font-stack-sc-medium: $font-whitney-sc-medium, $font-stack;
     font-size: 1rem;
 
     @include respond-to(medium){
-      padding: 1rem 16% 1rem;
+      padding: 1rem 12% 1rem;
     }
   }
 
@@ -623,6 +623,18 @@ $font-stack-sc-medium: $font-whitney-sc-medium, $font-stack;
     }
   }
 
+  .button{
+
+    &:hover{
+
+      .email-icon{
+              &:before{
+            content: url(../images/find-an-advisor-email-white.svg);
+          }
+      }
+
+    }
+  }
 
 }
 
@@ -965,6 +977,30 @@ $font-stack-sc-medium: $font-whitney-sc-medium, $font-stack;
 
   .phone-icon, .email-icon{
     width: 30px;
+
+    &:hover{
+      background-color: $brand-color;
+      
+      @include respond-to(medium){
+        background-color: transparent;
+      }
+    }
+  }
+
+  .phone-icon{
+    &:hover{
+      &:before{
+        content: url(../images/find-an-advisor-phone-white.svg);
+      }
+    }
+  }
+
+  .email-icon{
+    &:hover{
+      &:before{
+        content: url(../images/find-an-advisor-email-white.svg);
+      }
+    }
   }
 }
 
@@ -1001,16 +1037,6 @@ $font-stack-sc-medium: $font-whitney-sc-medium, $font-stack;
   .expanded-accordion-arrow{
     &:before{
       top: 8px;
-    }
-  }
-}
-
-
-.email-icon{
-
-    &:hover{
-        &:before{
-      content: url(../images/email-white.svg);
     }
   }
 }
