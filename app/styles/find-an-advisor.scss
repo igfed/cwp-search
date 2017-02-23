@@ -431,7 +431,6 @@ $font-stack-sc-medium: $font-whitney-sc-medium, $font-stack;
 
 .find-an-advisor-search-form-field{
 
-    padding-top: 15px; 
 
     @include respond-to(medium){
       width: auto;
@@ -446,6 +445,7 @@ $font-stack-sc-medium: $font-whitney-sc-medium, $font-stack;
 
     .section-title{
       padding-bottom: 10px;
+      padding-top: 10px;
     }
 }
 
