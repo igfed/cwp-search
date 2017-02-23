@@ -430,6 +430,8 @@ $font-stack-sc-medium: $font-whitney-sc-medium, $font-stack;
 
 .find-an-advisor-search-form-field{
 
+    padding-top: 15px; 
+
     @include respond-to(medium){
       width: auto;
     }
@@ -439,6 +441,10 @@ $font-stack-sc-medium: $font-whitney-sc-medium, $font-stack;
       position: absolute;
       top: 10px;
       left: 10px;
+    }
+
+    .section-title{
+      padding-bottom: 10px;
     }
 }
 
@@ -522,7 +528,6 @@ $font-stack-sc-medium: $font-whitney-sc-medium, $font-stack;
   width: 100%;
   border-radius: 0.5rem;
   border: none;
-  margin-top: 10px; 
 
 
   font-family: $font-stack;
