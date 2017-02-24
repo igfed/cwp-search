@@ -1,3 +1,70 @@
+(function ($) {
+    'use strict';
+
+
+    $.fn.infoToggle = function() {
+        this.each(function() {
+            var $reveal = $(this),
+                $revealContent = $reveal.find('.info-toggle-content'),
+                $revealTrigger = $reveal.find('.info-toggle-trigger'),
+                fixedHeight = false,
+                setAria = $reveal.attr('info-toggle-aria') === 'true';
+
+            init();
+
+            function init() {
+                $revealTrigger.on('click', handleRevealToggle);
+                $(window).on('resize', resizeHandler);
+
+                setRevealContentHeight();
+            }
+
+            //-----
+
+            function handleRevealToggle() {
+                setRevealContentHeight();
+                $reveal.toggleClass('active');
+                window.setTimeout(setRevealContentHeight);
+                if ($reveal.hasClass('active')) {
+                    scrollToTarget();
+                }
+            }
+
+            function resizeHandler() {
+                if (fixedHeight) {
+                    $revealContent.css({height: 'auto'});
+                }
+            }
+
+            function scrollToTarget() {
+                $('html, body').animate({scrollTop: $reveal.offset().top}, 500);
+            }
+
+            function setRevealContentHeight() {
+                var finalHeight;
+
+                if ($reveal.hasClass('active')) {
+                    finalHeight = $revealContent[0].scrollHeight;
+                    fixedHeight = true;
+                } else {
+                    finalHeight = 0;
+                    fixedHeight = false;
+                }
+                $revealContent.css({height: finalHeight});
+
+                if (setAria) {
+                    $revealContent.attr('aria-hidden', !fixedHeight);
+                }
+            }
+        });
+
+        return this;
+    };
+
+}(jQuery));
+
+
+
 // GLOBALS
 var modelUrl = 'https://search.investorsgroup.com/api/cwpsearch?';
 var $location_field = $('#FindAnAdvisor_location');
@@ -9,13 +76,6 @@ if(window.location.href.indexOf('-fr.') > -1) {
     lang = 'fr';
 }
 
-
-// $(function(){
-// 	$('.search-results-consultant-team-members-view-all').on('click', function(){
-// 		alert();
-// 		$(this).toggleClass('active');
-// 	})
-// });
 
 //Search dropdown
 
