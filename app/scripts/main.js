@@ -9,6 +9,14 @@ if(window.location.href.indexOf('-fr.') > -1) {
     lang = 'fr';
 }
 
+
+// $(function(){
+// 	$('.search-results-consultant-team-members-view-all').on('click', function(){
+// 		alert();
+// 		$(this).toggleClass('active');
+// 	})
+// });
+
 //Search dropdown
 
 $(function() {
@@ -29,6 +37,12 @@ $(function() {
 
     }         
   }).trigger('change');
+
+  $('.search-results-consultant-team-members-view-all').on('click', function(){
+  	alert();
+		$(this).toggleClass('active');
+	});
+
 });
 
 
