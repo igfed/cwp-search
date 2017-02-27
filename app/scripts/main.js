@@ -151,7 +151,6 @@ function getSearchResults(params) {
 	.always()
 	.done(function( data ) {
 		var result = JSON.parse(data);
-		console.log(result)
 		for (var i=0; i<result.length; i++) {
 			result[i].myInfo.FName = result[i].myInfo.FName.toLowerCase();
 			result[i].myInfo.LName = result[i].myInfo.LName.toLowerCase();
@@ -319,24 +318,3 @@ $(function() {
 	$location_field.focus();
 
 });
-
-//Lowercase text
-// $(function textTransformLowercase(){
-//      $('.search-ui').text(function (_, val) {
-// 	    return val.toLowerCase();
-// 	    $('.search-ui').addClass('capitalize');
-//     });
-// }());
-
-// $(function(){
-// 	if($('#info-toggle-wrapper').hasClass('isActive')){
-// 		$('.accordion-arrow').toggleClass('active');
-// 	}
-// });
-
-// $(function(){
-// 	$('.office-search').on('click', function(){
-// 		alert();
-// 		$('.accordion-arrow').toggleClass('active');
-// 	});
-// });
