@@ -10,6 +10,9 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
 
+     <!--dropdown select-->
+    <link rel="stylesheet" href="styles/nice-select.css">
+
     <link rel="stylesheet" href="styles/vendor.css">
     <link rel="stylesheet" href="styles/main-project.css">
     <!-- build:css styles/find-an-advisor.css -->
@@ -51,7 +54,7 @@
                       <div class="row collapse find-an-advisor-search-form-fields">
                           <div class="medium-5 columns find-an-advisor-search-form-field">
                                <p class="section-title text-left">Search By</p>
-                                <select class="search-select">
+                                <select class="search-select nice-select">
                                   <option value="Location">Location</option>
                                   <option value="Name">Name</option>
                               </select>
@@ -398,5 +401,10 @@
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
+
+    <!-- nice select-->
+    <script src="scripts/jquery.nice-select.min.js"></script>
+    <!-- fast click -->
+    <script src="scripts/fastclick.js"></script>
   </body>
 </html>

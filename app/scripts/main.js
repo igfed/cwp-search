@@ -345,4 +345,7 @@ $(function() {
 // });
 
 
-
+$(document).ready(function() {
+  $('select').niceSelect();      
+  FastClick.attach(document.body);
+});
