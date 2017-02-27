@@ -310,15 +310,18 @@ $(function() {
 	});
 
 	$('.twitter-typeahead input').on('keyup', function (e) {
+
 	    if (e.keyCode == 13) {
 	    	// $('#find-an-advisor-search').submit();
 	        $('.tt-menu').hide();
     	}
 	});
 
+
 	$location_field.focus();
 
 });
+
 
 //Lowercase text
 // $(function textTransformLowercase(){

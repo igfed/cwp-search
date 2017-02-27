@@ -373,6 +373,7 @@ $font-stack-sc-medium: $font-whitney-sc-medium, $font-stack;
     position: relative;
     width: 100%;
     display: inline-block;
+    padding: 0;
 
     input{
       &:first-child{
@@ -453,7 +454,7 @@ $font-stack-sc-medium: $font-whitney-sc-medium, $font-stack;
   margin-top: 0;
   background-color: white;
   height: 40px;
-  border-radius: 0.5rem;
+  border-radius: 5px;
   position: relative;
   // width: 100%;
 
@@ -483,7 +484,6 @@ $font-stack-sc-medium: $font-whitney-sc-medium, $font-stack;
     line-height: 1.5em;
     border-radius: 0.5rem;
     border: none;
-    top: -7.5px;
 
     @include respond-to(medium){
       border-radius: 0;
@@ -493,6 +493,12 @@ $font-stack-sc-medium: $font-whitney-sc-medium, $font-stack;
     &:focus{
       border: none;
     }
+  }
+}
+
+.find-an-advisor-search-form-field-location, .find-an-advisor-search-form-field-name{
+  &.active{
+    border-radius: 0.5rem 0.5rem 0 0!important;
   }
 }
 
@@ -527,7 +533,7 @@ $font-stack-sc-medium: $font-whitney-sc-medium, $font-stack;
   background-color: #e5e8e8;
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIpJREFUeNrEkckNgDAMBBfRkEt0ObRBBdsGXUDgmQfK4XhH2m8czQAAy27R3tsw4Qfe2x8uOO6oYLb6GlOor3GF+swURAOmUJ+RwtEJs9WvTGEYxBXqI1MQAZhCfUQKRzDMVj+TwrAIV6jvSUEkYAr1LSkcyTBb/V+KYfX7xAeusq3sLDtGH3kEGACPWIflNZfhRQAAAABJRU5ErkJggg==");
   width: 100%;
-  border-radius: 0.5rem;
+  border-radius: 5px;
   border: none;
 
 
