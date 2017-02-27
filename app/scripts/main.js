@@ -151,7 +151,6 @@ function getSearchResults(params) {
 	.always()
 	.done(function( data ) {
 		var result = JSON.parse(data);
-		console.log(result)
 		for (var i=0; i<result.length; i++) {
 			result[i].myInfo.FName = result[i].myInfo.FName.toLowerCase();
 			result[i].myInfo.LName = result[i].myInfo.LName.toLowerCase();
@@ -320,6 +319,7 @@ $(function() {
 
 	$location_field.focus();
 
+
 });
 
 
@@ -343,3 +343,6 @@ $(function() {
 // 		$('.accordion-arrow').toggleClass('active');
 // 	});
 // });
+
+
+
