@@ -1,68 +1,79 @@
-(function ($) {
-    'use strict';
+// (function ($) {
+//     'use strict';
 
 
-    $.fn.infoToggle = function() {
-        this.each(function() {
-            var $reveal = $(this),
-                $revealContent = $reveal.find('.info-toggle-content'),
-                $revealTrigger = $reveal.find('.info-toggle-trigger'),
-                fixedHeight = false,
-                setAria = $reveal.attr('info-toggle-aria') === 'true';
+//     $.fn.infoToggle = function() {
+//         this.each(function() {
+//             var $reveal = $(this),
+//                 $revealContent = $reveal.find('.info-toggle-content'),
+//                 $revealTrigger = $reveal.find('.info-toggle-trigger'),
+//                 fixedHeight = false,
+//                 setAria = $reveal.attr('info-toggle-aria') === 'true';
 
-            init();
+//             init();
 
-            function init() {
-                $revealTrigger.on('click', handleRevealToggle);
-                $(window).on('resize', resizeHandler);
+//             function init() {
+//                 $revealTrigger.on('click', handleRevealToggle);
+//                 $(window).on('resize', resizeHandler);
 
-                setRevealContentHeight();
-            }
+//                 setRevealContentHeight();
+//             }
 
-            //-----
+//             //-----
 
-            function handleRevealToggle() {
-                setRevealContentHeight();
-                $reveal.toggleClass('active');
-                window.setTimeout(setRevealContentHeight);
-                if ($reveal.hasClass('active')) {
-                    scrollToTarget();
-                }
-            }
+//             function handleRevealToggle() {
+//                 setRevealContentHeight();
+//                 $reveal.toggleClass('active');
+//                 window.setTimeout(setRevealContentHeight);
+//                 if ($reveal.hasClass('active')) {
+//                     scrollToTarget();
+//                 }
+//             }
 
-            function resizeHandler() {
-                if (fixedHeight) {
-                    $revealContent.css({height: 'auto'});
-                }
-            }
+//             function resizeHandler() {
+//                 if (fixedHeight) {
+//                     $revealContent.css({height: 'auto'});
+//                 }
+//             }
 
-            function scrollToTarget() {
-                $('html, body').animate({scrollTop: $reveal.offset().top}, 500);
-            }
+//             function scrollToTarget() {
+//                 $('html, body').animate({scrollTop: $reveal.offset().top}, 500);
+//             }
 
-            function setRevealContentHeight() {
-                var finalHeight;
+//             function setRevealContentHeight() {
+//                 var finalHeight;
 
-                if ($reveal.hasClass('active')) {
-                    finalHeight = $revealContent[0].scrollHeight;
-                    fixedHeight = true;
-                } else {
-                    finalHeight = 0;
-                    fixedHeight = false;
-                }
-                $revealContent.css({height: finalHeight});
+//                 if ($reveal.hasClass('active')) {
+//                     finalHeight = $revealContent[0].scrollHeight;
+//                     fixedHeight = true;
+//                 } else {
+//                     finalHeight = 0;
+//                     fixedHeight = false;
+//                 }
+//                 $revealContent.css({height: finalHeight});
 
-                if (setAria) {
-                    $revealContent.attr('aria-hidden', !fixedHeight);
-                }
-            }
-        });
+//                 if (setAria) {
+//                     $revealContent.attr('aria-hidden', !fixedHeight);
+//                 }
+//             }
+//         });
 
-        return this;
-    };
+//         return this;
+//     };
 
-}(jQuery));
+// }(jQuery));
 
+
+
+
+// View all team/associate members
+
+$(function() {
+	$('.info-toggle-trigger').on('click', function(){
+		alert();
+		$(this).closest('.info-toggle-content').toggleClass('active');
+	});
+});
 
 
 // GLOBALS
