@@ -340,6 +340,10 @@ $font-stack-sc-medium: $font-whitney-sc-medium, $font-stack;
 
 .find-an-advisor-search-form{
 
+  @include respond-to(medium){
+    margin-bottom: 35px!important;
+  }
+
   .medium-figure{
     margin-bottom: 0;
   }
@@ -549,7 +553,7 @@ $font-stack-sc-medium: $font-whitney-sc-medium, $font-stack;
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
   }
 }
 
