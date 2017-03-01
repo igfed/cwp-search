@@ -871,6 +871,14 @@ $font-stack-sc-medium: $font-whitney-sc-medium, $font-stack;
       }
     }
   }
+
+  .info-toggle-content {
+    display: none;
+  }
+
+  .info-toggle-content.active {
+    display: block;
+  }
 }
 
 .search-results-consultant-portrait{

@@ -251,7 +251,7 @@
           </div>
           {{#myConsultantTeam.length}}
                     <div class="row info-toggle-small">
-                      <div class="small-12 columns info-toggle-content">
+                      <div class="small-12 columns info-toggle-content" id="toggle-team-content-{{myInfo.FName}}-{{myInfo.LName}}" data-toggler=".active">
                         <div class="row">
                           <div class="medium-12 columns">
                             <div class="row search-results-consultant-team-section-divider">
@@ -305,7 +305,7 @@
                       </div>
                       <div class="small-12 columns">
                           <div class="row show-for-small-only text-center" >
-                             <p class="section-title text-center search-results-consultant-team-members-view-all overline info-toggle-trigger">View All Team Members
+                             <p class="section-title text-center search-results-consultant-team-members-view-all overline" data-toggle="toggle-team-content-{{myInfo.FName}}-{{myInfo.LName}}">View All Team Members
                               <span class="accordion-arrow"></span>
                             </p>
                           </div>
@@ -314,7 +314,7 @@
                     {{/myConsultantTeam.length}}
                     {{#associates.length}}
                     <div class="row info-toggle-small">
-                      <div class="small-12 columns info-toggle-content">
+                     <div class="small-12 columns info-toggle-content" id="toggle-associate-content-{{myInfo.FName}}-{{myInfo.LName}}" data-toggler=".active">
                         <div class="row">
                           <div class="medium-12 columns">
                             <div class="row search-results-consultant-team-section-divider">
@@ -368,7 +368,7 @@
                       </div>
                       <div class="small-12 columns">
                           <div class="row show-for-small-only text-center" >
-                             <p class="section-title text-center search-results-consultant-team-members-view-all overline info-toggle-trigger">View All Associate Members
+                             <p class="section-title text-center search-results-consultant-team-members-view-all overline" data-toggle="toggle-associate-content-{{myInfo.FName}}-{{myInfo.LName}}">View All Associate Members
                               <span class="accordion-arrow"></span>
                             </p>
                           </div>
@@ -393,8 +393,7 @@
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="/bower_components/typeahead.js/dist/typeahead.bundle.min.js"></script>
-    <script src="/bower_components/mustache.js/mustache.min.js"></script>
+    <script src="/bower_components/mustache.js/mustache.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

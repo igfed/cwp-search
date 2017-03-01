@@ -68,12 +68,12 @@
 
 // View all team/associate members
 
-$(function() {
-	$('.info-toggle-trigger').on('click', function(){
-		alert();
-		$(this).closest('.info-toggle-content').toggleClass('active');
-	});
-});
+// $(function() {
+// 	$('.info-toggle-trigger').on('click', function(){
+// 		alert();
+// 		$(this).closest('.info-toggle-content').toggleClass('active');
+// 	});
+// });
 
 
 // GLOBALS
