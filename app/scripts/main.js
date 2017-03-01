@@ -109,11 +109,6 @@ $(function() {
     }         
   }).trigger('change');
 
-  $('.search-results-consultant-team-members-view-all').on('click', function(){
-  	alert();
-		$(this).toggleClass('active');
-	});
-
 });
 
 
@@ -263,6 +258,11 @@ function displaySearchResults( templateID, json, destination ) {
 	$('#'+destination).removeClass('hide').append(rendered);
 	attachComponents();
 	$('#results-placeholder').addClass('hide');
+
+	$('.search-results-consultant-team-members-view-all').unbind('click').bind('click', function (e) {
+	  $(this).toggleClass('active');
+	});
+
 }
 
 function attachComponents(){

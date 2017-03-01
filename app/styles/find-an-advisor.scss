@@ -874,6 +874,11 @@ $font-stack-sc-medium: $font-whitney-sc-medium, $font-stack;
 
   .info-toggle-content {
     display: none;
+
+    @include respond-to(medium){
+      display: block;
+    }
+
   }
 
   .info-toggle-content.active {
@@ -1122,4 +1127,15 @@ $font-stack-sc-medium: $font-whitney-sc-medium, $font-stack;
       top: 8px;
     }
   }
+
+  &.active{
+    .accordion-arrow{
+      &:before{
+        transform: rotate(225deg) translateZ(0);
+        top: 8px;
+      }
+    }
+  }
 }
+
+
