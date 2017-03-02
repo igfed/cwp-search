@@ -3,3 +3,7 @@ dist
 .tmp
 bower_components
 test/bower_components
+.idea
+debug.log
+.DS_Store
+.idea
