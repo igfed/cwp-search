@@ -394,13 +394,16 @@ $font-stack-sc-medium: $font-whitney-sc-medium, $font-stack;
     background: white;
     width: 100%;
     margin-left: 0;
-    border-bottom-right-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
+    border-radius: 0.5rem;
     top: 3.7rem;
     box-shadow: 0 4px 10px rgba(1, 0, 0, 0.3);
     border-top: 1px solid #a9a9a9;
     text-align: left;
     padding: 40px 30px 30px 30px;
+
+    @include respond-to(medium){
+      border-radius: 0 0 0.5rem 0.5rem;
+    }
 
     &:before{
       content: 'Suggested Results';
