@@ -255,28 +255,6 @@ $(function() {
 });
 
 
-//Lowercase text
-// $(function textTransformLowercase(){
-//      $('.search-ui').text(function (_, val) {
-// 	    return val.toLowerCase();
-// 	    $('.search-ui').addClass('capitalize');
-//     });
-// }());
-
-// $(function(){
-// 	if($('#info-toggle-wrapper').hasClass('isActive')){
-// 		$('.accordion-arrow').toggleClass('active');
-// 	}
-// });
-
-// $(function(){
-// 	$('.office-search').on('click', function(){
-// 		alert();
-// 		$('.accordion-arrow').toggleClass('active');
-// 	});
-// });
-
-
 $(document).ready(function() {
   $('select').niceSelect();      
   FastClick.attach(document.body);
