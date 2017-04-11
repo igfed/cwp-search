@@ -135,6 +135,9 @@ $font-stack-sc-medium: $font-whitney-sc-medium, $font-stack;
     right: 0;
     margin-top: -0.5px;
     transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+
+    right: -6px;
+    // top: 8px;
   }
 
   .dropdown.menu .is-dropdown-submenu-parent.is-active  > a::after{
@@ -635,7 +638,13 @@ $font-stack-sc-medium: $font-whitney-sc-medium, $font-stack;
     margin: 0;
     display: flex;
     justify-content: flex-end;
+
+    width: auto;
   }
+
+  @include respond-to(large){
+    width: 50%;
+   }
 
   .button{
    padding: 5px 1.25em 7px;
@@ -668,6 +677,9 @@ $font-stack-sc-medium: $font-whitney-sc-medium, $font-stack;
     justify-content: center;
     padding-left: 0;
     margin-bottom: 5px;
+
+    width: auto;
+    float: right;
   }
 
   @include respond-to(large){
