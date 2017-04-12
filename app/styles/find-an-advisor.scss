@@ -116,6 +116,19 @@ $font-stack-sc-medium: $font-whitney-sc-medium, $font-stack;
 
 
 /*Search results global*/
+
+
+.fr.body{
+  .search-results{
+    .search-results-consultant-team-member-contact{
+
+      @include respond-to(medium){
+        min-width: 250px;
+      }
+    }
+  }
+}
+
 .search-results{
 
 // this is the foundation dropdown styles
