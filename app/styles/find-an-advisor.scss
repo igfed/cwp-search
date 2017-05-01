@@ -724,8 +724,8 @@ body.fr{
 }
 
 .search-results-office, .search-results-consultant{
-   padding-top: 1rem;
-  padding-bottom: 1rem;
+   padding-top: 10px;
+  padding-bottom: 10px;
 
   @include respond-to(medium){
     display:flex;
@@ -963,8 +963,8 @@ body.fr{
       display: flex;
       justify-content: center;
       flex-flow: row wrap;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
+      padding-top: 40px;
+      padding-bottom: 40px;
    }
 
     .dropdown{
@@ -1127,7 +1127,7 @@ body.fr{
 
   @include respond-to(medium){
     align-items: flex-end;
-    padding-top: 1rem;
+    padding-top: 30px;
   }
 }
 
