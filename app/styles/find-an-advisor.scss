@@ -524,12 +524,12 @@ body.fr{
   // width: 100%;
 
   @include respond-to(medium){
-    width: 320px;
+    width: 400px;
     border-radius: 0;
   }
 
   @include respond-to(large){
-    width: 400px;
+    width: 480px;
   }
 
   label{
