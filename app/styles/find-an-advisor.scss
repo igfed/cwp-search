@@ -148,9 +148,7 @@ body.fr{
     right: 0;
     margin-top: -0.5px;
     transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
-
     right: -6px;
-    // top: 8px;
   }
 
   .dropdown.menu .is-dropdown-submenu-parent.is-active  > a::after{
@@ -459,19 +457,36 @@ body.fr{
       font-size: 16px;
       color: $search-grey;
 
+      &:before{
+        content: "";
+        border-left: 2px solid #FFFFFF;
+        height: 14px;
+        left: -20px;
+        position: relative;
+      }
+
       &:hover, &.tt-cursor{
+
+        &:before{
+          content: "";
+          border-left: 2px solid #0d263c;
+          height: 14px;
+          left: -20px;
+          position: relative;
+        }
 
         @include respond-to(medium){
           background-color: #eff1f2;
           margin-left: -30px;
           padding-left: 30px;
-          width: 123%;
+          width: 117.8%;
         }
 
         @include respond-to(large){
-          width: 117.5%;
+          width: 114.2%;
         }
       }
+
   }
 
   .tt-suggestion:hover + .tt-suggestion{
@@ -488,7 +503,7 @@ body.fr{
     &:first-child{
       .tt-suggestion{
         &:first-child{
-          border: none;
+          border-top: none;
         }
       }
     }
@@ -521,7 +536,6 @@ body.fr{
   height: 40px;
   border-radius: 5px;
   position: relative;
-  // width: 100%;
 
   @include respond-to(medium){
     width: 400px;
@@ -591,22 +605,6 @@ body.fr{
 }
 
 .search-select{
-  // width: 15rem;
-  // padding-left: 1.5rem;
-  // padding-right: 1.5rem;
-  // background-color: #e5e8e8;
-  // width: 100%;
-  // border-radius: 5px;
-  // border: none;
-
-
-  // font-family: $font-stack;
-  // font-size: 16px;
-  // font-size: 1rem;
-  // color: $darkest-color;
-  // line-height: 1.5em;
-
-
   &:focus{
     border: none;
     background-color: #e5e8e8;;
@@ -912,8 +910,6 @@ body.fr{
 
 .search-results-consultant-portrait{
   width: 80px;
-  // overflow: hidden;
-  // margin-left: 15px;
 
   @include respond-to(medium){
     width: 125px;
@@ -921,24 +917,8 @@ body.fr{
 
   @include respond-to(large){
     width: 150px;
-    // max-width: 120px;
-    // height: 160px;
-
   }
 
-  // img{
-  //   position: relative;
-  //   left: 50%;
-  //   transform: translateX(-50%);
-  //   max-width: none;
-  //   height: auto;
-
-  //   width: 60px;
-
-  //   @include respond-to(large){
-  //     width: 130px;
-  //   }
-  // }
 }
 
 .search-results-consultant-info{
