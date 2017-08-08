@@ -4,4 +4,7 @@ dist
 bower_components
 test/bower_components
 debug.log
+.idea
+.history
+.vscode
 .DS_Store
