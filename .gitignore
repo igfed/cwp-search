@@ -7,3 +7,5 @@ test/bower_components
 debug.log
 .DS_Store
 .idea
+.history
+.vscode
