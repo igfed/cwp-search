@@ -1,5 +1,9 @@
 // GLOBALS
 var modelUrl = 'https://search.investorsgroup.com/api/cwpsearch?';
+var dataFolder = "/content/dam/investorsgroup/app/find-an-advisor/";
+if (location.hostname === "localhost") {
+	dataFolder = "data/";
+}
 var $location_field = $('#FindAnAdvisor_location');
 var $name_field = $('#FindAnAdvisor_name');
 var allConsultants = {};
@@ -39,18 +43,18 @@ var suggestions = {};
 	suggestions.locations = new Bloodhound({
 		datumTokenizer: Bloodhound.tokenizers.whitespace,
 		queryTokenizer: Bloodhound.tokenizers.whitespace,
-		prefetch: 'data/cities.json'
+		prefetch: dataFolder + 'cities.json'
 	});
 	suggestions.consultants = new Bloodhound({
 		// datumTokenizer: Bloodhound.tokenizers.obj.whitespace("name"),
 		datumTokenizer: Bloodhound.tokenizers.whitespace,
 		queryTokenizer: Bloodhound.tokenizers.whitespace,
-		prefetch: 'data/names.json'
+		prefetch: dataFolder + 'names.json'
 	});
 	suggestions.postalCode = new Bloodhound({
 		datumTokenizer: Bloodhound.tokenizers.whitespace,
 		queryTokenizer: Bloodhound.tokenizers.whitespace,
-		prefetch: 'data/postal-code.json'
+		prefetch: dataFolder + 'postal-code.json'
 	});
 
 // Get current location
@@ -70,6 +74,20 @@ function getCoordinates() {
 		console.log('Error with geolocation');
 	}
 	navigator.geolocation.getCurrentPosition(success, error);
+}
+
+// Get the 
+function getParameter(parameterName) {
+	var result = null,
+	tmp = [];
+	location.search
+	.substr(1)
+	.split("&")
+	.forEach(function (item) {
+		tmp = item.split("=");
+		if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+	});
+	return result;
 }
 
 // Get the results
@@ -206,9 +224,21 @@ function sendGoogleAnalytics(params) {
 
 //Init everything
 $(function() {
-
+	var queryLocation = getParameter('q');
+	var queryName = getParameter('qname');
 	// Try to predetermine what results should show
-	getCoordinates();
+	if (queryLocation != null) {
+		$location_field.val(queryLocation);
+		var siteSearchParams = parseSearchString();
+		getSearchResults(siteSearchParams);
+	} else if (queryName != null) {
+		$name_field.val(queryName);
+		$('.search-select').val('Name').trigger('change');
+		var siteSearchParams = parseSearchString();
+		getSearchResults(siteSearchParams);
+	} else {
+		getCoordinates();
+	}
 
 	// Setup the typeahead
 	$('.typeahead.itf_location').typeahead({
